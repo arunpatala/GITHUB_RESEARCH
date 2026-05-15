@@ -5,6 +5,7 @@
 | File | Purpose |
 |------|---------|
 | 00_git.md | Git auth using PAT from `.secret`, remote config, commit/push workflow |
+| 01_unsloth_docker.md | Unsloth Docker image setup, notebooks repo, running scripts |
 
 ## Current Goal
 
