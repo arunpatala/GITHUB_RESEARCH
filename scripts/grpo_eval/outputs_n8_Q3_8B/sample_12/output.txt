@@ -1,0 +1,760 @@
+<think>
+Okay, let's see. Carlos wants to plant a lemon tree. The initial cost is $90. Each year, the tree grows 7 lemons, which he can sell for $1.5 each. But there's also an annual cost of $3 for watering and feeding the tree. The question is, how many years will it take before he starts earning money on the lemon tree?
+
+Hmm, so first, I need to figure out the net profit each year and see when it becomes positive. Let me break it down step by step.
+
+First, the initial cost is $90. That's a one-time cost. Then, every year, he has two things happening: income from selling lemons and expenses for watering and feeding.
+
+Each year, the tree produces 7 lemons. Each lemon is sold for $1.5. So, the annual income from lemons would be 7 lemons multiplied by $1.5 per lemon. Let me calculate that. 7 * 1.5 is... let's see, 7 * 1 is 7, and 7 * 0.5 is 3.5, so total is 7 + 3.5 = $10.5 per year from selling lemons.
+
+But then he has to spend $3 each year on watering and feeding. So the net profit each year would be the income from lemons minus the annual cost. That is $10.5 - $3 = $7.5 per year.
+
+Wait, but he also has the initial cost of $90. So, the total profit after n years would be the total income from lemons minus total costs (initial planting + annual costs). So maybe I need to model this as cumulative profit.
+
+Let me think. The total revenue after n years is 7 lemons/year * $1.5/lemon * n years = 10.5n dollars. The total costs are the initial $90 plus $3 per year for n years, so 90 + 3n dollars. So the profit after n years is total revenue minus total costs: 10.5n - (90 + 3n) = 10.5n - 90 - 3n = 7.5n - 90.
+
+We need to find the smallest integer n where this profit is positive. So set 7.5n - 90 > 0.
+
+Solving for n: 7.5n > 90 → n > 90 / 7.5. Let me compute that. 90 divided by 7.5.
+
+Hmm, 7.5 times 12 is 90 because 7.5 * 10 = 75, 7.5 * 2 = 15, so 75 + 15 = 90. So 7.5 * 12 = 90. Therefore, n > 12. Since n has to be an integer (number of years), the smallest integer greater than 12 is 13. Therefore, it would take 13 years before he starts earning money.
+
+Wait, but let me check. Let me verify with n=12. Profit would be 7.5*12 -90 = 90 -90= 0. So at 12 years, profit is zero. So he doesn't start earning money until after 12 years. So the first year he has positive profit is 13 years. Therefore, the answer is 13 years.
+
+But wait, maybe the question is asking when he starts earning money, meaning when the profit becomes positive. So, if at year 12, the profit is zero, then he hasn't started earning money yet. Therefore, it's 13 years. Let me confirm the calculation again.
+
+Total revenue after n years: 10.5n.
+
+Total cost: 90 + 3n.
+
+Profit: 10.5n - 90 - 3n = 7.5n - 90.
+
+Set 7.5n - 90 > 0 → 7.5n > 90 → n > 12. So n must be 13. So yes, 13 years.
+
+But let me check with n=12:
+
+Revenue is 10.5*12 = 126 dollars.
+
+Cost is 90 + 3*12 = 90 + 36 = 126.
+
+So profit is 126 - 126 = 0. So no profit. Therefore, he needs to wait until n=13.
+
+At n=13:
+
+Revenue is 10.5*13 = 136.5.
+
+Cost is 90 + 3*13 = 90 + 39 = 129.
+
+Profit is 136.5 - 129 = 7.5. Positive. So yes, 13 years.
+
+Therefore, the answer is 13.
+
+But let me think again if there's another way to approach this. Maybe considering the initial cost and then the net annual profit. So after the initial cost, each year he gains $7.5. So how many years does it take to recover the initial $90?
+
+So, if he gains $7.5 per year, then the number of years to recover the initial cost would be 90 / 7.5 = 12 years. But since after 12 years, he has exactly recovered the initial cost, so the profit is zero. Therefore, he needs one more year to have a positive profit. So that would be 13 years. Yep, same result.
+
+Alternatively, maybe some people might think that the first year he plants the tree, does he get the first year's profit? Let's check. Suppose he plants the tree at year 0, then in year 1, he has the first harvest. So if the question is about how many years after planting, then the answer is 13 years. So that seems correct.
+
+Therefore, I think the answer is 13. So the number of years is 13. So the answer is 13.
+</think>
+
+To determine how many years it will take before Carlos starts earning money on his lemon tree, we need to analyze both his **revenue** and **costs** over time.
+
+---
+
+### Step 1: Calculate Annual Revenue
+Each year, the tree produces **7 lemons**, and each lemon sells for **$1.5**.
+
+$$
+\text{Annual Revenue} = 7 \times 1.5 = 10.5
+$$
+
+So, every year, Carlos earns **$10.50** from selling lemons.
+
+---
+
+### Step 2: Calculate Annual Costs
+Carlos spends **$3 per year** on watering and feeding the tree.
+
+$$
+\text{Annual Cost} = 3
+$$
+
+---
+
+### Step 3: Calculate Net Annual Profit
+Each year, the net profit from the tree is the revenue minus the annual cost.
+
+$$
+\text{Net Annual Profit} = 10.5 - 3 = 7.5
+$$
+
+So, each year after the tree is planted, Carlos earns **$7.50** in profit.
+
+---
+
+### Step 4: Account for the Initial Cost
+The initial cost to plant the tree is **$90**. This is a one-time cost that must be repaid before any profit is realized.
+
+We want to find the number of years, $ n $, it takes for the **total net profit** to exceed the initial cost of $90.
+
+$$
+\text{Total Profit After } n \text{ Years} = 7.5n
+$$
+
+We need to find the smallest integer $ n $ such that:
+
+$$
+7.5n > 90
+$$
+
+Solving the inequality:
+
+$$
+n > \frac{90}{7.5} = 12
+$$
+
+So, **after 12 years**, the total profit is exactly $90, which means the profit is **zero** (no profit, only break-even). 
+
+Therefore, Carlos only **starts earning money** after **13 years**, when the total profit becomes positive.
+
+---
+
+### ✅ Final Answer:
+$$
+\boxed{13}
+$$
+---
+<think>
+Okay, let's see. Carlos wants to plant a lemon tree. The initial cost is $90. Each year, the tree grows 7 lemons, which he can sell for $1.5 each. But there's also an annual cost of $3 for watering and feeding the tree. The question is, how many years will it take before he starts earning money on the lemon tree?
+
+Alright, so first, I need to figure out the profit each year and determine when the total profit becomes positive. But wait, actually, maybe I should think about the total cost versus the total revenue over the years. The initial cost is a one-time expense of $90. Then each year, there's an ongoing cost of $3, and each year he earns some revenue from selling the lemons.
+
+Let me break it down. Let's denote the number of years as 'n'. So, after n years, the total cost would be the initial cost plus the annual cost multiplied by the number of years. That would be 90 + 3n.
+
+On the other hand, the revenue from selling the lemons would be the number of lemons times the price per lemon. Each year, he gets 7 lemons, so over n years, that's 7n lemons. Each lemon sells for $1.5, so the total revenue is 7n * 1.5. Let me calculate that: 7*1.5 is 10.5, so revenue is 10.5n dollars.
+
+So, the profit after n years would be revenue minus total cost. Profit = 10.5n - (90 + 3n). Simplify that: 10.5n - 3n - 90 = 7.5n - 90. We want to find the smallest integer n where this profit is greater than zero.
+
+So, set up the inequality: 7.5n - 90 > 0. Solving for n: 7.5n > 90. Then n > 90 / 7.5. Let me compute that. 90 divided by 7.5. Hmm, 7.5 times 12 is 90, because 7.5*10=75, 7.5*2=15, so 75+15=90. So 7.5*12=90. Therefore, n > 12. So, n must be greater than 12. Since n has to be an integer number of years, the smallest integer greater than 12 is 13. Therefore, it would take 13 years before he starts earning money.
+
+Wait, but let me check that again. Let's verify with n=12. If n=12, profit is 7.5*12 -90 = 90 -90 = 0. So at 12 years, profit is zero. Therefore, he doesn't start earning until after 12 years, which would be 13 years. But maybe the question is asking when he starts earning money, meaning when the profit becomes positive. So at year 12, he breaks even, so he starts earning money in year 13.
+
+But let me check the calculation again. Let me recompute the revenue per year. Each year, 7 lemons, each sold for $1.5. So 7*1.5 is 10.5 dollars per year. Then, the annual cost is $3, so the net profit per year is 10.5 - 3 = 7.5 dollars per year. So each year, he gains $7.5 after expenses. But the initial cost is $90. So the total profit after n years is 7.5n - 90. So, when does this become positive? When 7.5n > 90 => n > 12. So n=13 is the first year where profit is positive.
+
+But wait, another way to think about it: maybe the first year he starts earning money is when the cumulative profit becomes positive. So, let's check year by year.
+
+Year 1: Revenue is 10.5, cost is 3, so profit is 10.5 - 3 = 7.5. But total cost includes the initial 90. Wait, no. Wait, the initial cost is 90, and then each year, there's an additional 3. So the total cost after n years is 90 + 3n. The total revenue is 10.5n. So profit is 10.5n - 90 - 3n = 7.5n -90. Therefore, the profit is cumulative over all years. So the total profit is 7.5n -90. So, for the profit to be positive, n must be greater than 12. Therefore, the answer is 13 years.
+
+But let me check with n=12. Total revenue is 10.5*12 = 126. Total cost is 90 + 3*12 = 90 + 36 = 126. So profit is 0. So, at year 12, he breaks even. So, he starts earning money in year 13. Therefore, the answer is 13.
+
+But let me make sure I didn't misinterpret the problem. Is the initial cost of $90 just one-time, and then each year he has to pay $3? Yes. So, the total cost is 90 + 3n. The total revenue is 7*1.5*n = 10.5n. So profit is 10.5n - 90 -3n = 7.5n -90. So, solving 7.5n -90 > 0. Which gives n>12. So, he needs 13 years.
+
+Alternatively, maybe the question is considering that in the first year, he plants the tree, and then starts earning money after that? Wait, but the problem says "how many years will it take before he starts earning money". So, if he plants the tree, then each year after that, he has the costs and revenues. So, the initial cost is $90. Then, in year 1, he has revenue from 7 lemons, but also has to pay $3 for watering and feeding. So, the profit after one year would be 10.5 - 3 - 90? Wait, no. Wait, the initial cost is $90, which is a one-time cost. Then, each year, he has to pay $3. So the total cost is 90 + 3n. So, the profit after n years is total revenue (10.5n) minus total cost (90 + 3n). Therefore, profit is 7.5n -90. Therefore, when does profit become positive? At n=13. So, the answer is 13 years.
+
+Alternatively, maybe the problem is considering that the first year he plants the tree, and then the first year's revenue is after that. But regardless, the calculation seems to hold.
+
+But wait, perhaps there's another way to think about it. Let me think again. Suppose he plants the tree, and then in the first year, he has to pay $3 to water and feed, and then sells the lemons. So, the total cost up to year 1 is 90 + 3 = 93. Revenue is 10.5. So profit is 10.5 - 93 = -82.5. Then in year 2, total cost is 90 + 3*2 = 96. Revenue is 21. Profit is 21 - 96 = -75. So each year, the profit increases by 7.5 (since each year, revenue increases by 10.5, cost increases by 3, so net profit increases by 7.5). So starting with a negative profit, and each year adding 7.5. How many years to get to positive?
+
+So, the total profit after n years is 7.5n -90. So when does that cross zero?
+
+We can think of it as an arithmetic sequence. Starting at n=0, profit is -90. Then each year adds 7.5. So, the profit after n years is -90 + 7.5n. So, solving -90 + 7.5n > 0. Which is same as 7.5n > 90 => n>12. So, same result.
+
+Therefore, it takes 13 years. So, the answer should be 13. Therefore, I think the answer is 13.
+
+**Final Answer**
+The number of years it will take before Carlos starts earning money on the lemon tree is \boxed{13}.
+</think>
+
+To determine how many years it will take for Carlos to start earning money on his lemon tree, we need to analyze both the **total costs** and the **total revenue** over time.
+
+---
+
+### Step 1: Understand the Costs
+
+- **Initial cost to plant the tree**: \$90 (one-time cost)
+- **Annual cost to water and feed the tree**: \$3 per year
+
+So, the **total cost** after $ n $ years is:
+
+$$
+\text{Total Cost} = 90
+---
+<think>
+Okay, let's see. Carlos wants to plant a lemon tree. The initial cost is $90. Each year, the tree grows 7 lemons, which he can sell for $1.5 each. But there's also a yearly cost of $3 for watering and feeding. The question is asking how many years it will take before he starts earning money on the lemon tree. So, basically, we need to find the number of years after which his total earnings from selling lemons exceed the total costs (initial planting cost plus the yearly costs).
+
+First, let me break down the problem. The initial cost is a one-time expense of $90. Then, every year, there are two things happening: he earns money from selling lemons and spends money on watering and feeding. So, each year, his net profit (or loss) would be the revenue from lemons minus the yearly cost. But since he needs to cover the initial cost as well, we need to consider the cumulative costs over the years and compare it with the cumulative revenue.
+
+Let me think. Let's denote the number of years as 'n'. Each year, he sells 7 lemons at $1.5 each. So, the revenue per year is 7 * $1.5. Let me calculate that. 7 times 1.5... well, 7*1 is 7 and 7*0.5 is 3.5, so total is 7 + 3.5 = $10.5 per year. So, each year, he makes $10.5 from selling lemons. But he also has to pay $3 per year for watering and feeding. Therefore, his net income per year is $10.5 - $3 = $7.5 per year. 
+
+Wait, but the initial cost is $90. So, the total cost after n years would be the initial $90 plus $3 per year for n years. The total revenue after n years would be $10.5 per year for n years. So, we need to find the smallest n where total revenue exceeds total cost.
+
+So, total revenue = 10.5 * n
+
+Total cost = 90 + 3 * n
+
+We need total revenue - total cost > 0
+
+So, 10.5n - (90 + 3n) > 0
+
+Simplify:
+
+10.5n - 3n - 90 > 0
+
+7.5n - 90 > 0
+
+7.5n > 90
+
+n > 90 / 7.5
+
+Let me calculate 90 divided by 7.5. Hmm, 7.5 times 12 is 90 because 7.5 * 10 is 75, 7.5 * 2 is 15, so 75 +15 =90. So, 7.5*12=90. Therefore, n > 12. Since n must be a whole number (number of years), he needs 13 years? Wait, wait, because if n is 12, then 7.5*12 is 90, so 90 - 90 =0. So, at 12 years, the total revenue equals the total cost. Therefore, he starts earning money after 12 years? Wait, but the question says "before he starts earning money". Wait, so when does he start earning money? If at n=12, he breaks even (total revenue equals total cost), so he doesn't earn any profit yet. So, he needs to have a positive profit. Therefore, he needs to have n such that total revenue > total cost. Therefore, n has to be greater than 12. Therefore, the answer would be 13 years. But let me check that again.
+
+Wait, let's test n=12:
+
+Total revenue: 10.5 * 12 = 126 dollars.
+
+Total cost: 90 + 3*12 = 90 + 36 = 126. So, 126 - 126 = 0. So, he breaks even. So, he doesn't make a profit yet. Therefore, he needs to wait until n=13.
+
+Total revenue for 13 years: 10.5 *13 = 136.5
+
+Total cost: 90 + 3*13 = 90 + 39 = 129
+
+So, 136.5 -129 = 7.5 dollars profit. So, yes, at 13 years, he has a profit. Therefore, the answer is 13 years. Therefore, the number of years it takes before he starts earning money is 13.
+
+But wait, the problem says "before he starts earning money". Wait, does that mean the first year when he has positive earnings? Or does it mean when he starts making money, i.e., when the cumulative profit becomes positive? So, if we consider that, then yes, it's 13 years.
+
+But maybe I need to check if my calculation of the net income per year is correct. Let me recheck:
+
+Each year, he sells 7 lemons at $1.5 each. 7 * 1.5 = $10.5 per year. Then, he has to pay $3 per year for watering and feeding. So, net profit per year is $10.5 - $3 = $7.5 per year. That seems correct.
+
+So, the total profit after n years is 7.5n - 90. Wait, no. Wait, the total profit is total revenue minus total cost. Total revenue is 10.5n, total cost is 90 + 3n. Therefore, profit is 10.5n - 90 - 3n = 7.5n - 90. So, profit is 7.5n -90.
+
+We set this greater than zero: 7.5n -90 > 0 => n > 12. So, since n must be an integer, n=13. So, yes, that's correct.
+
+But maybe the initial cost is only once, and the annual costs are per year. So, for example, in year 1, he has to pay $3 for watering and feeding, so total cost is 90 + 3*1, and revenue is 10.5*1. So, profit is 10.5 - 90 -3 = 10.5 -93= -82.5. So, negative. Similarly, each year, he's accumulating profit. So, after 12 years, profit is 7.5*12 -90= 90 -90=0, and after 13 years, 7.5*13 -90= 97.5 -90=7.5. So, yes, it's 13 years.
+
+So, the answer is 13.
+
+But let me check again if I interpreted the problem correctly. The problem says: "how many years will it take before he starts earning money on the lemon tree?" So, starting from planting, how many years until he starts earning money. So, if after 12 years he breaks even, then he starts earning money in the 13th year. Therefore, the answer is 13.
+
+Alternatively, sometimes the question might be interpreted as when does the cumulative profit become positive, which is 13 years. So, yes, that seems correct. Therefore, the answer is 13. So, the final answer is 13.
+
+**Final Answer**
+The number of years it will take before Carlos starts earning money on the lemon tree is \boxed{13}.
+</think>
+
+To determine how many years it will take for Carlos to start earning money on his lemon tree, we need to analyze both his **revenue** and **costs** over time.
+
+---
+
+### **1. Understand the Costs**
+
+- **Initial planting cost:** $90 (a one-time cost)
+- **Annual cost:** $3 (watering and feeding, repeated each year)
+
+So, the **total cost after n years** is:
+$$
+\text{Total Cost} = 90 + 3n
+$$
+
+---
+
+### **2. Understand the Revenue**
+
+Each year, the lemon tree produces **7 lemons**, and each lemon is sold for **$1.5**.
+
+So, the **annual revenue** is:
+$$
+7 \times 1.5 = 10.5 \text{ dollars}
+$$
+
+Therefore, the **total revenue after n years** is:
+$$
+\text{Total Revenue} = 10.5n
+$$
+
+---
+
+### **3. Find the Break-Even Point**
+
+We are looking for the **smallest whole number of years** *n* such that **revenue exceeds total cost** (i.e., starts earning money):
+
+$$
+10.5n > 90 + 3n
+$$
+
+Simplify the inequality:
+
+$$
+10.5n - 3n > 90 \\
+7.5n > 90 \\
+n > \frac{90}{7.5} \\
+n > 12
+$$
+
+Since the number of years must be an integer, and we are looking for when **profit becomes positive**, the **first year** where this occurs is **year 13**.
+
+---
+
+
+---
+<think>
+Okay, let's see. Carlos is planting a lemon tree. The initial cost is $90. Each year, the tree grows 7 lemons, which he can sell for $1.5 each. But there's also an annual cost of $3 for watering and feeding. The question is, how many years will it take before he starts earning money on the lemon tree?
+
+Hmm, so I need to figure out after how many years the total revenue from selling lemons exceeds the total costs (initial planting cost plus annual costs). So, basically, find the smallest number of years where the profit becomes positive.
+
+Let me break it down. First, the initial cost is a one-time expense of $90. Then, each year, there's an operating cost of $3. So, for each year, the total cost would be the initial $90 plus $3 per year. On the other hand, the revenue each year is 7 lemons times $1.5 per lemon. Let me calculate the annual revenue first.
+
+7 lemons/year * $1.5/lemon = $10.5 per year. So each year, he makes $10.5 from selling lemons. But he also has to subtract the annual cost of $3. So, the net profit each year is $10.5 - $3 = $7.5 per year. Wait, is that right?
+
+Wait, but the initial cost is $90. So, the total cost over n years would be $90 + $3*n. The total revenue over n years would be $10.5*n. So, to find when the revenue exceeds the total cost, we set up the inequality:
+
+Total Revenue > Total Cost
+
+So,
+
+10.5n > 90 + 3n
+
+Let me write that down:
+
+10.5n > 90 + 3n
+
+Subtract 3n from both sides:
+
+7.5n > 90
+
+Then divide both sides by 7.5:
+
+n > 90 / 7.5
+
+Calculating that, 90 divided by 7.5. Let me do that. 7.5 times 12 is 90, because 7.5*10=75, 7.5*2=15, so 75+15=90. So 7.5*12=90. Therefore, n > 12. So, since n has to be an integer (number of years), he needs 13 years? Wait, but wait, wait. Let me check again.
+
+Wait, if n is greater than 12, so the first year when it's true is n=13. But let me check if that's correct. Let me verify with n=12:
+
+Total revenue after 12 years: 10.5*12 = $126
+
+Total cost after 12 years: 90 + 3*12 = 90 + 36 = $126
+
+So at 12 years, revenue equals cost. So, the profit is zero. Therefore, he starts earning money when the revenue exceeds the cost, which would be after 13 years. But wait, maybe the question is about when he starts earning money, meaning when the profit becomes positive. So, if at 12 years, it's break-even, then starting from year 13, he starts making a profit. So the answer would be 13 years?
+
+But let me confirm again. Let me think about the problem again. Maybe I made a mistake in setting up the inequality. Let me consider the profit each year. The profit each year is (revenue per year - annual cost). So, each year, the profit is 10.5 - 3 = 7.5 dollars. So, the total profit after n years would be total revenue minus total cost. Which is 10.5n - (90 + 3n) = 7.5n - 90. So, when is this positive?
+
+7.5n - 90 > 0
+
+7.5n > 90
+
+n > 12.
+
+Same result. So, n has to be more than 12, so 13 years. So, the answer is 13 years. But let me check with n=12. Total profit is 7.5*12 -90 = 90 - 90 = 0. So, zero. So, he doesn't earn money yet. So, the first year he actually earns money is year 13. Therefore, the answer is 13.
+
+But wait, another way to think about it is, maybe the question is asking when the cumulative profit becomes positive, which would be after 13 years. However, sometimes, people might think about when the tree starts producing enough to cover the initial cost, but considering the annual costs. Let me check if my calculation is correct.
+
+Alternatively, maybe the question is considering that the initial cost is $90, and each year, he has to pay $3. So, the total cost after n years is 90 + 3n. The revenue is 7*1.5*n = 10.5n. So, the profit is 10.5n - 90 -3n = 7.5n -90. So, profit becomes positive when 7.5n -90 >0 => n>12. Therefore, n=13. So, the answer is 13 years.
+
+But maybe I need to check if there is any other way this could be interpreted. For example, does the initial planting cost get amortized over the years? But the question is about when he starts earning money, meaning when the total revenue exceeds total costs. So, yes, that would be when the profit becomes positive. So, after 13 years. So, answer is 13. Let me check with numbers.
+
+For n=12:
+
+Revenue = 12 * 10.5 = 126
+
+Cost = 90 + 12*3 = 90 + 36 = 126. So profit is zero. So, he hasn't started earning yet. For n=13:
+
+Revenue = 13 * 10.5 = 136.5
+
+Cost = 90 + 13*3 = 90 + 39 = 129
+
+Profit = 136.5 - 129 = 7.5. So, positive. Therefore, 13 years. Therefore, the answer is 13.
+
+But let me check again, perhaps there is a mistake in the calculation of revenue. Let's see: 7 lemons per year, each sold for $1.5. So 7 * 1.5 = 10.5 per year. Yes. So that's correct. Annual cost is $3. So, net profit per year is 10.5 - 3 = 7.5. So, yes, so total profit after n years is 7.5n - 90. So, solving for when that is positive. So, 7.5n > 90 => n>12. So, 13 years.
+
+Therefore, the answer is 13. So, I think that's it. So, the answer is 13.
+
+**Final Answer**
+The number of years it will take before Carlos starts earning money on the lemon tree is \boxed{13}.
+</think>
+
+To determine when Carlos starts earning money on his lemon tree, we need to analyze both the total revenue and total cost over time.
+
+---
+
+### **Step 1: Understand the costs and income**
+
+- **Initial planting cost**: $90 (one-time expense)
+- **Annual cost to water and feed the tree**: $3 per year
+- **Annual lemon production**: 7 lemons
+- **Selling price per lemon**: $1.50
+
+**Revenue per year**:  
+$$
+7 \text{ lemons/year} \times \$1.50/\text{lemon} = \$10.50/\text{year}
+$$
+
+**Annual cost after planting**:  
+$$
+\$3/\text{year (water/feeding)} + \$90 \text{ (initial cost)} = \text{Total cost}
+$$
+
+---
+
+### **Step 2: Model total revenue and cost over time**
+
+Let $ n $ be the number of years.
+
+- **Total revenue after $ n $ years**:  
+$$
+10.5n
+$$
+
+- **Total cost after $ n $ years**:  
+$$
+90 + 3n
+$$
+
+To determine when Carlos **starts making a profit**, we set up the inequality:
+
+$$
+\text{Revenue} > \text{Total Cost}
+$$
+$$
+10.5n > 90 + 3n
+$$
+
+---
+
+### **Step 3: Solve the inequality**
+
+Subtract $ 3n $ from both sides:
+
+$$
+7.5n > 90
+$$
+
+Divide both sides by 7.5:
+
+$$
+n > \frac{90}{7.5} = 12
+$$
+
+So, the profit becomes **positive after 13 years**.
+
+Let’s verify to ensure accuracy:
+
+- **At 12 years**:
+  - Revenue: $ 12 \times 10.5 = 126 $
+  - Cost: $
+---
+<think>
+Okay, let's see. Carlos wants to plant a lemon tree. The initial cost is $90. Each year, the tree grows 7 lemons, which he can sell for $1.5 each. But there's also an annual cost of $3 for watering and feeding. The question is, how many years will it take before he starts earning money on the lemon tree?
+
+So, first, I need to figure out the profit each year and see when it becomes positive. The initial cost is a one-time expense, right? So the first year, he spends $90 to plant the tree, and then each subsequent year, he has the $3 annual cost. But wait, does the $3 annual cost start in the first year? Or is it after the tree is planted?
+
+Probably, the $3 is an annual cost that starts from the first year. Because once the tree is planted, he needs to water and feed it every year. So the initial cost is $90, and then each year there's an additional $3. So the total cost each year is $3, but the first year he also has the $90.
+
+Wait, but maybe the $90 is a one-time cost, and the $3 is per year. So the total cost for year 1 is $90 + $3? Or is the $3 per year after the initial planting?
+
+Hmm, the problem says: "The tree will cost $90 to plant. Each year it will grow 7 lemons... It costs $3 a year to water and feed the tree." So planting is $90, then each year there's a $3 cost. So the first year, he spends $90 to plant, then in the first year, he also has to spend $3 for watering and feeding. But does he get any revenue in the first year? Let me check.
+
+The tree will start growing 7 lemons each year. So if he plants it in year 0, then in year 1, he has 7 lemons. But does he get to sell them in the first year? The problem says "each year it will grow 7 lemons, which he can sell for $1.5 each." So probably, the first year after planting, he can sell the lemons. So the first year, he has to pay $90 for planting, then $3 for watering and feeding, and then he sells the 7 lemons. So the total profit for each year would be revenue minus costs.
+
+Wait, but the question is how many years until he starts earning money. So maybe we need to calculate the cumulative profit over the years until it becomes positive. Let's think.
+
+Let me break it down. Let's define the variables:
+
+Initial cost: $90
+
+Annual cost: $3 per year
+
+Revenue per year: 7 lemons * $1.5 each = $10.5 per year
+
+So each year, the revenue is $10.5, and the cost is $3. So the net profit per year is $10.5 - $3 = $7.5 per year.
+
+But wait, but the initial cost is $90. So the total cost is initial cost plus annual costs over the years. So if we consider the first year, he has initial cost of $90, then the annual cost of $3, and revenue of $10.5. So total profit for year 1 would be $10.5 - $90 - $3? Wait, no. Wait, the initial cost is a one-time cost, so it's not per year. So the total cost for the first year would be $90 (initial) + $3 (annual) = $93? But then the revenue is $10.5. So profit is $10.5 - $93 = -$82.5. Then in the second year, he has the annual cost of $3 again, so total cost is $90 + $3*2 = $96? Wait, but maybe the initial cost is only once, and the annual cost is each year. So total costs up to year n would be $90 + $3*n. And total revenue is $10.5 * n. So profit after n years is total revenue - total costs = 10.5n - (90 + 3n) = 7.5n - 90. We need to find the smallest n where this is positive.
+
+Wait, but does the revenue start in year 1? If he plants the tree, then in the first year, he can sell the lemons. So the revenue is 10.5 per year starting from year 1, and the costs are initial 90 plus 3 per year. So the profit after n years is 10.5n - 90 - 3n = 7.5n -90. So we need 7.5n - 90 > 0. Solving for n:
+
+7.5n > 90
+
+n > 90 / 7.5
+
+Calculate that: 90 divided by 7.5. Well, 7.5 times 12 is 90, because 7.5*10=75, 7.5*2=15, so 75+15=90. So n>12. So n has to be 13? But wait, since n has to be whole number of years. Wait, but when n is 12, profit is 7.5*12 -90 = 90 -90 = 0. So at 12 years, profit is zero. So he starts earning money when profit is positive. So the answer is 13 years?
+
+Wait, but maybe I made a mistake here. Let me check again.
+
+Alternative way: Let's think about each year's profit. The initial cost is $90, which is a sunk cost. So maybe we need to consider the cumulative profit each year. Let me think step by step.
+
+Year 1:
+
+Costs: $90 (initial) + $3 (annual) = $93
+
+Revenue: 7 * 1.5 = $10.50
+
+Profit: 10.50 - 93 = -82.50
+
+Year 2:
+
+Costs: previous costs + $3 = 93 +3= $96
+
+Revenue: 10.50
+
+Profit: 10.50 - 96 = -85.50
+
+Wait, that can't be. Wait, no. Wait, the revenue is per year. So each year, he has revenue of $10.50, and annual costs of $3. So maybe I should think of the profit each year as $10.50 - $3 = $7.50. But the initial cost is a one-time cost. So the total profit after n years is total revenue (10.5n) minus total costs (90 + 3n). So 10.5n -90 -3n = 7.5n -90. So when is this positive? 7.5n -90 >0 => n> 12. So after 12 years, the profit is zero. After 13 years, it's 7.5*13 -90 = 97.5 -90=7.5. So positive.
+
+But the question is "how many years will it take before he starts earning money on the lemon tree?" So does that mean the first year where profit is positive? So 13 years. But maybe the question is interpreted differently. Maybe it's considering that the initial cost is only once, and each year's profit is 10.5 -3 = 7.5, so how many years to recoup the initial 90?
+
+So if we think of it as the initial cost of 90, and each year he gains 7.5 profit. So the time to recoup is 90 /7.5= 12 years. But since in the 12th year, he would have exactly broken even. So to start earning money, he needs to have profit positive. Therefore, it would be 13 years. But maybe the question considers that the first year he starts earning money when the cumulative profit becomes positive. So maybe the answer is 13.
+
+But maybe another way. Let's think of it as net cash flow per year. The initial cost is -$90. Then, each year, he has a net cash flow of $7.5. So the cumulative cash flow after n years is -90 + 7.5n. We need this to be greater than 0. So:
+
+-90 + 7.5n >0
+
+7.5n >90
+
+n>12
+
+So again, n=13. Therefore, the answer is 13 years. But let me check the problem statement again to make sure.
+
+The problem says: "How many years will it take before he starts earning money on the lemon tree?"
+
+So "starts earning money" would mean the first year where the cumulative profit is positive. So, if after 12 years, profit is zero, then he starts earning money in the 13th year. So answer is 13.
+
+But maybe there's a different interpretation. For example, maybe the initial cost is only once, and in the first year, he has the revenue of $10.5 minus
+---
+<think>
+Okay, let's see. Carlos wants to plant a lemon tree. The initial cost is $90. Each year, the tree grows 7 lemons, and he can sell each for $1.5. But there's also an annual cost of $3 for watering and feeding. The question is, how many years until he starts earning money?
+
+First, I need to figure out the net profit per year. Let me break it down. Each year, he sells 7 lemons at $1.5 each. So the revenue per year is 7 * 1.5. Let me calculate that. 7 times 1.5 is... 7 * 1 is 7, 7 * 0.5 is 3.5, so total revenue is 7 + 3.5 = $10.5 per year.
+
+But he has to subtract the annual cost of $3. So the net profit per year would be $10.5 - $3 = $7.5 per year. Wait, so each year after the initial planting, he makes $7.5?
+
+But the initial cost is $90. So he needs to recoup that $90. So how many years does it take for the cumulative profit to reach $90?
+
+So if each year he makes $7.5, then the number of years needed is $90 divided by $7.5. Let me do that division. 90 divided by 7.5. Hmm. Well, 7.5 times 12 is 90, because 7.5 * 10 = 75, 7.5 * 2 = 15, so 75 +15 = 90. So 12 years.
+
+Wait, but does that mean after 12 years, he breaks even? So before that, he's losing money? Let me check.
+
+Wait, the initial cost is $90. So in year 1, he spends $3 on maintenance, and earns $10.5. So his net profit for year 1 is $10.5 - $3 = $7.5. But he still hasn't recouped the initial $90. So the total profit after n years is 7.5 * n. So when does 7.5 * n equal 90? At n=12. So after 12 years, he has made $90 in profit, which covers the initial cost. Therefore, he starts earning money after 12 years? Wait, but does the question mean when does he start earning money, meaning when does his total profit become positive?
+
+But actually, the initial cost is a one-time expense. So his total cost is $90 plus $3 per year. His total revenue is $10.5 per year. So each year, his total earnings would be revenue minus costs.
+
+Let me think again. Let me formalize this. Let me define the total cost after n years. The initial cost is $90, and then each year, he spends $3. So total cost is 90 + 3n.
+
+Total revenue after n years is 10.5n.
+
+So he starts earning money when total revenue exceeds total cost. That is when 10.5n > 90 + 3n.
+
+Let me solve this inequality.
+
+10.5n - 3n > 90
+
+7.5n > 90
+
+n > 90 / 7.5
+
+n > 12
+
+So n must be greater than 12. Since n has to be a whole number of years, the first year when he starts earning money is year 13. Wait, but this contradicts my previous conclusion. Which is correct?
+
+Wait, because if n is 12, then total revenue is 10.5 *12 = 126. Total cost is 90 + 3*12 = 90 + 36 = 126. So at n=12, revenue equals cost. So he breaks even. So he starts earning money after that. So the first year where he has positive profit is year 13. But the question says "how many years will it take before he starts earning money". So maybe the answer is 12 years? Because after 12 years, he breaks even, so he starts earning money from the 13th year? Or is the question considering that once the total revenue equals the total cost, he starts earning?
+
+Wait, let me check the exact wording: "how many years will it take before he starts earning money on the lemon tree?" So "starts earning money" would mean when his profit becomes positive. So in the first year, profit is $7.5, but he hasn't yet covered the initial cost. So the total profit after n years is total revenue minus total cost. So total profit is (10.5n) - (90 + 3n) = 7.5n - 90. So when does this become positive?
+
+7.5n - 90 > 0
+
+7.5n > 90
+
+n > 12
+
+So n must be 13. So he starts earning money in the 13th year. But the question is asking "how many years will it take before he starts earning money". So the time taken is 12 years? Or 13 years? Because if you take 12 years, he breaks even. But the question is about when he starts earning money, which is when he has positive profit. So maybe it's 13 years. But maybe the problem considers that after the first year, he starts earning money. Let me check the calculations again.
+
+Wait, let's think of it as cumulative profit. Let me think step by step.
+
+Year 1:
+
+Revenue: 7 * 1.5 = 10.5
+
+Cost: 3 (watering and feeding) + initial cost? Or is the initial cost only once?
+
+Wait, the initial cost is $90 to plant the tree. So that's a one-time cost. The $3 per year is for watering and feeding. So total cost is 90 + 3n.
+
+So the profit each year is revenue - (initial cost + annual cost). Wait, but the profit after n years is total revenue minus total cost. So profit = 10.5n - (90 + 3n) = 7.5n - 90.
+
+So when is profit positive? When 7.5n - 90 > 0 → n > 12. So n is 13. Therefore, after 12 years, profit is zero. After 13 years, profit is 7.5*13 -90 = 97.5 -90=7.5. So he starts earning money after 13 years. Therefore, the answer is 13 years.
+
+But let me check again: maybe I made an error in considering the initial cost. Let me think another way. Suppose he plants the tree, paying $90. Then each year, he has to pay $3. So in year 1, he has revenue of 10.5, cost of 3. Net profit for that year is 10.5 -3 = 7.5. But he hasn't yet paid back the initial 90. So total profit after year 1 is 7.5. After year 2, total profit is 15. So total profit after n years is 7.5n. So when does 7.5n exceed 90? At 12 years, 7.5*12=90. So at that point, he has made back the initial 90. So does he start earning money after 12 years? Or does he start earning money after 13?
+
+This is a bit of a terminology issue. If you think of "earning money" as having a positive net profit, then it's after 12 years, because when you have 7.5n profit, which is equal to 90 at n=12. But depending on how the question is phrased, sometimes "start earning money" is considered when you have positive profit, so the first year where profit is positive. But in this case, the total profit is 7.5n -90. So for n=12, it's zero. For n=13, it's positive. So maybe the answer is 13.
+
+But let's check the problem again: "How many years will it take before he starts earning money on the lemon tree?"
+
+So, "before he starts earning money"—so the point in time when he starts earning money. So if he breaks even at year 12, then starting from year 13 he is earning money. Therefore, it takes 12 years before he starts earning money. Wait, but that might be ambiguous. If you say "how many years will it take before he starts earning money", the answer could be 12 years, because after 12 years, he starts earning money. But in reality, at year 12, he's breaking even, so not earning money yet. So maybe the answer is 13.
+
+This is a common problem with break-even analysis. The break-even point is when total revenue equals total cost, so profit is zero. So before that, you're losing money; at break-even, you're not making or losing money; after that, you're making money. So "start
+---
+<think>
+Okay, let's see. Carlos wants to plant a lemon tree. The initial cost is $90. Each year, the tree grows 7 lemons, which he can sell for $1.5 each. But there's also an annual cost of $3 for watering and feeding the tree. The question is, how many years will it take before he starts earning money on the lemon tree?
+
+So, first, I need to figure out the net profit each year and determine when that profit becomes positive. Let me break it down step by step.
+
+First, the initial cost is $90. That's a one-time expense. Then, each year, there are two things happening: he earns money from selling lemons and spends money on maintenance.
+
+Let me calculate the annual revenue from selling lemons. Each year, he gets 7 lemons, each sold at $1.5. So, 7 times $1.5. Let me compute that. 7 * 1.5 is... 10.5 dollars per year. So, each year, he makes $10.5 from selling lemons.
+
+But then, he has to pay $3 each year for watering and feeding. So, the net profit per year would be revenue minus costs. That would be $10.5 - $3 = $7.5 per year. Wait, so each year after the initial cost, he makes $7.5 profit?
+
+But wait, the initial cost is $90. So, the total profit after n years would be the total revenue from lemons minus total costs (initial planting plus annual watering). Let me think.
+
+Let me model this as:
+
+Total Revenue after n years = 7 lemons/year * $1.5/lemon * n years = 10.5n dollars.
+
+Total Costs after n years = initial cost + annual costs * n years = 90 + 3n dollars.
+
+So, Profit = Total Revenue - Total Costs = 10.5n - (90 + 3n) = 10.5n - 90 - 3n = 7.5n - 90.
+
+We need to find the smallest integer n where Profit > 0.
+
+So, 7.5n - 90 > 0.
+
+Solving for n:
+
+7.5n > 90
+
+n > 90 / 7.5
+
+Calculating that, 90 divided by 7.5. Let me compute that. 7.5 times 12 is 90 because 7.5*10=75, 7.5*2=15, so 75+15=90. So 7.5*12=90. Therefore, n > 12. Since n must be an integer (number of years), so n=13 years?
+
+Wait, but wait, let me check that again. Because if n=12, then profit is 7.5*12 -90= 90 -90= 0. So at n=12, profit is zero. So, he starts earning money when profit is positive, so after 12 years, he breaks even. Therefore, the first year he actually makes a profit is year 13? Wait, but maybe the question is asking when he starts earning money, meaning when the profit becomes positive. So, if at year 12, profit is zero, then he starts earning money in year 13. But perhaps there's a different way to think about it.
+
+Alternatively, maybe the problem is considering that the initial cost is incurred at the start, and then each year, the costs and revenues are incurred. So, the first year, he has the initial cost of $90, then in year 1, he gets revenue of 10.5, and costs 3. So, total profit after year 1 is 10.5 - 3 - 90 = -82.5. Then, after year 2, it's 10.5*2 - 3*2 -90 = 21 -6 -90= -75. So each year, the profit increases by 7.5. So, we need to find when 7.5n - 90 > 0. So, n > 12. So, at n=12, it's zero, so after 12 years, he breaks even. Then, after 13 years, profit is positive.
+
+But the question is asking "how many years will it take before he starts earning money". So, does "starts earning money" mean when the profit becomes positive? If so, then it's 13 years. However, in some contexts, breaking even is considered as starting to earn money. But maybe the question is considering that he starts earning money when the total profit is positive, not zero. So, the answer is 13 years.
+
+But let me double-check my calculations. Let me compute the total profit for each year:
+
+Year 1: Revenue 10.5, costs 3, total costs so far 90+3=93. Profit: 10.5 - 93 = -82.5
+
+Year 2: Revenue 21, costs 6, total costs 96. Profit: 21 - 96 = -75
+
+Year 3: Revenue 31.5, costs 9, total costs 99. Profit: 31.5 - 99 = -67.5
+
+... and so on. Each year, profit increases by 7.5.
+
+So after n years, profit is 7.5n -90. So, solving 7.5n -90 >0:
+
+n> 90/7.5=12.
+
+So, n=13 years.
+
+But maybe the question is considering that once the tree is planted, the first year's profit is calculated. So, maybe the answer is 12 years because at year 12, profit is zero. But the question says "starts earning money", which might imply when it's positive. So, it's 13 years.
+
+But let me think again. Suppose he plants the tree at time 0. Then, in year 1, he has the initial cost of 90, and then during year 1, he earns 10.5 and spends 3. So, total profit after year 1 is 10.5 - 3 - 90 = -82.5.
+
+After year 2, profit is 10.5*2 - 3*2 -90 = 21 -6 -90 = -75.
+
+Each year, the net profit increases by 7.5.
+
+So after 12 years:
+
+Total profit = 7.5*12 -90 = 90 -90 = 0.
+
+So at the end of year 12, he has zero profit. So, he hasn't earned any money yet.
+
+At the end of year 13:
+
+Profit is 7.5*13 -90 = 97.5 -90 = 7.5. So positive. Therefore, it takes 13 years before he starts earning money.
+
+But let me check if there's another way to model it. Maybe the initial cost is only once, and the annual costs are per year. So, maybe the total cost is 90 + 3n, and total revenue is 10.5n. So profit is 10.5n - (90 +3n) = 7.5n -90. So, solving for 7.5n -90 >0, n> 12. So, 13 years.
+
+Therefore, the answer should be 13.
+
+But wait, maybe the problem is considering that the initial cost is for planting, and then each year, he has to pay $3. So, maybe the first year, he has to pay the initial cost and the first year's $3? So, total cost after n years is 90 + 3n. So, same as before. So yes, same calculation.
+
+Alternatively, maybe the question is phrased as "how many years will it take before he starts earning money", meaning when the total profit becomes positive. Therefore, after 13 years.
+
+But let me check with n=12, profit is zero. So, he hasn't earned any money yet, he's just broke even. Therefore, he starts earning money in the 13th year. Therefore, the answer is 13.
+
+But I need to make sure there's no mistake in my calculations. Let me compute 90 divided by 7.5.
+
+Well, 7.5 times 12 is 90. So yes, 12 years would give exactly 90, so profit is zero. So, the next year, profit is positive. So, 13 years.
+
+But perhaps the question is considering that once the tree is planted, the first year's earnings start. So, maybe the answer is 12. Let me think again.
+
+Wait, when you plant the tree, you pay $90. Then, each year, you have the $3 cost and the $10.5 revenue. So, the first year, you have:
+
+Revenue: $10.5
+
+Costs: $3 (for that year) + $90 (initial) = $93
+
+So, profit: $10
+---
+<think>
+Okay, let me try to figure out how many years it will take for Carlos to start earning money on his lemon tree. Hmm, so the tree costs $90 to plant. Each year, it grows 7 lemons, which he can sell for $1.5 each. But there's also an annual cost of $3 for watering and feeding the tree. I need to find out after how many years his total earnings will cover the initial cost and start making a profit.
+
+First, let me break down the costs and revenues. The initial cost is a one-time expense of $90. Then, every year, there are two things happening: he's spending $3 on maintenance, and he's earning money from selling lemons. Each year, he gets 7 lemons, each sold at $1.5. So per year, his revenue from lemons is 7 * $1.5. Let me calculate that. 7 times 1.5 is... 7*1 is 7, 7*0.5 is 3.5, so total is 10.5 dollars per year from selling lemons. But he also has to subtract the $3 annual cost. So his net profit per year would be $10.5 - $3 = $7.5 per year. Wait, is that right? So each year, after paying the $3, he makes $7.5 profit?
+
+But wait, the initial cost is $90. So he needs to recover that $90 through these annual profits. So the question is, how many years does it take for the cumulative profit to reach $90?
+
+But wait, actually, the total cost is $90, and each year he has a net profit of $7.5. So the time required to recoup the initial cost would be $90 divided by $7.5 per year. Let me do that division. 90 divided by 7.5. Hmm, 7.5 times 12 is 90 because 7.5*10=75, 7.5*2=15, so 75+15=90. So 12 years. So does that mean it takes 12 years to break even?
+
+But wait, let me check again. Maybe I need to model it year by year to be sure. Let me think. The initial cost is $90. Then, each year, he earns $10.5 from selling lemons and spends $3, so net $7.5 per year. So after 1 year, his total profit is $7.5. After 2 years, $15, and so on. So to get to $90, it's 90 divided by 7.5, which is 12. So 12 years. So he starts earning money after 12 years? Wait, but does that mean that at the end of the 12th year, he has broken even? So before that, he's still losing money. So the question is asking when he starts earning money, which would be when his cumulative profit is positive. So if it takes 12 years to break even, then after 12 years, he's just breaking even, and starting from the 13th year, he starts making a profit? Wait, but maybe the question is considering that once the cumulative profit exceeds the initial cost, then he starts earning. But maybe I need to check if the calculation is correct.
+
+Alternatively, maybe I should model the total cost and total revenue over time. Let me try that approach.
+
+Total cost is the initial $90 plus the annual costs. Wait, the $3 per year is an ongoing cost. So total cost after n years is $90 + $3n. Total revenue after n years is 7 lemons/year * $1.5/lemon * n years = 10.5n dollars. So to find when revenue exceeds total cost, we can set up the inequality:
+
+10.5n > 90 + 3n
+
+Subtract 3n from both sides:
+
+7.5n > 90
+
+Divide both sides by 7.5:
+
+n > 90 / 7.5
+
+Which is n > 12. So n must be greater than 12. Since n must be an integer number of years, that means after 12 years, he hasn't yet exceeded the cost, but after 13 years, he does. Therefore, he starts earning money after 13 years? Wait, but this conflicts with my previous conclusion. Hmm.
+
+Wait, let me check the math again. Let's compute total revenue and total cost for n=12.
+
+Total revenue: 10.5 * 12 = 126 dollars.
+
+Total cost: 90 + 3*12 = 90 + 36 = 126 dollars.
+
+So at n=12, revenue equals total cost. Therefore, he breaks even at 12 years. So does that mean he starts earning money after 12 years? Or is it after 13? Because if he breaks even at 12, then in the 12th year, he's just covering the cost, and in the 13th year, he starts making a profit.
+
+But the question is phrased as "how many years will it take before he starts earning money". So if he breaks even at 12 years, does that mean that before that, he hasn't earned money yet? So starting from year 1 up to year 12, he's not making a profit, but at year 12, he's breaking even. So does that count as starting to earn money?
+
+Wait, maybe the question considers that once he has a positive profit, that's when he starts earning. So if at the end of year 12, he has zero profit, and at the end of year 13, he has a profit of 7.5 dollars. Therefore, it would take 13 years to start earning money.
+
+But this depends on how we interpret the question. Let me check the problem again: "How many years will it take before he starts earning money on the lemon tree?"
+
+So "starts earning money" would mean when his total profit becomes positive. So if at year 12, the profit is zero, and starting from year 13, it's positive. Therefore, the answer is 13 years. But that contradicts my first calculation where I thought 12 years. Which one is correct?
+
+Let me think of the first year. Let's say he plants the tree. At year 0, he spends $90. Then, at year 1, he has revenue of $10.5, cost of $3, so net profit is $7.5. But total cost is $90 + $3 = $93. Total revenue is $10.5. So net profit is $10.5 - $93 = -$82.5. Wait, that's not right. Wait, maybe I need to calculate total profit as revenue minus total costs. So total profit after n years is total revenue minus total costs.
+
+Total revenue after n years: 10.5n
+
+Total costs: 90 + 3n
+
+Therefore, profit = 10.5n - 90 - 3n = 7.5n - 90
+
+So when is this profit positive?
+
+7.5n - 90 > 0 => 7.5n > 90 => n > 12.
+
+Therefore, n must be greater than 12, so the first integer n where this is true is 13. Therefore, the answer is 13 years. Therefore, it takes 13 years before he starts earning money. But that seems like the correct answer based on this formula. But why did my initial thought say that after 12 years, he breaks even?
+
+Because when n=12, profit is 7.5*12 - 90 = 90 - 90 = 0. So at n=12, profit is zero. Therefore, he hasn't started earning money yet. So he starts earning money in the 13th year. Therefore, the answer should be 13 years.
+
+But maybe the problem considers that once the cumulative earnings cover the initial cost, then he starts earning. But in that case, the answer would be 12 years. But according to the profit equation, profit is zero at 12 years. So maybe the problem is expecting the answer to be 12 years. Hmm. Let me check again.
+
+Let me take an example. Suppose he plants the tree, spends $90. Then, each year, he makes $7.5 profit. So after 1 year, he has $7.5 profit. But total costs are $90 + $3 = $93, and total revenue is $10.5. So his net profit is $10.5 - $93 = -$82.5? Wait, that can't be. Wait, no. Wait, profit is total revenue minus total costs. Total revenue is 10.5n, total costs are 90 + 3n. So for n=1 year:
+
+Total revenue: 10.5*1 = 10.5
+
+Total costs: 90 + 3*1 = 93
+
+Profit: 10.5 - 93 = -82.5
+
+So he is losing

@@ -1,0 +1,851 @@
+Here's a thinking process that leads to the solution:
+
+1.  **Understand the Goal:** The objective is to find the total number of vacuum cleaners Melanie started with, given a sequence of sales and the final remainder.
+
+2.  **Identify the Variables:**
+    *   Let $T$ be the total number of vacuum cleaners Charlotte started with.
+    *   Let $V_1$ be the number sold to the green house.
+    *   Let $V_2$ be the number sold to the red house.
+    *   Let $V_3$ be the number sold to the orange house.
+    *   Let $R$ be the remaining number after the orange house.
+
+3.  **Translate the Information into Equations:**
+    *   "She sold a third of her vacuum cleaners at the green house": $V_1 = \frac{1}{3}T$.
+    *   "2 more to the red house": $V_2 = 2$.
+    *   "Half of what was left at the orange house":
+        *   "What was left" after the green house and red house is $T - V_1 - V_2$.
+        *   So, the remaining amount after Green is $T - \frac{1}{3}T = \frac{2}{3}T$.
+        *   After selling to the Red house, the amount left is $\frac{2}{3}T - 2$.
+        *   $V_3 = \frac{1}{2} \times (\text{remaining after Green and Red}) = \frac{1}{2} (\frac{2}{3}T - 2)$.
+    *   "If Melanie has 5 vacuum cleaners left": $R = 5$.
+    *   Total = Sum of sold + Remainder: $T = V_1 + V_2 + V_3 + R$.
+
+4.  **Set up the Equation:**
+    $5 = T - V_1 - V_2 - V_3$
+    Since $V_1 + V_3$ is the total sold *before* the remainder, maybe it's easier to work backward from the remainder. Let's try working backward.
+
+5.  **Working Backward Approach:**
+    *   **End:** After selling to the Orange house, she has 5 left.
+    *   **Orange House:** She sold half of what was left *at that point* (which meant half of what was left after the Red house).
+        *   So, after the Orange sale, she has $5$.
+        *   Before the Orange sale, she had $2 \times 5$.
+        *   Amount before Orange sale = $2 \times (\text{amount after Orange sale})$. Wait, let's check the wording carefully.
+        *   "half of what was left [after Green and Red] at the orange house."
+        *   This means: $\text{After Orange} = (\text{Before Orange}) - \frac{1}{2}(\text{Before Orange})$.
+        *   Therefore, $\text{After Orange} = \frac{1}{2}(\text{Before Orange})$.
+        *   So, $\text{Before Orange} = 2 \times (\text{After Orange})$.
+    *   **Before Orange House:**
+        *   Amount remaining after Red house = $2 \times 5 = 10$.
+    *   **Red House:** She sold 2 more.
+        *   This means 10 was what remained *after* selling the 2 to the Red House.
+        *   So, Before Red House (which is same as After Green House) = $10 + 2 = 12$.
+    *   **Green House:** She sold a third of her initial stock.
+        *   This means 12 was the amount remaining *after* selling the one third.
+        *   So, Initial Stock ($T$) - $\frac{1}{3}T = 12$.
+        *   $\frac{2}{3}T = 12$.
+    *   **Calculate Initial Stock:**
+        *   Multiply both sides by 3: $2T = 36$.
+        *   Divide by 2: $T = 18$.
+
+6.  **Verification (Forward Check):**
+    *   Start with 18 vacuum cleaners.
+    *   Green House: Sold $\frac{1}{3}$ of 18 = 6. Remaining: $18 - 6 = 12$.
+    *   Red House: Sold 2. Remaining: $12 - 2 = 10$.
+    *   Orange House: Sold half of what was left (half of 10) = 5. Remaining: $10 - 5 = 5$.
+    *   Final Remainder: 5.
+    *   Does this match the problem statement? Yes ("If Melanie has 5 vacuum cleaners left").
+
+7.  **Final Answer Formulation:**
+    *   The calculated number is 18.
+    *   The format requires the answer after `####`.
+
+8.  **Alternative Method (Algebraic Setup):**
+    *   Let $x$ be the total number.
+    *   Set up equation based on remaining amount.
+    *   Remaining = $x - \frac{1}{3}x - 2 - \frac{1}{2}(x - \frac{1}{3}x - 2) = 5$.
+    *   Simplify terms inside parentheses: $x - \frac{1}{3}x - 2 = \frac{2}{3}x - 2$.
+    *   Equation becomes: $5 = \frac{2}{3}x - 2 - \frac{1}{2}(\frac{2}{3}x - 2)$.
+    *   Note: Wait, the remaining amount *after* the orange house is what is left *after* the half is sold. The term $(\frac{2}{3}x - 2)$ is the amount available at the orange house. She sold half of it. So the remaining amount is $\frac{1}{2}(\frac{2}{3}x - 2)$.
+    *   So, $5 = \frac{1}{2}(\frac{2}{3}x - 2)$.
+    *   Multiply by 2: $10 = \frac{2}{3}x - 2$.
+    *   Add 2: $12 = \frac{2}{3}x$.
+    *   Multiply by $\frac{3}{2}$: $x = 12 \times \frac{3}{2}$.
+    *   $x = 18$.
+    *   Both methods yield 18.
+
+9.  **Final Output Generation:**
+    *   Write down the steps clearly.
+    *   State the final answer.
+    *   Ensure the number is after `####`.
+
+10. **Refining the Steps for the Output:**
+    *   Let $x$ be the starting number.
+    *   Green House: Sold $\frac{1}{3}x$. Left: $\frac{2}{3}x$.
+    *   Red House: Sold 2. Left: $\frac{2}{3}x - 2$.
+    *   Orange House: Sold half of the remainder ($\frac{1}{2}(\frac{2}{3}x - 2)$). Left: $\frac{1}{2}(\frac{2}{3}x - 2)$.
+    *   Given Left: 5.
+    *   Equation: $\frac{1}{2}(\frac{2}{3}x - 2) = 5$.
+    *   Solve: $2(\frac{2}{3}x - 2) = 10 \Rightarrow \frac{2}{3}x - 2 = 10 \Rightarrow \frac{2}{3}x = 12 \Rightarrow x = 18$.
+    *   Looks solid.
+
+    *Wait, re-reading the prompt:* "half of what was left at the orange house".
+    Does "what was left at the orange house" mean what was left *before* selling to the orange house? Yes, standard English interpretation in math problems (the quantity remaining after the previous transaction).
+    "She sold a third... 2 more... and half of what was left at the orange house."
+    Interpretation:
+    1. Start with $x$.
+    2. Green House removal: $1x/3$. Remaining: $2x/3$.
+    3. Red House removal: $2$. Remaining: $2x/3 - 2$.
+    4. Orange House removal: $1/2$ of the *current* remaining amount.
+    5. After Orange House: Remaining is 5.
+    Calculation:
+    $Remaining_{after\_green} = 2x/3$
+    $Remaining_{after\_red} = 2x/3 - 2$
+    $Remaining_{after\_orange} = (2x/3 - 2) - \frac{1}{2}(2x/3 - 2)$
+    $Remaining_{after\_
+---
+Here's a thinking process that leads to the solution:
+
+1.  **Understand the Goal:** The objective is to find the starting number of vacuum cleaners Melanie had, based on a series of sales and the remaining count.
+
+2.  **Analyze the Given Information:**
+    *   **Action 1 (Sales):** Sold 1/3 of the stock at the "green house".
+    *   **Action 2 (Sales):** Sold 2 more at the "red house".
+    *   **Action 3 (Sales):** Sold half of what was left at the "orange house".
+    *   **Action 4 (Result):** Has 5 vacuum cleaners left.
+    *   **Unknown:** The initial number of vacuum cleaners.
+
+3.  **Formulate a Plan:**
+    *   Method 1: **Working Backwards.** Start with the final number and reverse the operations to find the initial number.
+    *   Method 2: **Algebra.** Set up an equation with a variable ($x$) representing the initial amount and solve for $x$.
+
+4.  **Execute Method 1 (Working Backwards):**
+    *   *Final State:* 5 left.
+    *   *Reverse Action 3:* At the orange house, she sold *half* of what was left. Therefore, the 5 remaining represents the *other half*.
+        *   If 5 is half, the total before selling the orange house stuff was $5 \times 2 = 10$.
+    *   *Reverse Action 2:* Before selling to the orange house (after the red house), she had 10. But wait, Action 2 says she sold to the red house *before* the orange house.
+        *   Let $A_{before\_orange} = 10$.
+        *   She sold 2 at the red house. So, before the red house sale, she had more.
+        *   $Parent - 2 = 10 \Rightarrow Parent = 10 + 2 = 12$.
+    *   *Reverse Action 1:* Before the green house sale, she had 12.
+        *   At the green house, she sold 1/3 of what she had.
+        *   So, the 12 remaining represents the 2/3 that was left.
+        *   Let $x$ be the starting amount. $x - (\frac{1}{3}x) = \text{Remaining}$.
+        *   $\frac{2}{3}x = 12$.
+        *   Multiply by 3: $2x = 36$.
+        *   Divide by 2: $x = 18$.
+
+5.  **Execute Method 2 (Algebra):**
+    *   Let $x$ be the starting number of vacuum cleaners.
+    *   **Green House:** Sold $\frac{1}{3}x$. Remaining: $x - \frac{1}{3}x = \frac{2}{3}x$.
+    *   **Red House:** Sold 2. Remaining: $\frac{2}{3}x - 2$.
+    *   **Orange House:** Sold half of what was left.
+        *   "What was left" entering the orange house stage is $(\frac{2}{3}x - 2)$.
+        *   She sold $\frac{1}{2} (\frac{2}{3}x - 2)$.
+        *   Remaining after Orange House: $\frac{1}{2} (\frac{2}{3}x - 2)$.
+        *   (Alternatively, if you have a pile and sell half, half remains).
+    *   **Final Count:** $\frac{1}{2} (\frac{2}{3}x - 2) = 5$.
+    *   **Solve:**
+        1.  $\frac{1}{2} (\frac{2}{3}x - 2) = 5$
+        2.  Multiply both sides by 2: $\frac{2}{3}x - 2 = 10$
+        3.  Add 2 to both sides: $\frac{2}{3}x = 12$
+        4.  Multiply by $\frac{3}{2}$ (or 3 then divide by 2): $x = 12 \times \frac{3}{2}$
+        5.  $x = 6 \times 3$
+        6.  $x = 18$
+
+6.  **Verification:**
+    *   Start with 18.
+    *   Green House: Sold 1/3 of 18 = 6. Remaining = $18 - 6 = 12$.
+    *   Red House: Sold 2. Remaining = $12 - 2 = 10$.
+    *   Orange House: Sold half of what was left (half of 10 = 5). Remaining = $10 - 5 = 5$.
+    *   Final Left: 5.
+    *   Does it match the problem statement? Yes.
+
+7.  **Final Output Formulation:**
+    *   State the steps clearly.
+    *   Provide the final number.
+    *   Format the final answer as requested (####).
+
+8.  **Drafting the response:**
+    *   Let $x$ be the total vacuum cleaners.
+    *   After Green House: $2/3 x$.
+    *   After Red House: $2/3 x - 2$.
+    *   After Orange House (half sold, half left): $1/2(2/3 x - 2)$.
+    *   Equals 5.
+    *   Calculation leads to 18.
+    *   Format as #### 18.
+
+    Wait, I should check the prompt requirement "Put your final answer as a number after ####."
+    This means "#### 18" (or similar). Usually, it implies the number immediately following ####.
+    Instruction: "Put your final answer as a number after ####."
+    Okay, so the line should look like: #### 18.
+
+    Let's double check logic one more time.
+    - 1/3 sold at green. Remaining = 2/3 of total.
+    - 2 sold at red. Remaining = 2/3 total - 2.
+    - 1/2 of remaining sold at orange. Remaining = 1/2 of (2/3 total - 2).
+    - Remaining is 5.
+    - $1/2 (2/3 T - 2) = 5$
+    - $2/3 T - 2 = 10$
+    - $2/3 T = 12$
+    - $T = 12 \times 3 / 2 = 18$.
+    Correct.
+
+    Steps explanation:
+    1. Work backwards from the 5 left.
+    2. Before Orange House: Since she sold half, the 5 left represents the other half. So she had $5 \times 2 = 10$ vacuum cleaners before the orange house.
+    3. Before Red House: She sold 2 to get from some number to 10. So she had $10 + 2 = 12$ before the red house.
+    4. Before Green House: She sold 1/3 to get to 12. So 12 represents the 2/3 remaining. So Start = $12 / (2/3) = 12 \times 1.5 = 18$.
+
+    The number is 18.
+
+    Constraint check: "Put your final answer as a number after ####."
+    Okay. I will write out the solution steps briefly and put the final number there.
+
+    Wait, I need to make sure I don't output markdown formatting in the `####` block that isn't just the number. Usually, prompts like this just want the number. But I should include the text explanation first.
+    Actually, standard format for these types of requests is usually text explanation then the `####` line at the end.
+    Let's stick to the instruction: "Put your final answer as a number after ####."
+    So the last line should be `#### 18`.
+
+    Ready to write.
+</think>
+
+To find the number of vacuum cleaners Melanie started with, let's work backwards from the end result.
+
+1.  **Orange House:** At the orange house, Melanie sold half of what was left. Having 5 vacuum cleaners remaining means that the 5 were the "other half." Therefore, she arrived at the orange house with:
+    $$5 \times 2 = 10 \text{ vacuum cleaners}$$
+
+2.  **Red House:** Melanie sold 2 vacuum cleaners to the red house to get to the orange house count. To find the amount before this sale, we add the 2 back to the remaining count:
+    $$10 + 2 = 12 \text{ vacuum cleaners}$$
+
+3.  **Green House:** Melanie sold one-third of her initial stock at the green house. This means that after selling one-third, she had two-thirds of her original stock remaining. Since she had 12 left after this sale, we can set up the equation:
+
+---
+Here's a thinking process that leads to the solution:
+
+1.  **Understand the Goal:** The objective is to find the total number of vacuum cleaners Melanie started with, given the distribution of sales to three houses and the remaining inventory.
+
+2.  **Identify the Given Information:**
+    *   Total units to start = $x$ (unknown variable).
+    *   Sale at Green House = $\frac{1}{3}$ of $x$.
+    *   Sale at Red House = 2 more (absolute number) than the rest? No, read carefully: "2 more to the red house" usually implies 2 *more than the previous clause*? Or just 2 units *more*? Let's re-read. "She sold a third of her vacuum cleaners at the green house, 2 more to the red house..."
+        *   Interpretation A: 2 *more* than the Green House amount. (Less likely phrasing for standard math riddles).
+        *   Interpretation B: Just 2 units. But why say "2 more"? Usually "2 more" implies addition to something, OR it implies 2 *more* than the previous *transaction*.
+        *   Let's check standard phrasing for word problems. "2 more to the red house" is ambiguous. It could mean "2 more [units] than the green house" OR it could mean "2 more [units] [after selling to the green house]"? No, that doesn't make sense.
+        *   Let's look at the structure: "She sold a third... [at the green house], 2 more to the red house..."
+        *   Common interpretation in these types of riddles: "2 more [units than what I sold at the green house]".
+        *   Alternative interpretation: "2 more [units *in addition to previous calculations]*".
+        *   Let's re-read again: "She sold a third of her vacuum cleaners at the green house, 2 more to the red house..."
+        *   Grammatically, if I say "I ate an apple, 2 more than an apple", it means 3. If I say "I ate an apple, 2 more to the second basket", it's ambiguous.
+        *   However, let's look at the next part: "...and half of what was left at the orange house."
+        *   If "2 more" means 2 units, the math is simple.
+        *   If "2 more" means $2 + \text{Green House Sale}$, the math changes.
+        *   Let's test the "2 units" hypothesis first. "2 more to the red house" might be a typo for "2" or "2 more units". But usually, "2 more" implies $2 + \text{previous}$.
+        *   Wait, a very common phrasing in these specific riddles is "2 *more than* the green house". But the text says "2 more to the red house". This usually implies a specific quantity. Let's look at the context of "half of what was left".
+        *   Let's try to interpret "2 more" as "2 more than the remaining"? No.
+        *   Let's assume the standard meaning "2 more units" (meaning just 2) is unlikely to result in a clean integer solution for this type of problem.
+        *   Actually, let's look at the phrasing again: "2 more to the red house".
+        *   Scenario 1: She sold $\frac{1}{3}x$. Now she sold $2$. Remaining: $\frac{2}{3}x - 2$. Then she sold half of remaining.
+        *   Scenario 2: She sold $\frac{1}{3}x$. Then she sold $\frac{1}{3}x + 2$. Remaining: $\frac{2}{3}x - 2$. Then she sold half of remaining.
+        *   Scenario 3: "2 more to the red house" implies the total sales to Red House is 2 *more than Green*. i.e., $x_{green} + 2$.
+        *   Let's calculate based on the most logical mathematical interpretation for this specific structure.
+        *   Usually, if it's a specific number, it's "2". If it's comparative, it says "2 more than". The "to the red house" suggests direction.
+        *   Let's look for a source or similar riddle. Often, "2 more" means "2 more than the amount just sold" OR it's just "2 units".
+        *   Wait, "2 more to the red house" implies an additive amount to the pile sold? No.
+        *   Let's assume the variable is the starting amount $x$.
+        *   Step 1: Green House sells $\frac{1}{3}x$. Remaining: $\frac{2}{3}x$.
+        *   Step 2: Red House sells 2. (Wait, does it say "2"? It says "2 more to the red house"). Is "2 more" meaning "2 units added to what was sold in Green"? Or is it "2 units total"?
+        *   If I say "I have 2 dollars, 2 more to the other pocket", it implies I have 2 in the other pocket? Or 2 more than what I have now?
+        *   Let's check the constraint: "5 vacuum cleaners left".
+        *   Step 3: Orange House gets "half of what was left" (after Green and Red).
+        *   Remaining after Orange = Remaining after Red - 0.5 * Remaining after Red = 0.5 * Remaining after Red.
+        *   So, $0.5 * (\text{Remaining after Red}) = 5$.
+        *   This implies $\text{Remaining after Red} = 10$.
+        *   Now back to Step 1 and 2.
+        *   Remaining after Red = Remaining after Green - Red Sales.
+        *   Remaining after Green = $\frac{2}{3}x$.
+        *   So $\frac{2}{3}x - \text{Red Sales} = 10$.
+        *   Red Sales = $\frac{2}{3}x - 10$.
+        *   Now, look at the phrasing "2 more to the red house".
+            *   Case A: Red Sales = 2.
+                *   $\frac{2}{3}x - 2 = 10 \Rightarrow \frac{2}{3}x = 12 \Rightarrow x = 18$.
+                *   Let's check: Start 18. Green sells $18/3 = 6$. Left 12. Red sells 2. Left 10. Orange sells half of 10 = 5. Left 5. Works perfectly.
+                *   Does "2 more" mean just 2? In natural language, "2 more to [place]" often means "2 items in that direction". However, the word "more" is suspicious.
+            *   Case B: Red Sales = Green + 2 = $6 + 2 = 8$ (using $x=18$ as reference, though $x$ is variable).
+                *   $\frac{2}{3}x - (\frac{1}{3}x + 2) = 10$.
+                *   $\frac{1}{3}x - 2 = 10 \Rightarrow \frac{1}{3}x = 12 \Rightarrow x = 36$.
+                *   Let's check: Start 36. Green sells 12. Left 24. Red sells $12 + 2 = 14$. Left 10. Orange sells 5. Left 5. Works perfectly.
+            *   Case C: "2 more to the red house" means 2 more [than needed]? No.
+            *   Case D: Is it "2 more [than she had before]"? No.
+            *   The phrasing "2 more to the red house" is slightly ambiguous compared to "2 more than she sold to the green house".
+            *   HOWEVER, let's consider the phrase "2 more to the red house". If I say "I ate an apple, 2 more to the red house", that doesn't make sense.
+            *   If I say "I sold X at Green, 2 more to Red", the comma separation suggests the "2 more" is an independent action, not necessarily comparative to X.
+            *   However, in the context of these specific logic puzzles (often from GRE/GMAT or elementary math competitions), "2 more" often implies "2 more than the previous amount".
+            *   *But*, usually, comparative phrases are explicit: "2 more **than the green house**". The omission of "than the green house" makes the "2 units" argument slightly stronger mathematically (Occam's razor), but "more" is the word used.
+            *   Let's search for this specific riddle.
+            *   Riddle search query simulation: "Melanie door-to-door saleswoman vacuum cleaners green house red house orange house".
+            *   Common variation: "She sold a third... and 2 more... half of what was left...".
+            *   Let's assume the findings from a similar problem online.
+            *   Actually, there's a specific
+---
+Here's a thinking process that leads to the solution:
+
+1.  **Analyze the Request:**
+    *   **Role:** Melanie (door-to-door saleswoman).
+    *   **Item:** Vacuum cleaners.
+    *   **Initial State:** Unknown number (Let $x$ be the number).
+    *   **Transactions:**
+        1.  Sold $\frac{1}{3}$ of her stock at the green house.
+        2.  Sold 2 more at the red house.
+        3.  Sold half of what was *left* at the orange house.
+    *   **Final State:** 5 vacuums left.
+    *   **Goal:** Find the initial number of vacuum cleaners ($x$).
+    *   **Output Format:** Final answer as a number after `####`.
+
+2.  **Step-by-Step Calculation:**
+
+    *   *Let $x$ be the number of vacuum cleaners Melanie started with.*
+
+    *   **Transaction 1 (Green House):**
+        *   She sold $\frac{1}{3}$ of her stock.
+        *   Amount sold: $\frac{1}{3}x$.
+        *   Amount remaining: $x - \frac{1}{3}x = \frac{2}{3}x$.
+
+    *   **Transaction 2 (Red House):**
+        *   She sold 2 more vacuums.
+        *   Amount remaining: $\frac{2}{3}x - 2$.
+
+    *   **Transaction 3 (Orange House):**
+        *   She sold half of what was *left* (before selling at the orange house).
+        *   "What was left" before going to the orange house is $(\frac{2}{3}x - 2)$.
+        *   Amount sold: $\frac{1}{2} \left( \frac{2}{3}x - 2 \right)$.
+        *   Amount remaining after this sale: $\frac{1}{2} \left( \frac{2}{3}x - 2 \right)$. (Since she sold half, she has half left).
+
+    *   **Final State:**
+        *   We are told she has 5 vacuum cleaners left.
+        *   Equation: $\frac{1}{2} \left( \frac{2}{3}x - 2 \right) = 5$.
+
+    *   *Solve for $x$:*
+        1.  Multiply both sides by 2:
+            $$ \frac{2}{3}x - 2 = 10 $$
+        2.  Add 2 to both sides:
+            $$ \frac{2}{3}x = 12 $$
+        3.  Multiply both sides by $\frac{3}{2}$:
+            $$ x = 12 \times \frac{3}{2} $$
+            $$ x = 6 \times 3 $$
+            $$ x = 18 $$
+
+3.  **Verification:**
+    *   Start with 18.
+    *   Green house: Sold $\frac{1}{3}$ of 18 = 6.
+    *   Left: $18 - 6 = 12$.
+    *   Red house: Sold 2.
+    *   Left: $12 - 2 = 10$.
+    *   Orange house: Sold half of what was left (half of 10) = 5.
+    *   Left: $10 - 5 = 5$.
+    *   Final amount matches the problem statement (5).
+
+4.  **Final Formatting:**
+    *   The question asks to put the final answer as a number after `####`.
+    *   Answer: 18.
+
+5.  **Constructing the Response:**
+    *   State the variable.
+    *   Show the steps/reversal logic.
+    *   Calculate the final number.
+    *   Apply the required format.
+
+    *Method 2 (Working Backwards):*
+    *   End with 5 left.
+    *   Before Orange house, she sold half, so she had $5 + 5 = 10$ left.
+    *   After Red house, she sold 2, so she had $10 + 2 = 12$ left.
+    *   After Green house, she sold $\frac{1}{3}$, meaning she kept $\frac{2}{3}$, leaving her with 12. So $12 = \frac{2}{3}x$.
+    *   $x = 12 \times \frac{3}{2} = 18$.
+
+    *Compatibility Check:* Both methods yield 18.
+
+    *Final Output:* ####18
+</think>
+
+Let $x$ be the number of vacuum cleaners Melanie started with.
+
+1.  **Green House:** She sold $\frac{1}{3}$ of her vacuums.
+    *   Remaining: $x - \frac{1}{3}x = \frac{2}{3}x$.
+
+2.  **Red House:** She sold 2 more vacuums.
+    *   Remaining: $\frac{2}{3}x - 2$.
+
+3.  **Orange House:** She sold half of what was left at previous steps.
+    *   Remaining: Half of $(\frac{2}{3}x - 2) = \frac{1}{2}(\frac{2}{3}x - 2)$.
+
+4.  **Final Count:** She had 5 vacuums left.
+    *   $\frac{1}{2}(\frac{2}{3}x - 2) = 5$
+
+5.  **Solving:**
+    *   Multiply both sides by 2:
+        $$2 \times \frac{1}{2}(\frac{2}{3}x - 2) = 5 \times 2$$
+        $$\frac{2}{3}x - 2 = 10$$
+    *   Add 2 to both sides:
+        $$\frac{2}{3}x = 12$$
+    *   Multiply by $\frac{3}{2}$:
+        $$x = 12 \times \frac{3}{2}$$
+        $$x = 6 \times 3$$
+        $$x = 18$$
+
+**Check:**
+*   Start with 18.
+*   Sell $\frac{1}{3}$ (6) -> Left with 12.
+*   Sell 2 -> Left with 10.
+*   Sell half (5) -> Left with 5.
+
+The calculation is correct.
+
+####18
+---
+The problem asks us to find the initial number of vacuum cleaners Melanie had. Let's denote the total number of vacuum cleaners she started with as $x$.
+
+Here's the breakdown of the sales process:
+1.  **First sale:** She sold a third of her vacuum cleaners at the green house.
+    *   Amount sold: $\frac{1}{3}x$
+    *   Amount remaining: $x - \frac{1}{3}x = \frac{2}{3}x$
+
+2.  **Second sale:** She sold 2 more vacuum cleaners to the red house.
+    *   Amount remaining after this sale: $\frac{2}{3}x - 2$
+
+3.  **Third sale:** She sold half of what was left at the orange house.
+    *   "What was left" before this step is $\frac{2}{3}x - 2$.
+    *   Amount sold: $\frac{1}{2} \left( \frac{2}{3}x - 2 \right)$
+    *   Amount remaining after this sale: $\left( \frac{2}{3}x - 2 \right) - \frac{1}{2} \left( \frac{2}{3}x - 2 \right) = \frac{1}{2} \left( \frac{2}{3}x - 2 \right)$
+
+4.  **Final state:** She has 5 vacuum cleaners left.
+    *   So, $\frac{1}{2} \left( \frac{2}{3}x - 2 \right) = 5$
+
+Now, I need to solve for $x$.
+
+Equation:
+$$ \frac{1}{2} \left( \frac{2}{3}x - 2 \right) = 5 $$
+
+Multiply both sides by 2:
+$$ \frac{2}{3}x - 2 = 10 $$
+
+Add 2 to both sides:
+$$ \frac{2}{3}x = 12 $$
+
+Multiply both sides by 3:
+$$ 2x = 36 $$
+
+Divide both sides by 2:
+$$ x = 18 $$
+
+Let's verify the answer.
+Start with 18 vacuum cleaners.
+1.  Green house: Sold $\frac{1}{3}$ of 18. $18 / 3 = 6$.
+    Remaining: $18 - 6 = 12$.
+2.  Red house: Sold 2.
+    Remaining: $12 - 2 = 10$.
+3.  Orange house: Sold half of what was left. Half of 10 is 5.
+    Remaining: $10 - 5 = 5$.
+    The problem states she has 5 left. This matches.
+
+So the initial number of vacuum cleaners is 18.
+
+The request is to put the final answer as a number after ###.
+
+Step-by-step derivation again to be sure:
+Let $x$ be the number of vacuum cleaners.
+Remaining after Green house = $x - \frac{1}{3}x = \frac{2}{3}x$.
+Remaining after Red house = $\frac{2}{3}x - 2$.
+Remaining after Orange house = $\frac{1}{2}(\frac{2}{3}x - 2)$.
+Given remaining = 5.
+$\frac{1}{2}(\frac{2}{3}x - 2) = 5$
+$\frac{2}{3}x - 2 = 10$
+$\frac{2}{3}x = 12$
+$x = \frac{12}{2/3} = 12 \times \frac{3}{2} = 6 \times 3 = 18$.
+
+The calculation is correct.
+
+Final Answer is 18.
+###
+</think>
+
+Let $x$ represent the initial number of vacuum cleaners Melanie started with.
+
+1.  **Green House:** She sold $\frac{1}{3}$ of her vacuum cleaners.
+    *   Remaining: $x - \frac{1}{3}x = \frac{2}{3}x$
+
+2.  **Red House:** She sold 2 more vacuum cleaners.
+    *   Remaining: $\frac{2}{3}x - 2$
+
+3.  **Orange House:** She sold half of what was left.
+    *   Remaining after selling half: $\frac{1}{2} \left( \frac{2}{3}x - 2 \right)$
+
+We know that the amount remaining after the Orange House is 5 vacuum cleaners. We can set up the equation:
+$$ \frac{1}{2} \left( \frac{2}{3}x - 2 \right) = 5 $$
+
+First, multiply both sides by 2 to eliminate the fraction:
+$$ \frac{2}{3}x - 2 = 10 $$
+
+Next, add 2 to both sides:
+$$ \frac{2}{3}x = 12 $$
+
+Now, multiply both sides by 3 to get rid of the denominator:
+$$ 2x = 36 $$
+
+Finally, divide by 2 to solve for $x$:
+$$ x = 18 $$
+
+**Check:**
+*   Start with 18.
+*   Sell $\frac{1}{3}$ (which is 6) to the green house. Remaining: $18 - 6 = 12$.
+*   Sell 2 to the red house. Remaining: $12 - 2 = 10$.
+*   Sell half of what is left (which is half of 10, or 5) to the orange house. Remaining: $10 - 5 = 5$.
+*   The result matches the problem statement.
+
+###
+18
+---
+Here's a thinking process that leads to the solution:
+
+1.  **Understand the Goal:** The objective is to find the total number of vacuum cleaners Melanie started with, based on a series of sales and the remaining inventory.
+
+2.  **Define Variables:**
+    *   Let $x$ be the total number of vacuum cleaners Melanie started with.
+
+3.  **Break Down the Steps:**
+    *   **Step 1:** She sold $1/3$ of her vacuum cleaners to the green house.
+        *   Amount sold to green house = $\frac{1}{3}x$.
+        *   Amount remaining after green house = $x - \frac{1}{3}x = \frac{2}{3}x$.
+    *   **Step 2:** She sold 2 more to the red house.
+        *   Amount remaining after red house = (Amount from Step 1) - 2.
+        *   Remaining = $\frac{2}{3}x - 2$.
+    *   **Step 3:** She sold half of what was left at the orange house.
+        *   "What was left" refers to the amount remaining after the red house ($\frac{2}{3}x - 2$).
+        *   Amount sold to orange house = $\frac{1}{2} \times (\frac{2}{3}x - 2)$.
+        *   Amount remaining *after* the orange house = (Amount before orange sale) - (Amount sold to orange house)
+        *   Alternatively, selling half means half is left. So, Remaining = $\frac{1}{2} \times (\frac{2}{3}x - 2)$.
+    *   **Step 4:** We know she has 5 vacuum cleaners left.
+        *   Equation: $\frac{1}{2} \times (\frac{2}{3}x - 2) = 5$.
+
+4.  **Solve the Equation:**
+    *   Start with: $\frac{1}{2}(\frac{2}{3}x - 2) = 5$
+    *   Multiply both sides by 2 to clear the fraction regarding the orange house sale:
+        $\frac{2}{3}x - 2 = 10$
+    *   Add 2 to both sides to isolate the $x$ term:
+        $\frac{2}{3}x = 12$
+    *   Multiply both sides by 3 to clear the denominator:
+        $2x = 36$
+    *   Divide by 2:
+        $x = 18$
+
+5.  **Verification (Sanity Check):**
+    *   *Start:* 18 vacuums.
+    *   *Green House:* Sold $1/3$ of 18 = 6. Remaining = $18 - 6 = 12$.
+    *   *Red House:* Sold 2 more. Remaining = $12 - 2 = 10$.
+    *   *Orange House:* Sold half of what was left ($10$). Sold = 5. Remaining = $10 - 5 = 5$.
+    *   *Final:* 5 left.
+    *   *Comparison:* Matches the problem statement ("If Melanie has 5 vacuum cleaners left").
+
+6.  **Final Answer Formulation:**
+    *   The question asks for the initial number.
+    *   The calculated number is 18.
+    *   Format: Number after ####.
+
+7.  **Constructing the Output:**
+    *   State the variable.
+    *   Show the step-by-step logic.
+    *   Present the calculation.
+    *   State the final answer in the requested format.
+
+    *Self-Correction/Refinement:*
+    Wait, let me re-read "half of what was left at the orange house".
+    Usually, this phrasing implies:
+    1. Sold to green ($1/3 x$)
+    2. Sold to red (2)
+    3. "What was left" is the result of step 1 and 2.
+    4. Sold to orange is $1/2$ *of that* remaining amount.
+    5. Leftover = The other $1/2$ *of that* remaining amount.
+    Yes, my equation $\frac{1}{2}(\frac{2}{3}x - 2) = 5$ represents that perfectly.
+    $1/2$ of remaining is sold, other $1/2$ is left (since the total remaining before orange was split into sold-left orange).
+    So, Remaining = 5.
+    Before Orange Sale = 10.
+    Before Red Sale - 2 = 10 => Before Red Sale = 12.
+    $x - 1/3x = 12$ => $2/3x = 12$ => $x = 18$.
+    Calculation is solid.
+
+    Another way to work backwards:
+    1.  End: 5.
+    2.  This is half of what remained before the Orange sale. So, before Orange sale = $5 \times 2 = 10$.
+    3.  This 10 is what remained after selling to Red (\(x - 1/3x - 2\)).
+    4.  So, Remaining before Red = $10 + 2 = 12$.
+    5.  This 12 is what remained after selling to Green ($1/3$ of $x$). So, $2/3$ of $x = 12$.
+    6.  $x = 12 \times 3 / 2 = 18$.
+    Both methods yield 18.
+
+    Final check of the prompt requirements: "Put your final answer as a number after ####."
+    So the last line should be `####18`.
+
+    Drafting the response.
+    Let the starting number be $x$.
+    After Green House: $x - \frac{x}{3} = \frac{2x}{3}$.
+    After Red House: $\frac{2x}{3} - 2$.
+    After Orange House: $\frac{1}{2}(\frac{2x}{3} - 2) = 5$.
+    $\frac{2x}{3} - 2 = 10$
+    $\frac{2x}{3} = 12$
+    $2x = 36$
+    $x = 18$.
+    Matches.
+    Ready to write.s
+</think>
+
+Let $x$ be the total number of vacuum cleaners Melanie started with.
+
+1.  **Green House:** She sold $\frac{1}{3}$ of her inventory.
+    Remaining: $x - \frac{1}{3}x = \frac{2}{3}x$
+
+2.  **Red House:** She sold 2 more.
+    Remaining: $\frac{2}{3}x - 2$
+
+3.  **Orange House:** She sold half of what was left.
+    This means half of the inventory remaining from the Red House was sold, and half remained.
+    Remaining: $\frac{1}{2} \left( \frac{2}{3}x - 2 \right)$
+
+4.  **Final Amount:** We know she has 5 left.
+    Equation: $\frac{1}{2} \left( \frac{2}{3}x - 2 \right) = 5$
+
+Now, solve for $x$:
+
+Multiply both sides by 2:
+$\frac{2}{3}x - 2 = 10$
+
+Add 2 to both sides:
+$\frac{2}{3}x = 12$
+
+Multiply by 3:
+$2x = 36$
+
+Divide by 2:
+$x = 18$
+
+**Verification:**
+*   Total: 18
+*   Green House: Sold $1/3$ ($6$). Left: $12$
+*   Red House: Sold $2$. Left: $10$
+*   Orange House: Sold $1/2$ ($5$). Left: $5$
+*   Remaining matches the problem description.
+
+####18
+---
+Here's my thought process for solving this word problem:
+
+1.  **Understand the Goal:** The objective is to find the total number of vacuum cleaners Melanie started with.
+
+2.  **Identify the Variables and Constants:**
+    *   Let $x$ be the starting number of vacuum cleaners.
+    *   The problem breaks down the sales into three stages and leaves a remainder.
+    *   Sales at Green House: $1/3$ of $x$.
+    *   Sales at Red House: 2 more than the Green House sales? No, re-reading carefully: "2 more" usually implies an absolute number added to a previous calculation or relative to the remaining stock. Let's parse the sentence: "She sold a third of her vacuum cleaners at the green house, 2 more [sales] to the red house, and half of what was left at the orange house."
+    *   *Correction on interpretation*: "2 more" is slightly ambiguous. Does it mean "2 more than sold at the green house" or "2 additional units"? The phrasing "2 more to the red house" usually implies "2 units". However, often in these types of riddles, it implies "2 more than the previous quantity". Let's look at the structure:
+        *   Stage 1: $1/3$ of total.
+        *   Stage 2: "2 more". This likely means "2 units" (additive). If it meant "2 more than the first batch", it would usually be phrased "2 more than that". But let's pause. Let's re-read: "2 more to the red house". Standard English interpretation in this context usually means an additional quantity of 2 units, not dependent on the previous sale count. However, some puzzle logic might imply addition to the previous specific number. Let's look for clues. If I assume it's just "2 units", I can solve it. If I assume it's "previous sales + 2", I can solve it.
+        *   Wait, let's look at the standard structure of these algebra word problems. "2 more to the red house" usually acts as a quantity transaction. "She sold $X$ to A, 2 to B..."
+        *   Let's check the phrase "half of what was left". This refers to the remaining stock after the Green and Red houses.
+        *   Final condition: "If Melanie has 5 vacuum cleaners left".
+
+    *   Let's try the "just 2 units" hypothesis first, as it's the literal interpretation.
+        *   Start: $x$
+        *   Green House Sales: $\frac{1}{3}x$
+        *   Remaining after Green: $x - \frac{1}{3}x = \frac{2}{3}x$
+        *   Red House Sales: 2
+        *   Remaining after Red: $\frac{2}{3}x - 2$
+        *   Orange House Sales: Half of what was left (before Orange House).
+        *   Sales at Orange: $\frac{1}{2} (\frac{2}{3}x - 2) = \frac{1}{3}x - 1$
+        *   Final Left: Remaining after Orange = (Remaining after Red) - (Sales at Orange)
+        *   End State: $5$
+        *   Equation: $(\frac{2}{3}x - 2) - \frac{1}{2}(\frac{2}{3}x - 2) = 5$
+
+3.  **Alternative Interpretation Check:**
+    *   What if "2 more" means "2 more than what she sold at the green house"?
+    *   Green Sales: $\frac{1}{3}x$.
+    *   Red Sales: $\frac{1}{3}x + 2$.
+    *   Remaining: $x - \frac{1}{3}x - (\frac{1}{3}x + 2) = \frac{1}{3}x - 2$.
+    *   Orange Sales: $\frac{1}{2}(\frac{1}{3}x - 2)$.
+    *   Remaining: $\frac{1}{2}(\frac{1}{3}x - 2) = 5$.
+    *   Let's solve this: $\frac{1}{6}x - 1 = 5 \Rightarrow \frac{1}{6}x = 6 \Rightarrow x = 36$.
+    *   Let's check the first hypothesis ($x$ amount calculations).
+        *   Equation: $\frac{1}{2}(\frac{2}{3}x - 2) = \frac{2}{3}x - 2 - 5$ (Wait, the algebra in step 2 was: Left = Remaining(after Red) - Sales(Orange)).
+        *   $\frac{1}{2}(\text{Remaining}) = \text{Remaining} - 5$.
+        *   Remaining = $2 \times 5 = 10$.
+        *   So, Remaining after Red House was 10.
+        *   $\frac{2}{3}x - 2 = 10$.
+        *   $\frac{2}{3}x = 12$.
+        *   $x = 18$.
+    *   So, if "2 more" means "2 units", $x=18$.
+    *   If "2 more" means "2 more than the first batch", $x=36$.
+    *   Grammar check: "She sold a third of her vacuum cleaners at the green house, 2 more to the red house..."
+    *   In common mathematical word problems, "2 more" usually qualifies the sales quantity directly as a standalone integer quantity unless it says "2 more than [previous amount]". However, saying "2 more to the red house" could be interpreted as the number being 2 more. But wait, could it mean "2 more than she sold to the green house"?
+    *   Let's check similar problems online or in textbooks. Phrase: "2 more to the red house". This is ambiguous.
+    *   However, looking at the math of the problem:
+        *   Scenario A (Just 2 units): $x = 18$.
+            *   Start: 18.
+            *   Green: $1/3 \times 18 = 6$. Remaining: 12.
+            *   Red: 2. Remaining: 10.
+            *   Orange: $1/2 \times 10 = 5$. Remaining: 5.
+            *   End: 5. Matches.
+        *   Scenario B (2 more than Green): $x = 36$.
+            *   Start: 36.
+            *   Green: $1/3 \times 36 = 12$. Remaining: 24.
+            *   Red: $12 + 2 = 14$. Remaining: 10.
+            *   Orange: $1/2 \times 10 = 5$. Remaining: 5.
+            *   End: 5. Matches.
+    *   Both scenarios yield an integer result. Which interpretation is standard?
+    *   Usually, without the phrase "the same amount as" or "2 more than that", "2 more" in a list of actions like "Sold A, [Action], Sold B" implies a quantity. Example: "I ate an apple, 2 more apples, then a orange." That means 2 apples.
+    *   However, "2 more" is often used to mean "add 2". If the sentence was "2 more than she sold at the green house", it would be explicit.
+    *   Let's consider the phrase "2 more to the red house".
+        *   Is it "2 more units" (quantity = 2)?
+        *   Or is it "the red house had 2 more customers/units"? No, it's sales.
+        *   Given the phrasing "2 more to the red house", simply interpreting it as 2 items is the most direct linguistic interpretation without assuming hidden comparative clauses.
+        *   Let's look at the phrasing again. "She sold... a third..., 2 more..., and half of what was left..."
+        *   "2 more" acts as an adverbial modifier for "sold". "She sold [Quantity 1], [Quantity 2], and [Quantity 3]".
+        *   Quantity 1 = $1/3$ of total.
+        *   Quantity 2 = "2 more". This stands for the number 2. As opposed to "2 more than [Green]".
+    *   Wait, consider this perspective. If I say "I sold a hundred dollars at store A, 50 dollars at store B", that's clear. If I say "I sold a third, 2 more at store B", it usually means 2 units.
+    *   Is there a reason to prefer the other interpretation ($x=36$)? Sometimes riddles imply relationships between purchases.
+    *   However, in standard arithmetic riddles found on the internet (often sourced from worksheets), "2 more" in this list format typically means a fixed quantity of 2.
+    *   Let's verify if $x=18$ makes sense in the context of the
+---
+Here's a thinking process that leads to the solution:
+
+1.  **Understand the Goal:** The objective is to find the total number of vacuum cleaners Melanie started with, given information about how many she sold at different houses and how many she has left.
+
+2.  **Identify the Variables:**
+    *   Let $T$ be the total number of vacuum cleaners Melanie started with.
+
+3.  **Break Down the Transaction History:**
+    *   **Part 1:** She sold $\frac{1}{3}$ of her vacuum cleaners at the green house.
+        *   Sold at Green House = $\frac{1}{3}T$.
+        *   Remaining after Green House = $T - \frac{1}{3}T = \frac{2}{3}T$.
+    *   **Part 2:** She sold 2 more vacuum cleaners to the red house.
+        *   Sold at Red House = $2$.
+        *   Remaining after Red House = $(\frac{2}{3}T) - 2$.
+    *   **Part 3:** She sold half of *what was left* at the orange house.
+        *   "What was left" here refers to the remaining amount after Part 2, which is $(\frac{2}{3}T) - 2$.
+        *   Sold at Orange House = $\frac{1}{2} \times [(\frac{2}{3}T) - 2]$.
+        *   Remaining after Orange House = $[\text{Amount Before Sales} \text{ at Orange House}] - \text{Sold at Orange House}$.
+        *   Remaining = $\frac{1}{2} \times [(\frac{2}{3}T) - 2]$.
+    *   **Ending State:** Melanie has 5 vacuum cleaners left.
+        *   Remaining after Orange House = $5$.
+
+4.  **Formulate the Equation:**
+    Based on the step-by-step breakdown, we can write the equation:
+    $$ \frac{1}{2} \left[ \frac{2}{3}T - 2 \right] = 5 $$
+
+5.  **Solve the Equation:**
+    *   **Step 1:** Multiply both sides by 2 to eliminate the fraction outside the bracket.
+        $$ \frac{2}{3}T - 2 = 5 \times 2 $$
+        $$ \frac{2}{3}T - 2 = 10 $$
+    *   **Step 2:** Add 2 to both sides to isolate the term with $T$.
+        $$ \frac{2}{3}T = 10 + 2 $$
+        $$ \frac{2}{3}T = 12 $$
+    *   **Step 3:** Multiply both sides by $\frac{3}{2}$ (the reciprocal of $\frac{2}{3}$) to solve for $T$.
+        $$ T = 12 \times \frac{3}{2} $$
+        $$ T = \frac{36}{2} $$
+        $$ T = 18 $$
+
+6.  **Verify the Solution (Sanity Check):**
+    *   **Start:** 18 vacuum cleaners.
+    *   **Green House:** Sold $\frac{1}{3}$ of 18. $\frac{1}{3} \times 18 = 6$.
+        *   Remaining: $18 - 6 = 12$.
+    *   **Red House:** Sold 2 more.
+        *   Remaining: $12 - 2 = 10$.
+    *   **Orange House:** Sold half of what was left. What was left was 10. Half of 10 is 5.
+        *   Sold: 5.
+        *   Remaining: $10 - 5 = 5$.
+    *   **Final:** 5 left.
+    *   **Match:** The calculation matches the final condition given in the problem (5 left).
+
+7.  **Format the Output:**
+    *   The user requested the final answer as a number after `####`.
+
+8.  **Final Answer Formulation:**
+    *   Calculation: $18$.
+    *   Format: `#### 18`.
+
+    Wait, the instruction says "Put your final answer as a number after ####". This usually implies the format `#### 18` or just `18` inside that markdown. I will follow the standard interpretation of "after ####" meaning inside the block or just showing the number. Usually, prompts like this expect `#### 18` at the end of the text.
+
+    Let's re-read: "Put your final answer as a number after ####."
+    Okay, I will write a short explanation and then end with `#### 18`.
+
+    Let's double check the phrasing. "Put your final answer as a number after ####."
+    Interpretation 1: The line should look like `Answer: #### 18`.
+    Interpretation 2: The specific string `#### 18`.
+    Interpretation 3: Just `18` inside the instructions provided by the system prompt.
+    Common usage for these types of prompts (often math evaluation):
+    ```markdown
+    Calculation steps...
+    #### 18
+    ```
+    Or simply `#### 18` at the very end.
+
+    Let's stick to the standard constraint satisfaction:
+    Final Output Line: `#### 18`
+
+    Let's draft the response text.
+    Start with $x$ as total.
+    $x - \frac{x}{3} = \frac{2x}{3}$.
+    $\frac{2x}{3} - 2 = \text{Remaining before orange}$.
+    $\frac{1}{2}(\frac{2x}{3} - 2) = 5$.
+    $\frac{2x}{3} - 2 = 10$.
+    $\frac{2x}{3} = 12$.
+    $2x = 36$.
+    $x = 18$.
+
+    Looks solid.
+
+    Constraint check: "Put your final answer as a number after ####."
+    Example: `#### 18`
+
+    Let's write the response.
+    Goal: Explain the logic and provide the final formatted string.
+    
+    Step 1: Let $x$ be the starting amount.
+    Step 2: After Green house, she has $x - \frac{1}{3}x = \frac{2}{3}x$.
+    Step 3: After Red house, she has $\frac{2}{3}x - 2$.
+    Step 4: She leaves the Orange house with half of the previous amount. So remaining is $\frac{1}{2}(\frac{2}{3}x - 2)$.
+    Step 5: This remaining amount is equal to 5.
+    Step 6: Equation: $\frac{1}{2}(\frac{2}{3}x - 2) = 5$.
+    Step 7: Solve for $x$.
+    $\frac{2}{3}x - 2 = 10$
+    $\frac{2}{3}x = 12$
+    $x = 18$.
+
+    Final check complete. Ready to write.s
+</think>
+
+Let $x$ be the total number of vacuum cleaners Melanie started with.
+
+1.  **At the green house:** She sold $\frac{1}{3}$ of her vacuum cleaners.
+    Remaining: $x - \frac{1}{3}x = \frac{2}{3}x$.
+
+2.  **At the red house:** She sold 2 more.
+    Remaining: $\frac{2}{3}x - 2$.
+
+3.  **At the orange house:** She sold half of what was left.
+    Remaining: $\frac{1}{2} \times (\frac{2}{3}x - 2)$.
+
+4.  **Final amount:** We know she has 5 vacuum cleaners left.
+    Equation: $\frac{1}{2} (\frac{2}{3}x - 2) = 5$
+
+5.  **Solving for $x$:**
+    Multiply both sides by 2:
+    $$ \frac{2}{3}x - 2 = 10 $$
+
+    Add 2 to both sides:
+    $$ \frac{2}{3}x = 12 $$
+
+    Multiply by the reciprocal of $\frac{2}{3}$ (which is $\frac{3}{2}$):
+    $$ x = 12 \times \frac{3}{2} $$
+    $$ x = 6 \times 3 $$
+    $$ x = 18 $$
+
+Melanie started with 18 vacuum cleaners.
+
+#### 18

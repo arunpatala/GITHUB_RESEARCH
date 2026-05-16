@@ -1,0 +1,773 @@
+To find the number of incomplete questions, we need to compare the total number of questions Mark completed with the number of questions he had to complete.
+
+**1. Calculate questions completed on the first test:**
+*   Total questions on first test: 75
+*   Rate of completion: 5 questions per hour
+*   Total available hours for first test: 8 hours
+*   Weeks completed formula: $\frac{\text{Total Questions} \times \text{Hours}}{\text{Hours per Question}}$
+*   Therefore, questions completed = $75 \times 5 \times 8$
+*   Calculation: $75 \times 40 = 3000$
+
+**2. Calculate questions candidates for completion on the second test:**
+*   Total questions on second test: 100
+*   Total available hours for second test: 6 hours
+*   Distance to complete formula: $\frac{\text{Total Questions} \times \text{Hours}}{\text{Hours per Question}}$
+*   Therefore, remaining questions = $100 \times 6$
+*   Calculation: $600$
+
+**3. Determine the number of incomplete questions:**
+*   Incomplete questions = Total questions to complete - Completed questions
+*   $600 - 3000 = -2400$
+
+Since the number of incomplete questions cannot be negative, there is an issue with the problem setup described or standard interpretation of "take another test... at the same rate" given the specific hours provided. However, if we strictly follow the calculation based on the numbers given, Mark completes significantly more than the test duration allows.
+
+Let's re-read carefully: "How many questions did he leave **incomplete**?"
+Usually, this phrasing implies that he would need to submit this full test to finish it. If he cannot finish it, does that equal a negative number of tasks he has to finish, or is the problem flawed?
+
+Let's assume the standard interpretation where one calculates the difference:
+$600 - 3000 = -2400$.
+
+However, looking at similar logic puzzles in competitive math, sometimes the question asks for the *difference* or checks the feasibility. But strictly speaking, if you start with 600 tasks and complete 3000, you are leaving 2400 tasks undone.
+
+Wait, is there a different formula?
+Sometimes "leave incomplete" means questions that remain unsatisfied.
+Completed = 3000.
+Left to complete = 600.
+Incomplete = Completed + Left to complete = 3000 + 600 = 3600.
+But the question asks "how many questions did he **leave incomplete**". If the test is already done, they haven't left any incomplete questions; they have either passed or the test is cancelled.
+
+Let's reconsider the standard interpretation of "complete a test".
+One complete test has 3000 hours.
+One candidate test has 600 hours.
+Mark has done 3000 hours.
+He has 600 hours to do his second test.
+If he tries to complete his second test, he finishes 600 questions.
+Total questions = 3600.
+Questions he left incomplete = $3000 + 600 = 3600$.
+
+Another interpretation:
+Did the rate apply differently? No, "same rate".
+Did the hours apply differently? No, "to complete".
+Maybe the first test isn't the full duration?
+Let's check if the problem implies the *duration* matches the completion?
+Completed = 3000 hours.
+He needs to finish a test in the remaining 6 hours.
+But his first test was 3000 questions.
+So he cannot finish the first test.
+This leads to the most logical result derived from the logic of completing all mandatory tasks: the two tests are conflicting. One takes 3000 hours, the other takes 600 hours. He has already done all parts of the first test. He only has 600 parts of the remaining test.
+So he has completed 3000 parts.
+He has not completed the remaining 600 parts.
+Total tasks completed = 3600.
+Total tasks remaining to complete = 600.
+Incomplete questions = Completed + Remaining = 3600.
+
+However, a cryptographic "trick" might exist.
+Ratio:
+First test: $\frac{3000}{75 \times 8} = \frac{3000}{600} = 5$. (Per hour)
+Second test: $\frac{600}{100 \times 6} = \frac{600}{600} = 1$. (Per hour needed to complete)
+Meaning he has finished his first test exactly as fast as he needs to finish the second test?
+Wait.
+First test hours needed for completion: $75 \times \frac{8}{5} = 120$ hours.
+He did 8 hours.
+So he did less than the required 120 hours?
+If he started early, he could finish the whole first test in 120 hours.
+Today he has 8 hours.
+He cannot finish the whole first test.
+He can complete 40 questions.
+$75 - 40 = 35$ questions remaining.
+Plus he needs to finish the second test in the remaining 6 hours.
+But the second test is 600 hours.
+Wait, my ratio calculation earlier:
+Image = $\text{Total Questions} \times \text{Hours}$.
+If Image = 600.
+Then Required Image = $3000$.
+$3000 / 600 = 5$.
+He has 600 Image. The required Image is 3000.
+He is 5x short of the first test's "potential work" (that is, leaving incomplete works).
+Wait, "Incomplete questions" = Total - Completed.
+Total = 3600.
+Incomplete = 600.
+
+Let's try a different interpretation.
+Maybe the first test comes earlier? Or the time is scaled?
+No, it's just a standard subtraction.
+$3000 \text{ (completed)} + 600 \text{ (remaining needed)} = 3600$.
+The number of questions he leaves incomplete is **3600**.
+
+But wait, looking at the numbers:
+$3000$ is a nice number.
+$600$ is a nice number.
+If the answer is 3000, it implies he completed the test. Impossible.
+If the answer is 3600, it implies the sum of what he did and what needs to be done.
+Actually, could "incomplete questions" refer to the *new* questions he is about to do that he could not do yet?
+No, math puzzles of this type usually ask for the sum of what is left.
+If he leaves the first test unfinished (35 questions + he still needs to do 1st test of 2nd) and he leaves the second test unfinished (600 questions).
+Total left = 35 (first) + 600 (second).
+Wait, in the "standard" interpretation for "how many incomplete questions is left", if the second test is impossible to finish, he passes it?
+No, "Leaves incomplete" means you didn't pass the test?
+If the first test is complete (mathematically possible), he passes it.
+If the second test is impossible (3000 > 600?), he cannot pass it?
+So he left 600 questions incomplete?
+But the question asks "how many questions did he leave *incomplete*".
+Does it mean the set of questions that cannot be completed?
+If he can't finish the second test, the remaining questions count as "incomplete".
+However, if he successfully completed the first test, some of the 3000 questions became completed.
+So:
+Completed 1st = 3000.
+Remaining 2nd (needed) = 600.
+Total remaining = 3600.
+Question: "How many questions did he leave incomplete?"
+Answer: 3600.
+
+Let's double check if there's any trick where he doesn't have to clear the first test?
+No, the problem says "complete the test". If he doesn't complete it, it's incomplete.
+If he passes the first test (eventually), the question of "how many incomplete" is moot.
+But since he can't finish the second test, the logic holds.
+Completed tasks = 3600.
+Remaining tasks = 600.
+Incomplete tasks = Completed + Remaining = 3600.
+
+Alternatively, is it possible the rate is different? "5 questions per hour" for the first part, and "same rate" for the second. Yes, $5 \text{ q/h}$.
+Hours: 8 vs 6.
+Is it possible the first test's 75 questions cover the whole 8 hours?
+Max work for 75 = $\frac{75 \times 8}{5} =
+---
+To find the number of questions Mark left incomplete, we need to determine the time it took him to finish each test and subtract the sum of the time he actually spent from his available total time.
+
+**Step 1: Calculate the number of hours to complete the first test.**
+The first test consists of 75 questions.
+The rate of questions per hour is 5 per hour.
+To find the time, divide the number of questions by the rate:
+$$ \text{Time}_1 = \frac{\text{Number of questions}}{\text{Questions per hour}} = \frac{75}{5} = 15 \text{ hours} $$
+
+**Step 2: Calculate the number of hours to complete the second test.**
+The second test consists of 100 questions.
+The rate of questions per hour is the same as the first test (5 out of every 100 questions).
+$$ \text{Time}_2 = \frac{100}{5} = 20 \text{ hours} $$
+
+**Step 3: Calculate the total available time for the second test.**
+Mark has 6 hours available for the second test.
+
+**Step 4: Calculate the number of hours left for the second test.**
+$$ \text{Hours}_2 = \text{Available Time} - \text{Time}_2 $$
+$$ \text{Hours}_2 = 6 - 20 = -14 \text{ hours} $$
+
+**Step 5: Determine the total time used.**
+The total time used is the sum of the time spent on the first test and the remaining time spent on the second test.
+$$ \text{Used Time} = \text{Time}_1 + \text{Hours}_2 $$
+$$ \text{Used Time} = 15 + (-14) = 1 \text{ hour} $$
+
+*Note: This indicates that Mark spent exactly 1 hour on the second test, but for it to be incomplete, he would still need 15 + 1 = 16 hours. Wait, let's re-evaluate the logic.*
+
+If he completed 15 hours into the second test and spent 6 hours on it, he has spent $15+6=21$ hours.
+However, the question asks "how many questions did he leave incomplete".
+The scenario implies that the time taken to complete the second test was **more** than his available time (20 hours vs 6 hours).
+If he has 6 hours and takes 20 hours, he has actually waited $20 - 6 = 14$ hours on the missing time? No, this interpretation is slightly flawed. Let's look at the standard "incomplete" condition.
+
+Usually, "incomplete" means the time he spent isn't the full duration defined by the rate, but rather he ran out.
+If he has 6 hours and the time required is 20 hours, he failed the test at the 6-hour mark because 14 hours were needed, out of which 10 hours were "missing" from the calculation of completed time. No, that's too complex.
+
+Let's try the alternative logic often used in these problems:
+Time used for test 1 = 15 hours.
+Time remaining for test 2 = 6 hours.
+Since $6 < 20$, he did not complete the second test entirely within the allotted time.
+The remaining time is the question to be wasted. However, the question asks for "incomplete" counts.
+If he completes test 1 completely in 15 hours.
+His total capacity for test 2 is 20 hours.
+He has 6 hours. He effectively wasted 14 hours (because $20 - 6 = 14$) to answer 100 questions at a rate of 5 per hour.
+He effectively would take 20 hours.
+He takes 6 hours.
+He *wastes* time. How many "question-knapsacks" are wasted?
+If he finishes at the end of hour 6, he expects to finish test 2 at hour 20.
+He completed it at hour 6.
+He effectively waited $20 - 6 = 14$ hours? No.
+He pressed the button 20 times. He held an "empty" pocket for 14 hours. That is 14 "questions" left blank.
+
+Let's double check this interpretation.
+If you spend 6 hours on a test that takes 20 hours, you have spent 6 hours of parallel time. You have 14 more hours of parallel space available.
+Infinite parallelism implies 14 questions of nothing.
+Or, simply, his total capacity for question 2 is 20. He only used 30 units of capacity ($20 \text{ reqs} \times 0.6 \text{ hr/req}$ is wrong. $20 \text{ reqs} \times 5 \text{ req/hr} = 100 \text{ req-hours}$.
+Wait. The rate is 5 questions/hr.
+Total requirements = $100 \text{ questions}$.
+Total potential time = $100 / 5 = 20$ hours.
+He has 6 hours.
+He has 14 hours of potential capacity but only used 6 hours.
+So he wasted 14 hours of max capacity.
+Is 14 questions the answer? Or is he "incomplete" because he didn't finish full?
+Usually, "leave incomplete" in these specific math word problems implies the amount of capacity that was not utilized as a complete unit of time, effectively meaning he failed the test by waiting for extra hours he didn't have.
+He has 14 hours of potential "questions" left in his box, but he used 6. $14 - 6 = 8$? No.
+If I have 14 hours of slots and I don't use any of them, I have 0 questions "left". I just waited for nothing.
+So if he used 6 hours, and the test lasts 20 hours, the question "how many left incomplete" might be interpreted as the time elapsed? No, that's not it.
+Let's reconsider the "waiting" logic.
+He has 6 hours available.
+The test needs 20 hours.
+He effectively had to wait for the time that would be needed? No.
+Let's calculate the difference in "hour-quantity".
+Hour Utilization = (Hours Used) / (Max Hours)
+Wait, if Rate = 5 per hour, and Total Questions = 100, then Total Hours Required = 20.
+Hours Available = 6.
+Since Available < Required, he failed.
+"Left incomplete" usually refers to the number of units of the test that are essentially "missing" from his capacity.
+Capacity for Test 2 = 20 questions.
+Hours Used = 6 questions (since 5 questions/hr).
+Actually, $20 \text{ hours} \times 5 \text{ questions/hr} = 100 \text{ questions}$.
+He is asking "If he took 6 + 6 + 6 + 6 hours, how many questions?".
+If he took 6 hours, he answered 30 questions.
+The second test needs 20 hours (100 questions).
+Total Capacity = 20 hours.
+He used 6 hours.
+The "remaining" capacity in terms of time is $20 - 6 = 14$ hours.
+However, 14 hours is a "waste" of capacity.
+In many versions of this riddle, the answer is the difference in hours (available - used) multiplied by some factor? Or simply the hours saved?
+No, if you are 15 hours short of running a test, you leave 15 questions left? That doesn't make sense dimensionally.
+Let's look at the "waiting" logic again.
+He must answer 20 questions.
+He answered 6.
+He has "missed" the next 14 questions.
+Wait, if he has 14 hours *of potential* but used 6 hours, does he have 14 or 0 questions "left" to spend the remaining time?
+If he spends 6 hours, he moves the cursor forward 6 hours.
+If he finished at the end of hour 20, he is at hour 20.
+He finished at hour 6.
+So he is 14 hours behind.
+Is the question asking how many questions he *missed*?
+He missed answering questions between his 6-hour mark and the 100-question mark in the future?
+If he keeps moving forward, he arrives at the 100-question mark after 14 more hours.
+Does "leave incomplete" mean the count of questions he *should* have answered?
+If rate = 5/hr, $0.5$ questions/hr is not it.
+Let's assume the standard interpretation: The test completion time is the mathematical maximum gap.
+Time required = $100/5 = 20$ hours.
+Time available = 6 hours.
+He has 14 hours available but it's not enough.
+He is effectively "wasting" the capacity.
+Usually, this specific type of problem asks for the number of questions that were completed vs requested, but
+---
+**Step 1: Calculate the rate of completing the first test.**
+The first test has 75 questions and 8 hours.
+$$ \text{Rate of completion}_1 = \frac{75 \text{ questions}}{8 \text{ hours}} = 9.375 \text{ questions per hour} $$
+
+**Step 2: Calculate the total time available for the first test.**
+Since the rate is constant, we simply need to multiply the rate by the total time allocated.
+$$ \text{Total time for first test} = 8 \text{ hours} $$
+
+**Step 3: Calculate the number of questions the first test completes in that time.**
+$$ \text{Questions completed}_1 = 9.375 \text{ questions/hour} \times 8 \text{ hours} = 75 \text{ questions} $$
+
+**Step 4: Calculate the number of questions left incomplete for the first test.**
+$$ \text{Questions incomplete}_1 = \text{Total questions} - \text{Questions completed} $$
+$$ \text{Questions incomplete}_1 = 75 - 75 = 0 $$
+
+**Step 5: Calculate the time remaining for the second test.**
+The second test was intended to take 6 hours.
+$$ \text{Remaining time available} = 6 \text{ hours} $$
+
+**Step 6: Calculate the rate of completing the second test.**
+$$ \text{Rate of completion}_2 = \frac{100 \text{ questions}}{6 \text{ hours}} = \frac{100}{6} = 16.666... \text{ questions per hour} $$
+
+**Step 7: Calculate the number of questions the second test completes in the remaining time.**
+$$ \text{Questions completed}_2 = \text{Rate of completion}_2 \times \text{Remaining time} $$
+$$ \text{Questions completed}_2 = \frac{100}{6} \times 6 = 100 \text{ questions} $$
+
+**Step 8: Calculate the number of questions left incomplete for the second test.**
+$$ \text{Questions incomplete}_2 = \text{Total questions} - \text{Questions completed} $$
+$$ \text{Questions incomplete}_2 = 100 - 100 = 0 $$
+
+**Conclusion:**
+Mark has 0 questions left incomplete on the first test and 0 questions left incomplete on the second test.
+
+####
+---
+To find the number of incomplete questions, we need to calculate the questions Mark finished and the questions used to start the second test, then subtract from the total questions to find the completion.
+
+**Step 1: Calculate the time Mark needed for the first test.**
+*   Total questions in first test: $75$
+*   Rate: $5$ questions per hour
+*   Time required for first test:
+    $$ \text{Time} = \frac{\text{Total Questions}}{\text{Rate}} = \frac{75}{5} = 15 \text{ hours} $$
+
+**Step 2: Calculate the time Mark used for the second test.**
+*   Total questions in second test: $100$
+*   Rate: $5$ questions per hour
+*   Time required for second test:
+    $$ \text{Time} = \frac{\text{Total Questions}}{\text{Rate}} = \frac{100}{5} = 20 \text{ hours} $$
+
+**Step 3: Determine the completion times.**
+*   Mark started the first test at the end of yesterday. So, he began after $15$ hours.
+*   He finished the first test at $15$ hours.
+*   For the second test, he has $6$ hours available.
+*   He begins the second test after $15 + 6 = 21$ hours (using 15 hours for the first part) or he completes it in 21 hours total.
+*   The start time for the second test is $20$ hours past the end of yesterday.
+
+**Step 4: Analyze the start and end times.**
+*   First test start: $20$ hours (past)
+*   First test end: $20 + 15 = 35$ hours (past)
+*   Second test start: $20$ hours (past) (Assuming he started his second part of it immediately after the last question of the first part is completed, or if the start time calculated from "6 hours to complete" allows for partial overlap without calculating superfluous time).
+
+Let's refine the timeline based on exact hour values:
+*   End of yesterday: Hour 0.
+*   Start of First Test: $0 + 15 = 15$ hours.
+*   Finish of First Test: $15 + 15 = 30$ hours.
+*   End of First Test (in minutes): $30 \times 60 = 1800$ hours.
+
+Remaining time to finish first test: $24$ hours.
+Remaining time to finish second test: $1$ hour.
+
+Total elapsed time: $1800 + 1 = 1801$ hours.
+Total Needed: $1800 + 1 = 1801$ hours.
+
+Total Available: $6$ hours.
+Boundaries:
+*   Start of test 2: $1801 - 1 = 1800$ hours.
+*   Start of test 2 = Start of test 1 + Remaining Time 1 = Start of test 1 + 6 hours.
+    *   $1800 - 1 = 1799$ hours (Start of test 1).
+    *   $1799 + 6 = 1805$ hours (Start of test 2).
+
+Let's check the timeline again simply logically:
+*   Start: Hour 0.
+*   Minute-based calculation:
+    *   Hour 0: $24 \times 60 = 1440$ mins.
+    *   Hour 1: $25 \times 60 = 1500$ mins.
+    *   ...
+    *   Hour 18: $18 \times 60 = 1080$ mins.
+    *   Hour 19: $20 \times 60 = 1200$ mins.
+    *   For the first test (remaining 24 hr, 1 min):
+        *   $24 \times 60 = 1440$ mins.
+        *   $1440$ minutes into the day = $25$ hours = $16:00$ on the 2nd? No.
+        *   $1440$ minutes = $24$ hours exactly.
+        *   So the first test is finished exactly at $24$ hours.
+        *   First test finishes at $24:00$.
+        *   Second test starts at $24$ hours + 6 hours = $30$ hours = $24:00$ exactly?
+        *   If he must complete a test in 1 hour, and he finishes the first one exactly on the full hour 24, and he has 6 hours available, he cannot have started the second one before.
+        *   If he starts the second one at 24 hours 00:00, and it takes 1 hour, he finishes at 25:00.
+        *   Total time = 1 hour from 24:00.
+        *   Total Required = 15 (first) + 1 (second) = 16 hours.
+        *   Available = 6 hours.
+        *   He cannot complete both.
+        *   If he starts the second one at 24:00 (end of first physical hour):
+            *   He finishes the first test at 24:00 (physical end of the hour).
+            *   He has 6 hours *available* to complete. This implies he can only have been working the first 6 hours.
+            *   But he was working through hours 1440 to 2400? No.
+            *   Work interval: $1440 \to 2400$. Duration = $24 \times 60 = 1440$ mins = 24 hours.
+            *   He starts second test at 24 mins? No, he can start any interval as long as it adheres to the "6 hours available" constraint relative to the start.
+            *   Start time of Second Test = $1800 - 6 = 1794$ mins past midnight? No.
+            *   Let's stick to the 24-hour day:
+                *   Start: $1800$ mins.
+                *   End: $1800 + 1 = 1801$ mins.
+                *   Available time: $1801 - 1800 = 1$ minute.
+                *   Start time for Test 2 = Start time for Test 1 - 1 minute? Or Start time for Test 1 + 6 hours?
+                *   Constraint: He *could* have started Test 2 anytime after the completion of Test 1.
+                *   But he *must* have finished the first part.
+                *   If he completes Test 1 exactly at 1801 minutes (physical end):
+                    *   Problem: He wanted to start Test 2 *after* completion.
+                    *   If he starts Test 2 at 1801 mins: Start = $1801$ mins.
+                    *   Work Interval for Test 2: $1801$ mins to $1801 + (24 \times 60) + 1 = 1801 + 1441 = 3242$ mins?
+                    *   Total time needed: $24 \times 60 + 1 = 1441$ mins. No, needed to finish *in* 6 hours.
+                    *   If he starts at 1801, and has 6 hours left to complete it: He finishes at 1807.
+                    *   Total waiting time for second test: From $1440$ to $1807$ is $367$ mins.
+                    *   Wait, the question asks "how many questions did he leave incomplete".
+                    *   Incompletable questions are the ones used to start the second test before completion.
+                    *   Since he must finish the first test within 24 hours, and the second test takes 24 hours.
+                    *   Can he start the second test *during* the 24 hours remaining? Yes, if the 24 hours includes the start of the second test.
+                    *   Start time of Test 2 = Start time of Test 1 + 6 hours.
+                    *   Start time of Test 1 = 1800 mins.
+                    *   Start time of Test 2 = 1806 mins.
+                    *   Total Duration of second test = $24 \times 60 + 1 = 1441$ mins.
+                    *   Does $1806$ plus $1441$ fit in 24 hours? $1806+1441 = 3247$ mins. $3247 / 1440 \approx 2.25$ days.
+                    *  
+---
+#### 1. Calculate the total number of questions each test would take as fully completed
+If Mark had finished the first part of the first test, how many hours would it take to complete it?
+$$ \text{Time} = \frac{\text{Total Questions}}{\text{Rate}} = \frac{75}{5} = 15 \text{ hours} $$
+
+If Mark had finished the second part of the second test (waiting 6 hours for the first test), how long would it take to complete the second part of the second test?
+$$ \text{Time} = \frac{\text{Remaining Time}}{\text{Rate}} = \frac{6}{5} = 1.2 \text{ hours} $$
+
+So, leaving the second test incomplete means Mark spends $1.2$ hours just waiting for the first test to be finished.
+
+#### 2. Calculate the total time spent on the second test and find the percentage incomplete
+The second test involves $100$ questions. Since Mark waits $1.2$ hours, the total time required to complete the second test as expected is:
+$$ 15 \text{ hours} + 1.2 \text{ hours} = 16.2 \text{ hours} $$
+
+Mark's actual time is $6$ hours. The percentage of the distance Mark actually moved is:
+$$ \frac{\text{Actual Time}}{\text{Time Needed}} \times 100\% = \frac{6}{16.2} \approx 36.9\% $$
+
+The questions left incomplete are:
+$ 100\% - 36.9\% = 63.1\% $
+or approximately $63$ questions (since we deal with integers in rate problems).
+
+#### 3. Verify using the rate approach (valid for continuous time)
+We can calculate the rate of completion for the second test based on the first test's completion rate.
+The first test is $5$ questions/hour for $15$ hours, so each full question takes $1/5$ of a hour ($15/5 = 3$ hours).
+The second test is $100$ questions. Total time needed to complete it as expected is $16.2$ hours.
+His actual time is $6$ hours.
+Using the calculated rate per question ($1$ hour per question since $1/5$ hour = $1$ minute):
+$$ \text{Questions} = \text{Actual Time} \times \text{Rate} = 6 \text{ hours} \times \frac{1 \text{ question}}{5 \text{ hours}} = \frac{6}{5} = 1.2 \text{ questions} $$
+
+This confirms the calculation for the percentage remaining.
+
+**Total Incomplete Questions:**
+$$ 100 - 1.2 = 98.8 $$
+Converting back to the standard rate-based format ("questions in full"):
+Remaining as full questions: $\frac{98.8}{5} = 19.76$.
+Taking the integer part for integer division: $19.76 \approx 19$.
+Incomplete count: $100 - 19 = 81$.
+
+Wait, let's re-evaluate the standard "questions" interpretation. Usually, in math competitions, unless specified as a real number of time available, the "percentage" logic leads directly to the numerator in the reduced fraction if not taken as whole items.
+Let's stick to the strict integer constraint logic often used in such word problems unless "finite number of questions" is explicitly stated as an integer constraint.
+Total Questions = 100.
+Incomplete Count = $\frac{100}{5} \times 0.369$? No.
+Incomplete Count = Full Questions - Completed Questions.
+Completed Questions = $\frac{6}{16.2} = \frac{60}{162}$.
+Incomplete = $100 - \frac{60}{162} = \frac{1620 - 60}{162} = \frac{1560}{162}$.
+$1560 \div 2 = 780$.
+$162 \div 2 = 81$.
+$780 \div 81 = 780 / 81$.
+$780 / 81 = 26 / 27$.
+$26 \div 27 \approx 0.96 \approx 1$ (as a fraction) -> **1 Question**.
+$1 \times 10 = 10$ question? No.
+Let's re-calculate $780 / 81$.
+$780 / 81 = 260 / 27 \approx 9.63$?
+$81 \times 9 = 729$.
+$780 - 729 = 51$.
+So $9$ with remainder $51$.
+$260 \div 27 = 9$ with remainder $13$.
+So $9.12$?
+Again, standard integer division rule: "A fraction of time taken".
+Time = $6$ hours. Rate = $15 \times 5 = 75$ correct questions.
+Incomplete Rate = $(75 - 6) / 75$? No, that's too simple.
+Fraction = $6 / (15 \times 5 + 6) = 6 / (75 + 6) = 6 / 81$.
+Incomplete = $100 - (6/81) \times 100$? No, the "percentage" of time is not the percentage of questions. The number of incomplete questions is the total number of questions not completed.
+Completion Rate = $75$ questions / $15 \times 5$ hours.
+Incomplete Question Rate = $(75 - 6/15) / (15 \times 5) = 81/75 / 75$? No.
+Inkomplete Question Count = (Total Questions - Completed Questions).
+Completed Questions = $\frac{6}{16.2} \times 100 = 36.904 \approx 37$ questions.
+$100 - 37 = 63$ questions.
+This is the standard answer format for rate problems with "per hour" rates and "total questions". The quiet time is the difference.
+
+Let's double check the logic.
+Correct questions = $5 \times 15 = 75$.
+Incomplete (Quiet) time = $16.2 - 6 = 10.2$ hours.
+Incomplete Questions = $5 \times 10.2 = 51$ questions.
+Calculations:
+1. Correct time for 75 = 15 hrs. Rate = 5 all question per 5 hr.
+2. 1st test incomplete time = 16.2 - 6 = 10.2 hours.
+3. Rate per question = $5 \text{ questions} / (5 \times 1 \text{ hr}) = 1 \text{ question per 5 mins}$.
+4. Incomplete questions = $5 \text{ (total)} \times 10.2 \text{ (hr)} / 5 \text{ (hr per q)} = 5 \times 10.2 = 51$.
+Wait, earlier I got 81 vs 63.
+Let's re-run the fraction calculation carefully.
+Correct rate = $5$ q/5 hr = $1$ q/min.
+Total time for 100 q expected = $16.2$ hrs.
+Incomplete time for 100 q = $16.2 - 6 = 10.2$ hrs.
+% Incomplete = $10.2 / 16.2 = 102 / 162 = 51 / 81 = 17 / 27$.
+Incomplete questions = $Total / 27 \approx 100 / 27 \approx 3.7$? No.
+Formula: $\text{Incomplete} = \text{Total} \times \text{Rate} \times \text{Fraction}$. No.
+Incomplete = $\text{Total} - (\text{Correct} \times \text{Fraction})$.
+Correct = $5 \times 6 = 30$? No, Correct questions for 6 hours at 15 hr per set = $30$.
+Wait, $15 \text{ sets} \times 5 \text{ p/q} = 75$. Correct for 6 hours is $30$.
+Rate per q = $30/6 = 5$ q/hr.
+Incomplete Time per set = $5$ q/hr $\times 10.2$ hr? No.
+Incomplete Questions = $10.2 \text{ hr}$.
+At 5 q per hour, that is $10.2 / 5 = 2.04$ q? No.
+Total inkomplete q = $10 \text{
+---
+To find the number of questions Mark left incomplete, we need to calculate the amount of time he had for the first test and the amount of time he had for the second test, subtract these from the total hours he had allocated, and then multiply the difference by the number of questions.
+
+**Step 1: Calculate the time taken for the first test.**
+*   Total questions for the first test = 8 questions.
+*   Rate for the first test = 5 questions/hour.
+*   Time taken = $\frac{\text{Total Questions}}{\text{Rate}} = \frac{8}{5} = 1.6$ hours.
+
+**Step 2: Calculate the time taken for the second test.**
+*   Total questions for the second test = 100 questions.
+*   The rate is the same as the first one, so 5 questions/hour.
+*   Time taken for the second test = $\frac{100}{5} = 20$ hours.
+
+**Step 3: Compare the total time available to each test.**
+*   Mark has **8 hours** for the first test.
+*   Mark has **6 hours** for the second test.
+*   Historical note: It is important to note that Mark **had not completed the tests yet**. He only has the hours he started with to spare.
+
+**Step 4: Determine whether each time satisfies the requirement.**
+We need to check if he has time for *each* question within the limit assigned to the test.
+*   **First Test**: 1 hour available. The test consists of 8 questions ($\frac{8}{1} = 8$). Since $8 > 1$, Mark has insufficient time to finish **all** questions in this test.
+*   **Second Test**: 5 hours available. The test consists of 100 questions ($\frac{100}{5} = 20$). Since $20 > 5$, Mark has insufficient time to complete **all** questions in this test.
+
+**Step 5: Calculate total questions left incomplete.**
+Mark cannot finish any questions because the time available per question is less than the total number of questions.
+*   Questions left in First Test: $8 - 1 = 7$ questions.
+*   Questions left in Second Test: $100 - 5 = 95$ questions.
+
+Total questions left incomplete = $7 + 95 = 102$ questions.
+
+Wait, let me re-read the prompt carefully. "How many questions did he **leave incomplete**?"
+
+If he has only 6 hours for a test with 100 questions at a rate of 5 per hour, he finishes in 20 hours. He has 6 hours. So he fails completely. He left 95 questions.
+
+If the prompt meant "assuming he completed as many as allowed (i.e., completed all questions if possible)", does that make sense? No, that would be telepathy.
+
+Let's re-evaluate the "insufficient time" logic.
+Time available = 6 hours.
+Rate = 5 questions/hour.
+Hours per question = $1/5 = 0.2$ hours per question.
+Total hours = $6$.
+Total questions possible if he finished as many as required = $6 \times 0.2 = 1.2$ questions.
+Did he fail in the first test? Yes, 8 questions > 1.2 questions. Left: 7.
+Did he fail in the second test? Yes, 100 questions > 1.2 questions. Left: 99.
+
+Total incomplete = 7 + 99 = 106.
+
+However, usually in these types of word problems, there is a trick. Let's look at the numbers again.
+Rate is 5 questions/hour.
+First test: 8 questions. Rate = 5 -> 1.6 hours. 1.6 < 6.
+Second test: 100 questions. Rate = 5 -> 20 hours. 20 > 6.
+
+If the question implies that he **finished** the first test as fast as he could (1.6 hours), but the *deadline* or *impossibility* of finishing the second test is different, it might be interpreted as a comparative limit.
+But the phrasing "If Mark had 8 hours to complete the first test..." implies the 8 hours is a resource constraint for that specific test. Since the test (8 questions) takes more than 1.6 hours, he leaves things out.
+Since the test (100 questions) takes 20 hours, and only he has 6 hours, he definitely leaves it out.
+Is there a typo in my interpretation?
+Perhaps the "rate" is questions remaining or something? No, "completed at a rate of 5 questions per hour".
+
+Let's reconsider the definition of "incomplete".
+If a test has 100 questions and you can only do 6 hours, you must do $6/5 = 1.2$ questions completely.
+Question 1: $\frac{100-1.2}{1.2} = 81 \frac{1}{12}$ hours? No.
+Actually, if he can only do 1.2 questions completely, he passes the first test with 6.7 questions incomplete.
+Passing the test: 6 questions. Incomplete: 7 questions.
+Passing the second test: 1.2 questions. Incomplete: 98.875 questions.
+Total incomplete: 100.875.
+
+This seems highly unlikely for a standard math riddle. The standard solution for this riddle pattern is usually **7** for the first and **10** for the second? No.
+
+Let's try the "Could you do it" logic.
+First test: 8 questions. Can you do all?
+Hours available = 6.
+Minute per question = 5 minutes.
+Total minutes = 300. 5 minutes can do 2 questions.
+With 6 hours (360 minutes), he can do at least 2 * 20 = 40 questions.
+He can do 8 questions.
+So he is likely able to do 8 questions. Incomplete = $8 - 5 = 3$.
+Wait. $2 * 20 = 40$. 8 < 40. He is truly unable.
+
+Let's try the arithmetic only.
+Time for 8 questions = 1.6 hours. (Less than 6).
+Time for 100 questions = 20 hours. (More than 6).
+If he completes the 8 questions as soon as he starts, he has effectively used 1.6 hours.
+If he must wait until he finishes the 100 questions, he has wasted 6 - 1.6 = 4.4 hours on the second test.
+But the second test requires 20 hours. So he failed it.
+
+Is it possible the question implies he **can** complete the first one, and **must** might fail the second one?
+No, he explicitly says "If Mark had 8 hours... and 6 hours to complete the second one". This is a conditional constraint. He *has* 6 hours to complete the second.
+So he cannot finish the second one. He leaves incomplete the second one.
+Remaining questions = 100.
+Time spent = 6.
+Questions left = $100 - 1 = 99$.
+Question through = 1.
+Total = $100 - 1 = 99$.
+
+Is it possible the "rate" is 5 minutes per question? The text says "5 questions per hour".
+Maybe the "8 hours" is not the only constraint?
+What if the question implies: He gave up on the first test. How many does he have left?
+He has 6 hours to spare.
+Questions = 100. Time = 6.
+Is there a special logic for this specific riddle?
+Often, the phrasing "How many questions did he leave incomplete?" asks for the difference: (Questions) - (Completed).
+Completed = $\min(8, \text{estimated mins})$.
+Estimated mins = 100 questions * 5 mins/q = 500 mins.
+6 hours = 360 mins.
+Estimated mins for 8 questions = $8 \times 5 = 40$ mins.
+With 360 mins, he can do 40 questions fully (if rate was constant).
+He has 8 questions.
+So he is likely able to do them.
+Incomplete = 8 - 40 = -32? Impossible.
+
+Let's assume there is a typo in the problem statement regarding the rate or the first rate.
+Usually, these problems are structured:
+Test 1: 8 questions @ 5/hr. Can he do it?
+Test 2: 100 questions @ 5/hr. Can he do it?
+If he can do Test 1: He passes it. He is left with the "waste" time? No.
+The question asks "how many questions did he **leave incomplete**?"
+Possible interpretations:
+1. He completed the test as much as required. If he couldn't, he failed that specific subtask, leaving questions infinite
+---
+To determine how many questions Mark left incomplete, we must first calculate the number of hours he could have completed the tests based on his original schedule and then compare the actual completed questions with the total questions in each test.
+
+**Step 1: Calculate the total time allocated for each test.**
+
+*   **First Test:**
+    *   Total questions: 75
+    *   Time available: 8 hours
+    *   Calculated Rate: $75 \text{ questions} \div 8 \text{ hours} = 9.375 \text{ questions/hour}$
+    *   Calculated Hours Required: $75 \text{ questions} \div 9.375 \text{ questions/hour} = 8 \text{ hours}$.
+
+*   **Second Test:**
+    *   Total questions: 100
+    *   Time available: 6 hours
+    *   Calculated Rate: $100 \text{ questions} \div 6 \text{ hours} \approx 16.667 \text{ questions/hour}$
+    *   Calculated Hours Required: $100 \text{ questions} \div 16.667 \text{ questions/hour} \approx 6 \text{ hours}$.
+
+**Step 2: Determine the total number of hours Mark worked.**
+
+Mark worked 8 hours (\text{study 1}) + 6 hours (\text{study 2}) = **14 hours**.
+
+**Step 3: Calculate the number of questions completed.**
+
+*   **First Test Completed:**
+    $9.375 \text{ questions/hour} \times 8 \text{ hours} = 75 \text{ questions}$.
+    Mortification Factor (Mf): $75 / 9.375 = 100\%$.
+
+*   **Second Test Completed:**
+    $16.667 \text{ questions/hour} \times 6 \text{ hours} = 100 \text{ questions}$.
+    (Note: $100/6 = 3.333...$ hr × 6 = 20 hours min = 20 hours 1 min = 16.666... hours).
+    Mortification Factor (Mf): $100 / 16.666... = 60\%$.
+    Completed Questions: 16.666... $\times$ 6 $\approx$ 100 questions.
+    Remaining Time to complete 100 questions from the above rate: $16.667 - 20 = -3.333$ hours (3 minutes).
+    Let's re-calculate the exact duration for the second test to avoid rounding errors.
+    Time to complete 100 questions at $100/6$ questions/hr:
+    Time = $100 / (100/6) = 6$ hours.
+    Total Time = 6 hours.
+
+**Step 4: Compare completed questions against reality.**
+
+*   **Time Limit for Test 2 (3 mins):**
+    To complete 100 questions from the calculated rate: $100 / (100/6) = 6$ hours.
+    Mark only worked **4 hours** (8 for test 1 and 4 for test 2) before running out of time.
+    He must have sought relief by skipping questions.
+    He skipped for 6 minutes (remaining fraction of the time limit).
+    $6 \text{ minutes} = 6 / 60 = 1/10 = 0.1 \text{ hours}$.
+
+*   **Total Skipped Questions:**
+    1.  Test 1: Mark worked all 75 questions in the allotted time.
+    2.  Test 2: He worked approximately 6 hours, but was only allowed 4 hours of effective work (athletic). To skip remaining time to reach the target of 100 questions, he needs to skip $(4 - 6) = -2$ hours? This is incorrect logic.
+    
+    Let's re-evaluate Test 2 completion strictly.
+    Time limit = $100 / (100/6) = 6$ hours.
+    Actual work done = $6$ hours.
+    Time remaining = 0.
+    Therefore, he has to stop working immediately.
+    Questions remaining in this 6-hour "gun run":
+    Since he successfully completed 100 questions *under* the constraint of 6 hours, he has already met the requirement. He cannot skip *any* questions in this segment to finish.
+
+    *Critical Check on Test 2:*
+    Did the problem say he needed 6 hours to finish 100 questions?
+    Rate = 100 questions / 6 hours = ~16.7/tasks/hour.
+    Target = 100 questions.
+    Time needed = $100 / 16.7 = 6$ hours.
+    Mark worked 6 hours.
+    Since he worked exactly what was needed, he cannot reach the goal further back in time or skip questions at his calculated rate.
+    However, the problem usually implies he *could* have finished, so he likely failed.
+    If he fails to complete 100 questions within 6 hours, how many did he leave incompletable?
+    Usually, in these problems, the "skipping" refers to questions in the same test he could not finish because his peak performance was below the target.
+    BUT, look at Test 2 rate again. $100 / 6 \approx 16.67$.
+    If he finished Test 2 at 100%, he performs 100%.
+    If he is required to complete 100 questions within 6 hours, and he completes it at 100%, he is done.
+    So, in this specific scenario where he finishes the mandatory task by the deadline, he cannot leave incompletable questions on the **second** test.
+
+    *Re-evaluating the whole problem structure:*
+    Is there another interpretation?
+    "How many questions did he leave incompletable?" implies he failed the second test or didn't finish it.
+    If he completes 100 questions in 6 hours, he is satisfied. No incompletable questions.
+    If the question implies he *must* complete 100 questions, but he doesn't, usually you count the uncompleted questions. But since he completed them by the deadline, 0 were left incompletable on the second test.
+
+    **Let's check Test 1 again.**
+    75 questions, 8 hours limit.
+    Max completion rate = $75/8 = 9.375$.
+    If he was attempting to complete 75 questions by 8 hours:
+    At 9.375, he gets 75 exactly.
+    So he completed 75. No incompletable on Test 1.
+
+    **Conclusion on Test 2:**
+    Rate = 100/6.
+    Required = 100.
+    Time required = 6.
+    Worked = 6.
+    Completion = 6 * (100/6) = 100.
+    Since everything fits exactly, no incompletable questions were left from the second test (assuming he finished it on time).
+
+    **Wait, is there a trick in the rate?**
+    "He completed the test at a rate of X."
+    Does "at a rate" mean "at peak efficiency" or "average rate"?
+    If he completed 100 questions in 6 hours using an average of 5 (conceptually), that would be weird for a test (usually it takes ~1.6mo).
+    If he completed 100 questions in 6 hours using *his* actual rate (16.67), that fits perfectly.
+    The phrasing "at a rate of 100 questions per 6 hours" strongly implies the capacity was exactly that peak rate until he finished.
+    Therefore, on test 2, 0 incompletable questions.
+
+    **Wait, let me read the first sentence carefully.**
+    "Mark took a test yesterday that consisted of 75 questions. He completed the test at a rate of 5 questions per hour."
+    This sets the baseline before the second one.
+    Then "Today, he took another test of 100 questions at the same rate."
+    Usually, "at the same rate" in these logic puzzles implies the *capacity* constraint is constant or the peak efficiency allows it.
+    If the capacity was 5, then 100 questions would take $100/5 = 20$ hours.
+    He only has 6 hours. He is guaranteed not to reach 100 questions if he continues at 5 questions/hr.
+    Wait! The second test *was* "taken today".
+    My previous calculation assumed the rate was the *aim* for both, or the rate was constant despite the second constraint.
+    Let's read: "Today, he took another test of 100 questions at the same rate."
+    This suggests the *intended
+---
+To find the number of incomplete questions, let's break down the problem step by step.
+
+**1. Analyze the parameters:**
+*   **First Test:**
+    *   Total questions: 75
+    *   Rate: 5 questions per hour
+    *   Total available time: 8 hours
+*   **Second Test:**
+    *   Total questions: 100
+    *   Rate: 5 questions per hour
+    *   Available time: 6 hours
+*   **Goal:** Calculate the number of incomplete questions.
+
+**2. Calculate time spent on the first test:**
+*   Since the rate is constant (5 questions/hour), time is equivalent to the number of questions completed.
+    *   Total time = 8 * 5 = 40 hours? Wait, let's re-read carefully.
+    *   Rate is 5 questions per hour. Total time is 8 hours.
+    *   Question count = Rate * Time = $5 \text{ questions/hour} \times 8 \text{ hours} = 40 \text{ questions}$.
+    *   *Self-correction*: The rate is usually performance, but the problem states "at a rate of 5 questions per hour" over 8 hours. So, the time elapsed is 8 hours. The number of questions completed is $8 \times 5 = 40$.
+
+**3. Calculate how many questions are left incomplete on the first test:**
+*   Incomplete questions = (Total questions) - (Questions completed)
+*   Incomplete = $75 - 40 = 35 \text{ questions}$.
+
+**4. Calculate time available for the second test:**
+*   Total time = 6 hours.
+*   The question says "Tomorrow, he took another test...". Since tomorrow has not happened yet, he has not started.
+*   Time available now = 6 hours.
+*   Completed questions = Time * Rate = $6 \text{ hours} \times 5 \text{ questions/hour} = 30 \text{ questions}$.
+
+**5. Calculate the number of questions for this test to complete:**
+*   Completed = $30$.
+*   Available time is 6 hours. So he can definitely complete the full 100 questions in this timeframe (if he can pad the time out of thin air, which is impossible physically, but the problem asks how much *he* leaves incomplete based on the time constraint).
+*   Actually, let's look at the "incomplete" portion for this test.
+    *   He has 6 hours. He starts now.
+    *   He finishes at $6 \times 5 = 30$ questions.
+    *   He wants to complete 100 questions.
+    *   Incomplete for this test = $100 - 30 = 70 \text{ questions}$.
+
+**6. Sum the incomplete questions:**
+*   First test incomplete: 35
+*   Second test incomplete: 70
+*   Total incomplete = $35 + 70 = 105$.
+
+Let's double check the logic. The problem asks "how many questions did he leave incomplete?". It implies all questions for the second test are left incomplete.
+First test:
+Time = 8 hours.
+Questions = $8 \times 5 = 40$.
+Incomplete = $75 - 40 = 35$.
+
+Second test:
+Total time available = 6 hours.
+Questions available to complete = $6 \times 5 = 30$.
+Total questions needed = 100.
+Incomplete = $100 - 30 = 70$.
+
+Total = $35 + 70 = 105$.
+
+**Alternative Interpretation Check:**
+Does "He completed the test at a rate of 5 questions per hour" mean he finished it as long as 5 questions/hr is possible? Usually, in these problems, the time provided (8 or 6 hours) is the duration slept into or the calculation provided. Since he took a test of 75 questions and completed it with 8 hours, it's standard to assume the 8 hours encompasses the entire 75-question test performance.
+Since the problem doesn't give him the time to complete the *remaining* questions of the second test separately, we assume the six hours available *start* when he begins taking the 100-question test. In that context, the 70 questions made of the second test are all left incomplete.
+
+Therefore, the total incomplete questions is the sum of incomplete from the first and second tests.
+
+**Calculation:**
+Incomplete First Test = $75 - (8 \times 5) = 75 - 40 = 35$.
+Incomplete Second Test = $100 - (6 \times 5) = 100 - 30 = 70$.
+Total = $35 + 70 = 105$.
+
+#### 105

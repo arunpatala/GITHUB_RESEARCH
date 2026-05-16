@@ -1,0 +1,496 @@
+1,400,000
+---
+To find Marcy's new annual pension after she quits after 30 years, we need to calculate how much of the pension the company will restore to her after she leaves the workforce.
+
+**Step 1: Calculate the total annual payment.**
+Marcy gets an initial annual pension of $50,000. However, for the first 20 years, she receives an annual payout of $50,000. After 20 years, she becomes entitled to an annual payment equal to 5% of the total pension amount.
+
+The formula for the total pension payment on a simple progressive annuity where the start is $P$ and the starting payment rate is $r$ is:
+$$ Total = P + Pr $$
+Where $P$ is the initial annual payment and $r$ is the incremental payment starting from year 20.
+
+Given:
+*   $P = 50,000$
+*   $r = 0.05$
+
+The total annual pension over her career is:
+$$ \text{Total Annual Payment} = 50,000 + (0.05 \times 50,000) $$
+$$ \text{Total Annual Payment} = 50,000 + 2,500 = 52,500 $$
+
+**Step 2: Determine the number of years of recovery.**
+Marcy quits 30 years after she started (which is 30 years after year 0). In the context of the problem:
+*   Years 1 to 20 make up her initial service.
+*   Years 21 to 30 are her recovery period.
+
+Wait, let's re-read the timeline carefully.
+"Starting after 20 years" means at the end of year 20, she becomes entitled to 5%.
+"Quits after 30 years" implies her employment ends 30 years from the start of the first year she earns income.
+Usually, in these problems, "30 years" means 30 annual payments following the 20th.
+Total recovery periods = $30 - 20 = 10$ periods.
+
+Total number of recovery decades: $10 \times 10 = 100$ years.
+
+**Step 3: Calculate the annual payment during the recovery period.**
+The company recovered 5% of the original pension amount over the first 10 years of recovery.
+Let $A$ be the annual payment during recovery.
+$$ 10A = 0.05 \times 52,500 $$
+$$ 10A = 2,625 $$
+$$ A = \frac{2,625}{10} = 262.5 $$
+
+**Step 4: Calculate the final annual pension.**
+This annual payment ($262.5$) is added to her base pension over the last 10 years to equal the total earnings from the company for her service at age 40.
+The total earnings from the company in her final 10 years (years 41 to 50) is:
+$$ \text{Total Earnings}_{\text{final}} = 262.5 $$
+
+Marcy starts at age 40 (Year 40 of 40). The recovery period occurs from age 40 (Year 40 start) to age 50.
+She earns this cash flow for 10 years.
+The total payout during the final 10 years should be the total earnings she earned.
+$$ \text{Annual payout in years 41-40} = \text{Total Earnings}_{\text{final}} $$
+$$ \text{Annual payout} = 262.5 $$
+
+Therefore, her final annual pension is $262.50.
+
+(Note: Sometimes "30 years" could be interpreted as 30 years of service immediately after 20, meaning 30-20 = 10 years of work remaining. The phrasing "quits after 30 years" standardly implies 30 annual payments following the 20th one).
+
+Calculation Check:
+Base: 50,000
+Increment: $0.05 \times 50,000 = 2,500$
+Total: 52,500
+Retired at 30 years. Recovered 5% of total in 20 years.
+Recovery value: $52,500 \times 0.05 = 2,625$
+Restitution: 10 years $\times 2,625 / 10 = 2,625$.
+Wait. If it's 10 years of trigocial repayment (equivalent to a geometric average or simple average), the final payment is simply the average of the first and last terms.
+Sum = $52,500 \times 11 / 2 = 52,500 \times 5.5 = 288,750$.
+Rate of return in these specific years is 0.05 per year.
+Using the average number of years (arithmetic mean of $t$ and $T-10$):
+Average $t = (20 + 20)/2 = 20$.
+Average $t' = (20 + 10)/2 = 15$.
+Average number of years of recovery = $10/2 = 5$? No, simple average of 10 is 5.
+This logic is getting complicated for a simple arithmetic progression question usually. Let's stick to the simple average approximation or exact geometric mean calculation.
+Total accumulation factor $(1+0.05)^{10} - 1$.
+$1.55125627 - 1 = 0.55125627 \approx 0.55$.
+$52,500 \times 0.55 = 28,875$.
+Far from 2,625.
+Actually, let's re-read the "5% of the value" part.
+Usually, if someone says "gets 5% of the value", they mean they get an annual claim equal to 5% of the *total* pension value generated over the life of the company, regardless of the baseline amount.
+Or does it mean they get 5% of the *current* balance?
+Standard interpretation: It's a progressive annuity where the advance payment $a_1$ is $5\%$ of the total retirement benefit $a_2$.
+Total annual payment = $a_1 + (a_1 \times 0.05) = a_1(1.05)$.
+Here $a_2$ is the total payment.
+$a_1 = 50,000$.
+$a_2 = 52,500$.
+The amount repaid over the 10 years is the average of $a_2$ and $a_1$ if the interest is constant? No.
+Standard assumption for these textbook problems: The company retains the average of the first and last payment terms to ensure fair distribution (Trigonometric Average).
+Average of $52,500$ and $2,625 = (52,500 + 2,625)/2 = 555/2 = 277.5$.
+If the company pays simple average, final year is 277.5.
+If they pay geometric average (which matches the "percentage" rule):
+Let $x$ be the final payment.
+$x = 52,500 + (x-52,500) \times (r)(1+r) ...$
+Decimals approximation:
+$0.1004 \approx r$.
+$b_1 = 2625$.
+$b_2 = 277.5$.
+$2625/277.5 = 3$.
+Total factor $(1.05)^N - 1 = N \times 0.05 \times 0.92 \approx N \times 0.046$.
+If $N=10$, $b_2 = 10 \times 0.05 / (1+0.132) \approx 10/6 = 1.6$.
+$2625 \times 277.5 / 2625 - 277.5 \approx 2625$.
+
+Let's assume the standard interpretation for this type of problem: The company restores the total expected amount (average of base and promised).
+Total = 52,500.
+Restored = 55,500 / 10? No.
+Let's try the simple geometric mean logic which is direct.
+$55,500 = 2,625 \times y \implies y = 2625 / 55.5 = 47.3$.
+This gives a much lower pension ($47k) than the original ($50k) which is plausible as she retires at 40.
+But looking at the numbers: $5
+---
+To determine Marcy's annual pension after she quits after 30 years, we need to calculate the value of the pension she receives starting from year 30 via the annual 5% withdrawal benefit.
+
+**Step 1: Calculate the initial total pension value.**
+Marcy works for 40 years.
+Starting pension amount = $50,000/year.
+Since she is entitled to 5% of the value of the pension twice a year (daily = $50,000 \times 0.05 = \$2,500/day), the combined daily balance is $2,500.
+Total pension value in full years = $2,500/day \times 40 years = \$100,000$.
+
+**Step 2: Calculate the partial withdrawal period.**
+Marcy quits after 30 years.
+Withdrawed from the stash = $100,000 / 2$ (for 50 years) + $100,000 / 2$ (for 30 years) = $50,000 / 2$ ($20,000/day).
+Coalition formed = $100,000 - 20,000 = 80,000$ dollars per day.
+
+**Step 3: Calculate the annual difference per day for the remaining years (11 to 39).**
+This is equivalent to the daily difference for the years 30 to 39 (11 days per year).
+Daily difference = $80,000 / 11 \approx 7,272.73$.
+Annual difference per year = $7,272.73 \times 12 \approx 87,273.36$ dollars.
+
+**Step 4: Add the remaining value from the stash.**
+Since the stash accumulated at $7,272.73/day for 11 days each year, the total value retained for 11 years is:
+$$80,000 \text{ dollars/day} \times 11 \text{ days} = 880,000 \text{ dollars}.$$
+
+**Step 5: Calculate the final annual pension after the 11-year withdrawal period.**
+$$\text{Pension After 11 Years} = 100,000 \text{ (from stash)} + 880,000 \text{ (from rate increase)} = 980,000 \text{ dollars}.$$
+Daily pension = $980,000 / 11 \approx 89,090.91$.
+
+**Step 6: Calculate the new annual pension after quitting.**
+After the 11-year withdrawal period, Mathews returns to the stash daily at the rate of $7,272.73/day.
+Total withdrawal = $7,272.73 \times 11 = 79,999.99$ (approximately 80,000).
+Total annual pension = $980,000 + 80,000 = 1,060,000$ dollars.
+
+*(Alternative calculation using fractions)*
+Daily rate = $0.05$.
+Daily rate of change = $0.005$ per day ($\frac{1}{5}$).
+Numerator = Initial Pension $\times 0.005 = 0.005 \times 2,500 = 12.5$ per day.
+Daily rate after 11 years = $12.5 / 11 \approx 1.136$.
+Total Pension = Initial Pension $\times 1 / (1 - 11/11)$ ??? No.
+Let's stick to the accumulation method which is safer.
+Numerator = $50,000 / 10 = 5,000$ (This represents the value added over the first 10 years of the 40-year cycle).
+Wait, the standard formula for constant rate $x, 1-x$ is $\frac{50000}{1-11/11}$? No.
+Let's re-evaluate the numerator.
+Initial: $50,000$. Daily balance: $2,500$.
+Over 11 years (11 days worth of retirement), earnings = $50,000 \times 0.005 \times 11 = 2,750$.
+Total value = $50,000 + 2,750 = 52,750$.
+Total withdrawals (11 years) = $2 \times 50,000 \times 0.005 \times 11 = 55,000$.
+Pension after 11 years = $52,750 - 55,000 = -2,250$? This logic is flawed.
+
+Correct logic for constant rate $r, 1-r$:
+Day 1 to Day 11 (11 days):
+Gain = $50,000 \times r \times 11 / 100 = 5,500$ (if 50000 is value, $2,500 is base).
+Let's restart the first step clearly.
+Semiannual: $50,000$. Daily = $2,500$.
+10 years: $2,500 \times 10 \times 2$? No, par value is 1 year.
+Par value of pension = $50,000$ per year.
+Daily = $50,000$ credit.
+Working 10 years (200 days):
+Loss = $2,500 \times 200 / 365$? No, "entitled for 5% per year".
+Wait, the pension is paid at the end of the year (salaried).
+The 5% is an increase of $50,000 \times 0.05 = \$2,500/day$ (daily bal).
+Over 10 years (20 days of retirement), earnings = $2,500 \times 20 = 50,000$.
+Starting 10-year value = $50,000$.
+Total Ending Value after 10 years = $50,000 + 50,000 = 100,000$ (since it's at tax-free end for the 10 years, so value is $2500 \times 10 + 50,000 \times 10 = 105,000$? No.
+The pension payout is once yearly.
+The "entitled" value accrues.
+Days worked = $200$.
+Base balance = $10,000$ (if 2500 is base).
+Payout = $2500 \times 20 = 50,000$.
+Total Value = $50,000 + 50,000 = 100,000$.
+Correct.
+Total values of 10 years = $2 \times 100,000 = 200,000$ (set aside).
+Time to stop = 11 days (Year 11).
+Total values for 11 years = $2 \times (80,000) = 160,000$.
+Net Value = $160,000 - 55,000$ (loss from 10 years) = $105,000$?
+Let's trace the "Digital Tree of Death".
+Start: 2s (1m).
+Year 1: +$5k ($8.5m) \to 8.5m$.
+Year 2-11: $2,500 \times 11 = 27.5k$. Total $8.5m + 27.5k = 10.5m$.
+Year 12-start value: $2,500 \times 10 = 2.5m$. Total $10.5m + 2.5m = 13m$.
+Wait, the 50,000 was deducted from the $50,000 \times 50 = 2.5m$?
+Formula: $\text{Net Value} = \text{Initial Value} + \sum (\text{Gain in 1 period}) - \sum (\text{Loss in 1 period})$.
+Start Value = $50,000$.
+Gain Year 1: $50,000 \times 0.05 = 2,500$.
+Total Gain Year 1 = $2,500$ (half day).
+Less Loss Year 1: $2,500 \times (11
+---
+To find Marcy's annual pension after she quits after 30 years, we need to use the property of annuities: if a payment is made annually, a lump-sum payment made 14 years later is equivalent to the annual payments. This property holds true regardless of amount, and does not require any interest accumulation or discounting.
+
+Here is the step-by-step calculation:
+
+1.  **Initial Annual Pension:** Marcy receives an annual amount of **$50,000** for 40 years.
+2.  **Compounded Period:** The payments start accruing interest 14 years ago (starting at year 0), meaning the first payment of $50,000 is compounded for 14 years.
+3.  **Extension Period:** After the 20-year period (end of year 20), the payments stop and the initial future payments (starting from year 0) begin to compound again, as if they were made at year 20.
+4.  **Agreement:** Since a 14-year compounding period exists for the first annuity and a 14-year compounding period exists for the second (annuity starting at year 20), the two streams of money are exactly equivalent. You can simply treat the first 14 payments as the principal balance and the remaining 26 payments we are looking for as interest-only withdrawals/returns.
+5.  **Annuity Payment Calculation:**
+    *   Payment ($PMT$) = $50,000
+    *   Number of Periods ($n$) = 14 years
+    *   This creates a standard annuity due (payments at the beginning of each period).
+    *   The formula for the future value of an annuity due is:
+        $$FV = PMT \cdot \frac{(1 + i)^n - 1}{i} \cdot (1 + i)$$
+    *   Here, $PMT = 50,000$, $n = 14$, and $i = \frac{50,000}{100,000} = 0.5$.
+    *   $$FV = 50,000 \cdot \frac{(1 + 0.5)^{14} - 1}{0.5} \cdot 1.5$$
+    *   $$FV = 50,000 \cdot \frac{1.5^{14} - 1}{0.5} \cdot 1.5$$
+    *   Due to the 2x multiplier from the $1.5$ term in the formula, the final FV is exactly:
+        $$FV = 50,000 \cdot 2 \cdot \frac{1.5^{14} - 1}{0.5} = 100 \cdot 2 \cdot \frac{1.5^{14} - 1}{0.5} = 100 \cdot 50 \cdot \frac{1.5^{14} - 1}{0.5}$$
+    *   Evaluating the time value of difference: The doubling effect per period is $2/0.5 = 4$.
+    *   Alternatively, simpler logic: The annuity paid at $t=0$ is $50,000$. The annuity paid at $t=14$ is $14 \times 50,000$. The $t=0$ payment is equal to $FV \cdot (1+i)^{-1}$ and the $t=14$ payment is equal to $FV \cdot (1+i)^{+14}$. This simplifies to the future value of an ordinary annuity multiplied by $(1+i)$, which we established is twice the annual amount.
+    *   Actually, let's just use the standard annuity formula directly for the *future* value, which is $14 \times \text{annual}$.
+    *   Calculation: $14 \times 50,000 = 700,000$.
+    *   Wait, is this logic robust? Let's re-verify the property.
+        *   Statement: $700,000(1+i)^{14} = 700,000 + 700,000i(1+i)^{14}$? No.
+        *   Let $PV = 700,000$ (present value of a stream of $700,000 per year starting at 14 years).
+        *   Value at present ($t=0$): $PV_{old} = 700,000(1+i)^{-14}$.
+        *   Future value of this old stream at $t=14$: $FV_{old} = 700,000(1+i)^{14}$.
+        *   Statement: We want to find future value at $t=14$ (which is our current accumulated cash).
+        *   Let $FV_{new}$ be the future value at $t=14$.
+        *   We know $PV_{old} \cdot (1+i)^{14} = PV_{new}$. Therefore, $FV_{old} = PV_{new} = 700,000$.
+        *   So, the nominal variable $700,000$ is equivalent to the annual payout.
+
+6.  **Final Constant:** Marcy currently has these constant amounts n = 14 and PMT = 50,000. Since PMT is provided, the variable is just 50,000.
+    *   $40 = 14 + (40-14-2) = 14 + 22$? No.
+    *   Time interval = 40 years.
+    *   Total payments = 40.
+    *   Periods = 14 (old start) + 26 (new start) = 40.
+    *   The value is simply $40 \times \text{Leaf Value} / \text{Nominal Period}$.
+    *   Leaf Value (Annual) = $50,000$.
+    *   Nominal Period = 1 year.
+    *   Value = $40 \times 50,000 = 2,000,000$.
+
+    Let's double check with a simple clock analogy.
+    If Marcy receives $X$ at year 0 and $X$ at year 14, totaling $2X$.
+    This is equivalent to receiving $2X$ at year 0.
+    So, if she retires now (at year 0), she receives $2 \times 50,000 = 100,000$.
+    If she quits at year 40, it hasn't happened yet in the simulation space of "current time" relative to the "quitting time" 40, but relative to the "old event" time relative to the "new event" time, the annuity has matured.
+    Since the annuity starts 14 years ago ($t=-14$) and matures at $t=40$, we are essentially comparing a payment schedule that effectively covers the whole period from today to 40.
+    The question asks: "If she quits after 30 years, what will her annual pension be?"
+    This is the future value of a stream of 50,000 per year starting at year 0, but directly from $t=0$ (the moment of quitting) to $t=40$ (the moment of quitting + 30 years later? No, that's not how annuity derivatives work).
+
+    Correct Interpretation of the Twist: "Starting after 20 years" means payments $t=21, 22, \dots, 40$ go away.
+    "Beginning a new stream" means payments $t=21, 22, \dots, 40$ generate interest on the *same* principal.
+    So we are comparing payments over years 0-39 to years 0-40.
+    Period = 40 years.
+    Leaf Value = $50,000.
+    Nominal Period = 1 year.
+    Value = $40 \times 50,000 = 2,000,000$.
+
+    Logic check:
+    Present Value of new stream (years 21-40 at current rate):
+    $PV = 20 \times 50000 \times (1+0.005)^{14} - 50000 / 1.005$.
+    Future Value of new stream at year 40 (or current):
+    Since it's an annuity of 20 payments, which is exactly 20 years of life ending at 40, does it equal a single payment?
+    Future Value of 20 payments of 50k at 0.5% for 14 years?
+    $FV = 20
+---
+To determine Marcy's annual pension after she quits, we need to calculate the value of her pension after 20 years, find the base annual salary, subtract the quit bonus, and then calculate the total annual disability award for the remaining 10 years.
+
+**Step 1: Determine Marcy's annual salary.**
+Marcy works for 40 years. If she receives a full benefit of $50,000 for every year on average, her annual salary is calculated as the total cost multiplied by the years worked.
+$$ \text{Annual Salary} = \frac{50,000 \times 40}{40} = 50,000 $$
+
+**Step 2: Calculate the pension entitlement in 2019 (at age 20).**
+Pension entitlement starts after age 20 for 36 full years.
+$$ \text{Entitlement Rate} = 0.05 $$
+The value of the pension at the end of year 20 is:
+$$ \text{Pension Value} = 50,000 \times (1 + 0.05)^{36} = 50,000 \times 5.08056 $$
+$$ \text{Value} \approx 254,028.48 $$
+
+**Step 3: Calculate the quit bonus.**
+Marcy quits after 30 years. Therefore, she receives the pension for 20 years (years 21 to 40), plus she keeps the first year ($65\%$).
+$$ \text{Benefit Amount} = 50,000 \times (0.65 + (1.05)^{20}) $$
+$$ \text{Benefit Amount} = 50,000 \times (0.65 + 1.68541) $$
+$$ \text{Benefit Amount} = 50,000 \times 2.33541 $$
+$$ \text{Benefit} \approx 116,770.50 $$
+
+**Step 4: Calculate Marcy's total annual pension.**
+This is the initial entitlement (in 2019) minus the quit bonus.
+$$ \text{Monthly Pension} = \frac{116,770.50 - 50,000}{12} $$
+$$ \text{Monthly Pension} = \frac{66,770.50}{12} \approx 5,564.21 $$
+
+**Step 5: Calculate Marcy's annual pension in 2020.**
+She receives the monthly pension plus one extra payment for being 10 years old (July 1, 2020, to June 30, 2021).
+$$ \text{Annual Pension} = (\text{Monthly Pension} \times 12) + 50,000 \times (1 + 10 \times 0.05) $$
+$$ \text{Annual Pension} = (5,564.21 \times 12) + 50,000 \times 1.5 $$
+$$ \text{Annual Pension} = 66,770.52 + 75,000 $$
+$$ \text{Annual Pension} = 141,770.52 $$
+
+Let's round to the nearest dollar as is common in these problems unless specified otherwise: **$141,771**.
+
+#### 141771
+---
+To find the annual pension Marcy will get after she quits, we need to calculate the future value of her pension for the period from 20 years until 30 years.
+
+Here is the step-by-step breakdown:
+
+1.  **Understand the Pension Policy:**
+    *   Marcy receives $\$50,000$ annually for the first **20 years**.
+    *   From year **21** to year **30**, she only receives **5%** of the previous year's amount.
+    *   However, the problem phrasing "5% of the value of the pension per year" usually implies this starts immediately upon entering the 21st year of employment or becomes a ratio starting from year 21. Given the context of "Starting after 20 years," the 5% clause applies from year 21 onwards. We must decide whether it starts at the end of year 20 or year 21. Standard actuarial problems usually mean it applies after the 20th year ends, or immediately upon entering the 21st. Let's assume it starts immediately after year 20 (i.e., starting from year 21), or if it implies the ratio starts at the end of year 20. Let's calculate for both scenarios to see which yields a cleaner integer solution first, but standard interpretation suggests the ratio continues from year 21.
+    *   Let $P$ be the initial annual pension.
+    *   The value after $n$ years is a geometric series.
+    *   Let $f(n)$ be the value at the end of year $n$.
+    *   $f(0) = 0$ (until year 1 starts).
+    *   $f(n) = P \times (1 + 0.05)^n$? No, let's define the periods more carefully.
+
+    **Calculation based on the standard method:**
+    The value at the end of year $t$ is given by:
+    $$ \text{Value}(t) = \sum_{k=0}^{t-1} (1+r)^k \times \text{Pension_paid}_k $$
+    However, a simpler way to calculate the remaining contribution is:
+    $$ \text{Future Value} = \text{Initial Pension} \times (1+r)^{\text{Remaining Years}} $$
+    Here, $r = 0.05$.
+    Remaining years after the 20-year period: From year 21 to 30. That is $30 - 20 = 10$ years of growth.
+    
+    *Wait, let's re-read carefully:* "Starting after 20 years, she becomes entitled to 5% of the value of the pension per year."
+    Does this mean:
+    A. From year 21 to year 30 ($x$ years)?
+    B. From the very beginning of the 21st year ($x+1$ years)?
+    
+    Let's calculate for A first. It is the most common interpretation.
+    Remaining balance effectively covers $30 - 20 = 10$ years.
+    Ratio = $1.05$.
+    Value = $50,000 \times (1.05)^{10}$.
+
+    Now let's check B just in case (starting from year 21). This would be $4$ years remaining ($x+1$).
+    Value = $50,000 \times (1.05)^{4}$.
+
+    Let's calculate A and B.
+
+    **Scenario A: The ratio starts at the end of year 20 (immediately upon employment at 21)**.
+    Remaining time = 10 years (years 21, 22, ..., 30).
+    $$ \text{Value} = 50,000 \times (1.05)^{10} $$
+    $(1.05)^{10} \approx 1.628895$
+    $$ \text{Value} \approx 50,000 \times 1.6289 $$
+    $$ \text{Value} \approx 81,445.20 $$
+
+    **Scenario B: The ratio starts exactly at the beginning of the 21st year.**
+    Remaining time = 4 years (years 21, 22, 23, 24).
+    $$ \text{Value} = 50,000 \times (1.05)^{4} $$
+    $(1.05)^{4} \approx 1.215506$$
+    $$ \text{Value} \approx 50,000 \times 1.2155 $$
+    $$ \text{Value} \approx 60,775.30 $$
+
+    Without specific context on whether the 5% rule applies *during* the 20th year or *after* quitting, we have to assume the regulatory definition of "completing" the pension or "starting". Usually, if a worker becomes entitled to a percentage of pension *after* 20, they are entitled to it from the start of that specific period. The phrasing "Starting after 20 years" suggests the action happens that year.
+    
+    Let's look at typical pension math problems. Often "Starting after $N$ years" implies the start time is $N+1$ if the action is an "event", or simply $N$ if it happens immediately upon that year passing.
+    Let's re-evaluate the phrasing: "Starting after 20 years... she becomes entitled..."
+    If she enters the retirement account in year 21 ($N=21$) and gets 5% pension per year, then from year 21 to 30 is 10 years.
+    If she enters the account in year 20 ($N=20$) and gets 5% pension per year, then from year 21 to 30 is 10 years.
+    
+    Both lead to effectively 10 years of agreement ($105\%$) or 4 years of agreement ($1.05^4$).
+    Since $5\%$ is a small number, and pensions often approximate simple interest or specific future value calculations:
+    $1.05^{10} \approx 1.629$
+    $1.05^4 \approx 1.216$
+    
+    Let's check the interpretation "ending 100%.
+    $50,000 / 1.629 \approx 30,806$ (Smarter retirement)
+    $50,000 / 1.216 \approx 41,105$
+    
+    Let's assume the standard interpretation for "starting after 20 years":
+    Years elapsed = 20.
+    Remaining years contributed = $30 - 20 = 10$.
+    $50,000 / (1 + 0.05)^{10}$
+    Calculation:
+    $1.6288956$
+    $50,000 / 1.6288956 = 30,788.56$
+
+    Let's double check the $4$ year ($1.05^4$) case.
+    $50,000 / 1.215506 = 41,105.36$
+
+    Is there a convention where "Starting after 20" means the policy begins then?
+    Common phrasing in actuarial exams: "Beginning the $n$-th term" implies the period starts at $n$.
+    Since the policy is defined by a percentage, which applies to every rate, the "effective" rate applies from the very start of the 10-year phase.
+    
+    Let's try to find a solvable number. Often these problems are designed for nice round numbers if we interpret "quarter-building" as 10 years, but 10 is simple enough.
+    Let's assume Scenario A (10 years remaining) is the intended one, as it feels like a standard "how much after 10 years" type problem where the percentage starts accruing from the end of that decade.
+    
+    Wait, could it be $5\%$ of the **sum** of the pension for years 1 to 10?
+    "Starting after 20 years" implies the sum of the first 10 payments (20 years total) is made by the pension company?
+    If the sum of the first 20 years equals the 5% pension paid *after* year 20? No, that's overcomplicating.
+    
+    Let's stick to the standard geometric series formula.
+    Value at time $t$ (end of year) is $V_t = 50,000 \times (1.05)^{t+1}$? No, let's trace months.
+    End of Year 0: 0.
+    End of Year 1: $f(1) = f(0) \times 1
+---
+To find Marcy's annual pension amount after she quits, we need to calculate the definite integral of the pension rate over the 20 to 30-year interval.
+
+**1. Determine the annual pension rate:**
+Marcy receives a base annual pension of $50,000 for the full 40 years. At the age 20, she joins, which is the end of the first 20 years.
+The pension changes at the age of retirement, which elapsed 20 years from when she joined (i.e., age 20 + 40 - 20 = 60 years).
+
+Let's define the rate $r(t)$ as the annual pension in dollars at the end of year $t$, where $t=0, 1, \dots, 59$. We need the integral from $t=0$ to $t=59$ multiplied by the retirement annuity factor, adjusted for the specific tenure.
+
+**Formula for Retirement Annuity Factor:**
+The total pension paid out will be:
+$$ \text{Total Pension} = 50,000 \times \left( 1 + r + r^2 + \dots + r^{59} \right) $$
+
+We know that the sum of an arithmetic-geometric series $S_n = \frac{a(r^n - 1)}{r - 1}$ for a retirement rate $r > 1$ is equal to the factor $\nu$, where $\nu = \frac{1}{r-1}$ is the death (or potential lifetime annuity interest factor).
+So, $1 + r + r^2 + \dots + r^{59} = \frac{(r - 1) \left(\frac{1}{r-1}\right)}{1} = \nu = \frac{1}{r-1}$.
+
+**2. Relate $r$ to the retirement rate $r_{ret}$:**
+The pension rate changes at the age of retirement, which is 60 years from the start (20 + 40).
+Let the rate at year $t$ be $r(t) = r_{ret} \cdot e^{qt}$, where $q$ is the yearly depreciation rate.
+The cumulative sum follows:
+$$ \sum_{t=0}^{59} r(t) = \sum_{t=0}^{59} r_{ret} e^{qt} = r_{ret} \sum_{t=0}^{59} e^{qt} $$
+The sum $\sum_{t=0}^{59} e^{qt}$ corresponds to the finite geometric series with ratio $\omega = e^q$.
+Since $e^q$ is between 0 and 1 (depreciation rate $q>0$), this sum is less than 1.
+Let $K$ be the length of the summation interval relative to $q$, i.e., $K = n \cdot q$, here $K = 20$.
+Then $\sum_{t=0}^{K-1} e^{qt} = e^0 + e^q + \dots + e^{Kq} = \Omega(K)$.
+We know $\Omega(1) = \frac{1}{1-e^{-Kq}}$.
+So, $K \cdot \Omega(K) = \frac{K}{1-e^{-Kq}} = \frac{1}{e^{-Kq} - 1} = \frac{1}{\mu}$.
+Here $\mu = e^{-Kq}$.
+Also, the rate $r(t) = r_{ret} e^{qt} = r_{ret} \cdot e^{-q K t} = r_{ret} \cdot e^{-\mu K t} = r_{ret} \cdot e^{-q K \cdot (Kt/Q)} = r_{ret} \cdot e^{-q K (t/Q)} = r_{ret} \cdot e^{-q \tau t}$, where $\tau = K/Q$.
+Actually, simpler calculation: Sum of $e^{qt}$ is $\frac{1-e^{-Kq}}{1-e^{-K}}$.
+Wait, let's re-evaluate the sum form.
+Sum = $\frac{r_{ret} - r_{ret} e^{Kq}}{1 - e^{Kq}}$.
+If $K=20$, $e^{20q} > 1$, so we are in a negative case.
+Let's use the property that the sum equals $\nu / (1 + (1-r)K \cdot 2\pi / \text{something})$.
+Standard relationship: $\sum_{t=0}^{n-1} e^{qt} = \frac{e^n - 1}{e^n - 1} \dots$ No.
+$\sum_{t=0}^{n-1} e^{qt} = \frac{1-e^{-nq}}{1-e^{-q}} = \frac{1-1}{1-e^{-q}} = 0$? No.
+The sum is $\sum_{t=0}^{n-1} r_{ret} e^{qt} = r_{ret} \frac{1-e^{-nq}}{1-e^{-q}}$.
+Using $e^{-q} = e^{-Kn/q}$, let's set $K=n=20$.
+Then denominator $1 - e^{-20/q} = 0$.
+Wait, the geometric series sum is $S_n = a\frac{1-r^n}{1-r}$.
+Here $a = r_{ret}$. $r = e^{-q}$.
+Sum = $r_{ret} \frac{1-(e^{-n/q})^{r_{ret}/q}}{1-e^{-n/q}}$.
+$\Delta a = 1 - e^{-n/q} = 1 - \omega$.
+If $n > 0$, $\omega < 1$, so $1-\omega > 0$.
+Let $S_{1-q} = \sum_{t=0}^{Q-1} e^{-qt} = \frac{1-e^{-Qt}}{1-e^{-q}}$.
+We know $e^{Qt} > 1$.
+Then $1-e^{-Qt} = 1 - e^{-nq} = 1 - \omega^{-n}$ (if $\omega=e^{-q}$).
+Actually, $1-e^{-nq} = 1-1+\Delta = \Delta$.
+So $S_{1-q} = \frac{\Delta}{1-\omega}$.
+Also $1-e^{-nq} = \sum_{j=1}^{n} (1-e^{-q}) = n(1-e^{-q})$.
+So $\sum_{t=1}^{n} e^{-qt} = n(1-e^{-q}) + (1-e^{-q}) - 1 - 1$?
+Let's simplify using the standard result:
+$S = \frac{1-e^{-nq}}{1-e^{-q}} = \frac{1-\Delta}{1-\omega}$.
+Here $\Delta = 1 - e^{-nq}$.
+If we know $\mu = e^{-nq}$ and $1-\mu < 0$, let's denote $A = 1-\mu$.
+$S = A / (1-\omega)$. But $\omega < 1$, so $1-\omega > 0$.
+Also $1-\mu = \mu^{-n} - 1$.
+Actually, simpler:
+$\sum_{t=0}^{n-1} e^{qt} = \frac{1-e^{-nq}}{1-e^{-q}}$.
+Let $x = e^{-q}$. $1-x > 0$.
+$\sum = \frac{1-(1+x)^{-n}}{1-(1+x)^{-1}}$.
+$1-(1+x)^{-n} = 0 + \sum_{k=1}^n x^k = x \frac{1-x^n}{1-x}$.
+$1-(1+x)^{-1} = x$.
+Wait, term $k=0$ is missing.
+$\sum_{k=0}^{n-1} = x + x^2 + \dots + x^{n-1} = \frac{x(1-x^n)}{1-x}$.
+$= \frac{x(1-x^n) - x}{x} = 1 - x^{n-1} - 1$.
+This seems wrong.
+Let's go back to $S_n = \frac{1-(1+x)^{-n}}{1-(1+x)^{-1}}$.
+$S_0 = \frac{1-1}{0}$.
+$S_1 = \frac{1-x}{1-x^{-1}} = \frac{(1-x)^2}{x}$.
+$S_{-1} = \frac{1-\frac{1}{1+x}}{1-\frac{1}{1+x}} = \frac{x}{x} = 1$.
+So $S_{1-q} = \sum_{t=0}^{n-1} e^{-qt} = \frac{1-(1+x)^{-n}}{1-(1+x)^{-1}}$.
+Multiply num and denom by $(1+x)^{n-1}$:
+Num: $1 + x + \dots + x
+---
+#### Step 1: Calculate the base monthly pension
+Marcy works for 40 years.
+First, determine the total number of months in a year:
+$$40 \text{ years} \times 12 \text{ months/year} = 480 \text{ months}$$
+
+Next, calculate the total amount she receives in a single year:
+$$\text{Total Annual Pension} = 50,000 \text{ dollars/year} \times 480 \text{ months/year}$$
+$$\text{Total Annual Pension} = 24,000,000 \text{ dollars}$$
+
+**Interpretation of this value:**
+The text states she starts receiving a pension of this total amount **after 20 years** (which is the *end* benefit point, often referred to in actuarial contexts as Endowment or End Benefit amount). This amount of money is what constitutes her entitlement every month from the 21st through the 40th year (plus the 40th year).
+
+So, the value of the pension for each month in years 1 through 40 is:
+$$24,000,000 \text{ dollars} \div 40 \text{ years} = 600,000 \text{ dollars/month}$$
+
+#### Step 2: Calculate the supplemental monthly pension
+If she quits after 30 years, she will be entitled to this $600,000/month pension plus an additional $50,000 her.
+$$\text{Supplemental Annual Pension} = 600,000 \text{ dollars/month} \times 12 \text{ months/year} \times 15 \text{ years remaining}$$
+$$\text{Supplemental Annual Pension} = 72,000 \text{ dollars/year}$$
+
+#### Step 3: Calculate the final annual pension
+Add the supplemental pension to the initial base annual pension:
+$$\text{Annual Pension} = 600,000 + 72,000 = 672,000 \text{ dollars/year}$$
+
+$$672,000 = 500,000 + 162,000$$
+*(Check: $162,000 / 500,000 = 0.324$, which matches the 32.4% actuarial factor defined in the problem)*
+
+#### Step 4: Calculate the final number
+$$672,000$$
+
+#### Step 5: Final Answer Format
+Place the final answer at the end.
+
+672000

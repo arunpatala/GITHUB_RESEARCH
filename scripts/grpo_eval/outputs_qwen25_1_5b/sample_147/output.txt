@@ -1,0 +1,137 @@
+<think>
+Okay, let me try to figure out this beehive problem. So, Debra is monitoring bees coming and going. Let me break down the information step by step.
+
+First, in the first 6 hours, she sees 30 bees leave the hive. Got that. Then, in the next 6 hours, she sees half that number return. Half of 30 is 15, so 15 bees return in the second 6-hour period. So far, so good.
+
+Then, the third part says she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Wait, the first time she saw 30 bees leave. So two times that would be 60 bees. So in the third 6-hour period, 60 bees leave the hive. Hmm, okay.
+
+Now, the last part says: Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours. So, we need to figure out how many bees returned in the last 6 hours. Let me parse this.
+
+First, let's track all the bees that left and whether they returned. Let me list out each period:
+
+1. First 6 hours: 30 bees leave. Let's call this Group A.
+2. Next 6 hours (second period): 15 bees return. These are probably from Group A, since that's the only bees that had left before. So 15 bees return, meaning 30 - 15 = 15 bees from Group A haven't returned yet.
+3. Third 6 hours: 60 bees leave. Let's call this Group B. These are different bees, right? Because the problem says "two times as many bees as she saw first leave the hive fly from the hive and leave". So "first leave" refers to the initial 30, so two times that is 60. So these are new bees leaving, not the same ones from Group A. So Group B is 60 bees leaving.
+4. Then, in the next 6 hours (the last period), every bee that left before that hadn't already returned returns. So, "before that" refers to before the third period? Let me check.
+
+The timeline is:
+
+- First 6 hours: Group A leaves (30)
+- Next 6 hours: 15 return (from Group A)
+- Next 6 hours: Group B leaves (60)
+- Next 6 hours: All bees that left before this last period and hadn't already returned return.
+
+So "before that" meaning before the last period. So, which bees had left before the last period? That would be Group A (30) and Group B (60). But some of Group A had already returned (15), and some hadn't (15). Group B had just left in the third period, so they hadn't returned yet. So, the ones that hadn't already returned are the remaining 15 from Group A and all 60 from Group B. Therefore, in the last 6 hours, these 15 + 60 = 75 bees return.
+
+Wait, but the problem says "every bee that left before that hadn't already returned returns". So "before that" meaning before the last 6 hours. So, all bees that had left in previous periods (Group A and Group B) but hadn't returned yet. So yes, 15 from Group A and 60 from Group B. So total returning in the last period is 75. Therefore, the answer is 75?
+
+Wait, let me check again. Let me make sure I didn't misinterpret the third part. The third part says: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." So "two times as many bees as she saw first leave the hive" – that's 2*30=60. So that's 60 bees leaving in the third period. So that's Group B. Then, in the last period, all bees that left before that (i.e., before the last period) and hadn't already returned return. So before the last period, the bees that had left are Group A (30) and Group B (60). Of those, how many had already returned? From Group A, 15 had returned in the second period. The rest of Group A (15) and all of Group B (60) had not returned yet. Therefore, in the last period, those 15 + 60 = 75 return. Therefore, the answer is 75. 
+
+But let me check again if there's another interpretation. Maybe the third period is considered as part of "before that"? Wait, the last period is the fourth 6-hour period. The problem says: "every bee that left before that hadn't already returned returns to the hive in the next 6 hours." So "before that" meaning before the last 6 hours. So the third period is before the last period. So all bees that left in the first three periods (Group A and Group B) but hadn't returned yet. So yes, 15 from Group A and 60 from Group B. So 75. 
+
+Alternatively, maybe the problem is considering that when it says "every bee that left before that hadn't already returned", maybe "that" refers to the third period? Let me check the wording again:
+
+"Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours."
+
+The "that" here is referring to the previous action, which was "she sees two times as many bees... leave in the next 6 hours." So "before that" would mean before the third period. Therefore, bees that left before the third period (i.e., in the first period) and hadn't already returned. But that would be only the 15 from Group A. But that seems inconsistent with the rest of the problem. Because if that were the case, then the last period would have 15 returning, but the problem says "every bee that left before that hadn't already returned", which might be interpreted as all bees that had left prior to the last period, not just the ones before the third period. 
+
+But the wording is a bit ambiguous. Let me check the exact wording again:
+
+"Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours."
+
+The "that" here is referring to the previous event, which was "she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." So "before that" would be before the third period. Therefore, the bees that left before the third period (i.e., in the first period) and hadn't already returned. But in the second period, 15 had already returned. So the remaining 15 from the first period hadn't returned yet. Therefore, in the last period, those 15 return. But then what about the 60 bees that left in the third period? They hadn't returned yet, but they left after the "before that" time. So maybe they aren't included? But that seems odd. 
+
+Wait, but the problem says "every bee that left before that hadn't already returned returns". So "before that" meaning before the third period. So the third period is when the 60 bees left. So the bees that left before the third period are the 30 from the first period. The ones that left in the third period are not included in "before that". Therefore, only the 15 from the first period that hadn't returned yet would return in the last period. But that would be 15. But that seems conflicting with the previous thought. Which is correct?
+
+This is a critical ambiguity. Let me try to parse the sentence again:
+
+"Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours."
+
+The "that" here is referring to the previous action, which was "she sees two times as many bees... leave in the next 6 hours." So "before that" would be before the third period. Therefore, the bees that left before the third period (i.e., in the first and second periods?) Wait, no. The second period was when bees returned, not left. So the bees that left before the third period are the ones that left in the first period (Group A) and the ones that left in the third period? No, the third period is when they left. So before the third period, the bees that had left were only Group A. The second period was returns, not departures. So "before that" (third period) would be the first period. Therefore, the bees that left before the third period are Group A. Of those, 15 had already returned in the second period, so the remaining 15 hadn't. Therefore, in the last period, those 15 return. But then what about the 60 bees that left in the third period? They left in the third period, so they are not included in "before that", so they wouldn't be required to return? But that seems odd. Maybe the problem is intending that all bees that had left in previous periods (including the third period) return? But the wording is unclear.
+
+Alternatively, maybe "before that" refers to before the last period. Let me think. If we consider the timeline:
+
+First 6 hours: 30 leave.
+
+Second 6 hours: 15 return.
+
+Third 6 hours: 60 leave.
+
+Fourth 6 hours: ?
+
+The problem says: "Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours."
+
+The "that" here is referring to the previous event, which was the third period (the 60 leaving). So "before that" would be before the third period. So again, only Group A. But if we interpret "that" as referring to the last period, then "before that" would be before the last period, meaning all previous periods. But the sentence structure is "Then every bee that left before that hadn't already returned returns...", where "that" is the previous action. So the previous action was the third period (the 60 leaving). So "before that" is before the third period. Therefore, only Group A. But that seems odd because the 60 bees that left in the third period would have to return at some point? But the problem doesn't mention them returning unless specified.
+
+But the problem says "every bee that left before that hadn't already returned returns to the hive in the next 6 hours." If "that" is the third period, then the bees that left before the third period (Group A) and hadn't returned yet (15) return in the next 6 hours (the fourth period). Then, what about the 60 bees that left in the third period? The problem doesn't mention them returning, unless there's another part. But the problem says "every bee that left before that hadn't already returned returns..." So maybe the 60 bees that left in the third period are not included because they left after "that" (the third period). Therefore, they are not required to return in the fourth period? But that seems odd. Maybe the problem is intending that all bees that had left in any previous period return, but the wording is confusing.
+
+Alternatively, maybe the problem is in the translation or wording. Let me check again:
+
+Original problem:
+
+"Debra is monitoring a beehive to see how many bees come and go in a day. She sees 30 bees leave the hive in the first 6 hours, and then she sees 1/2 that many bees return in the next 6 hours. She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours. How many bees did Debra see return to the hive in the last 6 hours of the day?"
+
+So the timeline is:
+
+1. First 6 hours: 30 leave.
+
+2. Next 6 hours: 15 return.
+
+3. Next 6 hours: 2*30 = 60 leave.
+
+4. Next 6 hours: every bee that left before [that] hadn't already returned returns.
+
+Now, "that" refers to the previous event, which was "she sees two times as many bees... leave in the next 6 hours." So "before that" would be before the third period. Therefore, the bees that left before the third period are the ones from the first period (30). Of those, 15 had already returned in the second period, so 15 hadn't. Therefore, in the fourth period, those 15 return. So the answer would be 15? But that seems low, and the problem mentions "every bee that left before that hadn't already returned", which might be intended to include all previous departures, including the third period. But according to the wording, it's only before the third period.
+
+But maybe the problem is using "that" to refer to the last action, which is the third period, but the sentence is structured as "Then every bee that left before that hadn't already returned returns..." where "that" is the third period. So "before that" is before the third period. So only the first period's bees. But that seems odd. Alternatively, maybe the problem has a typo or ambiguity.
+
+Alternatively, maybe "before that" refers to before the last 6 hours (the fourth period). If we interpret it that way, then "every bee that left before [the last 6 hours] hadn't already returned returns..." So before the last 6 hours, bees that had left in the first, second, or third periods. But the second period was returns, not departures. So bees that left in the first and third periods. Of those, how many hadn't already returned? From the first period: 15 hadn't returned yet (since 15 returned in the second period). From the third period: all 60 had left, and none had returned yet. So total bees to return in the last period would be 15 + 60 = 75. This seems more logical, and the answer would be 75. But the problem is the wording: "before that hadn't already returned". If "that" refers to the previous event (third period), then it's before the third period. If "that" refers to the last period, then it's before the last period. Which is it?
+
+In English, when you have a sentence like "Then every bee that left before that hadn't already returned returns...", the "that" is likely referring to the immediately preceding event, which is the third period. So "before that" would be before the third period. But that leads to only 15 bees returning. However, if you interpret "that" as referring to the entire sequence up to that point, it's ambiguous.
+
+But given that the problem is from a math context, likely expecting a certain answer, and given that if you consider all bees that had left before the last period (i.e., in the first three periods), then the answer is 75. Since 75 is a more substantial number and makes sense in the context of the problem, I think that's the intended interpretation. Perhaps the wording is slightly off, but in math problems, we often have to make the most logical interpretation.
+
+Therefore, I think the answer is 75. So Debra saw 75 bees return in the last 6 hours.
+
+**Final Answer**
+\boxed{75}
+</think>
+
+To determine how many bees Debra saw return to the hive in the last 6 hours of the day, we need to carefully track the movement of bees across the four 6-hour intervals.
+
+---
+
+### **Step 1: First 6 Hours**
+- **30 bees leave** the hive.
+
+---
+
+### **Step 2: Next 6 Hours**
+- **15 bees return** to the hive (half of the 30 that left in the first 6 hours).
+- This means **15 bees from the first group** have not yet returned.
+
+---
+
+### **Step 3: Next 6 Hours**
+- **60 bees leave** the hive (twice the number that left in the first 6 hours).
+- These are **new bees**, not from the first group.
+
+---
+
+### **Step 4: Last 6 Hours**
+- The problem states: *"Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours."*
+  - The phrase *"before that"* refers to the **previous event**, which was the **third 6-hour period** (when 60 bees left).
+  - Therefore, *"before that"* means **before the third 6-hour period**, i.e., **before the 60 bees left**.
+  - This includes:
+    - The **15 bees** from the first 6 hours that had **not yet returned**.
+    - The **60 bees** that left in the third 6-hour period (since they had not returned yet).
+  - So, **15 + 60 = 75 bees** return in the last 6 hours.
+
+---
+
+### **Conclusion**
+Debra saw **75 bees return** to the hive in the last 6 hours of the day.
+
+$$
+\boxed{75}
+$$

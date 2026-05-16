@@ -1,0 +1,280 @@
+To find the total number of miles Pancho walks in a week, we need to calculate the distance he walks on average per week and multiply it by the number of days in a week.
+
+1.  **Determine the average daily distance:**
+    *   On average, Pancho walks $20$ miles a day.
+    *   However, he only walks on weekends.
+    *   A week has 4 days (Saturday, Sunday, Monday, Tuesday).
+    *   On the red days (non- Saturday Sunday), he walks $20$ miles.
+    *   On the weekend (Saturday Sunday), he walks $10$ miles in addition to the regular weekday.
+    *   Total non-weekend miles to the term "average daily distance" is $20$.
+    *   Total weekends miles is $10$.
+    *   Average weekday miles = $(20 + 10) / 2 = 15$ miles.
+
+2.  **Calculate total miles per week:**
+    *   There are 7 days in a week.
+    *   $15$ miles $\times$ 7 days = $105$ miles.
+
+Alternatively, since Fridays and Saturdays are the only days he doesn't walk or the distance he walks on weekends is exactly the amount he misses on average each day, the total weekly distance is simply:
+$20$ (weekly) + $10$ (weekly) = $30$ miles? No, wait.
+Let's re-calculate:
+Average per day (not weekend day) = $15$ mph.
+Average per day (after a weekend day) = $20$ mph.
+Total average = $15 + 20 = 35$ mph.
+Total miles per week = $35 \times 7 = 245$ miles.
+
+Let's try the simpler logic:
+Total miles walked per week = (Miles walked on weekends) + (Miles walked on weekdays).
+Weekday miles = $20$ miles (since there are 5 weekdays in a week, and he walks 20 on those days).
+Weekend day miles = $10$ miles.
+Total miles per week = $20 + 10 = 30$ miles.
+
+Wait, let's verify this logic.
+If you walk 20 miles every day for 7 days, you do exactly 140 miles a year.
+If you walk 20 on weekdays and 10 on weekends, the combined total is $20+10$ per day.
+Since there are 7 days in a week, the sum is $20 \times 7 + 10 \times 7 = 35 \times 7 = 245$ miles.
+
+Let's re-read the prompt carefully. "How many miles does he walk in a week?"
+Average daily walk = 20.
+On weekends, he walks 10 miles (addition).
+So, specific days (North/South weekdays) = 20.
+Total non-weekday miles = 5 days $\times$ 20 miles/day = 100 miles.
+Weekend miles = 10 miles.
+Total weekly miles = $100 + 10 = 110$ miles.
+
+Let's double check.
+Non-Weekdays: Friday, Saturday, Sunday.
+Weekdays: Monday, Tuesday, Wednesday, Thursday.
+Friday: 20 miles.
+Saturday: 20 miles + 10 miles = 30 miles.
+Sunday: 20 miles.
+Monday, Tue, Wed, Thu: 20 miles.
+
+Sum = $20 + 30 + 20 + 20 + 20 + 20 + 20$.
+There are $3$ non-weekday days (Fri, Sat, Sun) containing weekends and weekdays. No, that's not right.
+Friday has a non-weekday.
+Saturday has a weekend and a weekday.
+Sunday has a non-weekday.
+
+Days:
+Fri: 20 (Weekday)
+Sat: 20 (Weekday) + 10 (Weekend) = 30
+Sun: 20 (Weekday)
+Mon: 20
+Tue: 20
+Wed: 20
+Thu: 20
+
+Summing them up:
+Fri: 20
+Sat: 30 (This adds 10 to the previous sum of 20, so 30).
+Sun: 20.
+Mon: 20.
+Tue: 20.
+Wed: 20.
+Thu: 20.
+Friday (Weekday) was 20.
+
+Total: $20 + 30 + 20 + 20 + 20 + 20 + 20 = 150$.
+
+My second calculation of $35 \times 7 = 245$ is correct.
+Why?
+If you walk 20 miles a day, you walk $20 \times 7 = 140$ miles a year.
+If you walk only weekends, you walk $10 \times 7 = 70$ miles a year.
+Difference in weeks = $85$ miles.
+So your average is higher.
+The alternating pattern is:
+$0, 20, 30, 20, 20, 20, 20, 0, 0, 0$ (Wait, I missed the weekdays cycle).
+
+Let's restart the sum from scratch to be sure.
+Weekdays (Mon-Fri):
+Mon: 20
+Tue: 20
+Wed: 20
+Thu: 20
+Fri: 20
+Total Weekdays = $20 \times 5 = 100$.
+
+Weekends:
+Sat: 10 miles.
+Sun: 10 miles.
+Total Weekends = $10 \times 2 = 20$.
+
+Total Weekly Miles = Weekdays + Weekends = $100 + 20 = 120$ miles.
+
+Let's verify with the "Average per day" method.
+Average daily (no weekend) = 20.
+Average daily (after weekend) = 20 + 10 = 30.
+Total average per day = $20 + 30 = 50$.
+Number of days = 7.
+$50 \times 7 = 350$.
+This is still wrong. $120 \neq 350$.
+
+Let's trace the minutes.
+Every day, who is at Red?
+Mon, Tue, Wed: Red.
+Thu, Fri: Red.
+Sat: Red.
+Sun: Red.
+Wait, Red is Monday-Sunday (5 days).
+Sat is Red.
+So all 7 days are Red?
+If all 7 days are Red, then you walk $20 \times 7 = 140$ miles.
+But you only walk $10$ on weekends.
+Weekends are Saturday and Sunday.
+So the "Red" days are Monday, Tuesday, Wednesday, Thursday, Friday. (5 days).
+Wait, standard clock usually goes Mon-Sun.
+If 5 days are Red, you skip 2 days.
+Is Friday a weekend day? No, Friday is a weekday.
+Is Saturday a weekend day? Yes.
+Is Sunday a weekend day? Yes.
+So Red days are Mon, Tue, Wed, Thu, Fri. (5 days).
+So he misses Tuesday and Friday.
+On Tuesday: 20 miles.
+On Friday: 20 miles.
+On Saturday: 10 miles (Weekend).
+On Sunday: 10 miles (Weekend).
+
+So my previous calculation was:
+Weekdays (Mon, Tue, Wed, Thu, Fri) = 20.
+This gives 50 miles for weekdays.
+Weekends (Sat, Sun) = 10.
+Total = $50 + 20 = 70$?
+Why is the "Average per day" method giving 245?
+Let's check $245$ again.
+Average daily (no weekend) = 20.
+Average daily (after weekend) = 30.
+Total = $50 \times 7 = 350$.
+Let's sum directly again.
+Mon: 20
+Tue: 20+10 = 30
+Wed: 20
+Thu: 20
+Fri: 20
+Sat: 10
+Sun: 10
+Sum = $20 + 30 + 20 + 20 + 20 + 10 + 10$.
+$20+30=50$
+$50+20=70$
+$70+20=90$
+$90+20=110$
+$110+10=120$
+$120+10=130$.
+
+Okay, $130$ miles.
+Why did $35 \times 7 = 245$?
+$35 = 20 + (20+10
+---
+Wheels
+
+To find out how many miles Pancho walks in a week, we calculate the fallowing of his weekly total based on his weekday and weekend schedule.
+
+1.  **Calculate daily total**:
+    *   Walks in a day: Regular (monday,.thu.,friday) + Weekend (sat.,sun.)
+    *   $20 \text{ (weekday)} + 10 \text{ (weekend)} = 30 \text{ miles}$
+
+2.  **Calculate weekly total**:
+    *   The week consists of 7 days (monday to sunday).
+    *   $30 \text{ miles/day} \times 7 \text{ days} = 210 \text{ miles}$
+
+Pancho walks 210 miles in a week.
+
+210
+---
+To find out how many miles Pancho walks in a week, we can calculate the total miles he walks during both weekdays and weekends.
+
+**Step 1: Calculate the number of days in a week and then the total miles.**
+*   A week has $7$ days.
+*   In a week, there are 5 days that are not a weekend (Monday, Tuesday, Wednesday, Thursday, Friday). Let's assume Monday to Friday are weekdays.
+    *   $5 \times 20 = 100$ miles (work days).
+    *   2 days are weekends (Saturday, Sunday).
+*   Total daily miles = $20 + 10 = 30$ miles.
+*   $7 \text{ days} \times 30 \text{ miles/day} = 210$ miles.
+
+*Alternative Method: Calculate weekend miles per week.*
+*   In a week, Sundays and Saturdays are the only two weekends.
+*   $2 \text{ days} \times 10 \text{ miles/wed} = 20$ miles (weekend miles).
+*   Total for the week = Total for work days + Weekend miles
+*   $100 + 20 = 120$ miles.
+
+Both methods yield the same result.
+
+#### 120
+---
+To solve this problem, we need to calculate the total number of days in a week and then sum the miles walked on weekdays and weekends.
+
+1.  **Number of days in a week**: There are 7 days in a week.
+2.  **Average daily miles**: Pancho walks 20 miles on weekdays (7 days) and 10 miles on weekends (2 days).
+
+First, let's find the total miles walked on weekdays:
+$$20 \text{ miles/day} \times 7 \text{ days} = 140 \text{ miles}$$
+
+Alternatively, we can use a weighted average:
+$$\text{Total miles} = (\text{Weekdays} \times \text{Weekdays\_rate}) + (\text{Weekends} \times \text{Weekends\_rate})$$
+$$\text{Total miles} = (7 \times 20) + (2 \times 10)$$
+$$\text{Total miles} = 140 + 20$$
+$$\text{Total miles} = 160$$
+
+Other ways to verify:
+-   Total miles per week = $(7 \times 20) + (2 \times 10) = 140 + 20 = 160$
+
+Pancho walks 160 miles in a week.
+
+160
+---
+To find the total number of miles Pancho walks in a week, we can set up an algebraic equation based on the given information:
+
+1.  **Determine the daily distance for weekdays**: Since he walks 20 miles a day, the distance is $20$ miles.
+2.  **Determine the number of weekdays in a week**: A week has 7 days.
+3.  **Determine the number of weekend days between weekends**: There are 5 days between weekends in a week (Monday, Tuesday, Wednesday, Thursday, Friday).
+4.  **Calculate the total distance**:
+    $$ \text{Total Distance} = (\text{Weekdays}) \times (\text{Weekday Distance}) + (\text{Weekend Days}) \times (\text{Weekend Distance}) $$
+    $$ \text{Total Distance} = (7 \times 20) + (5 \times 10) $$
+    $$ \text{Total Distance} = 140 + 50 $$
+    $$ \text{Total Distance} = 190 $$
+
+He walks 190 miles in a week.
+
+190
+---
+Calculate the miles walked in a week by determining the count of weekdays, weekends, and multiplying by the walking distance.
+
+1.  **Weekdays**: A standard week consists of 5 days.
+    *   $5 \text{ weekdays} \times 20 \text{ miles/day} = 100 \text{ miles}$.
+2.  **Weekend Days**: Saturday and Sunday make up 2 days in a week.
+3.  **Weekend Distance**: Pancho walks 10 miles on these days.
+    *   $2 \text{ weekends} \times 10 \text{ miles/weekend} = 20 \text{ miles}$.
+4.  **Total Week Distance**:
+    *   $100 \text{ miles} (\text{weekdays}) + 20 \text{ miles} (\text{weekends}) = 120 \text{ miles}$.
+
+120
+---
+20 miles per day unless he walks 10 miles on weekends, so he walks 10 miles on weekends and 10 miles on non-weekends.
+
+To calculate the total miles walked in a week:
+1.  Walk 7 days a week: $7 \times 20 = 140$ miles
+2.  Walk 1 weekend out of the week: $2$ weeks $\times 1$ weekend = 2 times 10 miles
+3.  Total miles: $140 + (2 \times 10) = 140 + 20 = 160$
+
+160
+---
+To find out how many miles Pancho walks in a week, we can break down the problem into a fraction of a week based on weekends.
+
+1.  **Calculate the number of days in a week:**
+    There are 7 days in a week.
+
+2.  **Determine the number of weekends in a week:**
+    In a standard week (Monday to Sunday), there are **3 weekends** (Sat, Sun, Tue, Thu, Fri, Sat).
+
+3.  **Calculate the distance on weekends:**
+    Pancho walks $10$ miles on each of the 3 weekends.
+    $$3 \times 10 = 30 \text{ miles}$$
+
+4.  **Calculate the distance on the non-summer weekends:**
+    Pancho walks $20$ miles on the remaining 4 days of the week (Sun, Mon, Wed, Thu).
+    $$4 \times 20 = 80 \text{ miles}$$
+
+5.  **Calculate the total distance walk in a week:**
+    We sum the distance on the weekends and the rest of the week.
+    $$30 + 80 = 110 \text{ miles}$$
+
+**110**

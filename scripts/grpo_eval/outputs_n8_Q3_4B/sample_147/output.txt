@@ -1,0 +1,667 @@
+<think>
+Okay, let's try to figure out this bee problem. Hmm, Debra is monitoring a beehive. She sees bees leaving and returning over different periods. Let me break it down step by step.
+
+First, in the first 6 hours, she sees 30 bees leave the hive. So that's straightforward. Then, in the next 6 hours, she sees 1/2 that many bees return. So half of 30 is 15. So that would be 15 bees returning in the next 6 hours? Wait, but then the problem says something else: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Hmm, maybe I need to parse that sentence again.
+
+Wait, the original problem says: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Hmm, maybe that's trying to say that in the next 6 hours, the number of bees that leave is twice the number that left first? Wait, but that seems conflicting with the previous part where she saw 1/2 that many return. Let me check again.
+
+Original problem:
+
+"She sees 30 bees leave the hive in the first 6 hours, and then she sees 1/2 that many bees return in the next 6 hours. She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours. How many bees did Debra see return to the hive in the last 6 hours of the day?"
+
+Wait, maybe the problem is structured in parts. Let me try to parse each part:
+
+First part: First 6 hours: 30 bees leave.
+
+Second part: Next 6 hours: 1/2 that many bees return. So that would be 15 returning. But then there's another statement: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, this is confusing. Maybe the wording is that in the next 6 hours, she sees two times as many bees as she saw first leave the hive (the initial 30) fly from the hive and leave? Wait, that might not make sense. Or perhaps the problem is that there's another event where she sees two times as many bees as the first 30 leaving?
+
+Wait, maybe there are two different time frames here. Let me try again:
+
+First 6 hours: 30 bees leave.
+
+Next 6 hours: 1/2 that many return. So 15 return.
+
+But then there's another statement: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, maybe this is saying that in the next 6 hours, the number of bees flying from the hive (leaving) is two times the number that first left? Wait, but that would be 2*30=60 bees leaving in the next 6 hours? But that contradicts the previous part where it says 1/2 that many return. Maybe I'm misinterpreting.
+
+Alternatively, maybe the problem is that the first part is about the initial 30 leaving, then in the next 6 hours, 1/2 that many return (15). But then there's another part: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, maybe that's trying to say that in the next 6 hours, the number of bees that leave is two times the number that first left? But that would be 60 bees leaving? But then how does that fit with the return?
+
+Wait, but maybe the problem is that there are multiple events? Let me try to parse the sentences again carefully.
+
+Original problem:
+
+"Debra is monitoring a beehive to see how many bees come and go in a day. She sees 30 bees leave the hive in the first 6 hours, and then she sees 1/2 that many bees return in the next 6 hours. She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours. How many bees did Debra see return to the hive in the last 6 hours of the day?"
+
+So, breaking it down:
+
+1. First 6 hours: 30 bees leave.
+
+2. Next 6 hours: 1/2 that many return. So 15 return.
+
+But then there's another statement: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours."
+
+Wait, maybe this is saying that in the next 6 hours, she sees two times as many bees as she saw first leave the hive (which is 30) fly from the hive and leave. So 2*30 = 60 bees leaving in the next 6 hours. But this seems conflicting with the previous statement where 15 bees return. But perhaps the problem is structured such that there are two different events: one where bees leave, and one where they return.
+
+But then there's another part: "Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours."
+
+Wait, maybe the problem is that there are three time periods? Let me try to outline:
+
+First 6 hours: 30 bees leave.
+
+Second 6 hours: 1/2 that many (15) return.
+
+But then there's another statement: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." So maybe this is another event? Or perhaps it's a different time frame?
+
+Alternatively, maybe the problem is that the number of bees returning in the second 6 hours is two times the number that first left? But that would be 60, but the previous statement says it's 1/2 that many, which would be 15.
+
+This is confusing. Maybe I need to look at the problem again.
+
+Original problem again:
+
+First 6 hours: 30 bees leave.
+
+Next 6 hours: 1/2 that many bees return. So 15 return.
+
+Then, "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours."
+
+Wait, maybe the wording is that in the next 6 hours, she sees two times as many bees as she saw first leave the hive (which is 30) fly from the hive (i.e., leave) in the next 6 hours. So 2*30 = 60 bees leaving in the next 6 hours. But that would be in addition to the 15 returning? Or is that the same 6 hours?
+
+But if that's the case, then maybe during the second 6 hours, there are two things happening: 15 bees returning and 60 bees leaving? But that would be conflicting with the previous statement.
+
+Alternatively, maybe the "two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours" is referring to the return? Or is that a separate event?
+
+Alternatively, maybe the problem is that there are two different time frames: the first 6 hours, then the next 6 hours, and then the last 6 hours. The problem says "in the last 6 hours of the day," so maybe the total is three 6-hour periods?
+
+Wait, the problem says: "She sees 30 bees leave the hive in the first 6 hours, and then she sees 1/2 that many bees return in the next 6 hours." So that's two 6-hour periods: first 6 hours (leaving), next 6 hours (returning). Then the next part says: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Then "Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours."
+
+This is really confusing. Maybe the problem has a typo or is structured with some redundancy. Let me try to parse each sentence again.
+
+First sentence: She sees 30 bees leave in first 6 hours.
+
+Second sentence: Then she sees 1/2 that many bees return in the next 6 hours. So that's 15 returning.
+
+Third sentence: She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours.
+
+So "two times as many bees as she saw first leave the hive" (which is 30) fly from the hive and leave in the next 6 hours. So that would be 2*30=60 bees flying from the hive (leaving) in the next 6 hours. But this seems conflicting with the previous sentence, which said that in the next 6 hours, 15 bees return. Wait, but maybe "fly from the hive and leave" is different from returning. So maybe in the next 6 hours, there are two events: some bees return and some bees leave. But the problem says "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." So maybe 60 bees leave
+---
+<think>
+Okay, let's try to figure out this bee problem. Hmm, Debra is monitoring a beehive. So, the question is about how many bees return to the hive in the last 6 hours of the day. Let me break down the information step by step.
+
+First, she sees 30 bees leave the hive in the first 6 hours. Then, in the next 6 hours, she sees 1/2 that many bees return. Wait, so the first part is 30 leaving, then half of that, which would be 15, returning? But then there's more information. Let me read that again.
+
+"Then she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Hmm, that wording is a bit confusing. Let me parse that. So, "two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, maybe that's saying that in the next 6 hours, the number of bees that leave is twice the number that first left? Or maybe twice the number that returned? Wait, maybe I need to rephrase.
+
+Original problem: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, the wording is a bit tangled. Maybe it's saying that in the next 6 hours, she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Wait, that seems circular. Maybe there's a misinterpretation here.
+
+Let me start over. The problem says:
+
+First 6 hours: 30 bees leave.
+
+Next 6 hours: 1/2 that many bees return. So that would be 15 returning.
+
+Then, "she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, maybe that part is saying that in the next 6 hours, there's another event where she sees two times as many bees as she saw first leave? Or maybe that the number of bees that leave in the next 6 hours is two times the number that first left?
+
+Wait, let me check the exact wording again:
+
+"Then she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours."
+
+Wait, maybe this is a translation error or a confusing sentence. Alternatively, perhaps it's saying that after the first 6 hours and the next 6 hours, there's another period where she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Maybe the wording is that in the next 6 hours, the number of bees that leave is two times the number that first left? But that seems conflicting with the previous statement.
+
+Alternatively, maybe there's a sequence of events:
+
+First 6 hours: 30 bees leave.
+
+Next 6 hours: 1/2 that many return. So 15 return.
+
+Then, "she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Maybe this is referring to another period, perhaps the last 6 hours of the day? But the problem says "in the last 6 hours of the day," so maybe that's the third part?
+
+Wait, the problem says: "Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours."
+
+Wait, this is getting complicated. Let me try to structure it step by step.
+
+First, the problem has three time periods:
+
+1. First 6 hours: 30 bees leave the hive.
+
+2. Next 6 hours: 1/2 that many bees return. So 15 return.
+
+3. Then, "she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours."
+
+Wait, maybe this is a third time period? Or maybe it's referring to the second 6 hours? Let me think.
+
+The problem says: "Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours."
+
+So, maybe the third part is about the next 6 hours after the second 6 hours?
+
+So, total time is 18 hours? Maybe. Let me try to parse all the statements.
+
+Original problem:
+
+Debra is monitoring a beehive to see how many bees come and go in a day. She sees 30 bees leave the hive in the first 6 hours, and then she sees 1/2 that many bees return in the next 6 hours. She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours. How many bees did Debra see return to the hive in the last 6 hours of the day?
+
+So, maybe the structure is:
+
+First 6 hours: 30 leave.
+
+Next 6 hours: 15 return.
+
+Then, she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours.
+
+Wait, maybe this is saying that in the next 6 hours (after the first 6 hours), she sees two times as many bees as she saw first leave the hive (which is 30) fly from the hive and leave in the next 6 hours? Wait, that would be 2*30=60 bees leaving in the next 6 hours?
+
+But then there's another sentence: "Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours."
+
+So, maybe this is a different time period?
+
+Alternatively, maybe there are three time periods:
+
+- First 6 hours: 30 leave.
+
+- Next 6 hours: 15 return.
+
+- Then, in the next 6 hours, she sees two times as many bees as she saw first leave (i.e., 2*30=60) fly from the hive and leave in the next 6 hours.
+
+But then the next sentence says that every bee that left before that hadn't already returned returns to the hive in the next 6 hours.
+
+Wait, maybe "before that" refers to the first 6 hours? So, all the bees that left in the first 6 hours (30 bees) haven't already returned (so they haven't returned in the second 6 hours, which was 15 returning). So, in the third 6 hours, those 30 bees return?
+
+But that would be conflicting with the previous sentence where she saw 60 bees leave in the third 6 hours. But if the bees that left before (the 30) return, then maybe that's the 30 returning, but the problem says she saw two times as many bees as she saw first leave fly from the hive and leave in the next 6 hours. Hmm.
+
+This is getting confusing. Let me try to parse the sentences again.
+
+Original problem:
+
+First sentence: She sees 30 bees leave in the first 6 hours.
+
+Second sentence: then she sees 1/2 that many bees return in the next 6 hours. So 15 return.
+
+Third sentence: She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours.
+
+Fourth sentence: Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours.
+
+So, maybe the third sentence is about the next 6 hours after the first two periods? So, the third time period is the next 6 hours, where she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Wait, that seems like it's saying that in this next 6 hours, she sees two times as many bees as she saw first leave (which is 30) fly from the hive. So, two times 30 is 60 bees leaving in the next 6 hours?
+
+But then the fourth sentence says that every bee that left before that hadn't already returned returns to the hive in the next 6 hours.
+
+So, "before that" refers to the first 6 hours. So, the bees that left in the first 6 hours (30 bees) hadn't already returned (they didn't return in the second 6 hours, which was 15 returning). Therefore, in the next 6 hours (third time period), those 30 bees return. But the third sentence said that in the third time period, she saw 60 bees leaving. So, there is a contradiction here?
+
+Alternatively, maybe the third sentence is about the second 6 hours? Wait, but the second 6 hours was 15 returning. Maybe not. Maybe there's a different interpretation.
+
+Alternatively, maybe the third sentence is saying that in the next 6 hours (after the first 6 hours), she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Wait, that is, 2 times the number of bees that left first (30) fly from the hive in the next 6 hours. So, that would be 60 bees leaving in the next 6 hours. But then the next sentence says that every bee that left before that hadn't already returned returns to the hive in the next 6 hours. So "before that" would be in the first 6 hours.
+---
+<think>
+Okay, let me try to figure out this problem step by step. So, Debra is monitoring a beehive and counting how many bees leave and return. The question is asking how many bees she saw return to the hive in the last 6 hours of the day. Let me break down the information given.
+
+First, she sees 30 bees leave the hive in the first 6 hours. Then, in the next 6 hours, she sees 1/2 that many bees return. So, the first part is straightforward. If 30 bees left in the first 6 hours, then half of that would be 15 bees returning in the next 6 hours. But wait, the problem says "she sees 1/2 that many bees return in the next 6 hours." So that would be 15 bees returning. But then there's more to the problem.
+
+Then it says, "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Hmm, this part is a bit confusing. Let me parse it again. "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, maybe it's saying that in the next 6 hours, there are two times as many bees that left in the first 6 hours? Or is there something else?
+
+Wait, maybe it's saying that she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Wait, that wording is confusing. Let me try to rephrase. The original sentence is: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Maybe that's a typo or a misstatement? Maybe it's supposed to say that she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Wait, that still doesn't make sense.
+
+Alternatively, maybe it's saying that in the next 6 hours, she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Wait, that still doesn't make sense. Let me check again.
+
+Original problem statement again: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Maybe there's a misplacement of words here. Perhaps it's supposed to say that she sees two times as many bees as she saw first leave the hive fly from the hive and then leave in the next 6 hours. Or maybe it's saying that in the next 6 hours, she sees two times as many bees as she saw in the first 6 hours? Wait, that might be possible.
+
+Alternatively, maybe it's saying that she sees two times as many bees as she saw first leave the hive (which was 30) fly from the hive and leave in the next 6 hours. Wait, that would mean that in the next 6 hours, there are two times 30 bees that fly from the hive? But that would be 60 bees? But that seems conflicting with the previous part where she saw 15 bees return. Let me think again.
+
+Wait, maybe the problem is structured like this:
+
+First, first 6 hours: 30 bees leave. Then next 6 hours: 1/2 that many return, which is 15. Then there's another part: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Maybe this is referring to another period? Or is this referring to the same period?
+
+Alternatively, maybe the problem is that there's a total of three time periods? The first 6 hours, then next 6 hours, and then another 6 hours? Wait, but the problem says "the last 6 hours of the day". Maybe the total day is 12 hours? So first 6 hours, then next 6 hours, and then the last 6 hours? But the problem says "in the next 6 hours" and then "in the last 6 hours".
+
+Wait, the problem says: "She sees 30 bees leave the hive in the first 6 hours, and then she sees 1/2 that many bees return in the next 6 hours." So first 6 hours: 30 leave. Next 6 hours: 15 return. Then the next part: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, maybe this is referring to the next 6 hours? But if she saw 15 return in the next 6 hours, but then this part says she sees two times as many as she saw first leave the hive fly from the hive and leave in the next 6 hours. Wait, maybe that's saying that in the next 6 hours, she sees two times as many bees as she saw first leave the hive (which was 30) fly from the hive and leave in the next 6 hours. Wait, that would be 2*30=60 bees? But that would be conflicting with the previous statement that she saw 15 return in the next 6 hours.
+
+Alternatively, maybe there's a misinterpretation here. Maybe the sentence is trying to say that in the next 6 hours, she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Wait, that still doesn't make sense. Maybe it's a translation issue or a wording issue. Alternatively, maybe the original problem is meant to be parsed as follows:
+
+After the first 6 hours (30 bees leave), then in the next 6 hours, she sees 1/2 that many return (15 bees). Then, "she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, maybe that refers to the same 15 bees? Or maybe it's another event?
+
+Alternatively, maybe there's a third time period. Let me check the problem again.
+
+Original problem:
+
+"Debra is monitoring a beehive to see how many bees come and go in a day. She sees 30 bees leave the hive in the first 6 hours, and then she sees 1/2 that many bees return in the next 6 hours. She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours. How many bees did Debra see return to the hive in the last 6 hours of the day?"
+
+So breaking it down:
+
+1. First 6 hours: 30 bees leave.
+
+2. Next 6 hours: 1/2 that many return. So 1/2 of 30 is 15, so 15 return.
+
+3. Then, "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, maybe this is referring to the same 15? Or maybe it's a different number?
+
+Alternatively, maybe the problem is that after the first two periods (first 6 hours and next 6 hours), there's a third period: "the last 6 hours of the day", and in that third period, she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. But that would be a different interpretation.
+
+Wait, perhaps the wording is:
+
+"She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours."
+
+So, "two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." So, "she saw first leave the hive" is 30. Then "fly from the hive and leave in the next 6 hours." Wait, but in the next 6 hours, she saw 15 return. So maybe there's some confusion here between leaving and returning.
+
+Alternatively, maybe the problem is trying to say that in the next 6 hours, she sees two times as many bees as she saw in the first 6 hours. So 2*30=60. But that would be conflicting with the previous 15 returning.
+
+Alternatively, maybe the problem is structured in three parts:
+
+First 6 hours: 30 leave.
+
+Next 6 hours: 1/2 that many return (15 return).
+
+Then, "she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." So, perhaps the "two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours" is referring to something else. Wait, maybe it's that in the next 6 hours, she sees two times as many bees as she saw first leave the hive (which is 30) fly from the hive. So, 2*30=60 bees? But that would mean in the next 6 hours, 60 bees leave? But earlier, it said 15 return. So maybe this is conflicting.
+
+Alternatively, maybe "she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Maybe "fly from the hive and leave in the
+---
+<think>
+Okay, let's try to figure out this beehive problem. So, Debra is monitoring the beehive and counting the bees that leave and return. Let me break down the problem step by step.
+
+First, the problem says that in the first 6 hours, she sees 30 bees leave the hive. Then, in the next 6 hours, she sees 1/2 that many bees return. Wait, so the first part is 30 bees leaving, then half of that, which is 15, returning? Let me note that down.
+
+So, first 6 hours: 30 bees leave.
+
+Next 6 hours: 15 bees return. So, that's the first part. But then the problem continues: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Hmm, this part is a bit confusing. Let me parse that again.
+
+"Two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, maybe that's saying that in the next 6 hours, there are two times as many bees flying out as the initial number she saw? Wait, the initial number she saw leave was 30. So, two times that would be 60? But that seems conflicting with the earlier part where she saw 15 returning. Maybe I need to look at the exact wording again.
+
+Wait, the problem says: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." So maybe the "she saw first leave the hive" is the 30 bees. Then, two times that number is 60. But that would be the number of bees that fly from the hive in the next 6 hours? But that seems conflicting with the previous statement where she saw 15 return. Hmm, maybe I need to check again.
+
+Wait, maybe the problem is structured as follows:
+
+First 6 hours: 30 bees leave.
+
+Then, in the next 6 hours, she sees 1/2 that many return. So that's 15 returning. Then, there's another part that says: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, maybe that's referring to another event? Or is that part of the same period?
+
+Wait, maybe the problem is structured in three parts:
+
+1. First 6 hours: 30 bees leave.
+
+2. Next 6 hours: 1/2 that many return. So that's 15 returning.
+
+Then, "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, so maybe this is referring to another set of bees? Or perhaps the two times as many as the initial 30? Let me try to rephrase the sentence.
+
+"She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours."
+
+So, "as she saw first leave the hive" is 30. So two times that is 60. So she sees 60 bees fly from the hive in the next 6 hours? But then earlier, she saw 15 returning. Wait, but maybe that's in addition to the returning? Or is that part of the same 6 hours?
+
+Wait, the problem is a bit ambiguous. Let me check again.
+
+Original problem: "She sees 30 bees leave the hive in the first 6 hours, and then she sees 1/2 that many bees return in the next 6 hours. She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours. How many bees did Debra see return to the hive in the last 6 hours of the day?"
+
+So, the problem is divided into parts. Let's parse each sentence:
+
+1. First 6 hours: 30 bees leave.
+
+2. Next 6 hours: 1/2 that many return. So 15 return.
+
+3. Then she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours.
+
+Wait, so "two times as many bees as she saw first leave the hive" is 2*30 = 60 bees. So, "fly from the hive and leave in the next 6 hours." So perhaps in the next 6 hours, there are 60 bees that leave?
+
+But that would be in addition to the 15 returning? Or maybe that's part of the same 6 hours?
+
+But earlier, she saw 15 returning. So maybe in the same 6 hours, there are 60 bees leaving and 15 returning? But that would mean that the total number of bees leaving is 60, and returning is 15? Then, the next part says "Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours."
+
+Wait, maybe I need to figure out the timeline. Let me try to structure this:
+
+- First 6 hours: 30 bees leave the hive.
+
+- Next 6 hours: 1/2 that many return, which is 15. So 15 return.
+
+But then, the next statement: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, maybe that's referring to the same next 6 hours? So maybe in the next 6 hours, there are two times as many bees that left as the initial 30. So 60 bees leaving in the next 6 hours? But that seems conflicting with the 15 returning. But maybe those are separate events?
+
+Alternatively, maybe the problem is structured as:
+
+First, in the first 6 hours, 30 bees leave. Then, in the next 6 hours, she sees 1/2 that many return. Then, she sees two times as many bees as she saw first leave (i.e., 60) fly from the hive and leave in the next 6 hours. Then, every bee that left before that (i.e., the initial 30) hadn't already returned returns in the next 6 hours.
+
+Wait, but if the next 6 hours include both the returning and the leaving? Maybe there's confusion here. Let me try again.
+
+Let me think of the timeline:
+
+- First 6 hours: 30 bees leave.
+
+- Next 6 hours: 15 bees return.
+
+Then, "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." So, this is another event? Maybe the next 6 hours? Or maybe the same 6 hours?
+
+Alternatively, maybe the problem is in three parts:
+
+First 6 hours: 30 leave.
+
+Next 6 hours: 15 return.
+
+Then, in the next 6 hours (third segment), she sees two times as many bees as the initial 30 (so 60) fly from the hive and leave. But then after that, it says "every bee that left before that hadn't already returned returns in the next 6 hours."
+
+Wait, this is getting complicated. Maybe I need to clarify the structure.
+
+Let me try to rephrase the entire problem step by step.
+
+1. Debra observes 30 bees leave the hive in the first 6 hours.
+
+2. Then, in the next 6 hours, she sees 1/2 that many bees return. So 15 return.
+
+3. Then, she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. So, "two times as many bees as she saw first leave the hive" = 2*30 = 60. So, 60 bees fly from the hive and leave in the next 6 hours. But when is this happening?
+
+Is this in the same 6 hours as step 2, or in a different period?
+
+The problem says "in the next 6 hours" after the first 6 hours. But step 2 is already in the next 6 hours. So maybe this is in the same next 6 hours? So, during the same 6 hours, there are 15 returning and 60 leaving? That would mean that in those 6 hours, 60 bees left and 15 returned. Then, the next part says "every bee that left before that hadn't already returned returns to the hive in the next 6 hours."
+
+Wait, "before that" refers to the first 6 hours. So, the 30 bees that left in the first 6 hours. But if in the next 6 hours, 60 bees left, and 15 returned, but also, every bee that left before that (the 30) hadn't already returned returns in the next 6 hours. So that would mean that the 30 bees that left in the first 6 hours are now returning in the next 6 hours.
+
+But if in the next 6 hours, she saw 15 returning, and then also the 30 bees that left before (i.e., the 30 from the first 6 hours) return, then that would be 30 + 15 = 45? But that would be in
+---
+<think>
+Okay, let me try to figure out this bee problem. So Debra is watching a beehive and counting how many bees leave and return. The problem seems a bit complex, but let me break it down step by step. 
+
+First, the problem says: "She sees 30 bees leave the hive in the first 6 hours." Okay, so that's straightforward. In the first 6 hours, 30 bees leave. Then, "she sees 1/2 that many bees return in the next 6 hours." Hmm, so half of 30 is 15, so 15 bees return in the next 6 hours. Wait, but let me make sure I parse that correctly. The first part is 30 leaving, then in the next 6 hours, half that number returns. So 30/2 = 15. So that's 15 returning. 
+
+But then the problem says: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, that part is confusing. Let me read it again. "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Maybe I misread that. Let me parse the sentence again.
+
+Original sentence: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, maybe it's saying that in the next 6 hours, she sees two times as many bees as she saw first leave the hive (which was 30) fly from the hive and leave? Wait, that might not make sense. Wait, maybe it's two times as many as the first number? Or is it two times as many as the number that left in the first 6 hours? Let me check the wording.
+
+Wait, the original problem says: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Hmm, maybe the wording is a bit off. Maybe it's supposed to be: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, that seems like it's talking about the same thing? Or maybe it's a different period?
+
+Alternatively, maybe there's a translation error or a misphrasing. Let me think again. Let me try to parse the sentence again.
+
+Original problem: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours."
+
+Wait, perhaps the sentence is trying to say that in the next 6 hours, she sees two times as many bees as she saw first leave the hive (i.e., the 30 bees) fly from the hive and leave? But that would be confusing because the first 6 hours had 30 bees leaving, and then in the next 6 hours, maybe some more bees leave?
+
+But that would mean that in the next 6 hours, there are two times as many bees as the initial 30. But that would be 60 bees leaving in the next 6 hours?
+
+But then there's another part: "Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours." So maybe there's a confusion here with the timings.
+
+Wait, perhaps the problem is structured in three time periods? First 6 hours, next 6 hours, then the last 6 hours? Let me check the original problem again.
+
+Original problem: "Debra is monitoring a beehive to see how many bees come and go in a day. She sees 30 bees leave the hive in the first 6 hours, and then she sees 1/2 that many bees return in the next 6 hours. She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours. How many bees did Debra see return to the hive in the last 6 hours of the day?"
+
+So the timeline is: first 6 hours, then next 6 hours, then the last 6 hours? Or is the last 6 hours part of the same period? Maybe the problem has three parts: first 6 hours, then another 6 hours, and then the last 6 hours. But the problem mentions "the last 6 hours of the day", so maybe the total day is 24 hours, but the problem is only talking about three 6-hour periods? Let me check:
+
+The problem says: first 6 hours, next 6 hours, then "the last 6 hours of the day". So maybe that's three 6-hour periods: first, second, third. But the problem mentions "then every bee that left before that hadn't already returned returns to the hive in the next 6 hours." So maybe the "next 6 hours" after the first 6 hours? Let me try to outline the timeline:
+
+Time periods:
+
+1. First 6 hours: 30 bees leave.
+
+2. Next 6 hours: 1/2 that many return. So 15 bees return.
+
+3. Then, "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, this part is confusing. Maybe this is referring to the next 6 hours after the first 6 hours? Or is it referring to the next 6 hours after the second 6 hours? Maybe the problem is saying that in the next 6 hours (i.e., the third 6 hours), she sees two times as many bees as she saw first leave the hive (which was 30) fly from the hive and leave. So in the third 6 hours, 2*30=60 bees leave? But that would be 60 bees leaving in the third 6 hours?
+
+But then the next sentence says: "Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours." So this part is confusing. "Before that" refers to the previous events. So perhaps after the third 6 hours, which is the last 6 hours of the day, the bees that had left before (i.e., in the first 6 hours) and hadn't already returned (so those that left in the first 6 hours and didn't return in the second 6 hours) return in the next 6 hours? Wait, but the last 6 hours would be the third period, so maybe the sentence is talking about the third 6 hours?
+
+This is confusing. Let me try to parse the problem again step by step.
+
+Original problem:
+
+- First 6 hours: 30 bees leave.
+
+- Next 6 hours: 1/2 that many (so 15) return.
+
+- Then, "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." So this part is confusing. It might be that "two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." So maybe in the next 6 hours (after the first 6 hours?), she sees two times as many bees as she saw first leave the hive (i.e., 30) fly from the hive and leave. So 2*30=60 bees leave in the next 6 hours? Wait, but that is the second 6 hours?
+
+But earlier, we had 15 bees return in the next 6 hours (second 6 hours). So maybe the problem is saying that in the next 6 hours (the second 6 hours), she saw two times as many bees as she saw first leave the hive (30) fly from the hive and leave. But that would conflict with the previous statement that in the next 6 hours, 15 bees return. Wait, this is conflicting.
+
+Alternatively, maybe the problem is saying that in the third 6 hours, she sees two times as many bees as she saw first leave the hive fly from the hive and leave. But then, the wording is a bit unclear. Let me try to parse the sentence again:
+
+"She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours."
+
+So, she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Wait, maybe "she saw first leave the hive" refers to the first 30 bees. Then, "fly from the hive and leave in the next 6 hours." So perhaps she saw two times as many bees as that. But what is that? If the first 30 left, then in the next 6 hours, perhaps some bees left again? But that would be in the next 6 hours after the first 6 hours. So if the first 6 hours had 30 leave, then in the next 6 hours (second 6 hours), maybe she saw 2*30=60 bees leave? But then the problem says she saw 1/2 that many return in the next 6 hours. So that would be 15 return. But that might not be conflicting. But then the problem says "she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." So perhaps that is in the second 6 hours? So if in the second 6 hours,
+---
+<think>
+Okay, let's try to figure out this bee problem. So, Debra is monitoring a beehive and counting how many bees come and go. Let me break down the information step by step.
+
+First, she sees 30 bees leave the hive in the first 6 hours. So, that's straightforward. Then, in the next 6 hours, she sees 1/2 that many bees return. Wait, 1/2 of 30 is 15, right? So, 15 bees return in the next 6 hours. But then the problem says something else: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Hmm, that wording is a bit confusing. Let me parse that again.
+
+"Two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, maybe it's saying that in the next 6 hours, she sees two times as many bees as the initial number that left? Wait, but the initial number that left was 30. If she sees two times that number, that would be 60? But earlier, she saw 15 returning. Maybe I need to re-examine the problem.
+
+Wait, the problem says: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Maybe the wording is that in the next 6 hours, she sees two times as many bees as the first leaving. Wait, but the first leaving was 30, so two times that would be 60? But then that would conflict with the previous statement that 1/2 that many return. Maybe there's a misinterpretation here.
+
+Wait, perhaps the problem is structured in parts. Let me re-read the problem:
+
+"Debra is monitoring a beehive to see how many bees come and go in a day. She sees 30 bees leave the hive in the first 6 hours, and then she sees 1/2 that many bees return in the next 6 hours. She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours. How many bees did Debra see return to the hive in the last 6 hours of the day?"
+
+Wait, so maybe the second part is a separate event. Let me parse each sentence:
+
+First 6 hours: 30 bees leave.
+
+Next 6 hours: 1/2 that many return. So 1/2 of 30 is 15, so 15 return.
+
+Then: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours."
+
+Wait, that wording is confusing. Let me try to parse it again. Maybe it's saying that in the next 6 hours (after the first 6 hours), she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Wait, that seems redundant. Maybe it's a mistake in phrasing?
+
+Alternatively, perhaps the problem is that after the first 6 hours, she sees 1/2 that many return. Then, she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Wait, maybe "two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours" is referring to the first 6 hours and the next 6 hours? Maybe the total number of bees that left in the first 6 hours and the next 6 hours?
+
+Wait, maybe the problem is structured as follows:
+
+First, 30 bees leave in the first 6 hours.
+
+Then, in the next 6 hours, 1/2 that many (15) return. Then, she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Wait, maybe that's another event?
+
+Wait, maybe there are three time periods here? Like first 6 hours, next 6 hours, then another 6 hours? But the problem mentions "the last 6 hours of the day," so maybe the day is divided into three 6-hour periods?
+
+But the problem says "in the first 6 hours," then "in the next 6 hours," and then "in the last 6 hours of the day." So that would be three periods: first 6, next 6, last 6. But the problem says "She sees 30 bees leave the hive in the first 6 hours, and then she sees 1/2 that many bees return in the next 6 hours." Then it says "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Hmm, maybe that's another event in the next 6 hours?
+
+Wait, maybe the problem is that after the first 6 hours and the next 6 hours, there's another 6 hours, and in that last 6 hours, she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours.
+
+But that seems contradictory. Alternatively, perhaps the statement is that in the next 6 hours, she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Wait, this is confusing.
+
+Alternatively, maybe the problem is that in the next 6 hours after the first 6 hours, she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Maybe that's saying that the number of bees that leave in the next 6 hours is two times the number that left in the first 6 hours? Wait, but that would be 60, but earlier it said she saw 1/2 that many return. Maybe there's a contradiction here?
+
+Alternatively, maybe the problem has an error, but I need to figure out based on the given information. Let's try again.
+
+First, she sees 30 bees leave in the first 6 hours.
+
+Then, she sees 1/2 that many bees return in the next 6 hours. So that's 15 returning.
+
+Then, "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, maybe this is saying that in the next 6 hours, she sees two times as many bees that left in the first 6 hours? So that would be 2*30=60 bees leaving in the next 6 hours? But that seems conflicting with the previous statement that 15 return in the next 6 hours. Maybe the problem is that there are two events in the next 6 hours? One is returning, and another is leaving?
+
+Alternatively, perhaps the problem is that she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. So maybe that's a total of two times the first leaving? Maybe that's a different event. But I'm confused.
+
+Alternatively, maybe the problem is that in the next 6 hours, after the first 6 hours, she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Wait, that seems circular. Maybe translating into equations.
+
+Let me try to assign variables. Let me define:
+
+First 6 hours: 30 bees leave. Let's call this L1 = 30.
+
+Then, next 6 hours: 1/2 that many return. So R1 = 1/2 * L1 = 15.
+
+Then, "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." So maybe this is another group of bees that leave in the next 6 hours? Wait, perhaps it's saying that in the next 6 hours, she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Maybe that's a typo, and it should be "two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, maybe that's not the right parsing.
+
+Alternatively, maybe it's two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Maybe "as she saw first leave the hive fly from the hive and leave in the next 6 hours" is referring to the first 6 hours and the next 6 hours. So maybe she saw first leave the hive (30) and then in the next 6 hours, some number of bees fly from the hive. So "two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Maybe that's saying that the number of bees that left in the next 6 hours is two times the number that left in the first 6 hours? Which would be 60. But then that would conflict with the previous statement about returning?
+
+Alternatively, the problem says "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Maybe the "as she saw first leave the hive fly from the hive and leave in the next 6 hours" is referring to the
+---
+<think>
+Okay, let me try to figure out this bee problem. So, Debra is monitoring a beehive and counting how many bees come and go in a day. Let me break down the information step by step.
+
+First, she sees 30 bees leave the hive in the first 6 hours. Then, in the next 6 hours, she sees 1/2 that many bees return. Wait, so the first part is 30 bees leaving. Then, the next 6 hours, half of that number return. So half of 30 is 15. So that would be 15 bees returning in the next 6 hours. But then there's another part: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Hmm, that wording is a bit confusing. Let me parse that again.
+
+Original statement: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, maybe I need to read that again. Let me check the original problem again.
+
+Original: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, maybe that's saying that in the next 6 hours, she sees two times as many bees as the first leaving? Or maybe there's another part?
+
+Wait, maybe the problem is structured as follows:
+
+First 6 hours: 30 bees leave.
+
+Next 6 hours: 1/2 that many return. So 15 return.
+
+Then, "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, that part is confusing. Maybe it's saying that in the next 6 hours, she sees two times as many bees as the first leaving? But that might not make sense.
+
+Wait, maybe there's a translation issue here. Let me read again:
+
+"Debra is monitoring a beehive to see how many bees come and go in a day. She sees 30 bees leave the hive in the first 6 hours, and then she sees 1/2 that many bees return in the next 6 hours. She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours. How many bees did Debra see return to the hive in the last 6 hours of the day?"
+
+Wait, maybe the third sentence is trying to say that in the next 6 hours, she sees two times as many bees as she saw first leave the hive fly from the hive. Wait, but that would be confusing.
+
+Alternatively, maybe there's a misstatement here. Let me try to parse each sentence.
+
+First sentence: She sees 30 bees leave in first 6 hours.
+
+Second sentence: Then she sees 1/2 that many bees return in the next 6 hours. So that's 15 return.
+
+Third sentence: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, maybe this is talking about something else? Maybe the two times as many bees as the first leaving? But that would be 60? But that doesn't fit with the previous numbers.
+
+Alternatively, maybe the third sentence is saying that in the next 6 hours, she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Wait, that sounds circular. Maybe the problem is that there's a mistake in the wording.
+
+Alternatively, maybe the third sentence is trying to say that she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Wait, that is, the number of bees that left in the next 6 hours is two times the number that first left? But that would be 2*30=60? But that would contradict the earlier statement that she saw 1/2 that many return, which was 15. But maybe there's more to it.
+
+Alternatively, maybe there's a part where in the next 6 hours, she sees two times as many bees as she saw first leave the hive fly from the hive. Wait, maybe the "fly from the hive and leave in the next 6 hours" is the same as the first 6 hours? But that would be 30 bees. So two times that would be 60? But then that would mean in the next 6 hours, she sees 60 bees leaving? But that conflicts with the previous statement that she saw 1/2 that many return, which is 15.
+
+But then there's another part: "Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours." So maybe this is saying that in the next 6 hours, all the bees that left before (i.e., the first 30) that haven't returned yet return. Wait, but earlier, she saw 15 return in the next 6 hours. But according to this, maybe all the bees that left before (the 30) return in the next 6 hours?
+
+Wait, there's some confusion here. Let me try to take it step by step.
+
+First 6 hours: 30 bees leave.
+
+Next 6 hours: 1/2 that many return. So 15 return.
+
+Then, the third sentence: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Hmm. Maybe this is saying that in the next 6 hours, she sees two times as many bees as she saw first leave (30) fly from the hive and leave in the next 6 hours. Wait, that is, the number of bees that flew from the hive in the next 6 hours is two times the number she saw first leave? But that would be 2*30=60? So that would mean in the next 6 hours, 60 bees left? But that conflicts with the previous statement that 15 returned. Maybe not.
+
+Alternatively, maybe the third sentence is a separate event. Let me think. Maybe the problem is that the third sentence is another part of the total events. Maybe she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. So perhaps in the next 6 hours, besides the 15 returning, there are some more bees leaving?
+
+Alternatively, maybe the problem is that the third sentence is confusingly worded. Maybe it's saying that she sees two times as many bees as she saw first leave the hive fly from the hive (i.e., 30 bees) and leave in the next 6 hours. So that would be 2*30=60 bees leaving in the next 6 hours? But that would be in addition to the 15 returning? But then the next sentence says that every bee that left before that hadn't already returned returns to the hive in the next 6 hours.
+
+Wait, this is getting too tangled. Let me try to rephrase the problem with the information given.
+
+Original problem:
+
+- First 6 hours: 30 bees leave.
+
+- Next 6 hours: 1/2 that many return. So 15 return.
+
+- Then, she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours.
+
+- Then, every bee that left before that hadn't already returned returns to the hive in the next 6 hours.
+
+Wait, perhaps the third part is saying that in the next 6 hours, she sees two times as many bees as she saw first leave (which is 30) fly from the hive (i.e., leave). So that would be 2*30=60 bees leaving in the next 6 hours. Then, the next sentence says that every bee that left before (i.e., the first 30) that hadn't already returned return in the next 6 hours. So maybe that means that those 30 bees return in the next 6 hours.
+
+But if in the next 6 hours, there are 15 returning (from the second part) and 60 leaving (from the third part), but also the 30 bees that left before return?
+
+Wait, this is confusing. Maybe I need to model it with variables.
+
+Let me define:
+
+First 6 hours: 30 bees leave.
+
+Let me call this period as Period 1.
+
+Next 6 hours: Period 2.
+
+Then, there is another period? Or is the third sentence referring to Period 2?
+
+Alternatively, maybe the third sentence is referring to the same period?
+
+Alternatively, maybe the problem has three periods: first 6 hours, next 6 hours, and then the last 6 hours. But the problem says "in the last 6 hours of the day", so maybe there are three periods: first 6 hours, then another 6 hours, then the last 6 hours. The problem says "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Maybe that is referring to the next 6 hours?
+
+Wait, maybe the problem is that in the second 6 hours (the next 6 hours after the first 6), she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6
+---
+<think>
+Okay, let me try to figure out this bee problem. So, Debra is counting bees leaving and returning from a hive. Let me break it down step by step.
+
+First, she sees 30 bees leave the hive in the first 6 hours. Got that. So, initial departure: 30 bees.
+
+Then, in the next 6 hours, she sees 1/2 that many bees return. Wait, "that many" refers to the first 30, right? So half of 30 is 15. So, 15 bees return in the next 6 hours. So, after the first 6 hours, 30 left, then 15 came back. So, net change is -15 bees? Or maybe not, but let's note that.
+
+But then the problem says: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Hmm, this part is a bit confusing. Let me parse it again.
+
+Original statement: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours." Wait, maybe I need to parse this sentence again. Maybe it's saying that in the next 6 hours, she sees two times as many bees as she saw first leave the hive fly... Wait, maybe the wording is confusing.
+
+Wait, the original problem says:
+
+"She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours."
+
+Wait, maybe this is talking about another period? Let me check the original problem again.
+
+Original problem:
+
+"Debra is monitoring a beehive to see how many bees come and go in a day. She sees 30 bees leave the hive in the first 6 hours, and then she sees 1/2 that many bees return in the next 6 hours. She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours. How many bees did Debra see return to the hive in the last 6 hours of the day?"
+
+Wait, maybe there's a confusion in the wording here. Let me try to parse each sentence again.
+
+First sentence: She sees 30 bees leave in first 6 hours.
+
+Second: Then she sees 1/2 that many bees return in the next 6 hours. So that's 15 bees returning.
+
+Third sentence: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours."
+
+Wait, maybe the third sentence is another event? Maybe it's saying that in the next 6 hours (after the first 6 hours?), she sees two times as many bees as she saw first leave the hive fly... Wait, maybe this is referring to the initial 30 bees? Let me think.
+
+Alternatively, maybe there's a typo or confusion in the problem. Maybe the third sentence is trying to say something else.
+
+Alternatively, maybe the third sentence is talking about the same period as the first part? Let me try to parse it again.
+
+Original sentence: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours."
+
+Wait, maybe it's saying that in the next 6 hours, she sees two times as many bees as she saw first leave the hive (the initial 30) fly from the hive and leave in the next 6 hours. Wait, that would be confusing. Maybe the sentence is saying that in the next 6 hours (after the first 6 hours), she sees two times as many bees as she saw first leave the hive (i.e., 30) fly from the hive and leave in the next 6 hours. But that would be 2*30=60 bees leaving in the next 6 hours? But then that conflicts with the previous statement that 15 bees returned in the next 6 hours. Hmm, maybe not.
+
+Alternatively, perhaps there's a misinterpretation here. Let me try to think of the problem again. Maybe the third sentence is referring to the second part where bees return. Let me check the original problem once more.
+
+Original problem: "She sees 30 bees leave the hive in the first 6 hours, and then she sees 1/2 that many bees return in the next 6 hours. She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours."
+
+Wait, maybe the third sentence is another event. Maybe the problem is structured in three time periods?
+
+First 6 hours: 30 bees leave.
+
+Next 6 hours: 1/2 that many return, so 15 return.
+
+Then there's another part: "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours."
+
+Wait, maybe the "next 6 hours" refers to the third period? But the problem says "in the next 6 hours" after the first 6 hours? Or maybe the problem is structured as:
+
+First 6 hours: 30 leave.
+
+Second 6 hours: 1/2 that many return, so 15 return.
+
+Third 6 hours: She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours.
+
+Wait, maybe "the next 6 hours" here refers to the second 6 hours? But that seems conflicting.
+
+Alternatively, maybe the problem is saying that in the second 6 hours (after the first 6 hours), she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Wait, this seems like a circular reference. Maybe it's a translation error or wording issue.
+
+Alternatively, maybe the third sentence is talking about a different period. Wait, maybe the problem is structured as follows:
+
+First 6 hours: 30 bees leave.
+
+Then, in the next 6 hours, she sees 1/2 that many (15) return.
+
+Then, she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Wait, this is confusing.
+
+Alternatively, perhaps the third sentence is trying to say that in the next 6 hours (after the first 6 hours), she sees two times as many bees as she saw first leave the hive (the first 30) fly from the hive and leave in the next 6 hours. Wait, but that would imply that in the next 6 hours, there are 2*30=60 bees leaving. But that conflicts with the previous statement that in the next 6 hours, 15 bees return. But maybe that's not the case. Maybe the third sentence is talking about the same 6 hours as the second part? Or maybe different?
+
+Alternatively, maybe the problem is structured in three parts:
+
+1. First 6 hours: 30 bees leave.
+
+2. Next 6 hours: 1/2 that many return, so 15 return.
+
+3. Then, she sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours.
+
+Wait, but maybe the "next 6 hours" here refers to the third period? But the problem says "in the next 6 hours" after the first 6 hours, but then the third part is another 6 hours?
+
+This is getting too confusing. Maybe it's better to look at the last sentence: "Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours."
+
+So, maybe there are three time periods:
+
+First 6 hours: 30 bees leave.
+
+Second 6 hours: 15 return.
+
+Third 6 hours: some event.
+
+But the problem says "Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours."
+
+So "before that" refers to before the second 6 hours? So, the bees that left in the first 6 hours (30 bees) hadn't already returned (they didn't return in the first 6 hours, since only 15 returned in the second 6 hours). So then, in the next 6 hours (third 6 hours), those 30 bees return. But how does that fit with the previous sentences?
+
+But then the question is: How many bees did Debra see return to the hive in the last 6 hours of the day?
+
+So, if the day is divided into three 6-hour periods, then the last 6 hours would be the third period, where the 30 bees return. But then the problem says "Then every bee that left before that hadn't already returned returns to the hive in the next 6 hours."
+
+But maybe there's more to it. Also, there's the third sentence about "She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours."
+
+Wait, maybe this third sentence is referring to the third 6 hours?
+
+If the problem is structured as follows:
+
+First 6 hours: 30 bees leave.
+
+Second 6 hours: 15 bees return.
+
+Third 6 hours: She sees two times as many bees as she saw first leave the hive fly from the hive and leave in the next 6 hours. Wait,

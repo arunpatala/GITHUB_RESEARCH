@@ -1,0 +1,921 @@
+Here's a thinking process that leads to the solution:
+
+1.  **Analyze the Problem:**
+    *   **Initial number of trees:** 50
+    *   **Planting rate:** 10 trees/year
+    *   **Chopping rate:** 2 trees/year
+    *   **Survival rate:** 30% die after 10 years (and no specific condition implies they die dynamically each year, just at the end based on the duration).
+    *   **Timeframe:** 10 years
+    *   **Goal:** Find the number of trees left.
+
+2.  **Step-by-Step Breakdown:**
+
+    *   *Initial State ($t=0$):* 50 trees.
+    *   *Years (Calculation of Net Planting):*
+        *   Tom plants 10 trees per year.
+        *   Tom chops down 2 trees per year.
+        *   Net change per year ($10 - 2 = 8$ trees).
+
+    *   *Total Years:* 10 years.
+
+    *   *Tree Counting Strategy:*
+        *   Let's calculate the change over the 10 years based on planting/chopping.
+        *   Total trees added by planting - Total trees removed by chopping.
+        *   Then apply the "dying" condition.
+
+    *   *Wait, there's an ambiguity:* Does the "30% of the trees die" happen *each year*, *after every year*, or is it a single event *after 10 years*? The text says "After 10 years 30% of the trees die." This implies the calculation of 30% decay happens on the *total* count reached at the end of the 10-year period (or does it apply to the surviving trees of that year?).
+    *   *Interpretation:* "After 10 years 30% of the trees die." Usually, in these types of riddles/math problems, this implies a final reduction. Let's calculate the maximum available number of trees at the 15-year mark (or just before the death event happens at the end of year 10).
+    *   *Re-reading carefully:* "He starts with 50 trees. After 10 years... How many trees does he have left?"
+    *   Let's track the population growth first.
+    *   Start: 50
+    *   Year 1 End: $50 + 10 - 2 = 58$
+    *   Year 2 End: $58 + 10 - 2 = 66$
+    *   ...
+    *   Year 10 End (before death): $50 + (10 \times 10) - (10 \times 2)$?
+        *   No, the chopping happen annually? "Every year he also chops down 2 trees a year."
+        *   Net change per year = $+8$ trees.
+        *   Total net growth over 10 years = $8 \times 10 = 80$.
+        *   Total trees before death = $50 + 80 = 130$.
+
+    *   *The "30% Die" Clause:* "After 10 years 30% of the trees die."
+    *   This syntax is slightly tricky. Does it mean 30% of the *original* 50 die? Or 30% of the current total? Usually, "30% of the trees die" in the context "After 10 years" implies 30% of the *existing* trees (130) die.
+    *   Calculation: $130 \times (1 - 0.30) = 130 \times 0.70$.
+    *   $130 \times 0.7 = 91$.
+
+    *   *Alternative Interpretation (Age-based vs. Simple Math word problem):* Sometimes these problems are trick questions.
+        *   Is the chopping *from the total*? Yes, usually "chops down 2 trees" implies removing from the established count.
+        *   Is the planting *new* trees? Yes.
+        *   What about the "30% die" condition?
+            *   Does it apply to the trees Tom planted? If Tom chopped down trees to cut the forest thin, does that reduce the stock?
+            *   Let's stick to the literal arithmetic interpretation.
+            *   Base = 50.
+            *   Inflow (10 trees * 10 years) = 100.
+            *   Outflow (2 trees * 10 years) = 20.
+            *   Growth = $100 - 20 = 80$.
+            *   Total = 130.
+            *   Loss (30% of total) = $130 \times 0.30 = 39$.
+            *   Remaining = $130 - 39 = 91$.
+
+    *   *Another interpretation:* Is the chopping applied to the total, then the dying happens? Or is the dying compounded? The phrasing "After 10 years 30% of the trees die" is most likely a post-process step.
+    *   Does the "chops down 2 trees" imply they are planted *before* chopping that year? Usually, it's flow. Start + Add - Remove = End.
+        *   Year 1: Start 50. Plant 10. Chop 2. End 58.
+        *   Year 10 calculation: $50 + (10 \times 10) - (2 \times 10) = 130$.
+    *   Then apply the decay condition: "After 10 years 30% of the trees die."
+    *   Total trees = 130.
+    *   30% die = 39.
+    *   Remaining = 91.
+
+    *   *Is there a trap?*
+        *   "He starts with 50 trees."
+        *   "Every year he also chops down 2 trees" (Total planted? Or from the forest?). Usually implies from the forest. Even if he chops trees he just planted, it affects the count.
+        *   "After 10 years 30% of the trees die."
+        *   Some might interpret "30% of the trees" as 30% of the *original* trees (50).
+            *   If it meant original trees, it would likely say "30% of the *original* trees" or "30% of the starting tree count". Since it says "the trees" (referring to the collection he has at that time), it implies the current total.
+            *   Let's check standard math riddle conventions. "After X years, Y percent of the trees die." usually applies to the surviving stock.
+            *   Let's proceed with 91.
+
+    *   *Wait, let's check if "chops down" happens before planting?* Order of operations usually doesn't change the summation, but if he chops the 50 existing ones?
+        *   Year 1: 50 start. Chop 2 -> 48. Plant 10 -> 58.
+        *   Year 2: 58 start. Chop 2 -> 56. Plant 10 -> 66.
+        *   Net is the same.
+
+    *   *What if the 30% death applies cumulatively?* "After 10 years". It's a global statement about the state of affairs.
+
+    *   *Let's double check the result:*
+        *   Start: 50
+        *   Add: $10 \text{ trees/year} \times 10 \text{ years} = 100 \text{ trees}$.
+        *   Remove (chopped): $2 \text{ trees/year} \times 10 \text{ years} = 20 \text{ trees}$.
+        *   Remove (died): $130 \text{ trees} \times 0.30 = 39 \text{ trees}$.
+        *   Net: $50 + 100 - 20 - 39 = 91$.
+
+3.  **Format Check:**
+    *   Solve the math problem.
+    *   Final answer as a number after ####.
+
+4.  **Refining the logic for clarity:**
+    *   Initial: 50
+    *   Net Planting/Chopping per year: $+10 - 2 = +8$
+    *   Total added over 10 years: $8 \times 10 = 80$
+    *   Total at end of year 10 (before death): $50 + 80 = 130$
+    *   Trees that die: $130 \times 0.30 = 39$
+    *   Remaining: $130 - 39 = 91$
+
+    *Wait, is there any ambiguity about "After 10 years..." meaning 
+---
+Here's my thought process for solving this word problem:
+
+1.  **Analyze the Request:**
+    *   **Goal:** Calculate the number of trees left after 10 years.
+    *   **Format:** Put the final answer as a number after `####`.
+    *   **Given Data:**
+        *   Tom's planting rate: 10 trees/year.
+        *   Tom's chopping rate: 2 trees/year.
+        *   Initial amount: 50 trees.
+        *   Specific condition after 10 years: 30% of the trees die.
+        *   Duration: 10 years.
+
+2.  **Step-by-Step Calculation:**
+
+    *   **Step 1: Calculate the net growth per year before the mortality condition.**
+        *   Trees planted per year = $+10$
+        *   Trees chopped per year = $-2$
+        *   Net change per year = $10 - 2 = +8$ trees.
+
+    *   **Step 2: Calculate the total change over the 10-year period.**
+        *   Duration = 10 years.
+        *   Total net growth = (Net change per year) $\times$ (Duration)
+        *   Total net growth = $8 \times 10 = 80$ trees.
+
+    *   **Step 3: Determine the number of living trees before the mortality event.**
+        *   Initial trees = 50.
+        *   Added trees (net) = 80.
+        *   Trees before 10th year mortality = $50 + 80 = 130$.
+        *   *Self-Correction/Verification:* Wait, does the "After 10 years 30% of the trees die" happen *after* the 10th season's planting/chopping, or do those operations happen first then the mortality happens?
+        *   The prompt says "Every year he also chops down 2 trees a year. He starts with 50 trees... After 10 years 30% of the trees die."
+        *   It doesn't specify if the 30% death happens at the *end* of the 10th year or some other time. Usually, in these types of math problems, we calculate the total accumulation first, then apply the final condition mentioned for that specific time point.
+        *   So, Total Trees = Initial + (Planting - Chopping) * Years.
+        *   Total Trees = $50 + (10 - 2) \times 10 = 50 + 80 = 130$.
+
+    *   **Step 4: Apply the mortality condition.**
+        *   Condition: "After 10 years 30% of the trees die."
+        *   Base for dying trees: The total amount of trees present after the standard 10 years of planting/chopping are complete. Total trees = 130.
+        *   Percentage dying = 30%.
+        *   Number of trees dying = $30\%$ of $130$.
+        *   Calculation: $0.30 \times 130$.
+        *   $0.3 \times 130 = 30 \times 1.3 = 39$.
+        *   Alternatively: $10\%$ of $130$ is $13$. $30\%$ is $13 \times 3 = 39$.
+
+    *   **Step 5: Calculate the remaining trees.**
+        *   Trees remaining = Total trees - Trees dying.
+        *   Trees remaining = $130 - 39$.
+        *   $130 - 30 = 100$.
+        *   $100 - 9 = 91$.
+
+    *   **Step 6: Review for alternative interpretations.**
+        *   Does "30% of the trees die" mean 30% of the *original* trees or the *current* total?
+        *   Phrasing: "After 10 years 30% of the trees die."
+        *   Contextually, this implies 30% of the trees existing at that specific moment (after the 10 years of activity). If it meant 30% of the original stock, it would usually say "30% of the original trees".
+        *   So, 30% of 130 is the correct interpretation.
+
+    *   **Step 7: Double check arithmetic.**
+        *   Start: 50
+        *   + 10/year planting: $10 \times 10 = 100$
+        *   - 2/year chopping: $2 \times 10 = 20$
+        *   Net: $50 + 100 - 20 = 130$.
+        *   Death: $130 \times 0.30 = 39$.
+        *   Remaining: $130 - 39 = 91$.
+
+3.  **Final Output Formatting:**
+    *   Problem asks for the answer as a number after `####`.
+
+4.  **Constructing the Response:**
+    *   State the initial calculation logic clearly.
+    *   Show the net addition over 10 years.
+    *   Apply the death percentage.
+    *   State the final number.
+    *   Format the final line.
+
+    *Calculation:*
+    1.  **Initial Trees:** 50
+    2.  **Net Growth Per Year:** $10 \text{ (planted)} - 2 \text{ (chopped)} = 8$ trees/year.
+    3.  **Total Net Growth Over 10 Years:** $8 \text{ trees/year} \times 10 \text{ years} = 80$ trees.
+    4.  **Total Trees After 10 Years (before mortality):** $50 + 80 = 130$ trees.
+    5.  **Trees Dying:** $30\% \text{ of } 130 = 0.30 \times 130 = 39$ trees.
+    6.  **Trees Remaining:** $130 - 39 = 91$ trees.
+
+    Final Answer: 91.
+</think>
+
+Here is the step-by-step calculation:
+
+1.  **Calculate the net growth per year:**
+    Tom plants 10 trees and chops down 2 trees.
+    $10 - 2 = 8$ trees added to the count per year.
+
+2.  **Calculate the total trees added over 10 years:**
+    $8 \text{ trees/year} \times 10 \text{ years} = 80$ trees.
+
+3.  **Calculate the total number of trees before the mortality event:**
+    Start with the initial 50 trees and add the 80 new trees.
+    $50 + 80 = 130$ trees.
+
+4.  **Calculate the number of trees that die:**
+    After 10 years, 30% of the trees die.
+    $30\% \text{ of } 130 = 0.30 \times 130 = 39$ trees.
+
+5.  **Calculate the remaining trees:**
+    Subtract the dead trees from the total count.
+    $130 - 39 = 91$ trees.
+
+####91
+---
+Thinking Process:
+
+1.  **Analyze the Request:** The user wants me to solve a word problem about tree planting and chopping. I need to provide the final answer as a number after `####`.
+
+2.  **Break Down the Problem:**
+    *   **Starting amount:** 50 trees.
+    *   **Annual planting:** +10 trees/year.
+    *   **Annual chopping:** -2 trees/year.
+    *   **Duration:** 10 years.
+    *   **Death rate:** After 10 years, 30% of the *current* trees die.
+    *   **Goal:** Calculate the final number of trees.
+
+3.  **Step-by-Step Calculation:**
+
+    *   **Initial Trees (Year 0):** 50.
+    *   **Net Change per Year:** +10 (plant) - 2 (chop) = +8 trees/year.
+    *   **Duration:** 10 years.
+
+    *   *Scenario A: Trees die only after the 10 years.*
+        *   Calculate the number of trees grown *before* the death percentage applies.
+        *   Plants: 50 + (10 * 10) = 50 + 100 = 150.
+        *   Chops: 50 + (10 * 10)? No, chopping happens *as well* each year.
+        *   Let's calculate the total addition and total removal over the 10 years first.
+        *   Added by planting: 10 trees/year * 10 years = 100 trees.
+        *   Lost by chopping: 2 trees/year * 10 years = 20 trees.
+        *   Initial: 50.
+        *   Total before death = 50 + 100 - 20 = 130.
+        *   Wait, does the "chopping" refer to the initial set? Yes.
+        *   Calculation: 50 (start) + 10*10 (planted) - 2*10 (chopped) = 50 + 100 - 20 = 130.
+        *   Now apply the death rate. "After 10 years 30% of the trees die."
+        *   This phrasing means at the end of the 10-year period, 30% of the remaining trees die.
+        *   Current total = 130.
+        *   Trees dying = 30% of 130 = 0.30 * 130 = 39.
+        *   Trees left = Total - Dying = 130 - 39.
+        *   Alternatively, trees left = 70% of Total = 0.70 * 130.
+        *   0.7 * 130 = 91.
+
+    *   *Let's double check the timeline interpretation.*
+        *   "Tom plants 10 trees a year."
+        *   "Every year he also chops down 2 trees a year."
+        *   "He starts with 50 trees."
+        *   "After 10 years 30% of the trees die."
+        *   This implies the tree population dynamic happens continuously/annually for 10 years.
+        *   Usually, in these types of math problems, we treat the years as integer steps or cumulative totals unless specified otherwise (like "at the end of year 1", "at the end of year 2").
+        *   Since the death event happens "After 10 years", it applies to the total count accumulated over the 10 years.
+
+    *   *Step 1: Calculate accumulation.*
+        Start: 50
+        Years 1 to 10:
+        +10 plants per year. Total +100.
+        -2 chopped per year. Total -20.
+        Total at Year 10 (before the death event) = 50 + 100 - 20 = 130.
+
+    *   *Step 2: Calculate death.*
+        30% of the trees die.
+        30% of 130 = 39.
+        Trees remaining = 130 - 39 = 91.
+
+    *   *Ambiguity Check:* "30% of the trees die." Does this mean 30% of the *initial* 50, or 30% of the *current* collection? Standard interpretation is "current trees" present at that time (end of year 10).
+    *   Does "chops down 2 trees a year" imply trees from the existing stock, including potentially the new ones? Yes. So the math 50 + 100 - 20 holds (net growth +8 per year).
+
+    *   Let's re-read carefully: "After 10 years 30% of the trees die."
+    *   Could it mean the 2 trees chopped each year are included in the dying trees? No, "chops down" and "die" are separate events in the narrative structure (Chopping action vs. Natural death event happening at the 10-year mark).
+    *   So, Total Inventory = Start + (Plants - Chopped).
+    *   Total Inventory = 50 + (10-2)*10 = 50 + 80 = 130.
+    *   Remaining after death = 130 * (1 - 0.30) = 130 * 0.70.
+    *   Calculation: 13 * 7 = 91.
+
+    *   Let's consider if "After 10 years" includes the death in the yearly calculation? No, "After 10 years" suggests the 10-year process is done (planting + chopping), *then* the event regarding 30% death occurs.
+
+    *   Let's consider if the trees "chopped down" are considered "dead" and shouldn't be counted in the "trees die" statistic?
+    *   The question asks "How many trees does he have left?"
+    *   "Left" implies the living stock at the final moment.
+    *   So Chopped trees are gone (not left). Died trees are gone (not left).
+    *   My calculation of 130 represents the standing trees *before* the final death wave. 130 accounts for 50 initial + 100 planted - 20 chopped. The chopped trees are gone, so they are not part of the 130.
+    *   So 130 is the number of standing trees.
+    *   Then 30% of these 130 die.
+    *   Remaining = 70% of 130 = 91.
+
+    *   Is there a conflict with "2 trees a year"? He chops 2 trees. Are these living trees? Yes. Are they part of the "130"? No, they are removed.
+    *   So the equation: $T_{10} = T_{start} + (P - C) \times 10$
+    *   $T_{10} = 50 + (10 - 2) \times 10 = 130$.
+    *   Then death event. $T_{final} = T_{10} \times (1 - 0.30)$.
+    *   $T_{final} = 130 \times 0.7 = 91$.
+
+    *   Wait, is it possible "plants 10 trees a year" doesn't happen until *after* the start of year 1? Usually, "plants 10 trees a year" implies an ongoing rate. Total added = 10 * 10.
+    *   Is it possible the trees die *during* the 10 years? "After 10 years 30% of the trees die." This implies a specific event at T=10.
+    *   So, Step 1 is straightforward arithmetic.
+    *   Net change per year = +10 - 2 = +8.
+    *   10 years = 10 * 8 = +80 trees added to the net count.
+    *   Initial count = 50.
+    *   Count at year 10 = 130.
+    *   30% of 130 = 39 die.
+    *   Remaining = 130 - 39 = 91.
+
+    *   Are there any trick interpretations?
+    *   "Every year he also chops down 2 trees a year."
+    *   "After 10 years 30% of the trees die."
+    *   Does 30% apply to the trees existing *at the start* of the 10 years? "After 10 years" suggests the endpoint.
+    *   Does 30% apply to the chopped trees? No, they are already gone ("chopped down").
+    *   Does "die" imply
+---
+Here's a thinking process that leads to the suggested solution:
+
+1.  **Understand the Goal:** The objective is to calculate the remaining number of trees after a specific period and a set of conditions.
+
+2.  **Analyze the Inputs:**
+    *   Initial number of trees ($T_0$) = 50.
+    *   Planting rate per year = 10 trees/year.
+    *   Chopping rate per year = 2 trees/year.
+    *   Time period ($t$) = 10 years.
+    *   Death rate/Condition: "After 10 years 30% of the trees die."
+
+3.  **Step-by-Step Calculation:**
+
+    *   *Step 1: Calculate the net growth per year.*
+        *   Tom plants 10 trees.
+        *   Tom chops down (removes) 2 trees.
+        *   Net change per year = $10 - 2 = +8$ trees.
+
+    *   *Step 2: Calculate the total increase over 10 years.*
+        *   Net change per year = 8 trees.
+        *   Number of years = 10.
+        *   Total increase = $8 \times 10 = 80$ trees.
+
+    *   *Step 3: Calculate the total number of trees before the death rate is applied.*
+        *   Start + Total increase = $50 + 80 = 130$ trees.
+
+    *   *Step 4: Interpret the "30% die" condition.*
+        *   The problem states: "After 10 years 30% of the trees die."
+        *   This usually implies 30% of the *total count* that existed at that specific time point ($130$).
+        *   Number of dead trees = $30\% \text{ of } 130$.
+        *   $30\% = 0.30$.
+        *   $130 \times 0.30 = 39$.
+
+    *   *Step 5: Calculate the remaining trees.*
+        *   Trees remaining = Total trees - Dead trees.
+        *   $130 - 39 = 91$.
+        *   Alternatively: Trees remaining = $70\% \text{ of } 130$.
+        *   $130 \times 0.70 = 91$.
+
+4.  **Review and Verification:**
+    *   Does "chops down 2 trees" mean natural death or intentional removal? Usually, it implies removal, so it reduces the count.
+    *   Does "trees die" imply a separate mortality event after the 10-year mark? Yes, the timeline is defined as "After 10 years...".
+    *   Is there any ambiguity about whether the chopped trees were from the planting or existing stock? It doesn't matter for the math, only that -2 happened annually.
+    *   Calculation check:
+        *   $50 + (10 \times 10) - (10 \times 2) = 50 + 100 - 20 = 130$.
+        *   $30\% \text{ of } 130 = 39$.
+        *   $130 - 39 = 91$.
+
+5.  **Final Output Formulation:**
+    *   State the starting number.
+    *   Calculate net growth.
+    *   Calculate total count after 10 years.
+    *   Calculate the decrease due to the death rate.
+    *   Final result.
+
+6.  **Construct the Final Answer:**
+    *   Start: 50
+    *   Yearly Net: $(10 - 2) = 8$
+    *   10 Years Net: $8 \times 10 = 80$
+    *   Total before deaths: $50 + 80 = 130$
+    *   Percentage died: $0.30 \times 130 = 39$
+    *   Remaining: $130 - 39 = 91$
+
+7.  **Final formatting:** Put the number after `####`.
+
+    Wait, let me double check the wording "After 10 years 30% of the trees die."
+    Does it mean 30% of the original trees, or 30% of the current trees?
+    Phrasing: "After 10 years 30% of the trees die."
+    "The trees" generally refers to the population present at that time ("After 10 years..."). If it meant original trees, it usually says "30% of the original trees".
+    Standard interpretation: 30% of the current population size of 130 perish.
+
+    Let's check if there is any other interpretation.
+    Could it mean 30% of the *net* trees? (i.e., the calculated 91 is wrong).
+    Could it mean the trees *planted* are subject to mortality?
+    Given the phrasing "After 10 years 30% of *the* trees die", the referent "the trees" is the collection of trees existing at that point in time.
+    So, Total = 130. Died = 39. Left = 91.
+
+    Let's write down the steps clearly.
+    1. Initial: 50
+    2. Net change/year: +10 (plant) - 2 (chop) = +8.
+    3. Total trees gained over 10 years: 8 * 10 = 80.
+    4. Total trees available: 50 + 80 = 130.
+    5. Trees die (30%): 130 * 0.30 = 39.
+    6. Left: 130 - 39 = 91.
+
+    Looks solid.
+
+    Wait, is there a trick? "He starts with 50 trees." "Tom plants 10 trees a year." "Every year he also chops down 2 trees a year." "After 10 years 30% of the trees die."
+    Is it possible the 30% is applied to theInitial 50? "30% of *the* trees". Usually, "the trees" implies the subject of the conversation about tree population. If I have 130 trees now, and 30% die, 39 die from the 130. This is the only logical reading. If I have 100 trees, 30% of them usually means 30, regardless of origin, unless specified "original".
+
+    So 91 is the answer.
+
+    Constraint Check: "Put your final answer as a number after ####."
+    Format: #### 91
+
+    Wait, one more check.
+    "Every year he also chops down 2 trees a year."
+    Does this happen simultaneously with planting? "Tom plants... Every year he also chops..."
+    Does it matter? No, summing up to the end of year 10.
+    Year 1: Start 50. End 50 + 8 = 58.
+    Year 2: Start 58. End 58 + 8 = 66.
+    ...
+    Year 10: Start 130 - 8 = 122. End 122 + 8 = 130. (Assuming death event is only at the end of the 10 years).
+    "After 10 years 30% of the trees die." This implies the crash happens at the end of the year counting or upon completion of the 10th year.
+    So the population before the crash is 130.
+    Crash reduces it by 30%.
+    Result 91.
+
+    Ready.
+</think>
+
+Here is the step-by-step calculation to find the number of trees left:
+
+1.  **Calculate the net growth per year:**
+    Tom plants 10 trees and chops down 2 trees each year.
+    $$10 - 2 = +8 \text{ trees per year}$$
+
+2.  **Calculate the total number of trees after 10 years:**
+    Starting with 50 trees, he adds 8 trees each year for 10 years.
+    $$50 + (8 \times 10) = 50 + 80 = 130 \text{ trees}$$
+
+3.  **Calculate the number of trees that die:**
+    After 10 years, 30% of the trees die.
+    $$130 \times 0.30 = 39 \text{ trees die}$$
+
+4.  **Calculate the remaining trees:**
+    Subtract the dead trees from the total number of trees.
+    $$130 - 39 = 91 \text{ trees}$$
+
+#### 91
+---
+Here's a thinking process that leads to the solution:
+
+1.  **Analyze the Request:**
+    *   Goal: Calculate the number of trees Tom has left after a certain period.
+    *   Input Data:
+        *   Starting number of trees: 50.
+        *   Planting rate: 10 trees per year.
+        *   Chopping rate: 2 trees per year.
+        *   Duration: 10 years.
+        *   Additional event: 30% of the trees die after 10 years.
+    *   Output Format: Final answer as a number after `####`.
+
+2.  **Break Down the Timeline (Year by Year vs. Total):**
+    *   Let's look at the changes per year first.
+    *   Let's look at the starting point.
+
+3.  **Step-by-Step Calculation:**
+
+    *   **Initial State (Year 0):**
+        *   Trees = 50
+
+    *   **Growth Changes per Year:**
+        *   Adds: +10 trees/year.
+        *   Removes (chops): -2 trees/year.
+        *   Net change annually: $10 - 2 = +8$ trees/year.
+
+    *   **Total Change over 10 Years:**
+        *   Since the net change is +8 trees per year for 10 years.
+        *   Total added: $8 \times 10 = 80$ trees.
+        *   Total before mortality: $50 + 80 = 130$ trees.
+
+    *   **Applying Mortality Constraint:**
+        *   The problem states: "After 10 years 30% of the trees die."
+        *   Does this mean 30% of the *remaining* trees, or 30% of the *original* trees, or just a general 30% reduction from the current total?
+        *   Usually, in these types of word problems, "30% of the trees die" refers to the current inventory at that point in time.
+        *   Current inventory before death = 130.
+        *   Trees that die = $30\%$ of $130$.
+        *   $0.30 \times 130 = 39$.
+
+    *   **Final State:**
+        *   Trees left = Current inventory - Trees that died.
+        *   Trees left = $130 - 39$.
+        *   Calculation: $130 - 39 = 91$.
+
+4.  **Alternative Interpretation Check:**
+    *   Could "30% of the trees die" refer to the original 50?
+    *   Text: "After 10 years 30% of the trees die."
+    *   Usually, "the trees" refers to the collective existing trees at that moment. If I have a forest and I say "30% of the trees died," I mean 30% of what is currently standing.
+    *   Could the dying happen *during* the year? "After 10 years" implies a check at the end.
+    *   So, the calculation $130 \times (1 - 0.30)$ seems the most logical interpretation.
+    *   $130 \times 0.7 = 91$.
+
+    *   Let's double-check the math.
+    *   Start: 50.
+    *   Year 1 end: $50 + 8 = 58$.
+    *   Year 2 end: $58 + 8 = 66$.
+    *   ...
+    *   Year 10 end: $50 + (8 \times 10) = 130$.
+    *   Mortality: 30% of 130 = 39.
+    *   Remaining: $130 - 39 = 91$.
+
+5.  **Final Verification:**
+    *   Does the problem imply annual mortality during the 10 years? No, it specifically says "After 10 years...".
+    *   Does the problem imply the chopping happens *after* the dying? Or vice versa? "After 10 years [context of time], 30% of the trees die." This implies the mortality event happens following the accumulation of the growth over the 10 years.
+    *   So: Start + (Net Growth) - (Mortality) = Final.
+    *   $50 + 10 \times (10 - 2) - 0.3 \times (50 + 10(10-2))$.
+    *   $50 + 80 - 0.3(130)$.
+    *   $130 - 39$.
+    *   $91$.
+
+6.  **Formatting:**
+    *   Put final answer as a number after `####`.
+    *   Wait, the prompt says "after ####". It usually means "after `####`" on a new line or replacing a placeholder.
+    *   Instruction: "Put your final answer as a number after ####."
+    *   interpretation: `#### 91` or the answer should follow the text `####`.
+    *   Standard convention for this specific prompt type (often seen in math competitions/evaluations): The user wants the specific string `####` followed by the number or the number on a new line after the markers.
+    *   Re-reading: "Put your final answer as a number after ####."
+    *   Likely meaning: `#### 91`.
+
+7.  **Constructing the Output:**
+    *   Show the steps clearly.
+    *   End with `#### 91`.
+
+    *   Wait, looking at similar prompt structures usually found here: The instruction "Put your final answer as a number after ####" often implies the output should just be the markdown artifact or strictly formatted.
+    *   Let's check the phrasing: "after ####".
+    *   Okay, I will write out the solution and ensure the line ends with `#### 91`. Or is it `####` then space then `91`?
+    *   Let's assume it means the final answer is formatted as `#### 91`.
+
+    *   Wait, is there any ambiguity about "chops down 2 trees"? No.
+    *   Is there any ambiguity about "plants 10 trees"? No.
+    *   Is there any ambiguity about "starts with 50 trees"? No.
+    *   Is there any ambiguity about "After 10 years"? No.
+    *   Is there any ambiguity about "30% of the trees die"? This is the main potential pitfall. 30% of 130 = 39.
+    *   Is it possible "30% of the trees die" refers to the original 50? If the trees have died naturally before the 10 years, the calculation would be different. But it says "After 10 years...". This suggests the state is 10 years in, then the death event occurs.
+    *   So, $130 \rightarrow 130 - 0.3(130) = 91$.
+
+    *   Wait, could "chops down" mean instantaneous? "Every year he also chops down 2 trees a year." Seasonal pruning. It fits the cumulative net change model.
+
+    *   Let's re-read carefully: "After 10 years 30% of the trees die."
+    *   Scenario A: Net gain happens continuously/annually.
+        *   Start: 50.
+        *   Growth/Chopping happens over the 10 years.
+        *   Total Inventory at Year 10 mark = $50 + 10(10-2) = 130$.
+        *   Then mortality event -> $30\% \times 130 = 39$.
+        *   Final = $91$.
+
+    *   Is it possible the dying happens *to the planted trees specifically*? "30% of the trees die". Refers to total trees possessing "tree-ness".
+    *   Okay, calculation holds.
+
+    *   Final check on formatting instructions.
+    *   "Put your final answer as a number after ####."
+    *   This usually implies the line should look like: `#### 91`.
+
+    *   One more check: Some riddles imply the trees he plants are "future" trees, but since he plants them during the year, do they survive that year?
+    *   Usually in word problems, "10 trees a year" implies an accumulation.
+    *   Example: New Year earnings.
+    *   If year 1: Start 50. End of year 1: 50 - 2 + 10 = 58.
+    *   So $50 + 8 \times 10 = 130$ is correct for the start of the mortality calculation.
+
+    *   Wait, could the 10 years include the start?
+    *   "Starts with 50 trees... After 10 years".
+---
+Here's a thinking process that leads to the solution:
+
+1.  **Analyze the Request:**
+    *   Goal: Calculate the number of trees left after a specific period.
+    *   Inputs:
+        *   Initial trees ($T_{initial}$) = 50.
+        *   Rate of planting = 10 trees/year.
+        *   Rate of chopping (removal) = 2 trees/year.
+        *   Duration = 10 years.
+        *   Rate of death = 30% (occurs *after* 10 years).
+    *   Output format: A number after `####`.
+
+2.  **Break Down the Problem Year by Year (or via Total Calculation):**
+
+    *   *Initial State:* 50 trees.
+
+    *   *Annual Change (Net Planting/Chopping):*
+        *   Tom plants +10.
+        *   Tom chops -2.
+        *   Net change per year = $10 - 2 = +8$ trees.
+
+    *   *Duration:* 10 years.
+
+    *   *Step 1: Calculate the net growth over 10 years before the "death" event.*
+        *   Growth = 8 trees/year * 10 years = 80 trees.
+        *   *Crucial interpretation check:* Does he start with 50, then add/subtract over 10 years to get the total heap, *then* do the 30% death? Or does the plant/chop happen over the year, and the death happens at the very end?
+        *   Standard interpretation for word problems like this:
+            1.  Start with initial amount.
+            2.  Add/Subtract annual amounts over the duration.
+            3.  Apply the final event.
+
+        *   Total trees at the *pre-death* point (end of year 10 maintenance):
+            *   Initial + (Net Planting/Chopping)
+            *   $50 + (8 \times 10)$
+            *   $50 + 80 = 130$ trees.
+
+    *   *Step 2: Calculate the "Diámetro" (Death).*
+        *   Event: "After 10 years 30% of the trees die."
+        *   Base: The trees remaining from the growth phase (130 trees).
+        *   Trees dying = $30\%$ of $130$.
+        *   $0.30 \times 130 = 39$ trees.
+
+    *   *Step 3: Calculate the Final Remaining Total.*
+        *   Surviving trees = Total - Died
+        *   $130 - 39 = 91$ trees.
+
+    *   *Alternative Interpretation Check:*
+        *   Does "After 10 years 30% of the trees die" imply something about the inventory *during* the 10 years vs *at the end*? Usually, these problems assume all activities sum up to a point where a percentage is taken.
+        *   Does "chops down" mean he harvests or kills? Usually "chops down" implies removal (zeroing out that tree).
+        *   Does "die" mean natural attrition separate from chopping? Yes, the problem treats them as distinct categories of loss.
+        *   Is the 30% applied to the *initial* 50 or the *total accumulated*? Text says "30% of the trees die." Contextually, this applies to the state of the forest at that specific moment (end of year 10).
+
+    *   *Let's re-read carefully:* "After 10 years 30% of the trees die."
+    *   Calculation Path:
+        1.  Start: 50
+        2.  10 years pass:
+            *   Add: $10 \times 10 = 100$
+            *   Subtract: $2 \times 10 = 20$
+            *   Net change: $+80$
+            *   Total at year 10 mark: $50 + 100 - 20 = 130$
+        3.  Death event: "30% of the trees die."
+            *   $30\%$ of $130 = 39$.
+            *   Remaining: $130 - 39 = 91$.
+
+    *   *Potential Ambiguity:* What if "chops down" removes trees permanently, but "die" refers to natural mortality from the chirp's perspective? The wording "chops down" usually implies intentional removal. "Die" implies random/natural attrition. They both result in a loss of the count.
+    *   Is it possible the 30% applies to the growth *only*? No, "30% of the trees" refers to the population at that time.
+
+    *   Let's check if there are multiple death events. "30% of the trees die." Singular event.
+
+    *   *Wait, is the calculation of years inclusive or exclusive?*
+        *   "Starts with 50."
+        *   "Plants 10 trees a year... chops 2 trees a year."
+        *   "After 10 years".
+        *   Standard math word problem convention: Over the span of 10 years, he performs the yearly action 10 times.
+        *   Calculation: $50 + (10 - 2) \times 10 = 130$.
+
+    *   *Calculations:*
+        *   $130 \times 0.30 = 39$.
+        *   $130 - 39 = 91$.
+
+3.  **Final Verification:**
+    *   Start: 50.
+    *   Years: 10.
+    *   Net per year: +8.
+    *   Total added: 80.
+    *   Total before death: 130.
+    *   Loss (death): $39$.
+    *   Final: 91.
+
+4.  **Formatting:**
+    *   Output the final number after `####`.
+    *   Wait, the instruction says "Put your final answer as a number after ####".
+    *   Example: `#### 91`
+
+5.  **Drafting the response:**
+    *   Show the steps clearly.
+    *   1. Calculate net growth per year.
+    *   2. Calculate total trees after 10 years of planting/chopping.
+    *   3. Calculate number of trees that die.
+    *   4. Calculate remaining trees.
+
+    *   Step 1: 10 planted - 2 chopped = 8 net trees per year.
+    *   Step 2: Over 10 years, $8 \times 10 = 80$ trees added.
+    *   Step 3: Current total before death = Initial (50) + Added (80) = 130 trees.
+    *   Step 4: Trees die = $30\%$ of 130 = 39 trees.
+    *   Step 5: Remaining = $130 - 39 = 91$ trees.
+
+    *   Result: 91.
+
+    *   Wait, is there any trick regarding "chops down"? Sometimes "chops down" might mean logging for sale but keeping the stump? No, in tree math word problems, "chops down" removes the tree from the count of "trees he has".
+    *   Is there any trick regarding the 50 trees? Do they exist first, then he plants, then he chops?
+    *   Yes, $50 (start) + (10-2)*10$.
+    *   What if "30% of the trees die" includes the ones he chopped? No, "chops down" is distinct action. "Die" is the attrition event.
+    *   The phrasing "After 10 years 30% of the trees die" implies the attrition happens at the very end state.
+    *   So, $130 \times 0.7 = 91$.
+
+    *   Double check: Is there an interpretation where the chopping happens over time and the death happens over time?
+    *   "Every year he also chops down 2 trees a year." -> This is a rate. Integrated over 10 years = 20 total chopped.
+    *   "After 10 years 30% of the trees die." -> This is a rate event at the end.
+    *   The phrasing supports the calculation: $50 + 80 = 130$. $130 \times 0.7 = 91$.
+
+6.  **Construct Final Output:**
+    *   Number: 91.
+    *   Format: `#### 91`
+
+    Wait, check the instruction again: "Put your final answer as a number after ####."
+    Okay. I will write down the logic then format the final line.
+
+    Wait
+---
+Here's a thinking process that leads to the solution:
+
+1.  **Analyze the Request:**
+    *   Goal: Solve a math problem.
+    *   Output format: Put the final answer as a number after ####.
+    *   Problem details:
+        *   Rate of planting: 10 trees/year.
+        *   Rate of chopping: 2 trees/year.
+        *   Initial amount: 50 trees.
+        *   Timeframe: 10 years.
+        *   Extra condition: 30% of the trees die (presumably after 10 years or during the process? The phrasing "After 10 years 30% of the trees die" implies a lump sum death event or a cumulative loss rate applied *after* the 10-year horizon regarding the surviving capacity). Let's re-read carefully: "After 10 years 30% of the trees die."
+        *   Context: Usually, in these types of riddles/math problems, "30% of the trees die" is ambiguous. Does it mean 30% of the *initial* trees? 30% of the *total current* trees? 30% of the *last* year's trees? Or is it a decay rate over time?
+        *   Standard Interpretation for this specific structure: Calculate the net change over 10 years based on planting and chopping, then subtract the death rate from the final count.
+        *   Let's break it down step-by-step.
+
+2.  **Step 1: Initial State**
+    *   Start with 50 trees.
+
+3.  **Step 2: Net Planting/Chopping Calculation**
+    *   Time period: 10 years.
+    *   Plants per year: 10.
+    *   Chops per year: 2.
+    *   Net change per year = (Plants) - (Chops) = $10 - 2 = +8$ trees/year.
+    *   Total net growth over 10 years = $8 \times 10 = 80$ trees.
+
+4.  **Step 3: Trees Accumulated (Pre-Dying)**
+    *   Total trees before the death event = Initial + Net Growth.
+    *   $50 + 80 = 130$ trees.
+
+5.  **Step 4: The Death Clause**
+    *   "After 10 years 30% of the trees die."
+    *   Which trees? The ones currently in the possession of the count.
+    *   Total count entering this phase = 130.
+    *   Calculation for death: $130 \times 0.30$.
+    *   $13 \times 3 = 39$ trees died.
+
+6.  **Step 5: Final Calculation**
+    *   Leftover trees = Total trees - Dead trees.
+    *   $130 - 39$.
+    *   Calculation: $130 - 30 = 100$; $100 - 9 = 91$.
+    *   Alternatively: $130 \times (1 - 0.30) = 130 \times 0.70$.
+    *   $13 \times 7 = 91$.
+    *   Result: 91.
+
+7.  **Reviewing Ambiguities:**
+    *   *Ambiguity 1:* Does "30% of the trees die" refer to the 10 years total mortality or is it a specific event at the end? "After 10 years 30% of the trees die" strongly implies a specific attrition event at the end of the timeline. If it meant "30% of the trees die *during* the 10 years," it would make calculating the exact yearly count impossible without more data (normally trees alive *at that time*). Given the structure "Start -> Process -> End Event -> Result," applying the percentage to the final count at year 10 is the most logical mathematical interpretation.
+    *   *Ambiguity 2:* "30% of the trees" refers to the *original* 50 or the *current* total? Usually, "the trees" refers to the total count of trees existing at that specific moment (130 trees). "30% of the trees" implies the subject is the set of trees present.
+    *   *Ambiguity 3:* Do "chopped down" trees count towards the "die" percentage? If they are chopped down, they are dead/removed. If the chopping happens *before* the "30% of the trees die" event at the end of year 10, then the chopping trees are already gone.
+    *   *Scenario A (Most Likely):*
+        1. Year 1-10: Plant 10, Chop 2. Net +8/year. Start 50.
+        2. End of Year 10: Total count = $50 + (8 \times 10) = 130$.
+        3. Event: 30% of *these* 130 trees die (die but aren't chopped, just die).
+        4. Final count = $130 - (0.3 \times 130) = 91$.
+    *   *Scenario B:*
+        "Chops down 2 trees" means they are removed from the count immediately.
+        "30% of the trees die" might apply to the initial population.
+
+    Let's stick with the standard arithmetic progression logic. The "chopped down" trees are already removed from the *standing* count. The "die" is usually distinct from "chopped" in the context of the word "left".
+    1. Start: 50.
+    2. Operation (10 years): Net gain 8 trees/year.
+    3. Year 10 Standings: $50 + 80 = 130$.
+    4. Final Adjustment: 30% of 130 die.
+    5. Remaining: 70% of 130.
+
+    Let's calculate:
+    $130 \times 0.7 = 91$.
+
+8.  **Verification:**
+    *   Start: 50.
+    *   Year 11 (Year 1 to 10 includes 10 years of action):
+    *   Gains: $10 \times 10 = 100$ trees planted.
+    *   Losses (Chopped): $2 \times 10 = 20$ trees chopped.
+    *   Trees present before random death: $50 + 100 - 20 = 130$.
+    *   Death损失 (30%): $130 \times 0.30 = 39$.
+    *   Remaining: $130 - 39 = 91$.
+
+    Is there an interpretation where "chops down" is considered "dying"?
+    Usually, math problems separate "chopped" and "die". If they are both removal from the final count, chopping happens during the years, death happens at the end.
+    Does "30% of the trees" refer to the 50 initial trees? "30% of the trees" usually implies the population *at that time*. If I have 130 trees, and 30% die, I lose 39. If it meant 30% of the *original*, it would say "30% of the original trees".
+    Does "chops down 2 trees" happen before the death? Yes, "Every year".
+    So the sequence is: Years run -> 10 years pass -> Survey/Check -> 30% die -> Count.
+
+    Result is 91.
+
+    Wait, is there a trick? "He starts with 50 trees." "After 10 years 30% of the trees die."
+    Does he plant the trees, then chop them, then they die?
+    Does the "30%" apply to the trees *available* at the end of year 10? Yes.
+    Does "chops down 2 trees" count as removing them from the total? Yes.
+    So $50 + (10 \times 10) - (2 \times 10) = 130$.
+    Then $30\%$ death: $130 \times 0.3 = 39$.
+    Then $130 - 39 = 91$.
+
+    Let's double check if "30% of the trees die" implies the trees he chopped also died. The prompt asks "How many trees does he have left?".
+    If he chopped 20 trees, they aren't "left". They aren't planted there (he grows them from the sap maybe? No, he plants, they grow, he chops).
+    The phrase "how many trees does he have *left*" implies the balancing equation.
+    LHS = 50 (Initial).
+    Adds = $10 \times 10 = 10
+---
+Here's a thinking process that leads to the solution:
+
+1.  **Analyze the Request:**
+    *   Activity: Tomato (Wait, "Tom" plants trees).
+    *   Input: Tom plants 10 trees/year.
+    *   Input: Tom chops down 2 trees/year.
+    *   Input: Starts with 50 trees.
+    *   Input: After 10 years, 30% of the trees die.
+    *   Goal: Calculate how many trees are left.
+    *   Output Format: Put the final number after `####`.
+
+2.  **Break Down the Scenario:**
+    *   Initial State ($t=0$): 50 trees.
+    *   Duration: 10 years.
+    *   Annual Change: +10 (planting) - 2 (chopping).
+    *   Event at $t=10$: 30% of the trees die.
+
+3.  **Step 1: Calculate the net tree count change per year.**
+    *   Net change per year = Trees Planted - Trees Chopped
+    *   Net change = $10 - 2 = 8$ trees per year.
+
+4.  **Step 2: Calculate the total number of trees over 10 years.**
+    *   Initial trees = 50
+    *   Total added trees = $10 \text{ trees/year} \times 10 \text{ years} = 100$ trees.
+    *   Total removed (chopped) = $2 \text{ trees/year} \times 10 \text{ years} = 20$ trees.
+    *   *Alternative calculation:* Net change per year $\times 10 = 8 \times 10 = 80$.
+    *   Total trees before death = Initial + Net Change
+    *   Total = $50 + 80 = 130$ trees.
+
+    *Self-Correction/Refinement:* Does "chops down" mean he removes them immediately, or does he cut them down *after* they are added? Usually, in these math problems, "chops down" is a subtraction from the current total. "Plants" is an addition to the current total. So, the net effect happens annually over the year.
+    Let's verify:
+    Start: 50
+    Year 1: $50 + 10 - 2 = 58$
+    Year 10: $50 + 8 \times 10 = 130$.
+    Okay, the number is 130 trees at the exact moment of the 10-year mark before mortality.
+
+5.  **Step 3: Calculate the mortal trees.**
+    *   Total trees = 130
+    *   Mortality rate = 30%
+    *   Trees died = $0.30 \times 130$
+    *   Calculation: $3 \times 13 = 39$.
+    *   Trees died = 39.
+
+6.  **Step 4: Calculate trees remaining.**
+    *   Trees Remaining = Total trees - Trees died
+    *   Trees Remaining = $130 - 39$
+    *   Calculation: $130 - 30 = 100$, $100 - 9 = 91$.
+    *   Result = 91.
+
+7.  **Review the steps:**
+    *   Start: 50
+    *   Net rate: $10 - 2 = +8$
+    *   10 years: $50 + (8 \times 10) = 130$
+    *   30% of 130 = 39
+    *   $130 - 39 = 91$
+
+8.  **Final Check:**
+    *   Did I misinterpret "30% of the trees die"? Usually, this implies of the current total, or specific in-group trees? No, "of the trees" implies "of the current total".
+    *   Did I misinterpret "chops down"? Often "chops down" implies removing them from the count.
+    *   Is there any ambiguity about when the death happens? "After 10 years 30% of the trees die." This implies the calculation order is: (1) 10 years of planting/cutting -> (2) Apply death rate.
+    *   Does "trees die" apply to the year they were planted or older trees? Doesn't matter for the total count calculation, as long as % applies to the *current* count.
+
+    Let's re-read carefully: "Tom plants 10 trees a year. Every year he also chops down 2 trees a year. He starts with 50 trees. After 10 years 30% of the trees die. How many trees does he have left?"
+
+    *   Start: 50
+    *   Growth for 10 years: $(10 - 2) \times 10 = +80$
+    *   Total Active Trees: $50 + 80 = 130$
+    *   Death loss: $0.30 \times 130 = 39$
+    *   Remaining: $130 - 39 = 91$
+
+9.  **Formatting:**
+    *   The user asked to "Put your final answer as a number after ####."
+
+10. **Construct Final Output:**
+    *   State the steps clearly.
+    *   Box the final number.
+
+    Wait, the prompt says "Put your final answer as a number after ####." It doesn't explicitly ask for an explanation, but showing work is standard for "Solve the math problem". I will provide the steps and end with the specific format.
+
+    Wait, checking standard instruction interpretation for "after ####".
+    Usually, this means the number should be inserted into the placeholder.
+    Example: `#### 91` or `##### 91`?
+    Usually prompts like "Put your final answer as a number after ####" mean the text `####` followed by the number, e.g., `#### 91`. Or simply replacing the `####` with the number.
+    Given the phrasing "Put your final answer as a number after ####", it usually implies the format: `#### [Answer]`.
+    However, sometimes it means `###[Answer]`.
+    Let's look at the instruction again: "Put your final answer as a number after ####."
+    So, output should likely be `#### 91`.
+
+    Let's check the previous turn instructions. There are none.
+    Let's assume the format `#### 91`.
+
+    Wait, looking at common patterns for this specific prompt style (often used in benchmarks):
+    Instruction: "Put your final answer as a number after ####."
+    Interpretation: The text string should contain `####` followed by the number.
+    Actually, it might mean `#####91`? No, usually `####` is a placeholder.
+    If I write `91 after ####`, that's wrong.
+    If I write `#### 91`, that fits "after ####".
+
+    Let's consider the possibility that the user wants me to write `####91` (no space) or `#### 91` (with space). Usually, a space is more readable. I will include a space for clarity unless strictly prohibited, but often automated graders strip spaces. However, without specific constraints on whitespace, `#### 91` is safest visually.
+    Wait, looking at the constraint "Put your final answer as a number after ####."
+    It implies the structure `#### [ANSWER]`.
+
+    Let's double check the calculation.
+    Initial: 50
+    Year 1: 58 (add 10, lose 2)
+    Year 2: 66
+    ...
+    Year 10: $50 + (8 \times 10) = 130$.
+    Remaining: $130 \times (1 - 0.30) = 130 \times 0.70 = 91$.
+    $13 \times 7 = 91$.
+    Calculation is correct.
+
+    What about the "chops down" phrasing? "Every year he also chops down 2 trees". Does this happen during the year *before* planting? Or does it happen at the same time?
+    Assuming net change per year.
+    Does "After 10 years" mean 1 full period? Yes.
+    Does "30% of the trees die" happen immediately? Yes.
+    Math remains solid.
+
+    Final check on output format.
+    "Put your final answer as a number after ####."
+    I will write the explanation and conclude with `#### 91`.
+
+    Wait, some prompts mean "replace the #### with the answer".
+    If the prompt is instructions to *me* (the AI):
+    "Solve the math problem. Put your final answer as a number after ####."
+    This implies my output text should contain `####` followed by the number.
+    Example: `The answer is #### 9

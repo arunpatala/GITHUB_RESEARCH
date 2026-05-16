@@ -1,0 +1,415 @@
+To find the number of trees Tom has left after 10 years, we need to calculate the total number of trees and eliminate the ones that die, or set up a step-by-step calculation for each year. Let's use the step-by-step method as it is easier to follow.
+
+**Initial State:**
+- Trees = 50
+- Initial amount (Year 0) = 50
+
+**Every Year:**
+- Tom plants 10 trees.
+- He chops down 2 trees each year (Death rate = 2).
+- **Annual Change in Amount:** $+10 - 2 = +8$ trees.
+
+**Time Periods:** There are 10 years.
+
+**Calculation:**
+Since the change (+8) happens every year, we can add 10 times the total increase for 10 years.
+$$ \text{Total Increase} = 10 \times 8 = 80 $$
+
+$$ \text{Final Trees} = \text{Initial Trees} + \text{Total Increase} $$
+$$ \text{Final Trees} = 50 + 80 $$
+$$ \text{Final Trees} = 130 $$
+
+Alternatively, we can track the number of year-lines:
+- Year 1 (Start of Year 1): 50
+- Year 1 End: $50 + 8 = 58$
+- Year 2 End: $58 + 8 = 66$
+- Year 3 End: $66 + 8 = 74$
+- Year 4 End: $74 + 8 = 82$
+- Year 5 End: $82 + 8 = 90$
+- Year 6 End: $90 + 8 = 98$
+- Year 7 End: $98 + 8 = 106$
+- Year 8 End: $106 + 8 = 114$
+- Year 9 End: $114 + 8 = 122$
+- Year 10 End: $122 + 8 = 130$
+
+Both methods yield the same result.
+
+130
+---
+To solve this problem, we will break it down step by step:
+
+1.  **Calculate the total number of trees Beth cuts down after 10 years.**
+    Since he starts with 50 trees and dies every year, we calculate the number of trees lost over the 10-year period.
+    $$ \text{Trees Cut Down} = 50 \text{ trees (initial)} + 10 \text{ trees (1 year)} + 10 \text{ trees (2 years)} + 10 \text{ trees (3 years)} + 10 \text{ trees (4 years)} + 10 \text{ trees (5 years)} + 10 \text{ trees (6 years)} + 10 \text{ trees (7 years)} + 10 \text{ trees (8 years)} + 10 \text{ trees (9 years)} $$
+    $$ \text{Trees Cut Down} = 50 + 90 = 140 \text{ trees} $$
+
+2.  **Calculate the total number of trees Beth planted.**
+    Knowing she started with 50 trees and planted 10 trees a year for 10 years:
+    $$ \text{Trees Planned} = 50 + (10 \times 10) = 50 + 100 = 150 \text{ trees} $$
+
+3.  **Determine the number of trees that died.**
+    The problem states that 30% of the trees die.
+    $$ \text{Trees that Died} = 150 \text{ trees (planted)} \times 0.30 = 45 \text{ trees} $$
+
+4.  **Calculate the number of trees left.**
+    This represents the number of trees *remaining* from the number of trees planned, minus the number that died.
+    $$ \text{Trees Left} = 150 - 45 = 105 \text{ trees} $$
+
+Final Answer: 105
+---
+Let's break down the problem step by step.
+
+**1. Identify the initial amounts:**
+*   Initial number of trees ($T_0$) = 50
+*   Trees cut down per year ($C$) = 2
+*   Trees planted per year = 10
+
+At any given point, the number of trees remaining depends on the cumulative effect of cuts and plants over time.
+The number of trees left at time $t$ is:
+$$T(t) = T_0 - 2t + C \times t$$
+Why is it linear? Because the net change in trees is constant (plants subtracted) for the entire period, regardless of how many trees are left at the beginning. It's a linear function of time.
+
+**2. Identify the parameters given in the problem:**
+*   Start ($T_0$) = 50
+*   Cut rate ($C$) = 2 trees/year
+*   Net plantation rate ($P$) = 10 trees/year
+*   Time elapsed ($t$) = 10 years
+*   Percentage dying ($10\%$) = 0.10 trees/year
+
+**3. Calculate the annual gain and loss:**
+*   Trees added each year: $10$
+*   Trees removed each year: $2$
+*   Net annual change: $+10 - 2 = +8$ trees
+
+**4. Calculate the total number of trees cutting down over 10 years:**
+$$\text{Total cuts} = 2 \text{ (per year)} \times 10 \text{ (years)} = 20 \text{ trees}$$
+
+**5. Calculate the trees dying:**
+$$\text{Trees dying} = 20 \text{ trees} \times 10\% = 2 \text{ trees}$$
+*Explanation*: The rate of trees dying is also constant at 10% per year.
+$$20 \times 0.10 = 2$$
+
+**6. Calculate the trees left:**
+$$\text{Remaining trees} = T_0 - (\text{Trees cut} - \text{Trees planted})$$
+Wait, let's look at the formula again.
+Remaining = Total Planted - Total Cuts
+Total Planted = 50 (initial) + $10 \times 10 = 150$
+Total Cuts = $20$
+Remaining = $50 + 150 - 20 = 180$
+
+Alternatively, using the cumulative change:
+Remaining = $20 + (150 - 20)$? No.
+Let's just do the subtraction directly:
+Total Intentionally Planted = $50 + 10 \times 10 = 150$
+Total Trees Removed = $10 \times 2 = 20$
+Trees Left = $150 - 20 = 130$
+
+Let's double check this logic.
+At year 10:
+- Initial: 50
+- Cut (1 to 10): $2 \times 9 = 18$
+- No new trees for 10 years.
+- Total trees = $50 + 18 = 68$
+- Trees die in year 10 (10% of 68): $6.8$ trees
+- Who perfectly patches up 6.8 trees? They didn't plant them.
+- Trees at the start of year 11 careens to 68.
+- Cut (1 to 10, for year 11): $18$ trees cut.
+- Initially planted in year 1: 10 trees (plus the 50 from begin)
+- Wait, the problem says "Tom plants 10 trees a year."
+- Start: 50 trees.
+- Year 1 Cut: -2.
+- End of Year 1 Net: +8.
+- End of Year 10 Net: +80.
+- End of Year 10 Total Trees: $50 + 80 = 130$.
+- Trees die in Year 10 at a rate of 20%? No, 10%.
+- So 0.10 of the *current* population of 130 dies.
+- Die = $130 \times 0.10 = 13$ trees.
+- Trees Left = $130 - 13 = 117$.
+
+Let's re-read carefully.
+"Every year he also chops down 2 trees a year."
+"He starts with 50 trees."
+
+Calculation path 1 (Total Operations):
+Estimation of death rate might confuse the system.
+Let's assume the death rate is instant (continuous) or simply summed.
+Total cuts = $10 \text{ years} \times 2 \text{ trees/yr} = 20$ trees.
+If the problem implies $20\%$ are dying, the math gets weirder ($60 \times 9.2 = 552$).
+But the text says "Every year he also chops down 2 trees... He starts with 50... After 10 years 30% of the trees die."
+The phrase "30% of the trees die" refers to the population size at the end of the year for that specific interval, or perhaps the total population. Given the context of "After 10 years", it usually implies the quantity of trees remaining at $T=10$.
+The phrase "30% of the trees die" modifies the final state. It means the remaining volume is 70% of the original volume.
+If $100\% = P$, then remaining years = $30\%$ of the plants. Or remaining years = $70\%$ of the trees.
+This wording suggests: "30% of the current trees die."
+Let's stick to the most standard interpretation for this type of word problem:
+Formula: $\text{Remaining} = \text{Parshall} - \text{Cuts}$
+Parshall = $50 + (10 \times 10) = 150$
+Cuts = $2 \times 10 = 20$
+Result = $150 - 20 = 130$.
+
+Let's verify with the second path (Simulation logic):
+10 years:
+Net gain = $10 - 2 = 8$ trees.
+Total added plants = $8 \times 10 = 80$ trees.
+Total trees before death = $50 + 80 = 130$.
+Trees die = $10\%$ of 130 = $13$ trees.
+Trees left = $130 - 13 = 117$.
+
+Which interpretation is correct?
+"Every year he also chops down 2 trees a year." -> This updates the tree count every year.
+"He starts with 50 trees." -> This is the target.
+"After 10 years 30% of the trees die." -> This is the constraint on the population.
+
+If we follow the "Net" view:
+Every year, 2 trees are taken. 10 are added. Net +8.
+Over 10 years, total +80.
+Initial 50.
+Total trees = 130.
+"30% of the trees die."
+Does this imply that the trees removed in the last year accounted for the reduction, OR that 30% of the current stock is lost?
+Usually, in these problems, "X% of the trees die" refers to the final count relative to the start, BUT the mechanics define the timeline.
+If 30% of the trees were to die *by* year 10, that would mean 70% survive.
+$0.7 \times \text{Start} = \text{End}$.
+$0.7 \times 130 \text{ (net)} = 91$.
+But does 30% fit the timeline?
+If $10\%$ of 130 is dead (i.e., 13 died), then 117 remain.
+Total trees = 130. $13/130 \approx 10\%$. This fits perfectly.
+If the death rate was 30%, total trees would be 91. The cut 30 would mean $30\% \approx 10\%$ (90). But he removed only 20 trees clearly. 10% is a small fraction of 130.
+Therefore, the sentence "30% of the trees die" likely implies: "30% of the trees that were left at the end of the year died." i.e., a small reduction.
+The phrasing "30% of the trees die" in the context of "After 10 years" implies the population reduction caused by death, not the percentage of trees planted.
+Actually, re-reading similar solved problems: "30% of the trees [remaining] die" $\implies$ 70% survive.
+Wait, if we interpret it as "30% of the trees die *
+---
+100
+
+**Step-by-step derivation:**
+
+1.  **Calculate the total number of trees**:
+    Tom starts with 50 trees and plants 10 per year.
+    $$ 50 \text{ (initial)} + 10 \text{ (planted)} = 60 \text{ trees} $$
+    So, the total population is 60 trees.
+
+2.  **Determine the total number of tree deaths**:
+    The problem states that 30% of the trees die.
+    $$ 30\% \times 60 = 0.30 \times 60 = 18 \text{ tree deaths} $$
+
+3.  **Calculate trees remaining**:
+    To get the remaining trees, subtract the number of deaths from the total number of trees.
+    $$ 60 \text{ (total)} - 18 \text{ (deaths)} = 42 \text{ trees} $$
+---
+#### 1. Calculate the initial cumulative number of trees
+Tom starts with 50 trees.
+Over a period of 10 years, he adds 2 new trees every year.
+$$ \text{Total Clods} = 50 + (10 \times 2) = 70 \text{ trees} $$
+
+#### 2. Calculate the total number of trees that die in 10 years
+The problem states that 30% of the trees die. However, it does not specify if the percentage of the *initial* group or the *cumulative* total (50 + 10 new trees) are used.
+*   **Scenario A (Using the initial 50 as a base for "trees that die"):** $30\%$ of 50 trees die.
+*   **Scenario B (Using the final 70 as the base):** $30\%$ of 70 trees die.
+
+Standard mathematical phrasing usually implies determining the effect on the total population currently or the history. If we account for the new clods growing, the number of dead trees would be 30% of the total population ($50+70 = 120$). Let's calculate based on the cumulative total first.
+
+$$ \text{Total Trees at Start} = 50 $$
+$$ \text{New Trees planted} = 20 $$
+$$ \text{Total Trees} = 70 $$
+$$ \text{Percentage that die} = 30\% $$
+
+$$ \text{Trees that die} = 70 \times 0.30 = 21 \text{ trees} $$
+
+Let's check if the relative timing (10 years vs 10 new trees) matters for the population dynamics.
+*   If we treat 50 as a static base for the percentage ($0.30 \times 50$), then:
+    $$ 30\% \text{ of 50} = 15 $$
+*   If we treat it as the cumulative base ($0.30 \times 70$), then:
+    $$ 30\% \text{ of 70} = 21 $$
+
+In natural populations, new个体 can breed and potentially reproduce to increase survival/survivorship ratios. While the problem says "After 10 years", it provides no specific biological reproduction parameters. In standard riddle/concept problems without definitions of "reproduction rate," the safest assumption is that the percentage applies to the current total stem population unless the problem implies the new individuals are destined to die immediately and do not go into the reproduction cycle.
+
+However, let's look at the sentence structure: "He starts with 50 trees... After 10 years 30% of the *trees* die."
+If this were a strict population dynamics problem, the phrasing "death of trees" usually refers to the mortality rate of the existing population. If he adds new trees, are they part of the population being measured? Yes, the population *size* is 50, and 20 new trees exist.
+Let's assume the percentage applies to the **total population size including both existing and new trees**.
+$$ \text{Total Population} = 50 + 20 = 70 $$
+$$ \text{Dead} = 0.30 \times 70 = 21 $$
+
+If the question intended the percentage to apply only to the 50 trees, it would be phrased like "He starts with 50 trees. Every year he makes one. He starts with 50. After 10 years, he dies of... 30% of the 50 die" (wrong plural).
+The most logical interpretation is that the 30% applies to the current total of 70.
+
+$$ \text{Remaining Trees} = \text{Total Initial} - \text{Equalizing Trees} $$
+$$ \text{Total Initial} = 50 $$
+$$ \text{Equalizing Trees} = 0.30 \times 70 = 21 $$
+$$ \text{Remaining} = 50 - 21 = 29 $$
+
+Let's try the alternative interpretation where the 30% works on just the 50, and the new trees are "alive" and grow but we only subtract the 15 represented by the 30% from the original size? No, that ignores the negative population dynamics of mass succession.
+If we interpret "30% of the trees" as 30% of the history of die-in events purely from my size (50) and ignore the recruitment? That ignores the 20 existing trees.
+If we interpret "30%" as a rate applied to the current size (50)? No, it says "After 10 years 30% of the trees [in the current 70] die."
+
+Let's reconsider the standard "trick" logic often found in these problems.
+Total Trees = $50 + 10(2) = 70$.
+Percentage = 30%.
+If this is mathematically subtracted from the total: $70 \times 0.3 = 21$.
+Result: $50 - 21 = 29$.
+
+Is there a scenario where $30\%$ of 50 is the intended answer?
+"Every year he also chops down 2 trees a year."
+"30% of the trees die."
+If the percentage is applied to the *number of trees that could die*, and the total number of individuals is the limit, then the math holds.
+
+Let's check the alternative: Does the problem mean "30% of the strawberries... and the *rest* are trees"? No, it says "he also chops down".
+Could the "trees" refer to the 10 trees planted (maybe they are distinct)? No, "trees" implies the object planted.
+
+Let's assume the calculation is:
+$$ \text{Remaining} = (100\% - 30\%) \times \text{Total Initial} $$
+Is it possible the answer assumes **only** the 50 trees die from their own burst?
+If new trees are counted in the total but assume they don't contribute to the reproduction or are just "new" >1 population units?
+In a standard word problem context without "reproduction rates" specified as fractions or time decimals, the most direct interpretation is that the percentage applies to the cumulative number.
+$70 \times 0.3 = 21$.
+$50 - 21 = 29$.
+
+Let's consider if the question implies the 50 trees are the *only* population for the purpose of the specific "30%" on the "trees" they are, ignoring the 10 that grew.
+Why? Because "30% of the trees" can refer to a subset. If you plant 20 new trees, they exist. If they die, are they new trees?
+If the 30% applies universally to the total species count including new arrivals:
+Total Seconds = 70.
+Dead = 21.
+Left = 29.
+
+If the 30% applies only to the initial 50:
+"30% of the 50 trees die" -> 15 died.
+Total remaining = $50 - 15 = 35$.
+Why would they group 10 new trees separately? Because the sentence says "He starts with 50 trees... After 10 years [the group has grown] 30% of the trees die." Grammatically, "the trees" refers to the collective noun.
+However, if the 30% was a rate applied to the 50 trees specifically, the new trees would just add to the life expectancy expectation (though often ignored in simple math word problems).
+But usually, "30% of the trees" implies a decay on the total standing stock.
+Total Standing Stock = Initial + New = $50 + 20 = 70$.
+Surviving = $70 \times (1 - 0.30) = 70 \times 0.7 = 49$.
+
+Wait, let's rethink the "subtracting a subset" idea.
+What if the 50 is considered the "stock" and the 20 are "new"?
+If the problem implies an exponential reproduction or a specific demographic function, it would usually define it.
+Let's stick to the simplest additive interpretation.
+Total Population = $50 + 20 = 70$.
+Die = $0.30 \times 70 = 21$.
+Remaining = $70 - 21 = 49$.
+
+Let's try the logic where the 50 is static for the "percentage" calculation but the new trees are excluded from that calculation, while the total population that *should* have died is present.
+If the 50 is the standard reference for "30%", then:
+$0.30 \times 50 = 15$.
+Remaining = $50 - 15 = 35$.
+This feels like too much guessing. The cumulative number 70 is the only explicit "whole number" set increase.
+
+Let's try to find a reason for $35$.
+If the question treats the 50 as the
+---
+To solve this problem, we will calculate the initial number of trees, subtract the trees pruned by Julia, remove the fallen trees from that count, and then subtract the remaining trees from the population.
+
+**Step 1: Calculate the initial total number of trees.**
+Tom starts with 50 trees.
+$$50 \text{ (initial)}$$
+
+**Step 2: Calculate the number of trees pruned by Julia.**
+Julia prunes 2 trees per year.
+$$2 \text{ (pruned/year)} \times 10 \text{ (years)} = 20 \text{ (pruned)}$$
+
+**Step 3: Calculate the number of fallen trees.**
+The population of trees starts at 50 and dies over 10 years. The problem states that 30% of the trees die.
+$$50 \times 0.30 = 15 \text{ (fallen)}$$
+
+**Step 4: Calculate the remaining number of **trees** (pruned ** + fallen**).**
+Now subtract the pruned trees from the initial total, and subtract the fallen trees from that new total.
+$$50 - 15 = 35$$ (Remaining trees *from pruned trees*)
+Then subtract the fallen trees from that remaining total:
+$$35 - 15 = 20$$
+
+Alternatively, keeping track of the total trees at each step:
+1.  Total trees at start: 50
+2.  Pruned trees: $20$
+3.  Trees remaining from start: $50 - 20 = 30$
+4.  Fallen trees: $15$
+5.  Trees remaining at end: $30 - 15 = 15$
+
+**Final Answer:**
+**15**
+---
+1,800
+---
+To find the number of trees Tom has left after 10 years, we can model the growth using a progression of terms or work it out step-by-step by year.
+
+**Step 1: Analyze the initial conditions and the growth pattern.**
+*   **Initial trees** ($t=0$): 50
+*   **Annual growth**: -2 trees (Tom chops down 2 trees)
+*   **Death rate**: -1 trees (30% of trees die, meaning 70% remain)
+
+Let $a_n$ be the number of trees after $n$ years.
+The growth for each year can be represented by a percentage.
+*   Year 1 ($n=1$): -2, 30% mortality
+*   Year 2 ($n=2$): -2 (previous year's growth), 30% mortality
+*   Year 3 ($n=3$): -2 (previous year's growth)
+
+This creates a geometric series where the factor for each year is $(1 - 0.30) / (1 \text{ (from chopping down from 1 year ago)}) \times (1 - 0.30)$? No, let's re-evaluate the process.
+
+**Method 2: Calculate from Year 1 to Year 10**
+Let $T_n$ be the number of trees at the start of year $n$ (trees remaining from previous year) or at the end of year $n$.
+Let $T_n$ be the **end** of year $n$.
+
+*   **Start Year 1**: He has 50 trees.
+*   **End Year 1**:
+    *   He cuts 2 trees.
+    *   70% die (30% survive).
+    *   Trees = $50 - 2 = 48$.
+    *   If the remaining 48 trees die 30%, new quantity: $48 \times 0.7 = 33.6$.
+    *   *Problem:* 33.6 is not an integer. Typically in such problems, we work with whole numbers or the result is a fraction. Let's assume whole trees.
+    *   Let's try calculating the exact value: $48 \times 0.7 = 33.6$. Since he cannot have partial trees, the "30% die" might imply the number of surviving trees is an integer after accounting for chopping.
+    *   Alternatively, maybe the 30% applies to the *total* remaining population.
+    *   If the total remaining is $48$, then $0.3 \times 48 = 14.4$ die. Surviving = $48 - 14.4 = 33.6$.
+    *   This results in a non-integer. In these specific math riddles where intermediate results are fractions, we often stop at the end of the year and treat fractions as "remainder", or we adjust the starting number.
+    *   Let's check if the phrase "After 10 years 30% of the trees die" suggests a fixed percentage applied to the surviving base for the specific count.
+    *   Let $x$ be the number of trees at the end of Year 1. Then $x = 50 + (-2)_{\text{cut}} \times (0.7)^1$? No, the cutting happens in one specific year.
+    *   Let $x_n$ be the number of trees *after* cutting downs and dying from birth in year $n$.
+    *   $x_1 = 50 - 2 \text{ (cut)}$.
+    *   $x_2 = x_1 \times 0.7$.
+    *   $x_3 = x_2 \times 0.7$.
+    *   ...
+    *   $x_{10} = x_1 \times (0.7)^9 \times (-2)^{10}$.
+    *   This confirms the fractal nature.
+
+    Let's calculate $x_{10}$:
+    *   $x_1 = 48$
+    *   $0.7^9 = 0.40353607$
+    *   $48 \times 0.7^9 \times (-2)^{10} = (50 \times 0.7)^{10}$?
+    *   Let's re-read carefully: "Every year he also chops down 2 trees. Every year he also chops down 2 trees a year. He starts with 50 trees. After 10 years 30% of the trees die."
+    *   Usually, these problems imply the fractional remainder is ignored or the number of survivors is rounded. However, the math $50 \times 0.7^{10}$ gives $2.2$ trees.
+    *   $50 \times 0.7 = 35$. $35 \times 0.7 = 24.5$. ...
+    *   Maybe the 30% survival schedule is applied to the *number of trees remaining after previous standard chopping*.
+    *   Let's try a standard progression interpretation:
+    *   Trees = 50
+    *   Year 1: Cut 2. Remaining = 48. 70% die. $48 \times 0.7 = 33.6$. (Result: 33 trees remaining).
+    *   Year 2: Cut 2. From 33 trees. 70% die. $33 \times 0.7 = 23.1$. (Result: 23 trees).
+    *   Year 3: Cut 2. From 23 trees. 70% die. $23 \times 0.7 = 16.1$. (Result: 16 trees).
+    *   ...
+    *   After 9 years, the calculation involves $x_1$ multiplied by $(0.7)^9$. Since $x_1 = 48$, and the result is 33, we have approximately $48 \times 0.7^9 = 20.3$. Still not an integer.
+    *   Is it possible the "30% die" is an integer percentage of the current total? $0.3 \times 48 = 14.4$.
+    *   Maybe the shaving happens *then* the dying?
+        *   Start: 50.
+        *   End Year 1: 50 - 2 = 48.
+        *   If 30% of 48 die, survivors = 33.6. Round to 34? Or just ignore the fraction?
+        *   Assume we accept fractions are acceptable in this logic puzzle context or the input numbers were meant to result in a nice whole number (perhaps I'm miscalculating the exponent).
+        *   Wait, let's look at the formula: $(50 \times 0.7)^n \times (-2)^n$.
+        *   $50 \times 0.7 = 35$. $35 \times 0.7 = 24.5$. $24.5 \times 0.7 \approx 17.15$.
+        *   This doesn't seem to converge to an integer.
+
+    *   **Alternative Logic (Fixed Percentage of Total):**
+        Maybe the 30% applies to the *total population* equally at the start of each gap.
+        *   Gap 0: Start with 50.
+        *   Year 1: Cut 2. 70% remain. $50 \times 0.7 = 35$ new offspring. Cut 2.
+        *   Total Year 1 = $35 - 2 = 33$.
+        *   Year 2: Cut 2. 70% of 33 ($21.9$) die? Or $33 \times 0.7 = 23.1$. Cut 2.
+        *   Year 3: Cut 2. From 23.1?
+        This doesn't define integers well.
+
+    *   **Re-evaluating the "Fraction" issue:**
+        Perhaps the problem implies the number of trees is an integer, so the subtraction or division is performed such that $0.3 \times \text{Total} = \text{Total} - \text{Sauvages}$.
+        However, there is a common variation of this problem where the number of trees becomes a fractional integer.
+        Let's assume the question implies:
+        Tree Count $C$.
+        $C = 50$.
+        $C_{new} = C_{old} \times 0.7$.
+        Wait, if $C_{old} = 50$, then $50 \times 0.7 = 35$.
+        Is it possible the trees die *immediately*? "30% of the trees die." Usually means survive.
+        Let's assume the math problem allows for partial trees or that the final count is the exact result of the formula before rounding.
+        But wait! Look at the formula $x_n = 50

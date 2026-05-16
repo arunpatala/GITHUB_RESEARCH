@@ -1,0 +1,774 @@
+Here's a thinking process that leads to the solution:
+
+1.  **Analyze the Request:**
+    *   **Scenario:** A dragon (Perg) breathes fire 1000 feet down.
+    *   **Weapon:** A gold javelin (thrown by Polly).
+    *   **Base Capability:** Polly throws the javelin 400 feet without the sapphire gemstone.
+    *   **Enhanced Capability:** With the sapphire gemstone, she throws it 3 times farther than the base capability.
+    *   **Question:** How far *outside* the dragon's reach can Polly stand and still hit the dragon (throw the javelin), given she has the gemstone and the dragon breathes fire?
+    *   **Output Format:** A number after `####`.
+
+2.  **Deconstruct the Variables:**
+    *   Dragon's Reach: 1000 feet (maximum safe distance for Polly *relative to the dragon*).
+    *   Current Javelin Throw (No Gem): 400 feet.
+    *   Gem Javelin Throw: 3 * (Current Javelin Throw).
+
+3.  **Step-by-Step Calculation:**
+    *   *Calculate the maximum throw distance with the gemstone.*
+        *   $3 \times 400 \text{ feet} = 1200 \text{ feet}$.
+    *   *Determine the constraint:* The dragon's fire reaches 1000 feet. Therefore, Polly must stand at a distance $X$ from the dragon such that the javelin travels a distance of at least some minimum distance to hit the dragon, but the problem implies she "stands... and still hit the dragon". Usually, in these types of riddles/math problems, "stand... and still hit" implies standing at the *maximum* possible distance from the dragon's mouth where the flight path reaches the target.
+    *   *Wait, let's look closer at the wording:* "how far outside of the reach of the dragon's flames could Polly stand".
+        *   "Outside of the reach" means the distance between Polly and the Dragon ($D_{Polly}$) is greater than 1000 feet.
+        *   "Still hit the dragon" means the distance she throws ($D_{Throw}$) must be at least equal to $D_{Polly}$.
+        *   Actually, usually, the distance she stands is the distance the javelin must travel to reach the dragon.
+        *   So, If she stands at distance $D_{Polly}$, she throws distance $D_{Throw}$. For success, $D_{Throw} \ge D_{Polly}$.
+        *   To maximize the standing distance, we use the max throw distance.
+        *   Max Throw = 1200 feet.
+    *   *Calculate how far "outside" reaches.*
+        *   Dragon's Reach = 1000 feet.
+        *   Max Safe Standing Distance = 1200 feet.
+        *   Distance outside of reach = Max Safe Standing Distance - Dragon's Reach.
+        *   Calculation: $1200 - 1000$.
+
+4.  **Verify the Wording/Nuance:**
+    *   "sleeping the dragon" -> Wait, the prompt says "sleigh". "Sleigh"? The text says "sleigh the dragon". Slearn context suggests it's a typo for "sleigh" or "slay". However, standard parsing of math riddles ignores typos unless they change the math.
+    *   "how far outside... could Polly stand"
+        *   If Polly stands 11 feet away, she is inside the reach (0.109 * outside*... no).
+        *   If she stands 1001 feet away, she is 1 foot "outside".
+        *   If she throws 1200 feet, she can stand 1200 feet away.
+        *   Is 1200 feet outside of 1000 feet? Yes.
+        *   How many feet 1200 - 1000 = 200.
+    *   Is there a trick regarding the dragon's breath building up? "breathing fire upon anything within a distance of 1000 feet".
+    *   "How far outside... could Polly stand".
+        *   Total Distance = Throw Distance = 1200.
+        *   Fire Safe Boundary = 1000.
+        *   Excess Distance = 200.
+
+5.  **Drafting the Solution:**
+    *   Polly throws the javelin 400 feet without the gem.
+    *   With the gem, she throws it $400 \times 3 = 1200$ feet.
+    *   The dragon breathes fire 1000 feet down.
+    *   Therefore, Polly can stand 1200 feet away safely enough to throw, and the question asks how far *outside* the 1000 feet is the position 1200 feet.
+    *   $1200 - 1000 = 200$.
+
+6.  **Final Check:**
+    *   Base throw: 400.
+    *   Enhanced throw: 1200.
+    *   Fire limit: 1000.
+    *   Outside limit: $1200 - 1000 = 200$.
+    *   Does the problem imply the javelin needs to go *to* the dragon while she is at a specific distance? Yes.
+    *   Does "hit the dragon" mean the tip of the javelin must reach the dragon? Yes.
+    *   Does "stand" mean she must be the point, the dragon is a fixed point? Implied.
+    *   Does she have to be safe? Yes ("outside of the reach... could Polly stand").
+
+7.  **Formatting:**
+    *   Result: 200.
+    *   Format: `#### 200`.
+
+8.  **Final thought on "sleigh":**
+    *   Wait, the text says "flush the dragon". No, it says "sleigh the dragon".
+    *   Prompt text provided: "sleigh the dragon".
+    *   Prompt text provided: "gold javelin, the only known weapon that could sleigh the dragon".
+    *   "Sleigh" is likely "slay". This doesn't affect the math.
+    *   Prompt text provided: "sapphire gemstone, she could throw the javelin three times farther".
+    *   Math is $400 \times 3 = 1200$.
+    *   Math is $1200 - 1000 = 200$.
+
+    Let's double-check the logic of "outside".
+    If the fire reaches 1000 feet.
+    If she stands 1000 feet away. She is on the edge of fire. Is that "outside"? Usually "outside" implies strictly greater than.
+    If she stands 1200 feet away. That is 200 feet beyond the 1000 feet circle.
+    So the distance is 200 feet.
+
+    Is there any ambiguity about "hit"?
+    If she throws 1200 feet. The javelin travels 1200 feet.
+    If she stands 1000 feet away, she throws 1200 feet. The javelin hits past the dragon (or hits the dragon on the way towards the dragon if the dragon is 1200 feet away? No).
+    For her to hit the dragon, the distance between her and the dragon must be less than or equal to the throw distance (1200).
+    For her to be safe, the distance between her and the dragon must be greater than or equal to 1000 (or strictly greater, depending on interpretation, but usually "outside reach" implies the boundary).
+    Max safe distance (safe and hit) = 1200.
+    Dragon reach = 1000.
+    Difference = 200.
+
+    Wait, is the "reach of the dragon's flames" a distance *from the dragon* to * Polly*?
+    "breathing fire upon anything within a distance of 1000 feet."
+    If Polly stands 1001 feet away, she is outside.
+    If Polly stands 1200 feet away, she is far outside.
+    Since she aims the javelin to hit the dragon, the throw distance is equal to the standing distance.
+    Max standing distance = 1200.
+    Question: "how far outside...".
+    Calculation: $1200 - 1000 = 200$.
+
+    Seems solid.
+
+    Step 1: Max throw without gem = 400 ft.
+    Step 2: Max throw with gem = $400 \times 3 = 1200$ ft.
+    Step 3: Dragon fire radius = 1000 ft.
+    Step 4: Distance to stand = Max throw distance (to hit) = 1200 ft.
+    Step 
+---
+Here's a thinking process that leads to the suggested solution:
+
+1.  **Analyze the Problem:**
+    *   **Dragon's Reach:** The dragon can breathe fire on anything within $1000$ feet. Let's call this distance $R_{dragon} = 1000$.
+    *   **Normal Throw Distance:** Polly can throw the javelin $400$ feet without the gemstone. Let's call this $d_1 = 400$.
+    *   **Gemstone Throw Distance:** With the sapphire gemstone, she throws the javelin three times farther than normal. Let's call this $d_2$.
+    *   **Goal:** Find the maximum distance outside the dragon's reach where Polly can stand and still hit the dragon. Let's call this distance $X$.
+
+2.  **Calculate the Throw Distance with the Gemstone:**
+    *   $d_2 = 3 \times d_1$
+    *   $d_1 = 400$
+    *   $d_2 = 3 \times 400 = 1200$ feet.
+
+3.  **Determine Polly's Safe Position:**
+    *   Polly needs to throw the javelin $1200$ feet to hit the dragon.
+    *   The dragon defends anything within $1000$ feet.
+    *   To be "outside of the reach of the dragon's flames", Polly's starting position must be $> 1000$ feet away from where the dragon is (or rather, the dragon is so far away from Polly).
+    *   Actually, let's set up a simple coordinate system.
+        *   Let the Dragon be at position $0$.
+        *   The "Dragon's Reach" zone is $[-1000, 1000]$ (radius $1000$).
+        *   Actually, simpler: Let the Dragon be at one point. The "safe zone" is the region outside the dragon's breath radius.
+        *   If Polly is standing at distance $D$ from the Dragon.
+        *   She needs to throw the javelin to reach the Dragon. Distance of throw = $D$ (assuming she throws straight at him).
+        *   $D$ must be less than or equal to $d_2$ (throw distance). Since $d_2 = 1200$, she can reach any distance up to $1200$ feet.
+        *   However, she is "outside of the reach of the dragon's flames".
+        *   Dragon's reach = $1000$ feet.
+        *   To be safe, her distance from the Dragon ($D$) must be greater than $1000$ feet.
+        *   So, $1000 < D \le 1200$.
+    *   The question asks: "how far outside of the reach of the dragon's flames could Polly stand".
+    *   This asks for the distance *exceeding* the $1000$ foot mark.
+
+4.  **Interpret "How far outside of the reach":**
+    *   The total distance covering is from $0$ (Dragon) to $1200$ (Max Reach).
+    *   The dangerous zone is $0$ to $1000$.
+    *   The safe zone is $1000$ onwards.
+    *   She needs to stand somewhere in the safe zone where the throw range is sufficient.
+    *   She has a max throw distance of $1200$ feet.
+    *   The dragon's flame radius is $1000$ feet.
+    *   If she stands exactly at the edge of the flame ($1000$ feet away), that's not "outside".
+    *   If she stands at the edge of her reach from a point where the dragon is safe for her.
+    *   Let's re-read the phrasing carefully: "how far outside of the reach of the dragon's flames could Polly stand".
+    *   This implies the distance *from the edge of the dragon's breath* to Polly's location.
+    *   Let $P$ be Polly's distance from the Dragon.
+    *   Safe condition: $P > 1000$.
+    *   Throw condition: $P \le 1200$.
+    *   The maximum distance $P$ can be is $1200$.
+    *   The boundary of the dragon's reach is $1000$.
+    *   "How far outside" refers to the difference between $P_{max}$ and the boundary $R_{dragon}$.
+    *   Difference = $1200 - 1000$.
+    *   Wait, does it mean distance from the dragon, or distance from the safe zone edge? Usually, in these word problems, "how far outside of [Specific Boundary] could [Subject] stand" implies the distance between the maximum standing point allowed by capability and the boundary.
+    *   Calculation: $1200 \text{ (Max Reach)} - 1000 \text{ (Dragon Reach)} = 200 \text{ feet}$.
+
+5.  **Double Check Logic:**
+    *   Dragon is at point $D$.
+    *   Dragon's flame covers a sphere of radius $R = 1000$.
+    *   Polly throws javelin with max range $R_{javelin} = 1200$.
+    *   Polly needs to land the javelin on the Dragon (distance $P$ between them).
+    *   To hit the dragon, $P \le 1200$.
+    *   To be safe, $P > 1000$.
+    *   So $P$ can be anywhere between $1000$ (exclusive) and $1200$.
+    *   The question asks "how far outside of the reach...".
+    *   If she stands 1001 feet away, she is $1$ foot outside.
+    *   If she stands 1199 feet away, she is $199$ feet outside.
+    *   If she stands 1200 feet away, she is $200$ feet outside.
+    *   Since it asks "could Polly stand" (implies capability limit), the maximum extent is the relevant answer.
+    *   So, she can stand as far as $1200$ feet away.
+    *   $1200 - 1000 = 200$.
+
+6.  **Formulate the final answer:**
+    *   Dragon reach = $1000$.
+    *   Normal throw = $400$.
+    *   Enhanced throw = $3 \times 400 = 1200$.
+    *   Difference (buffer space) = $1200 - 1000 = 200$.
+    *   Answer = 200.
+
+7.  **Format:**
+    *   Put the number after ####.
+
+8.  **Final Review:**
+    *   Is there any trick? "sleigh the dragon" (typo in prompt for slay?), "sapphire gemstone", "salerian". No, those are just flavor text.
+    *   "hit the dragon with the gold javelin". She must hit it. So range must cover the distance.
+    *   "how far outside of the reach". If the reach is $1000$, and she can hit up to $1200$. If she stands at $1200$, she is $200$ feet outside the $1000$ radius.
+    *   Seems straightforward.
+
+    *   Step 1: Calculate throw distance with gemstone: $400 \times 3 = 1200$.
+    *   Step 2: Identify dragon safety distance: $1000$.
+    *   Step 3: Identify max safe distance from dragon: $1200$.
+    *   Step 4: Calculate distance outside the flame radius: $1200 - 1000 = 200$.
+
+    Wait, could it be interpreted as the distance from the center?
+    "how far outside of the reach... could Polly stand".
+    If the reach is a radius of 1000. The area outside is $r > 1000$.
+    If she stands at distance $D$, she is outside if $D > 1000$.
+    The phrase "how far outside" implies the magnitude by which $D$ exceeds the limit.
+    Max $D = 1200$.
+    Limit = $1000$.
+    Excess = $200$.
+
+    Is it possible the question asks for the total distance from the dragon?
+    "how far outside of the reach of the dragon's flames could Polly stand"
+    This structure usually compares the standing position against the boundary of the reach. It effectively asks for the amount of clearance.
+    If I ask "How far outside the pool can you stand?", you measure from the edge.
+    So $200$ is the correct interpretation.
+
+    Let's write down the
+---
+The user wants to solve a word problem based on distance calculations.
+
+**1. Analyze the problem statement:**
+*   **Dragon's reach:** 1000 feet. Anything within 1000 feet is on fire.
+*   **Normal javelin distance:** 400 feet (when throwing with no gemstone).
+*   **Gemstone-modified javelin distance:** 3 times the normal distance.
+*   **Goal:** Determine how far *outside* the reach of the dragon's flames Polly can stand to still hit the dragon.
+
+**2. Calculate the modified distance:**
+*   Distance with gemstone = 3 * Distance without gemstone
+*   Distance with gemstone = 3 * 400 feet = 1200 feet.
+
+**3. Analyze the "outside of the reach" constraint:**
+*   The dragon's flames reach 1000 feet from Perg.
+*   To hit the dragon, Polly needs to be at a position such that the dragon is within 1000 feet of Polly's shot? No, wait.
+*   Let's re-read carefully: "Polly could throw the gold javelin... for a distance of 400 feet... But when Polly held the sapphire gemstone, she could throw the javelin three times farther... If holding the gemstone, how far outside of the reach of the dragon's flames could Polly stand and still hit the dragon with the gold javelin?"
+*   The dragon is breath danger zone radius $R_{dragon} = 1000$ feet.
+*   The javelin travel distance is $D$.
+*   If Polly stands at a point $x$ relative to the dragon, and throws the javelin, the javelin travels distance $D$. For the javelin to hit the dragon, the dragon must be at the landing point of the javelin? Or does the javelin need to reach the dragon's location?
+*   Usually, in these riddles, "hit the dragon" implies the javelin reaches the location of the dragon.
+*   Let's look at the geometry.
+    *   **Dragon** is at Mount Farbo.
+    *   **Dragon's Fire Zone:** Area within 1000 feet of the Dragon.
+    *   **Polly's Position:** Let's say distance $d_{PollyDragon}$.
+    *   **Javelin Throw:** Distance $D = 1200$.
+    *   If Polly stands *outside* the reach, $d_{PollyDragon} > 1000$.
+    *   For the dragon to be hit, the javelin must travel the distance from Polly to the Dragon. So the javelin range must be at least equal to the distance between Polly and the Dragon.
+    *   Wait, is the dragon in the fire zone or outside?
+    *   The text says: "how far outside of the reach of the dragon's flames could Polly stand and still hit the dragon with the gold javelin?"
+    *   This implies Polly stands at distance $X$ from the dragon (where $X > 1000$, i.e., outside the fire).
+    *   The javelin must travel the distance $X$ to hit the dragon.
+    *   Therefore, the maximum distance the javelin can travel when holding the gemstone ($1200$ ft) must be greater than the distance Polly stands away from the dragon ($X$).
+    *   So, $X \le 1200$.
+    *   The question asks "how far outside... could Polly stand". Usually, this implies finding the maximum distance away from the fire zone edge where she can stand. Or does it mean the limit of her position?
+    *   "How far outside of the reach of the dragon's flames could Polly stand..." This phrasing suggests a distance value relative to the edge of the flames.
+    *   Let $R_{fire} = 1000$ feet.
+    *   Max distance to dragon $D_{max} = 1200$ feet.
+    *   To be outside the flames, Polly must be at distance $\ge 1000$ from the dragon.
+    *   To be safe and hit, $1000 < D_{PollyDragon} \le 1200$.
+    *   The question asks "how far outside...".
+    *   If she stands 1200 feet from the dragon, she is 1200 feet away. The dragon is 1000 feet away -> she is 200 feet outside the reach.
+    *   If she stands 1000 feet from the dragon, she is 0 feet outside (on the edge).
+    *   Usually, riddles like this imply a specific numerical answer derived from the difference.
+    *   Let's check the wording again: "how far outside of the reach of the dragon's flames could Polly stand".
+    *   This implies calculating the difference between the javelin's range and the dragon's fire radius, assuming she stands at the maximum possible distance where she is both safe and capable of hitting.
+    *   However, logic dictates: To hit the dragon, she must be within javelin range (1200 ft). To be outside the flames, she must be at least 1001 ft away (if integer).
+    *   So, she can stand at a position up to 1200 ft away from the dragon.
+    *   How far is this from the "reach of the flames"? The reach starts at the dragon and goes 1000 ft out.
+    *   If she stands 1200 ft from the dragon, she is 200 ft beyond the edge of the fire.
+    *   Alternative interpretation: Does "how far outside" mean the distance from the edge? Yes, that seems most likely.
+    *   Let's check if there's any tricky wording about line of sight or anything. No, standard math word problem.
+
+**4. Calculation Steps:**
+1.  **Dragon's Fire Range ($F$):** 1000 feet.
+2.  **Javelin Range ($J$):** $3 \times 400 = 1200$ feet.
+3.  **Condition to hit:** Distance from Polly to Dragon $\le 1200$.
+4.  **Condition to be safe:** Distance from Polly to Dragon $\ge 1000$.
+5.  **Question:** "How far outside of the reach... could Polly stand".
+    *   Max distance she can stand to hit dragon = 1200.
+    *   Radius of fire zone = 1000.
+    *   Difference = $1200 - 1000 = 200$ feet.
+    *   Does "how far outside" mean the distance from the fire boundary?
+    *   Example: "I want to know how far past the finish line I am." If I am at 1200 and the line is 1000, I am 200 past.
+    *   If the question meant "What is the maximum distance from the dragon she can stand?", the answer would be 1200.
+    *   But it qualifies that distance with "outside of the reach". This implies measuring the extent *outside* that reach.
+    *   Let's assume it means the distance beyond the 1000-foot mark.
+
+**5. Verification:**
+*   Normal throw: 400 ft. Fire: 1000 ft. She would be inside the fire (too deep) to throw effectively? Actually, she is inside the fire zone (since 400 < 1000 from her position, but she throws at the dragon). Wait.
+*   Scenario: Polly stands at $d$. Dragon is at 0. Fire extends to -1000 or +1000? Fire extends from Dragon outwards.
+*   Polly throws javelin to Dragon. Javelin travels $d$.
+*   Dragon breathes fire within 1000 feet.
+*   If Polly stands closer than 1000 feet, she breathes fire.
+*   Text says: "Perg sat... breathing fire upon anything within a distance of 1000 feet."
+*   So Polly cannot stand within 1000 feet of the dragon.
+*   She throws the javelin. Distance covered = 1200.
+*   For the javelin to hit the dragon, the dragon must be at the target of the throw? Or is she throwing *at* the dragon? "hit the dragon".
+*   So the distance between Polly and Dragon must be $\le 1200$.
+*   She must also be $> 1000$ feet away to not be burning alive.
+*   How far *outside* (of the fire boundary) can she stand?
+*   She can stand anywhere between 1000 feet and 1200 feet away from the dragon.
+*   However, the question asks for a specific number ("Put your final answer as a number"). This implies a fixed limit or capacity.
+*   "How far... could Polly stand". This suggests the maximum safe distance outside the fire zone where she can still make the throw hit the dragon.
+*
+---
+Here's a thinking process that leads to the solution:
+
+1.  **Analyze the Problem:**
+
+    *   **Dragon's Reach:** The dragon breathes fire within a distance of 1000 feet. This means if Polly stands 1000 feet away or closer, she is in danger. If she stands farther away than 1000 feet, she is safe from the fire.
+    *   **Polly's Normal Throw:** When holding nothing (no gem), she throws the javelin 400 feet.
+    *   **Polly's Throw with Gem:** When holding the sapphire gemstone, she throws the javelin *three times farther* than when not holding the gemstone.
+    *   **Goal:** Find the minimum distance outside the dragon's reach where Polly stands such that the javelin still hits (reaches) the dragon.
+        *   Wait, let's re-read carefully: "how far outside of the reach of the dragon's flames could Polly stand and still hit the dragon with the gold javelin?"
+
+2.  **Determine the Key Distances:**
+
+    *   Dragon's Aura limit: 1000 feet (Dragons breathe fire *within* this distance). So, safe zone starts *beyond* 1000 feet.
+    *   Normal Javelin Range ($d_{normal}$): 400 feet.
+    *   Gem Javelin Range ($d_{gem}$): 3 times $d_{normal}$.
+    *   Max Javelin Reach ($d_{max}$): $3 \times 400 = 1200$ feet.
+
+3.  **Interpret the Question:**
+
+    *   There is a specific phrasing: "how far outside of the reach of the dragon's flames could Polly stand".
+    *   Dragon's reach ($R_{dragon}$) = 1000 feet.
+    *   This usually means if Polly stands at distance $X$, and $X > 1000$, she is "outside".
+    *   However, the javelin has to reach the dragon. The javelin throws distance is measured from where Polly stands to the dragon.
+    *   So, the javelin travels distance $X$. The dragon is at the destination? Or is the dragon "at the distance"? The phrasing "how far outside... could Polly stand" implies the distance of Polly from the dragon.
+    *   Let $D$ be the distance between Polly and the Dragon.
+    *   Constraint 1 (Safety): $D > 1000$. (She needs to be outside the fire).
+    *   Constraint 2 (Accuracy/Range): The javelin must reach the dragon. So the throw distance must be at least $D$.
+    *   With the gem, the javelin travels 1200 feet.
+    *   So, for the javelin to hit, $D \le 1200$.
+    *   For the dragon to breathe fire *on* the thrown javelin? No, "breathing fire upon anything within a distance of 1000 feet". Polly throws to the dragon. The javelin lands on the dragon. The dragon dies. The key constraint is where *Polly* stands relative to the fire.
+    *   Does the dragon need to die? The question asks where Polly can stand to hit the dragon with the javelin.
+    *   So, we need to find a distance $D$ such that:
+        1.  Polly is safe from the fire ($D > 1000$).
+        2.  The javelin travels that distance ($D \le 1200$).
+    *   The question asks: "how far outside of the reach of the dragon's flames".
+    *   This usually implies a minimum distance. "How far... can she stand?" implies the maximum distance she can safely stand and still hit. Or does it mean a specific starting point?
+    *   Actually, usually, these logic puzzles ask for the *furthest* distance possible. If she stands at 1150 feet, she is outside the 1000ft fire. If she throws 1200ft with the gem, it hits (assuming 1200 > 1150). If she stands at 1900 feet, she is safe, but the javelin only goes 1200 feet, so it misses.
+    *   So, the remote set of valid distances is $(1000, 1200]$.
+    *   The question is slightly ambiguous. "How far outside...". Usually means "What is the maximum distance from the fire's reach that she can be".
+    *   Let's check the wording again. "how far outside of the reach of the dragon's flames could Polly stand".
+    *   Dragon's reach starts at 0 and goes to 1000.
+    *   Being "outside" means distance $> 1000$.
+    *   "How far outside" could mean the distance by which she is outside the 1000ft mark, or the distance from the dragon.
+    *   Common interpretation in word puzzles: Find the maximum distance from the dragon she can stand to be safe (outside reach) AND still hit (within range).
+    *   Wait, "reach of the dragon's flames" is a zone. The outside is the safe zone.
+    *   If she stands at distance $x$, she is outside if $x > 1000$.
+    *   She hits the dragon if $x \le 1200$ (max throw with gem).
+    *   The valid range for $x$ is $1000 < x \le 1200$.
+    *   Usually, questions like "how far outside" imply the distance added to the reach limit. Or does it mean the distance from the fire edge? Or does it mean "How far from the dragon"?
+    *   Let's look at similar riddles. Often, "How far outside the [zome]" means $x - 1000$. But another interpretation is "How far from the dragon can she stand".
+    *   If the question meant distance *added* to 1000, the answer is 200.
+    *   If the question meant the total distance from the dragon, the answer is 1200.
+    *   Let's parse "how far outside of the reach".
+    *   The reach is 0 to 1000.
+    *   The max safe distance where she hits is 1200.
+    *   So she can stand 200 feet further out than the reach limit?
+    *   Let's try to interpret "how far outside...".
+    *   If I ask "How far outside the city can you go?", I usually expect an absolute distance (e.g., 10 miles), or the clearance (1 mile).
+    *   Given the context of math puzzles, usually, they want the specific position ($1200$) relative to the threat ($1000$).
+    *   However, there is a nuance. If she stands at exactly 1200 feet, she is 200 feet outside the reach. If the question asks "How far outside", it likely asks for the difference ($1200 - 1000 = 200$).
+    *   But wait, "still hit the dragon". If she stands at 1200 feet, it is the maximum distance. The throw is *for* a distance of 400 feet (without gem) or 1200 feet (with gem).
+    *   So the maximum distance she can stand and hit the dragon is 1200 feet.
+    *   Is the answer 1200 or 200?
+    *   Context: "How far outside of the reach...".
+    *   If the reach stops at 1000. Standing 1001 feet is "1 foot outside". Standing 1100 is "100 feet outside". Standing 1200 is "200 feet outside".
+    *   But the distance *to* the dragon is what matters for the throw.
+    *   Let's re-read the sentence structure carefully.
+    *   "If holding the gemstone, how far outside of the reach of the dragon's flames could Polly stand and still hit the dragon with the gold javelin?"
+    *   Part 1: Polly stands. Distance from Dragon = $D$.
+    *   Part 2: Condition: "Outside of the reach of the dragon's flames" -> $D > 1000$.
+    *   Part 3: Condition: "Still hit the dragon" -> $D \le \text{Throw Range}$.
+    *   Throw Range (with gem) = $400 \times 3 = 1200$ feet.
+    *   So max $D = 1200$.
+    *   The question asks "how far outside".
+    *   Does "how far outside" mean "What is the distance from the edge of the flame zone?" (i.e. $D - 1000$) or "What is the total distance
+---
+The user wants me to solve a word problem and provide the final answer as a number in the format `####`.
+
+**1. Understand the Scenario:**
+*   **Dragon's reach:** The dragon breathes fire on anything within 1000 feet. So, Perg burns anything in the range $[0, 1000]$. To be "outside the reach of the dragon's flames" means being at a distance $> 1000$ from the dragon's mouth/nose. The dragon is at a certain height/location, and Polly needs to be standing at a distance away from him such that her throw reaches the dragon.
+*   **Normally (No gem):** Polly throws the javelin $d_{normal} = 400$ feet.
+*   **With Gem:** Polly throws the javelin $d_{gem} = 3 \times d_{normal}$.
+*   **Goal:** Find how far outside the reach of the dragon's flames Polly can stand and still hit the dragon.
+*   **Ceiling:** Polly needs to be throwing the javelin *towards* the dragon.
+
+**2. Clarify "outside the reach of the dragon's flames":**
+*   The fire reaches 1000 feet.
+*   Polly must be standing outside this zone to avoid burning. So, her standing distance must be $S > 1000$ feet.
+*   She throws the javelin *to* the dragon. The dragon is at a fixed distance.
+*   Wait, the problem phrasing is "how far outside of the reach of the dragon's flames could Polly stand".
+    *   Let $D_{dragon}$ be the distance from the dragon to the direct target spot? No, that doesn't make sense.
+    *   Let's interpret "out of reach" regarding her standing position relative to the fire zone.
+    *   She stands at a distance $X$ from the dragon.
+    *   The dragon's fire covers everything within 1000 feet.
+    *   So, $X$ must be greater than 1000 feet for her to not be burnt.
+    *   She throws the javelin a distance of $d_{throw}$.
+    *   To "still hit the dragon", she must be able to throw the javelin a distance equal to the distance between her standing point and the dragon.
+    *   Actually, usually in these riddles, "hit the dragon" implies hitting it directly. If she stands distance $S$ away, the javelin must travel distance $S$.
+    *   But the constraint is she must be *outside* the flames.
+    *   Dragon fire radius = 1000 ft.
+    *   Polly throws distance $d_{gem}$.
+    *   So if the dragon is at location $P_{dragon}$, and Polly is at location $P_{polly}$, the distance $|P_{dragon} - P_{polly}|$ must be $\le d_{gem}$ for the javelin to hit. Also $|P_{dragon} - P_{polly}| > 1000$ to avoid the fire.
+    *   So the maximum distance she can stand is limited by her throwing distance.
+    *   However, the dragon breathes fire at 1000 feet. This implies the dragon is a point source centered on itself.
+    *   Let's assume ideal conditions: The javelin travels a straight line.
+    *   Polly can throw a distance $d_{gem}$.
+    *   This distance allows her to fight the dragon if the dragon is at distance $d_{gem}$ from her.
+    *   So the maximum range for a successful hit is $d_{gem}$.
+    *   The minimum safe distance is $1000$ feet (just outside the flames).
+    *   The question asks: "how far outside of the reach of the dragon's flames could Polly stand".
+    *   "Outside of the reach" = distance $d > 1000$.
+    *   So she can stand at distance $D$ such that $1000 < D \le d_{gem}$.
+    *   How far *outside* does that mean? Usually means $D - 1000$.
+    *   So, calculate $d_{gem} - 1000$.
+
+**3. Calculate the distances:**
+*   Normal throw distance ($d_{normal}$) = 400 feet.
+*   Gem throw distance ($d_{gem}$) = 3 * $d_{normal}$ = 3 * 400 = 1200 feet.
+*   Dragon fire radius ($R_{fire}$) = 1000 feet.
+*   To stand and hold the javelin safely, she must be outside the fire zone.
+    *   Min safe distance = 1000 feet.
+*   She can throw 1200 feet.
+*   Therefore, she can stand anywhere between 1000 and 1200 feet away to reach the dragon without getting burned.
+*   The question asks "how far outside of the reach...".
+    *   This implies the distance from the edge of the fire zone to her position.
+    *   Max position = 1200 feet.
+    *   Edge of reach = 1000 feet.
+    *   Difference = $1200 - 1000 = 200$ feet.
+    *   Does it ask for the total distance or just how far she can go *beyond* the 1000 mark?
+    *   Phrasing: "how far outside of the reach of the dragon's flames could Polly stand".
+    *   Interpretation A: Maximum distance from the dragon she can stand safely. (Answer: 1200).
+    *   Interpretation B: How far beyond the scrape-line can she go? (Answer: $1200 - 1000 = 200$).
+    *   Let's check the wording carefully: "how far outside of the reach".
+    *   If the "reach" is the zone of safety or danger? "Reach of the dragon's flames" = Zone of safety? No, zone of danger.
+    *   Being "outside" usually means further than the boundary.
+    *   So, if boundary is 1000, and she stands at 1150, she is 150 feet "outside" the reach.
+    *   Usually, these math problems look for the difference between the max reach and the fire radius to find the buffer zone.
+    *   Let's assume the question asks for the maximum *buffer* distance beyond the fire limit.
+    *   If it meant "at what distance", it would usually say "how far from the dragon".
+    *   "How far outside..." implies a measurement relative to the "reach".
+    *   So, max reach - min safe distance.
+    *   Calculation: $1200 - 1000 = 200$.
+
+**Let's double check the logic.**
+1.  **Dragon's reach**: 1000 feet. Fire covers this zone.
+2.  **Safety constraint**: Must be > 1000 feet from dragon to not be burnt.
+3.  **Polly's throwing distance with gem**: 3 * 400 = 1200 feet. This is the maximum distance she can throw the javelin.
+4.  **Condition to hit dragon**: She must throw the javelin to the dragon. So Dragon's distance = Javelin range.
+5.  **Max distance she can stand**: Since she needs to hit the dragon with a javelin of 1200 ft range, the dragon must be 1200 ft away. If the dragon is closer, she can't reach? Or does the question imply she can position herself at a specific point?
+    *   Scenario: Dragon is fixed. Polly moves.
+    *   If Dragon is at $D_{dragon}$, and Polly is at $S_{polly}$.
+    *   Condition 1: $|D_{dragon} - S_{polly}| \le 1200$.
+    *   Condition 2: $|D_{dragon} - S_{polly}| > 1000$.
+    *   She wants to place herself such that the threat of fire is minimized? Or maximize the safety margin?
+    *   Actually, the phrasing "could stand and still hit the dragon" implies finding the upper limit of her range relative to the fire zone.
+    *   If she stands further than 1200 feet, she *cannot* hit the dragon.
+    *   If she stands closer than 1000 feet, she *will be* burnt.
+    *   So the valid standing distance range is $(1000, 1200]$.
+    *   The question: "how far outside of the reach of the dragon's flames could Polly stand".
+    *   "Outside the reach" = distance from the 1000ft point.
+    *   She could stand at any point up to 1200ft away.
+    *   The maximum distance "outside" is $1200 - 1000
+---
+The user wants me to solve a math word problem.
+
+1.  **Analyze the given information:**
+    *   Dragon is at the mount.
+    *   Dragon's reach (danger zone): 1000 feet.
+    *   Pestik (Polly) can throw the javelin normally (without gem): 400 feet.
+    *   With the sapphire gemstone: Throw distance is 3 times the normal distance.
+    *   Question: How far *outside* of the dragon's reach could she stand and still hit the dragon?
+
+2.  **Determine the throwing distance with the gem:**
+    *   Normal distance = 400 feet.
+    *   Multiplier = 3 times.
+    *   Distance with gem = $400 \times 3$.
+    *   $400 \times 3 = 1200$ feet.
+
+3.  **Analyze the positioning:**
+    *   Dragon's fire range = 1000 feet from the dragon.
+    *   Polly needs to be within the throwing range (1200 feet) to hit the dragon.
+    *   However, the question asks "how far outside of the reach of the dragon's flames could Polly stand".
+    *   This means we need to find the distance from Polly to the dragon such that she is safe (outside 1000 feet) but can still hit the dragon (requires $1200 \ge \text{distance}$).
+    *   Wait, the question is slightly ambiguous. "outside of the reach of the dragon's flames" usually means distancing at least 1000 feet.
+    *   Let's check the phrasing: "how far outside of the reach of the dragon's flames could Polly stand".
+    *   "Outside of reach" means being at a distance $d$ where $d > 1000$.
+    *   If she stands further away, say 1100 feet, she can throw 1200 feet (reach the dragon), and she puts herself 1100 feet from the fire.
+    *   If she stands further out than her throwing range, she can't hit him. So, maximum distance she can safely stand while hitting the dragon is 1200 feet.
+    *   The dragon's reach is 1000 feet.
+    *   So, she can stand anywhere between 1001 feet and 1200 feet? Or is the question asking for the *margin* of safety? "how far outside ... could Polly stand".
+    *   Usually, in these types of riddles, "how far outside" implies the difference between the maximum possible safe distance and the minimum safe distance (the boundary of the dragon's reach).
+    *   Let's re-read carefully: "how far outside of the reach of the dragon's flames could Polly stand".
+    *   Interpretation A: What is the maximum distance she can stand such that she is still safe and still hits? That would be 1200 feet - 1000 feet? Or is it just asking for the maximum distance she can reach that is outside 1000?
+    *   Interpretation B: "How far outside [from the edge of that reach]".
+    *   If she stands at 1100 feet, she is 100 feet outside the reach. If she stands at 1200 feet, she is 200 feet outside the reach.
+    *   The question asks "how far ... could ... stand". This usually implies the maximum limit. The maximum limit of a valid position where she hits the dragon is 1200 feet.
+    *   Is she safe at 1200? Yes, 1200 > 1000.
+    *   Is she hitting the target? Yes, 1200 is the max range.
+    *   So the distance she stands *from the dragon* is 1200 feet.
+    *   However, the phrasing "how far outside of the reach" suggests a relative difference from the reach boundary.
+    *   Let's look at the wording again: "how far outside of the reach of the dragon's flames could Polly stand".
+    *   If the dragon's reach ends at 1000 feet.
+    *   She stands at $X$ feet.
+    *   Condition 1: $X > 1000$ (Outside reach).
+    *   Condition 2: $X \le 1200$ (Can hit).
+    *   What is the maximum value of $(X - 1000)$?
+    *   If she stands 200 feet outside the reach, she is at 1200 feet.
+    *   Does the question ask for the distance from the dragon (Total distance) or the excess distance (Clearance)?
+    *   "How far outside of the reach ... could she stand?"
+    *   This sounds like asking for the distance *measured from the boundary of the reach*.
+    *   Just like if the fire is a circle of radius 5, and you stand 10 meters away, you are 5 meters outside.
+    *   However, sometimes these problems are simpler: "The dragon shoots 1000. Polly throws 1200. How far outside?" implies $1200 - 1000 = 200$.
+    *   Let's check if there's an interpretation where the answer is 1200. If I ask "How far are you outside the school yard?", and the yard is 30ft x 30ft and I am standing 35ft away from the center line... usually it implies distance from the boundary.
+    *   Let's assume the question asks for the difference between her throwing range and the dragon's reach to ensure she understands.
+    *   Dragon Reach = 1000 ft.
+    *   Polly Max Throw = 1200 ft.
+    *   She can stand up to 1200 feet away.
+    *   She is safe at 1200 feet because 1200 is outside 1000.
+    *   The distance she is *outside* the reach is $1200 - 1000 = 200$.
+    *   If the question meant "What is the maximum distance she can stand?", it would ask "How far from the dragon could Polly stand?".
+    *   It specifically qualifies with "outside of the reach".
+    *   Therefore, the unit of measurement is "distance beyond the 1000 ft limit".
+    *   Calculation: $1200 - 1000 = 200$.
+
+    Let's double check the wording "how far outside".
+    If I say "I am standing 20 feet outside the fence". I am 20 feet past the line.
+    So the answer should be 200.
+
+    Let's verify the numbers.
+    Polly normal throw: 400.
+    With gem: $400 \times 3 = 1200$.
+    Dragon reach: 1000.
+    Max distance away to still hit (and be safe): 1200.
+    Distance outside the 1000 zone: $1200 - 1000 = 200$.
+
+    Is there any other interpretation?
+    "How far outside of the reach... could Polly stand".
+    Could it mean the minimum distance she *must* stand outside? No, "could ... stand" implies capability/limit.
+    Could it imply she stands max distance to maximize safety?
+    The safest spot is as far as possible, provided she can still hit.
+    So the maximum safe location is 200 feet beyond the danger zone.
+
+    Let's write down the steps clearly.
+    1. Fire reach: 1000 ft.
+    2. Normal javelin: 400 ft.
+    3. Gemmed javelin: $3 \times 400 = 1200$ ft.
+    4. To hit the dragon, she must be within 1200 ft.
+    5. To be safe, she must be more than 1000 ft away.
+    6. To maximize distance outside the danger zone (finding the limit), she stands at 1200 ft.
+    7. Distance outside the reach = Total distance - Dragon reach = $1200 - 1000 = 200$ ft.
+
+    Wait, is there ambiguity in "how far... outside"?
+    If I say "How far is the school bus stop outside the city limits?", and the stop is 5 miles in and the city is 10 miles in, the answer is 0 miles outside.
+    If the stop is 11 miles in, the answer is 1 mile outside the city limit (distance from the boundary).
+    Here, the dragon's fire stops at 1000.
+    Polly stands at a distance $D$.
+    If $D > 1000$, she is outside.
+    If $D
+---
+Here's a thinking process that leads to the solution:
+
+1.  **Analyze the Request:**
+    *   I need to solve a word problem.
+    *   The final answer must be a number placed after `####`.
+
+2.  **Deconstruct the Problem:**
+    *   **Dragon's Reach:** 1000 feet.
+    *   **Normal Throw Distance:** 400 feet (without gemstone).
+    *   **Throw with Gemstone:** 3 times the normal distance.
+    *   **Goal:** Calculate the maximum distance *outside the dragon's reach* where Polly can stand and still hit the dragon with the gemstone.
+
+3.  **Step-by-Step Calculation:**
+
+    *   *Step 1: Calculate the throw distance with the gemstone.*
+        *   Normal throw = 400 feet.
+        *   Throw with gemstone = $3 \times 400$.
+        *   Calculation: $400 \times 3 = 1200$ feet.
+
+    *   *Step 2: Understand the "outside the reach" condition.*
+        *   Dragon's reach = 1000 feet.
+        *   Throw distance = 1200 feet.
+        *   Polly stands at distance $X$.
+        *   She throws the javelin directly at the dragon (implied linear distance).
+        *   To hit the dragon, the throw distance must be at least the distance to the dragon.
+        *   To be *outside* the dragon's reach, the distance to the dragon must be greater than 1000 feet.
+        *   So, Polly needs to stand at a distance such that: $1000 < \text{Distance to Dragon} \le \text{Throw Distance}$.
+        *   The question asks "how far outside". This implies the difference between the maximum reachable distance and the dragon's safe zone limit.
+        *   Alternatively, it asks for the distance Polly can stand beyond the 1000ft mark and still make contact.
+        *   Max distance thrown = 1200 ft.
+        *   Dragon reaches up to = 1000 ft.
+        *   Extra distance = Max Throw Distance - Dragon's Reach.
+
+    *   *Step 3: Perform the subtraction.*
+        *   $1200 \text{ feet (throw)} - 1000 \text{ feet (reach)} = 200 \text{ feet}$.
+
+4.  **Verification:**
+    *   If Polly stands 1200 feet away, she hits it exactly.
+    *   If Polly stands 1201 feet away, she misses (can't reach it).
+    *   If Polly stands 1001 feet away, she hits it (1001 <= 1200). Is she outside the reach? Yes, 1001 > 1000.
+    *   The question asks "how far outside... could Polly stand". This implies the buffer zone between the danger zone edge and the limit of her throw.
+    *   Calculation: $1200 - 1000 = 200$.
+
+5.  **Final Formatting:**
+    *   Ensure the answer is a number.
+    *   Place it after `####`.
+
+6.  **Drafting the Output:**
+    *   Identify the base throw distance: 400 feet.
+    *   Calculate the throw distance with the gem: $400 \times 3 = 1200$ feet.
+    *   Identify the dragon's attack range: 1000 feet.
+    *   Calculate the difference: $1200 - 1000 = 200$ feet.
+    *   Final Answer: 200.
+
+    *   Wait, is there any trick wording?
+        *   "how far outside of the reach of the dragon's flames could Polly stand and still hit the dragon"
+        *   Dragon reach: 1000.
+        *   Throw: 1200.
+        *   If she stands 1001 ft away, she is 1 ft outside reach, hits dragon (1200 > 1001).
+        *   If she stands 1200 ft away, she is 200 ft outside reach, hits dragon (1200 = 1200).
+        *   If she stands 1201 ft away, she is 201 ft outside reach, misses (1200 < 1201).
+        *   Max distance outside is 200.
+
+7.  **Final Check:**
+    *   Problem: "how far outside of the reach of the dragon's flames could Polly stand and still hit the dragon with the gold javelin?"
+    *   Reach = 1000.
+    *   Throw = 1200.
+    *   Outside = Throw - Reach = 200.
+    *   Format: ####200
+
+    *   Wait, is the number just "200" or "200 feet"? The prompt says "Put your final answer as a number after ####." Usually, this means just the numeric value, though sometimes units are acceptable depending on context. I will provide the number.
+
+    *   Let's double check the wording "how far outside".
+    *   If I am at 1000ft, I am reached by the dragon (1000 inclusive usually, though "within a distance of 1000 feet" usually implies the boundary is inclusive).
+    *   So "outside" means > 1000.
+    *   Max reach is 1200.
+    *   Distance outside = 1200 - 1000 = 200.
+    *   Is it possible the answer expects the decimal? "200".
+    *   Okay, I'm confident.
+
+    *   One more check on the prompt: "Put your final answer as a number after ####."
+    *   Does it mean `####[NUMBER]` or `####`?
+    *   The instruction usually implies the format `####YOUR ANSWER`.
+    *   I will write out the steps briefly and then the final formatted block. Wait, instructions say "Put your final answer as a number after ####." It doesn't explicitly say "only the number", but usually, it's the final line. I will just output the solution text then the final block.
+    *   Actually, looking at similar instructions, often the user wants the reasoning then the specific formatted tag. I will provide the reasoning and then the final tag.
+    *   Wait, strict evaluation might look for the `####` format specifically. I'll write the solution and end with `####200`.
+
+    *   Wait, re-reading: "Put your final answer as a number after ####."
+    *   Example: `####10`
+    *   Okay.
+
+    *   Calculation check again:
+        1000 = Dragon limit.
+        3 * 400 = 1200 = Gemthrow.
+        1200 - 1000 = 200.
+        Answer is 200.
+
+    *   Are there any lateral thinking traps?
+        *   "sleigh the dragon" - irrelevant flavor text.
+        *   "breathing fire" - irrelevant unless concerned about heat, but the math focus is distance.
+        *   "outside of the reach" - clearly implies distance minus reach.
+        *   "hit the dragon" - implies she must be within her throw distance.
+    *   No obvious traps.
+
+    *   Final Answer Formulation:
+        *   Dragon reach: 1000 feet.
+        *   Normal throw: 400 feet.
+        *   Gem throw: 3 * 400 = 1200 feet.
+        *   Safe throw distance: 1200 - 1000 = 200 feet.
+        *   Result: 200.
+
+    *   Okay, I will write the response.
+</think>
+
+Here is the step-by-step solution to the problem:
+
+1.  **Determine the dragon's attack range:** The dragon breathes fire within a distance of **1000 feet**.
+2.  **Determine the normal throw distance:** Polly can throw the javelin **400 feet** without the gemstone.
+3.  **Determine the throw distance with the gemstone:** When holding the gemstone, she throws the javelin three times farther than normal.
+    $$400 \text{ feet} \times 3 = 1200 \text{ feet}$$
+4.  **Calculate the distance outside the dragon's reach:**
+    *   The dragon's reach ends at 1000 feet.
+    *   With the gemstone, the javelin can travel up to 1200 feet.
+    *   The difference is the maximum distance Polly can stand outside the dangerous zone and still hit the target.
+    $$1200 \text{ feet} - 1000 \text{
+---
+Here's a thinking process that leads to the solution:
+
+1.  **Analyze the Request:**
+    *   **Scenario:** A dragon (Perg) breathes fire within 1000 feet.
+    *   **Weapon:** Gold javelin (known to hit the dragon).
+    *   **Base Range:** Polly can throw the javelin 400 feet without the gemstone.
+    *   **Enhancement:** Holding the sapphire gemstone allows the javelin to be thrown 3 times farther than the base range.
+    *   **Goal:** Determine how far *outside* the dragon's reach the Julian (Polly) can stand and still hit the dragon if she uses the gemstone.
+    *   **Output Format:** A number after `####`.
+
+2.  **Break Down the Variables and Constraints:**
+    *   Dragon's reach ($D_{dragon}$) = 1000 feet.
+    *   Throwing distance without gemstone ($D_{base}$) = 400 feet.
+    *   Throwing distance with gemstone ($D_{enhanced}$) = $3 \times D_{base}$.
+    *   Target condition: The javelin must reach the dragon (distance = throw distance), and the thrower must be *outside* the dragon's flames.
+
+3.  **Interpret the Phrasing:**
+    *   "Breathing fire upon anything within a distance of 1000 feet." -> This means if Polly is within 1000 feet of Perg, she is in danger. If she is *at* the dragon, she is in danger.
+    *   "Hit the dragon with the gold javelin." -> The javelin travels from Polly's position, through the air, to the dragon.
+    *   The distance Polly stands = The throwing distance.
+    *   Wait, let's look closer at the mechanics. Usually, in these types of riddles/math word problems, the "distance" refers to the range of the projectile.
+    *   Polly throws the javelin at the dragon. The javelin travels a certain distance.
+    *   The constraint is usually that the throw must be successful (reach the target).
+    *   However, if Polly is 1100 feet away, she can throw 1100 feet? No, that doesn't make sense physically for throwing distance.
+    *   Let's treat the throwing distance as the variable controlled by the gemstone.
+    *   Condition 1: The javelin must reach the dragon.
+    *   Condition 2: The dragon is breathing fire on a 1000-foot radius. This implies that if Polly stands anywhere within 1000 feet of the dragon, her *person* will be incinerated. She wants to be *outside* the reach of the flames (so she needs to be $> 1000$ feet away).
+    *   Wait, does she throw the javelin *while* the javelin is in the air? Does the javelin hit the dragon from a distance greater than the dragon's reach radius *away* from her?
+    *   Actually, usually, this phrasing implies: "How close to the dragon can she stand and still be safe?"
+    *   Let's re-read carefully: "If holding the gemstone, how far outside of the reach of the dragon's flames could Polly stand and still hit the dragon with the gold javelin?"
+    *   This implies Polly is standing at a Safe Distance ($D_{stand}$).
+    *   She throws the javelin. The javelin lands a certain distance away ($R_{throw}$).
+    *   For her to hit the dragon, the javelin's range must equal the distance between her and the dragon. So $D_{stand} = R_{throw}$.
+    *   She needs to be "outside of the reach of the dragon's flames".
+    *   So, $D_{stand} > 1000$.
+    *   BUT, she can only throw the javelin up to a maximum distance defined by the gemstone potency.
+    *   Let's calculate the maximum throwing distance with the gemstone.
+    *   Base throw = 400 feet.
+    *   Enhanced throw = $3 \times 400 = 1200$ feet.
+
+    *   **Scenario A: Max throw without gemstone.** 400 feet. She can't be outside 1000 feet. Fail.
+    *   **Scenario B: Max throw with gemstone.** 1200 feet. She can stand 1200 feet away.
+    *   **Question:** "How far outside of the reach... could Polly stand...".
+    *   This asks for the distance from the dragon's reach boundary.
+    *   Reach boundary = 1000 feet.
+    *   Max throwing distance = 1200 feet.
+    *   So she can stand at a distance of 1200 feet to hit the dragon.
+    *   "How far outside" means: (Throwing Distance) - (Dragon Reach).
+    *   Calculation: $1200 - 1000 = 200$ feet.
+
+    *   **Alternative Interpretation Check:**
+    *   Does "hit the dragon" imply she throws a distance of $X$ feet, where $X$ is the measure of her standing away from the dragon?
+    *   Yes, if Polly throws a javelin that hits the dragon, the distance she stands from the dragon must equal the javelin's range cap.
+    *   If she stands at 1200 feet, she throws 1200 feet (max cap). The dragon is 1200 feet away. Is that her position? Yes.
+    *   Dragon breathes fire up to 1000 feet.
+    *   She needs to stand at $> 1000$ feet.
+    *   Max she can stand (to hit the dragon) = Max throw range.
+    *   Max throw range = 1200.
+    *   If she stands at 1190 feet, she can throw? No, the javelin's potential is capped at 1200. If she is at 1150, she throws 1150 feet. 1150 hits the dragon. Is she safe? 1150 > 1000, yes.
+    *   The question asks "How far outside... could she stand" (implying the maximum margin of safety while still achieving the goal of hitting the dragon).
+    *   Usually, in these word problems, "how far outside" implies the difference between her maximum capability and the danger zone.
+    *   Max capability = 1200 feet.
+    *   Danger edge = 1000 feet.
+    *   Safe margin = 200 feet.
+    *   Or is it asking simply how far away she can stand? "how far outside...". Usually, that is a difference. "How far outside your car door is this mat?" -> 5 feet (Distance - Door width).
+    *   If I stand 1000 feet away, I am at the edge.
+    *   I stand 1200 feet away. I am 200 feet outside the 1000-foot radius.
+    *   Let's check for any trickERY. "Reach the dragon" -> The javelin lands on the dragon.
+    *   "Stand outside the flames" -> She must be > 1000 feet away.
+    *   "Hit the dragon" -> Her throw must cover the distance between her and the dragon.
+    *   Max throw distance = 1200.
+    *   So max distance from dragon = 1200.
+    *   Dragon fire radius = 1000.
+    *   Difference = 200.
+    *   Is there any ambiguity? "How far outside...". If the max distance is 1200, she *can* stand at 1200. At 1200 she is 200 feet outside the flames.
+    *   If the question meant "What is her standing distance", it would usually ask "What is the maximum distance Polly could stand...". "How far outside" implies the extra distance beyond the danger radius.
+    *   Let's assume the question asks for the difference (the "outside" part).
+
+    *   **Wait, let me double check the math.**
+    *   Throwing distance without gem = 400.
+    *   Throwing distance with gem = $3 \times 400 = 1200$.
+    *   Dragon reach = 1000.
+    *   She needs to be outside the 1000 reach.
+    *   Max distance she can throw = 1200.
+    *   So she stands 1200 feet away.
+    *   How far is this "outside" the reach?
+    *   $1200 - 1000 = 200$.
+
+    *   **Is it possible the question means:** At what point does she stand, such that she is safe vs hit?
+    *   No, "

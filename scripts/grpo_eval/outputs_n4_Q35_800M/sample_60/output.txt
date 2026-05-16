@@ -1,0 +1,436 @@
+To find the number of good oranges, we need to calculate the total number of oranges first and then subtract the number of bad, unripe, or sour oranges.
+
+**1. Calculate the total number of oranges:**
+The problem states there are 25 oranges total.
+$$ \text{Total oranges} = 25 $$
+
+**2. Calculate the number of unripe oranges:**
+The problem states that 20% of the orchard is unripe.
+$$ \text{Unripe oranges} = 25 \times 0.20 = 5 $$
+
+**3. Identify and subtract the number of unripe oranges:**
+$$ \text{Good unripe oranges} = \text{Total} - \text{Unripe} $$
+$$ \text{Good unripe oranges} = 25 - 5 = 20 $$
+
+**4. Identify and subtract the number of sour oranges:**
+The problem states that 2 oranges are sour.
+Therefore, the number of unripe or sour oranges is $2 + 5 = 7$.
+$$ \text{Good oranges} = \text{Total} - \text{Sour} $$
+$$ \text{Good oranges} = 25 - 7 = 18 $$
+
+Alternatively, since the unripe portion (5) and the sour portion (2) overlap, the "good" portion is simply the total minus the sum of the non-good parts:
+$$ \text{Good} = 25 - (5 + 2) = 25 - 7 = 18 $$
+
+Both methods yield the same result.
+
+18
+---
+To find the number of good oranges, we can calculate the total number of oranges and subtract the number of bad, unripe, sour, and rotten oranges from the total.
+
+**1. Identify the given values:**
+*   Total number of oranges = 25
+*   Number of **bad** oranges = 1
+*   Number of **unripe** oranges = $20\%$ of the total
+
+**2. Calculate the number of unripe oranges:**
+$$ \text{Unripe} = 20\% \text{ of } 25 = \frac{20}{100} \times 25 = 0.2 \times 25 = 5 $$
+So, there are 5 unripe oranges.
+
+**3. Determine the remaining oranges:**
+*   Total oranges = 25
+*   Bad oranges = 1
+*   Good oranges = ?
+*   Unripe oranges = 5
+
+Total remaining = Total - Bad - Unripe
+$$ \text{Total remaining} = 25 - 1 - 5 = 19 $$
+
+These remaining oranges include: "surplus" oranges (as well as 3 good oranges) + "sour" oranges.
+
+**4. Calculate the number of sour oranges:**
+*   Total oranges = 25
+*   Bad oranges = 1
+*   Good oranges = Surplus + Sour
+*   From Step 3, Surplus = 19.
+*   So, Good oranges = 19 + Sour.
+
+We know there are 2 sour oranges.
+$$ \text{Total remaining} (\text{before sour removal}) = \text{Good} + \text{Sour} = 19 + \text{Sour} $$
+$$ \text{Total remaining} = 25 - 1 (\text{bad}) - 5 (\text{unripe}) = 19 $$
+
+So, Good + Sour = 19.
+Substitute Good by (19 + Sour):
+$$ (19 + \text{Sour}) + \text{Sour} = 19 $$
+$$ 19 + 2 \times \text{Sour} = 19 $$
+$$ 2 \times \text{Sour} = 0 $$
+$$ \text{Sour} = 0 $$
+
+This means there are 0 sour oranges or the quantity of sour oranges is not expressible in the context described. This usually implies the "surplus" includes all the good ones, and the defect of sour has no separate counter-example from the constraint that the sum of good+sour must equal the remaining count. Specifically, since the only defect is 1 bad, and we already have 1 unripe specified, let's re-evaluate assuming there might be a misunderstanding of the "20%" or "1 bad".
+
+Let's try a different path to resolve this ambiguity.
+Total = 25
+Bad = 1
+Unripe = $20\%$ of 25 = 5.
+Total + Bad + Unripe = $25 + 1 + 5 = 31$.
+This is greater than the total number of oranges (25). This is mathematically impossible. The interpretation "Among which 25 oranges... 1 is bad" usually implies Hardy-Weinberg law splitting (Normal + Defect), but here the percentages sum to 5u + 1d + 1b = 17u, leaving 31d. Since $d > n_n$, there is a calculation error in the problem statement or an assumption error.
+
+Let's reconsider the standard interpretation where "1 is bad" is a standalone case separate from the distribution, OR the "20%" refers to the subset excluding the 1 bad.
+Scenario A: 25 total. 1 bad. "20% are unripe" among the 25. Remaining = 24. $24\% = 4$ unripe. This matches standard Hardy-Weinberg (Normal+Defect+Subnormal). But here we have 5 unripe.
+Scenario B: The 25 oranges total, but the specific "1 is bad" is an outlier that doesn't fit the distribution logic directly as a split.
+Let's assume the "1 is bad" is correct as a count, and we must proceed with the "20% are unripe" as defined by the total 25.
+Calculation from Scenario A:
+Ordinary (Good) = Total - Unripe = $25 - 5 = 20$.
+Unripe (Subrest) = Aded + Surplus.
+Total + Aded + Surplus = Normal.
+Normal + Unripe = 25.
+$20 + 5 = 25$. This sums perfectly to 25.
+So, Ordinary (Good) = 20.
+Subnormal (Unripe) = $25 - 20 = 5$.
+Aded (Unripe) = Aded + Surplus? No, Unripe are the mix of Normal (25) minus Aded.
+Let's define terms clearly:
+Total = $N = 25$.
+Bad ($D$) = 1.
+Unripe ($U$) = $0.2 \times N = 5$.
+These 5 are bad + normal.
+Total Normal ($N_{norm}$) = 25.
+Total Next Normal ($N_{next}$) = $25 - 5 = 20$. (This is the "surplus" + normal).
+Despite the contradictory sum (Aded + Surplus = 5 + Surplus > Total), the most consistent assumption in these problems where the sum of counts ($N+D+U$) exceeds the integer total count is that the "1 bad" is a specific defect and the "20% unripe" is a deflection within the normal pool.
+However, if we assume the sum must be 25:
+$20 + 5 = 25$.
+This implies $25 - 20 = 5$. The difference between total (25) and next normal (20) is 5.
+So, Normal + Unripe = 25.
+Therefore, Unripe = Normal + Unripe_defects = 20 + 5 = 25.
+If the unripes sum to 25, and there are 5 definite poor items, then $25 - 5 = 20$ must be the good items.
+
+Let's check consistency:
+Total = 25.
+Bad = 1.
+Unripe = 5.
+By inclusive counting, $1 + 5 = 6$ bad items (defects).
+Remaining pool = $25 - 6 = 19$.
+We need 25 good items here.
+But in distribution theory, "Normal + Defect = Total" implies $25 + 1 = 26$.
+So the assumption that "All 25 are distinct" and our counts are exact integers is flawed if we try to reconcile $N+D+U=25$ with percentages.
+Perhaps the "20% unripe" is exclusive of the "1 bad"?
+Usually, in these riddles: Total = 25. Aded = 1. $0.2 \times 25$ is the number of unripes.
+Maybe the "1 is bad" is actually a "1 normal" and the rest is the defect?
+If "1 is bad" means 1 bad + Normal, and 20% unripe = 5.
+$1 + 5 = 6$ bad items.
+Remaining items = 19. These must be normal.
+If 19 items are normal, does the "20%" hold?
+Normal items = Total - Defect - Subnormal?
+No, usually it's $Total = Aded + Normal$.
+$25 = 1 + Normal$.
+Normal = 24.
+$1 + 19 = 20$. Mismatch with 20%.
+This path is contradictory.
+
+Let's go back to the most robust interpretation:
+$N = 25$.
+$D = 1$.
+$U = 0.2N = 5$.
+Total count of all known items = $N + D + U = 31$.
+Since the total number of oranges is 25, it is possible that the "Bad" items are a subset of the 31, while the "Unripe" items are a subset of the Normal items, and they sum to the total count.
+If we assume $N_{nom} = N = 25$ and $N_{def} = D = 1$.
+Then Total = $25 + 1 = 26$.
+If the problem states the actual count is 25, perhaps the "20%" miscalculated or the "1 bad" miscalculated?
+Or perhaps the "1 is bad" refers to the 15th item and nothing else is bad?
+Let's assume the simplest arithmetic without the paradoxical sum:
+$Total = 25$.
+$Unripe = 5$.
+$Orig = 20$.
+The question asks "How many oranges are good?".
+Given the standard riddle structure where $Total = Aded + Normal + Subnormal$ (if all
+---
+To find the number of good oranges, let's break down the given information step by step:
+
+1.  **Total Oranges**: The problem states there are 25 oranges in total.
+2.  **Bad Oranges**: There is explicitly stated that 1 orange is bad.
+3.  **Unripe Oranges**: There are 20% of the total oranges that are unripe.
+4.  **Sour Oranges**: There are 2 oranges that are sour.
+5.  **Good Oranges**: This is the remaining group, consisting of oranges that are not bad, not unripe, and not sour.
+
+**Calculation Steps:**
+
+*   **Calculate the number of Unripe Oranges**:
+    Total number of unripe oranges = Total number of oranges $\times$ 20%
+    $25 \times 0.20 = 5$
+
+*   **Calculate the number of Sour Oranges**:
+    Number of sour oranges = 2 (given directly)
+
+*   **Calculate the remaining group of Good Oranges**:
+    Remaining group = Total number of oranges - (Bad oranges + Unripe oranges + Sour oranges)
+    Remaining group = $25 - (1 + 5 + 2)$
+    Remaining group = $25 - 8 = 17$
+
+Alternatively, you can solve it by subtracting the non-good items from the total:
+Total - (Bad + Unripe + Sour)
+Total = $25$
+Bad = $1$
+Unripe = $5$
+Sour = $2$
+Total non-good = $1 + 5 + 2 = 8$
+Total good = $25 - 8 = 17$
+
+Both methods yield the same result.
+
+17
+---
+To find the number of good oranges, we can break down the problem into steps involving the given percentages and components of the basket.
+
+**Step 1: Analyze the composition of the 25 oranges.**
+ *   Total oranges: 25
+ *   Bad oranges: 1
+ *   Unripe oranges: The problem states "20% are unripe".
+    *   Number of unripe oranges = $25 \times 0.20 = 5$.
+ *   Sour oranges: 2.
+ *   Remaining oranges are good.
+    *   Total - Bad - Unripe - Sour = Good
+    *   $25 - 1 - 5 - 2 = 17$
+
+**Step 2: Verify the percentages.**
+ *   Is 17% equal to 20%?
+    *   $17\%$ of $25$ would be $4.25$.
+    *   The problem states 20%. Since 17% is not equal to 20%, there is an inconsistency in the problem statement provided. However, the question asks us to calculate based on the final distribution: "How many oranges are good?"
+
+**Step 3: Calculate the number of good oranges using the remaining component.**
+From Step 1, we established that after accounting for the bad ones, unripe ones, and sour ones, the remaining oranges are guaranteed to be good.
+*   Calculation: $25 - 1 (\text{bad}) - 5 (\text{unripe}) - 2 (\text{sour}) = 17$.
+
+**Conclusion:**
+The number of oranges in the basket, which are necessarily good, is 17.
+
+17
+---
+To find the number of good oranges, let's break down the information given:
+
+1.  **Total number of oranges**: The problem states there are a total of 25 oranges.
+2.  **Bad oranges**: The problem states there is 1 bad orange.
+    *   $1$ (bad) + $25$ (total) = **26 oranges in total**.
+    *   Wait, this is impossible because it implies the total is much larger than the sum of the non-good categories. Let's re-read carefully.
+    *   Standard comprehension: "25 oranges among which 1 is bad". This means the total basket is actually $1 + 20\% + 2 + \text{rest}$.
+    *   The phrase "among which 1 is bad" specifically defines the composition *of the unique collection mentioned*, not the set of all items in the basket.
+    *   Therefore, the *Total Number of Oranges* is the sum of:
+        *   Good oranges
+        *   Unripe oranges
+        *   Sour oranges
+        *   Bad oranges
+
+    $$25 \text{ (Total)} = \text{Good} + \text{Unripe} + \text{Sour} + 1 \text{ (Bad)}$$
+
+3.  **Calculating the components**:
+    *   **Unripe**: $20\%$ of the total basket.
+        $$20\% \times 25 = 0.20 \times 25 = 5 \text{ oranges}$$
+    *   **Sour**: 2 oranges.
+    *   **Bad**: 1 orange.
+
+4.  **Finding the "Good" count**:
+    Substitute the known values into the equation:
+    $$25 = \text{Good} + 5 + 2 + 1$$
+    $$25 = \text{Good} + 8$$
+    $$\text{Good} = 25 - 8$$
+    $$\text{Good} = 17$$
+
+The calculation confirms a contradiction in the literal additive interpretation ($25 \neq 1+20+2+25$), but the standard mathematical interpretation of "among which X is Y" refers to the components that make up the whole set defined by the percentage.
+
+1.  **Total Basket**: 25 oranges
+2.  **Bad**: 1
+3.  **Unripe**: 20% of 25 = **5**
+4.  **Sour**: 2
+5.  **Good**: Total - (Bad + Unripe + Sour)
+    $$25 - (1 + 5 + 2) = 17 $$
+
+Number of good oranges: 17
+
+#### 17
+---
+Let's break down the information given in the problem step by step.
+
+**1. Understand the components of the basket:**
+- Total number of oranges ($T$) = $25$.
+- 1 is bad.
+
+**2. Address the percentage information:**
+- There are **20%** oranges specifically described as "unripe".
+- Since there is only **25** oranges in total, the number of unripe oranges is:
+  $$25 \times 0.20 = 5 \text{ oranges}$$
+
+**3. Analyze the condition regarding quantity:**
+- The problem states there are **20%** unripe oranges.
+- It also states that **2** oranges are sour.
+- However, ratios like "receiving 50%" or "standardizing to percent" do not necessarily apply unless the percentage represents a proportion of the *total count* or if the counts are explicitly sold in that proportion.
+- In many riddles of this type, the sentence "receive 50%" implies the number of items in that group (here, unripe) equals half of the total number of items (25).
+- Let's calculate: $25 \times \frac{1}{2} = 12.5$. Since there are 12.5 oranges, it is impossible to have exactly 5 unripe oranges and 2 sour oranges without some conflicting information or a specific definition of "receive XX%".
+- Given the strict phrasing "20% are unripe" versus "there are 5 unripe oranges" vs "there are 2 sour oranges", we must assume the "percentage" rule applies to the **total count** to validate the existence of the other fractions.
+- If 20% of the basket is unripe: $0.20 \times 25 = 5$.
+- If 20% of the basket is sour: $0.20 \times 25 = 5$.
+- Since the problem lists both specific numbers ($5$ raw fruits, 2 specific sour fruit) and a percentage ($20\%$ of total), and the percentages total up ($5+5=10$) which is not the total count ($25$), there is an inconsistency if the unripe ones and sour ones are the *same* portion of the basket.
+- To make both statements mathematically consistent within the context of a single quantity ($25$):
+    - Unripe portion = 20% of Total = $0.20 \times 25 = 5$.
+    - Sour portion = 2. Since there are 5 unripe, the remaining quantity for sour oranges must be part of the total 25.
+    - Let's re-read carefully: "20% are unripe, 2 are sour...". This phrasing often separates the counts.
+    - Total cost = 5 (unripe) + 2 (sour) = 7.
+    - Total count = 25.
+    - The percentages likely do not apply to the *same* set of fruits. However, usually, in these specific puzzles, the "20%" and the "2" imply that the number 5 (unripe) equals 0.20 of the total, and the number 2 (sour) equals... ?
+    - Wait, perhaps the 20% applies to the unripe group specifically, and the 2 applies to the total? Or maybe they sum to the total?
+    - Let's look at the most logical interpretation for these "math riddles" where percentages and raw counts are mixed with a single integer total.
+    - Hypothesis A: The 20% refers to the unripe group ($5$ oranges). The 2 is a separate count (total sour) but the sentence structure "20% are unripe, 2 are sour" suggests two distinct categories of fruit.
+    - Category 1: Unripe. Count = $25 \times 0.20 = 5$.
+    - Category 2: Sour. Count = $2$.
+    - Total oranges = $5 + 0 + 5 = 10$ (to sum the unripe+ruman unripe). This contradicts the total count of 25.
+    - Hypothesis B: The 20% is the percentage of the **TOTAL**. So 20% of 25 = 5. And 2 are sour. Does this sum to 2? No. Does it imply other percentages are missing or the "2" is separate?
+    - Hypothesis C: The "20%" and "2" are just descriptive attributes that satisfy the mathematical constraints of a single problem instance without a unique solution, or one "2" is a typo in the user's prompt for "Does not have 2" or similar, but assuming the problem relies on standard interpretation:
+        - Unripe count is fixed by percentage: $25 \times 0.20 = 5$.
+        - Sour count is fixed by literal number: $2$.
+        - Are these distinct? "2 are sour" usually refers to the count.
+        - If 5 are unripe and 2 are sour, total eaten (or possessed) would be $5+2=7$. Total basket = 25.
+        - The "20%" is the ONLY percentage data point stating a ratio of $\frac{5}{25}$.
+        - Is "2" equal to $25 \times \dots$? $2/25 = 8\%$.
+        - Is the "2" a footnote? "2 is sour".
+        - Let's re-evaluate the prompt's probable intent. "20% are unripe" = 5. "2 are sour".
+        - If the question asks "How many oranges are good?", we need the total count of good oranges.
+        - Total Bad = 1 (explicit).
+        - Unripe = 5 (from 20%).
+        - Sour = 2 (from 2).
+        - Are unripe and sour the same fruit? In many overlapping baskets, yes, but usually they are distinct sensory descriptions (ripe vs unripe, sour vs no sour). If multiple types exist, usually "Good" refers to the majority.
+        - Let's assume all four types exist.
+          - Good + Unripe + Sour + Bad = 25.
+          - Bad = 1.
+          - Unripe = 5.
+          - Sour = 2.
+          - This doesn't sum to 25 (5+2+1=8). The missing quantity is $25 - 8 = 17$.
+          - The missing quarter must be "Good".
+          - If good = 17, and good is still "Good", then all conditions are consistent with a total of 17+5+2+1 = 25.
+          - Does the "20%" apply to the Good group? No, usually percentage applies to the defined group.
+          - If "20% are unripe", count = 5.
+          - If "2 are sour", count = 2.
+          - Total = 25.
+          - Good + Unripe + Sour + Bad = 25.
+          - Good + 5 + 2 + 1 = 25.
+          - Good = 17.
+          - Check counts: 20% of 25 = 5. $20\% / 0.20 = 100\%$. So the description fits exactly.
+          - Check "2 are sour": If this sums to the 20%+something? No.
+          - Interpretation:
+            - Group A: Unripe. Size 5. Rule |Group A|/|Total| = 20% |5/25 = 20%. **(Consistent)**
+            - Group B: Sour. Size 2. Is there a percentage rule for Group B? "2% are sour"? No.
+            - If the problem says "2 are sour", it likely means the number of sour oranges is 2.
+            - The only percentage constraint is on the unripe roots.
+            - Does "2 are sour" imply any constraint on the remaining?
+            - Let's consider the phrase "the rest are good".
+            - Total good = Total - Bad - Unripe - Sour.
+            - Total good = $25 - 1 - 5 - 2 = 17$.
+
+Is there any ambiguity where "20%" might mean $20\%$ of the Good group?
+- "20% are unripe" -> 5 oranges.
+- "2 are sour" -> 2 oranges.
+- If the percentages matched on all groups, $25 = \frac{1}{1+x} \times \dots$.
+- But "Good" implies all items remaining.
+- If "20% are unripe" -> 5.
+- If "2" is distinct, sum is 7. Remaining 17 is Good.
+- This seems the only logically consistent interpretation that respects the explicit numbers and the explicit phrase "the rest are good". The percentages likely mismatch the shared subset counts, forcing us to sum all counts first to find the specific valid subset.
+
+Calculation:
+1.  **Unripe**: $25 \times 
+---
+**Step-by-step Deduction:**
+
+1.  **Identify the Total Number of Oranges:**
+    From the problem statement, there are $25$ oranges in total.
+
+2.  **Analyze the Bananas:**
+    There is $1$ banana among the $25$ oranges. This distribution is provided in the context of the question ("1 is bad"), but it is explicitly instructed that we only have $25$ oranges in the basket and count the percentage provided for the other items. Therefore, we will likely ignore the $1$ banana or treat it as part of the "rest" to simplify the calculation until the section where the percentages are mentioned.
+
+3.  **Determine the Number of Good Oranges:**
+    *   The problem states that **$2$ percent** of the oranges are sour.
+    *   We can treat the total number of oranges as $100$ to apply the percentage directly.
+    *   Calculate $25 \times 2\%$:
+        $$25 \times 0.02 = 0.5$$
+    *   *Correction/Refinement:* The statement "2 percent are unripe" is a direct definition of the "unripe" category. However, the question asks for the number of **good** oranges.
+    *   Let's re-read carefully: "20% are unripe". This implies the remainder are good.
+    *   Remainder calculation: If $20\%$ is unripe, then $80\%$ are good.
+    *   Count of Good Oranges = Total Oranges $\times 80\%$.
+    *   Calculation: $25 \times 0.8 = 20$.
+
+    *Alternative interpretation check:* Does "2 percent are sour" and "20% are unripe" refer to subsets within a larger group meant to be subtracted?
+    Usually, in such word problems:
+    Total = 25.
+    Unripe = 20%.
+    Therefore, Good = $(100 - 20) / 100$ of the total.
+    Why would "2 percent are sour" and "20% are unripe" be both given?
+    If there are 25 oranges, calculating:
+    Unripe = $25 \times 20\% = 5$
+    Total used in unripe calculation = 5.
+    Sgestellt = $25 - 5 = 20$ (based on "20% of the oranges are unripe").
+    While the phrase "2 are sour" suggests 2 oranges, combined with the explicit "$20\%$" keyword for "unripe", the standard interpretation is that the quantity for unripe is defined by the percentage of the total basket. If the text meant "2 of them are sour" meant 2 specific oranges that happen to be unripe, it would usually state "The basket has 2 bad apples..." or imply a system where 25 total, 1 banana, 20% unripe, 2% sour...
+    Given the explicit "$20\%$ are unripe", this is the primary definition of the unripe subset. Using "2 percent are sour" might just be describing the composition of the basket to confuse, but the conflict resolves to:
+    Total = 25
+    Unripe portion = $20\%$
+    Good portion = $80\%$.
+
+    Let's calculate how many "unripe" items this actually consists of in a discrete fruit shop context (just in case the problem uses real-world numbers):
+    $25 \text{ oranges} \times 0.20 = 5 \text{ unripe oranges}$.
+    Total oranges = 25.
+    Good oranges = $25 - 5 = 20$.
+
+    Answer is 20.
+
+    **Step-by-step Calculation Without assuming hidden "2" constraint:**
+    1. Total oranges = $25$.
+    2. Unripe oranges = $20\%$ of $25$.
+    3. Good oranges = $1 - 0.20$.
+    4. Unripe oranges = $(25 \times \frac{20}{100}) = 5$.
+    5. Good oranges = $25 - 5 = 20$.
+
+**Final Answer:**
+The question asks for the number of good oranges. Since $20\%$ are unripe, the remaining $80\%$ must be good.
+$$ \text{Good Oranges} = 25 \times (1 - 0.20) = 25 \times 0.8 = 20 $$
+
+20
+---
+To find the number of good oranges, let's break down the problem logically based on the given information:
+
+1.  **Total number of oranges**: There are 25 oranges in the basket.
+2.  **Number of bad oranges**: The problem states "1 is bad".
+    *   Bad count = 1.
+3.  **Amount of unripe oranges**: There are 20% unripe.
+    *   Calculation: $25 \times \frac{20}{100} = 25 \times 0.20 = 5$.
+    *   Unripe count = 5.
+4.  **Amount of sour oranges**: There are 2 sour.
+    *   Sour count = 2.
+5.  **Calculation for Good oranges**: Subtracting the non-good items from the total gives the number of good oranges.
+    *   Good oranges (Total) - Bad - Unripe - Sour
+    *   $25 - 1 - 5 - 2$
+
+Now, perform the subtraction:
+*   $25 - 1 = 24$
+*   $24 - 5 = 19$
+*   $19 - 2 = 17$
+
+Alternatively, group them:
+*   Good Out of 5 apples (since 20% is unripe): 5/5.
+*   Subtracted: 4 apples (1 bad + 3 unripe).
+*   Bad: 1.
+*   Remaining Good: $4 + 1 = 5$.
+*   Add remaining unripe: 5.
+*   Wait, let's re-evaluate grouping.
+    *   Bad = 1
+    *   Unripe = 5
+    *   Sour = 2
+    *   Total Non-Good = $1 + 5 + 2 = 8$.
+    *   Total = 25.
+    *   Good = $25 - 8 = 17$.
+
+Let's double check the "rest" logic.
+Total = 25.
+Bad = 1.
+Remaining (must be good or unripe/sour/etc): 24.
+Unripe = 20% of 25 = 5.
+Good + Unripe + Sour = 24.
+$24 - 5 (\text{unripe}) - 2 (\text{sour}) = 17$.
+
+The logic holds up.
+
+The number of good oranges is 17.
+
+17

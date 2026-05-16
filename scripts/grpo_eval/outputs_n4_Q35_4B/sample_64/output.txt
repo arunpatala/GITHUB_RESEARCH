@@ -1,0 +1,846 @@
+Here's my thought process for solving this word problem:
+
+1.  **Analyze the Request:**
+    *   **Goal:** Calculate the maximum distance Sophia can drive on a single tank of gas.
+    *   **Input Data:**
+        *   Distance driven since last fill-up: 100 miles.
+        *   Gas needed to refill: 4 gallons.
+        *   Total tank capacity: 12 gallons.
+    *   **Output Format:** A number after `####`.
+
+2.  **Deconstruct the Problem:**
+    *   I need to find the *mileage* (miles per gallon) of the car.
+    *   Once I have the mileage, I multiply it by the *tank capacity* to find the total distance on a full tank.
+
+3.  **Step-by-Step Calculation:**
+
+    *   **Step 1: Calculate the car's fuel efficiency (MPG).**
+        *   The car traveled 100 miles.
+        *   Since the tank was full before, she consumed 4 gallons to get from 100 miles driven to a full tank again.
+        *   *Formula:* $\text{MPG} = \frac{\text{Distance Traveled}}{\text{Gallons Consumed}}$
+        *   *Calculation:* $MPG = \frac{100 \text{ miles}}{4 \text{ gallons}}$
+        *   *Result:* $25 \text{ miles per gallon (mpg)}$
+
+    *   **Step 2: Calculate the total distance for a full tank.**
+        *   The total capacity of the tank is 12 gallons.
+        *   *Formula:* $\text{Total Distance} = \text{MPG} \times \text{Tank Capacity}$
+        *   *Calculation:* $25 \text{ mpg} \times 12 \text{ gallons}$
+        *   *Mental Math:* $25 \times 4 = 100$, then $100 \times 3 = 300$. Or $10 \times 12 = 120$, $20 \times 12 = 240$, $5 \times 12 = 60$, $240 + 60 = 300$. Or $(25 \times 10) + (25 \times 2) = 250 + 50 = 300$.
+        *   *Result:* 300 miles.
+
+4.  **Review and Verification:**
+    *   Does the logic hold? Yes. She drove 100 miles on 4 gallons of gas. That's 25 mpg. If the tank holds 12 gallons, she can go $12 \times 25$ miles.
+    *   The question asks "How many miles can Sophia drive on a single tank of gas?"
+    *   The calculation gives 300.
+    *   Are there any hidden assumptions? "Put in 4 gallons of gas to fill it up again." implies exactly 4 gallons were consumed in that specific trip which totaled 100 miles. This standard word problem setup implies constant consumption for the sake of the calculation.
+    *   The math is $100 / 4 = 25$. $25 \times 12 = 300$.
+
+5.  **Final Formatting:**
+    *   The user requested: "Put your final answer as a number after ####."
+    *   So the output line should be `####300`.
+
+6.  **Construct Final Output:**
+    *   State the reasoning briefly (optional but helpful for the model response).
+    *   Present the calculation.
+    *   Ensure the specific format `####300` appears.
+
+    *Drafting the response:*
+    1. Find miles per gallon: 100 miles / 4 gallons = 25 mpg.
+    2. Find max distance: 25 mpg * 12 gallons = 300 miles.
+    3. Format: ####300
+
+    The prompt asks to solve the problem and put the answer after `####`. It doesn't explicitly restrict the text before that, but usually, just providing the steps and the formatted final line is best.
+
+    Wait, checking constraints again: "Put your final answer as a number after ####." It doesn't say "only output the number after ####". It implies the final answer should follow that pattern. I will provide the explanation and then the final string.
+
+    Actually, looking at typical "math solver" bots, usually, they want the logic followed by the specific tag. I'll provide the steps clearly.
+
+    Calculation:
+    Efficiency = 100 miles / 4 gallons = 25 miles/gallon.
+    Max Range = 25 miles/gallon * 12 gallons = 300 miles.
+
+    Final Answer string: ####300
+</think>
+
+First, we calculate Sophia's car's fuel efficiency (miles per gallon). She traveled 100 miles using 4 gallons of gas.
+
+$$ \text{Miles per gallon} = \frac{100 \text{ miles}}{4 \text{ gallons}} = 25 \text{ miles per gallon} $$
+
+Next, we calculate the total distance the car can travel on a full tank using this efficiency and the tank's capacity of 12 gallons.
+
+$$ \text{Total distance} = 25 \text{ miles per gallon} \times 12 \text{ gallons} = 300 \text{ miles} $$
+
+####300
+---
+Here's my thought process for solving this word problem:
+
+1.  **Analyze the Request:**
+    *   **Goal:** Calculate the maximum number of miles Sophia can drive on a single tank of gas.
+    *   **Input Data:**
+        *   Distance traveled: 100 miles.
+        *   Fuel consumed during this trip: 4 gallons.
+        *   Tank capacity: 12 gallons.
+    *   **Output Format:** A single number after `####`.
+
+2.  **Determine the Fuel Efficiency (Miles per Gallon):**
+    *   I know that Sophia drove 100 miles and used 4 gallons of gas to refill the empty part (assumption: the 4 gallons were needed to fill it up *again*, meaning she drove 4 gallons worth of distance off that specific 100 miles, or more accurately, she used 4 gallons of gas within the timeframe of the problem).
+    *   Let's re-read carefully: "She has traveled 100 miles since last filling her tank, and she needed to put in 4 gallons of gas to fill it up again."
+    *   This statement implies:
+        *   Starting state: Tank was full.
+        *   Action: Drove 100 miles.
+        *   Result: Tank is now at a level where it takes 4 gallons to fill the tank to full.
+    *   Wait, does "fill it up again" mean she topped it off completely? Or does it mean she used 4 gallons?
+        *   Scenario A: She drove 100 miles, consumed exactly the amount needed to reach empty. It says she needed 4 gallons to *fill it up* to full. This implies 4 gallons was the amount *consumed* to get to that refill point? No, that doesn't make sense. If she consumed 4 gallons worth, she could have driven on 4 gallons.
+        *   Scenario B: The tank currently has $(12 - 4)$ gallons left. Since she started with a full tank, she consumed 4 gallons.
+        *   Let's re-read the sentence structure: "She has traveled 100 miles since last filling her tank, and she needed to put in 4 gallons of gas to fill it up again."
+        *   Interpretation 1: She consumed 100 miles worth of gas. To get back to a full tank, she needed 4 gallons. This implies the car has a mileage rate that allows her to last the remaining 7 gallons of the 12-gallon tank for some distance. But wait, if she consumed only 4 gallons, then for 100 miles she used 4 gallons.
+        *   Interpretation 2: The problem states she needs to put in 4 gallons *to fill it up*. This means the tank currently has 8 gallons left (12 total - 4 to go).
+        *   If the tank has 8 gallons left *after* traveling 100 miles, that means she consumed $12 - 8 = 4$ gallons while traveling 100 miles.
+
+    *   **Hypothesis:** The distance traveled (100 miles) corresponds to the consumption of 4 gallons.
+    *   **Calculation:**
+        *   Miles per Gallon (MPG) = Total Distance / Total Gallons Used.
+        *   MPG = 100 miles / 4 gallons = 25 miles per gallon.
+
+3.  **Determine the Total Capacity:**
+    *   The problem states the owner's manual says the tank holds 12 gallons.
+
+4.  **Calculate the Range on a Full Tank:**
+    *   Total Miles = MPG * Tank Capacity.
+    *   Total Miles = 25 miles/gallon * 12 gallons.
+    *   Calculation: $25 \times 12$.
+    *   $25 \times 2 = 50$. $25 \times 10 = 250$. $25 \times 4 = 100$. $25 \times 12 = 300$.
+    *   Alternatively: $100/4 \times 12 = 100 \times (12/4) = 100 \times 3 = 300$.
+
+5.  **Verify the Interpretation:**
+    *   "She needs to put in 4 gallons to fill it up again." This confirms that the amount of petrol *consumed* (driven away) is equal to the 4 gallons needed to be added back to make it full. If it were less than 4, the calculation would be wrong. If it were more, it would be different. The text implies equality: Distance 100 miles used the capacity of 100 miles. The consumption for that 100 miles is a portion of the tank. When she stops, the remaining fuel is 8 gallons (since 4 is needed to fill the 12-gallon tank). Therefore, she consumed the 4 gallons of fuel.
+    *   Is it possible 4 gallons is just the fill amount she physically put in, implying she could have driven more? No, the problem asks "How many miles can Sophia drive on a single tank". This implies constant MPG derived from the test ride.
+    *   So, she used 4 gallons to drive 100 miles.
+    *   MPG = 25.
+    *   Full tank capacity = 12.
+    *   Max miles = $25 \times 12 = 300$.
+
+6.  **Final Check:**
+    *   Ratio: 100 miles / 4 gallons.
+    *   Scale up: 12 gallons / 4 gallons = 3.
+    *   Result: 100 miles * 3 = 300 miles.
+    *   Does the answer make sense? Yes.
+
+7.  **Formatting:**
+    *   The prompt asks to put the final answer as a number after `####`.
+    *   Format: ####300
+    *   Wait, usually "after ####" means the text `####` followed by the answer, or the answer inside the `####` block?
+    *   Standard instruction: "Put your final answer as a number after ####." usually implies `####300`.
+    *   Let's check common patterns for these prompts. Often it means `####<Number>`.
+    *   Let's stick to the specific instruction: "after ####". This means the number follows the `####`.
+
+8.  **Constructing the Output:**
+    *   Show the steps clearly.
+    *   Calculate MPG.
+    *   Calculate total range.
+    *   State the final number.
+
+    *   Step 1: Determine fuel consumption.
+        *   Distance = 100 miles.
+        *   Fuel used (calculated from refill amount) = 4 gallons.
+    *   Step 2: Calculate efficiency.
+        *   Miles per gallon = $100 / 4 = 25$ mpg.
+    *   Step 3: Calculate max range.
+        *   Range = Efficiency * Full Capacity.
+        *   Range = $25 \times 12$.
+        *   Range = 300.
+
+    *   Final check on the phrasing "needed to put in 4 gallons of gas to fill it up again".
+    *   This implies the tank went from 8 gallons (full minus 4) to 12 gallons. Since it was full previously, she consumed the 4 gallons in the meantime.
+    *   Calculation holds.
+
+    *   Final Answer: 300.
+
+    *   Format: `####300`.
+
+    Let's double-check the instruction "Put your final answer as a number after ####."
+    Does it mean:
+    Text
+    ####
+    300
+    OR
+    Text
+    ####300
+    Usually, in these math modeling contexts, `####` acts as a separator for the grading script. It usually means `####` followed immediately by the number.
+    However, looking at previous examples of this type of prompt (often from datasets like GSM8K or similar benchmarks), the instruction "Put your final answer as a number after ####" typically expects the format `####[Number]`.
+    Actually, sometimes it means the answer should be the only thing after the `####`.
+    Let's look at the constraint: "Put your final answer as a number after ####."
+    Likely implies the text `####300` is the target string.
+
+    Let's write out the solution clearly.
+
+    1. Determine miles per gallon (MPG):
+       Sophia drove 100 miles and used 4 gallons of gas (since 4 gallons were needed to refill the tank).
+       $MPG = \frac{\text{Miles Traveled}}{\text{Gallons Used}} = \frac{100}{4} = 25 \text{ miles/gallon}$.
+
+    2. Determine total distance for a full tank:
+       The tank capacity is 12 gallons.
+       $\text{Total Distance} = MPG \times \text{Tank Capacity} = 25 \times 12$.
+       $25 \times 
+---
+Thinking Process:
+
+1.  **Analyze the Request:** The user wants me to solve a math problem and provide the final answer as a number after `####`.
+
+2.  **Extract Information from the Problem:**
+    *   Distance traveled since last fill-up: 100 miles.
+    *   Amount of gas used to fill the tank: 4 gallons.
+    *   Total capacity of the tank: 12 gallons.
+    *   Goal: Determine the total distance Sophia can drive on a *single tank* of gas (meaning when the tank is full to the brim).
+
+3.  **Determine the Rate of Consumption:**
+    *   She drove 100 miles using 4 gallons of gas.
+    *   Miles per gallon (MPG) = Total Distance / Total Gallons Used.
+    *   MPG = 100 miles / 4 gallons = 25 miles per gallon.
+
+4.  **Calculate Total Distance on a Full Tank:**
+    *   Total Distance = Tank Capacity * MPG.
+    *   Tank Capacity = 12 gallons.
+    *   MPG = 25 miles/gallon.
+    *   Total Distance = 12 * 25.
+
+5.  **Perform the Calculation:**
+    *   12 * 25 = 12 * (100 / 4) = 1200 / 4 = 300.
+    *   Alternatively: 10 * 25 = 250, 2 * 25 = 50, 250 + 50 = 300.
+
+6.  **Verify the Interpretation:**
+    *   "How many miles can Sophia drive on a single tank of gas?"
+    *   The phrase "single tank of gas" usually implies the full capacity of the tank she describes, based on the manual. The fact she put in 4 gallons to fill it up means that 4 gallons is *not* the full capacity (which is 12 gallons), but it was the amount needed to bring it to full since she had 8 gallons empty.
+    *   Does the 100 miles/4 gallons spend imply the MPG was established during the drive? Yes.
+    *   Does the 12 gallons capacity represent the total fuel volume available for a full tank trip? Yes.
+    *   So, calculation: (100 miles / 4 gallons) * 12 gallons = 300 miles.
+
+7.  **Format the Output:**
+    *   Show the steps briefly (optional but good for explanation).
+    *   Ensure the final answer is on a separate line or clearly marked after `####`.
+    *   Constraint: "Put your final answer as a number after ####."
+
+8.  **Construct Final Response:**
+    *   Calculate MPG: 100 miles / 4 gallons = 25 mpg.
+    *   Calculate max distance: 25 mpg * 12 gallons = 300 miles.
+    *   Final Answer: 300.
+    *   Format: ####300
+
+    *Wait, one nuance check:* "She has traveled 100 miles since last filling her tank, and she needed to put in 4 gallons of gas to fill it up again."
+    *   Does this mean the distance 100 miles consumed 4 gallons?
+    *   Yes. "She has traveled 100 miles... and she needed to put in 4 gallons". The most logical reading is that the 100 miles of driving consumed the amount of fuel that created a 4-gallon deficit.
+    *   Tank Capacity = 12 gallons.
+    *   Fuel Efficiency = 100 miles / 4 gallons = 25 mpg.
+    *   Max Range = 12 gallons * 25 mpg = 300 miles.
+
+    *Alternative interpretation check:* Could "since last filling her tank" imply she started with a full tank, drove 100 miles, and then refilled? If she refilled 4 gallons, does that mean she only had 1/3 of a tank left, or she had 8 gallons left (12 - 4 = 8) and the 4 gallons filled the rest? Yes, 12 capacity - 4 added = 8 left. So she got 100 miles out of 8 gallons.
+    *   Wait, let's re-read carefully: "She has traveled 100 miles since last filling her tank, and she needed to put in 4 gallons of gas to fill it up again."
+    *   Scenario A: She started with a full tank at Station 1. Drove 100 miles. Current fuel level: 8 gallons used, 4 gallons remaining? No, the tank holds 12 gallons. If she needs to put in 4 gallons to fill it, it means she currently has 12 - 4 = 8 gallons *in* the tank.
+    *   So, distance traveled = 100 miles. Gas remaining to spill/top up = 4 gallons (wait, if the tank holds 12, and she needs 4 to fill it, she has 8 left).
+    *   Therefore, the car consumed (12 - 8) = 4 gallons to cover the 100 miles.
+    *   This confirms the consumption rate is 100 miles / 4 gallons = 25 mpg.
+    *   Total capacity is 12 gallons.
+    *   Total distance = 12 * 25 = 300 miles.
+
+    *Wait, is there an interpretation where she needs to put in 4 gallons, but that 4 gallons is part of the 12 gallons?*
+    *   "Tank holds 12 gallons." "Needed to put in 4 gallons to fill it up."
+    *   Current level = 12 - 4 = 8 gallons.
+    *   Total Gallons empty or consumed = 8 gallons? No, total consumption for the trip so far must be calculated.
+    *   If she just filled it *last*, then arrived here with an empty-ish tank? No. "Last filling her tank" -> Start Full.
+    *   Drove 100 miles.
+    *   Check fuel -> She needs 4 gallons to top off.
+    *   This means she used 8 gallons of fuel in that process (implied: Tank starts at 12 Full, ends at 8 Full-ish. 4 gallons poured in).
+    *   Wait. If Tank capacity is 12. She pours in 4. That means she has 8 gallons currently.
+    *   Therefore, she consumed 4 gallons. (12 start - 4 used = 8 remaining). (No, start 12, pour 4, end 12. Start + Poured - End = Consumed. 12 + 4 - 12 = 4 consumed).
+    *   Yes, she used 4 gallons to travel 100 miles.
+    *   Calculation holds: 25 mpg.
+    *   Full tank range: 12 * 25 = 300.
+
+    *Double Check Logic:*
+    1. Tank Capacity = 12 gal.
+    2. Consumed to reach 100 miles = ?
+    3. Current fuel state requires 4 gal to reach full (12 gal). So Current fuel = 8 gal.
+    4. Consumed fuel = Start Fuel (12) - Current Fuel (8) = 4 gal.
+    5. Distance = 100 miles.
+    6. Fuel Efficiency = 100 miles / 4 gallons = 25 mpg.
+    7. Max Distance = Full Tank (12 gallons) * 25 mpg = 300 miles.
+
+    Logic is solid.
+
+9.  **Final Output Generation:**
+    *   Keep it concise.
+    *   End with `####300`.
+
+    Wait, check the instruction: "Put your final answer as a number after ####."
+    So the last line should look like `####300`.
+
+    Let's write down the solution steps clearly before the final tag.
+
+    Step 1: Calculate fuel efficiency.
+    She drove 100 miles and used 4 gallons of gas.
+    Efficiency = 100 miles / 4 gallons = 25 miles per gallon.
+
+    Step 2: Calculate total range.
+    The tank capacity is 12 gallons.
+    Total Distance = 12 gallons * 25 miles/gallon = 300 miles.
+
+    Final Answer: 300.
+    Format: ####300
+</think>
+
+To solve this problem, we first need to determine the fuel efficiency (miles per gallon) of the car based on the information provided.
+
+1.  **Determine the fuel efficiency:**
+    *   Distance traveled: 100 miles
+    *   Gas used: 4 gallons (This is the amount needed to top up the tank from an empty state relative to the trip, implying the car has consumed 4 gallons relative to a starting full state to reach a full-capacity limit where 4 gallons is the deficit).
+---
+Here's my thought process for solving this problem:
+
+1.  **Analyze the Request:**
+    *   **Goal:** Calculate the maximum distance Sophia can drive on a full tank of gas.
+    *   **Given Data:**
+        *   Distance driven recently: 100 miles.
+        *   Fuel used recently: 4 gallons to refill.
+        *   Tank capacity (full tank): 12 gallons.
+    *   **Output Format:** A number placed after `####`.
+
+2.  **Understand the Underlying Concept:**
+    *   This is a rate problem involving "miles per gallon" (mpg).
+    *   I need to find the fuel efficiency of the car based on the driving history provided, and then apply that efficiency to the full tank capacity.
+
+3.  **Step-by-Step Calculation:**
+    *   *Step 1: Calculate the car's miles per gallon (mpg).*
+        *   Miles driven = 100 miles.
+        *   Gas used = 4 gallons.
+        *   Formula: $\text{Miles per gallon} = \frac{\text{Miles driven}}{\text{Gallons used}}$
+        *   Calculation: $\frac{100}{4} = 25 \text{ mpg}$.
+
+    *   *Step 2: Calculate the distance for a full tank.*
+        *   Fuel efficiency = 25 mpg.
+        *   Tank capacity = 12 gallons.
+        *   Formula: $\text{Distance} = \text{Miles per gallon} \times \text{Gallons of fuel}$
+        *   Calculation: $25 \times 12$.
+
+    *   *Step 3: Perform the multiplication.*
+        *   $25 \times 10 = 250$
+        *   $25 \times 2 = 50$
+        *   $250 + 50 = 300$.
+        *   Alternatively: $12 \times 25 = 12 \times 100 / 4 = 1200 / 4 = 300$.
+
+4.  **Verify the Logic:**
+    *   Sophia drove 100 miles using 4 gallons. If the tank holds 12 gallons (which is $4 \times 3$), she should be able to drive $100 \times 3$ miles on a full tank.
+    *   $100 \times 3 = 300$.
+    *   The result matches.
+
+5.  **Format the Output:**
+    *   The user requested the final answer as a number after `####`.
+    *   Answer: 300.
+    *   Output string: `####300`
+
+6.  **Final Review:** Does the question imply any trick or nuance?
+    *   "She has traveled 100 miles... needed to put in 4 gallons". This establishes the consumption rate.
+    *   "Tank holds 12 gallons". This establishes the total available fuel.
+    *   Ask: "How many miles can Sophia drive on a single tank of gas?"
+    *   It seems straightforward. No hidden variables about current fuel level mentioned (other than the fact she needed to fill it, implying she was empty, though strictly saying she "needed to put in 4 gallons to fill it up again" implies the tank went from some level to full, costing 4 gallons). Wait, let me re-read carefully.
+    *   "She has traveled 100 miles since last filling her tank, and she needed to put in 4 gallons of gas to fill it up again."
+    *   Interpretation A: The current fuel gauge says the tank was full before the trip? No, usually that means she had *some* fuel left, drove 100 miles, then refilled 4 gallons to get to full.
+    *   Interpretation B: The "rate" is established by the 100 miles for 4 gallons. This is a rate of consumption.
+    *   If the tank holds 12 gallons total, and she used 4 gallons to refill, does that change the rate? No, the rate is independent of the specific amount filled, as long as the consumption is linear (which car problems usually assume).
+    *   Wait, is there a trick where the *used* amount is different from the *total* capacity?
+    *   Context: "tank holds 12 gallons". "needed to put in 4 gallons to fill it up again". This implies she didn't start with an empty tank, but she used 4 gallons over the course of that interval. However, rate is constant.
+    *   Speed of calculation: $\frac{\text{100 miles}}{\text{4 gallons}} = 25 \text{ mpg}$. Total distance = $25 \text{ mpg} \times 12 \text{ gallons} = 300 \text{ miles}$.
+    *   Is it possible the question implies the 4 gallons is the *volume* of the remaining fuel at the end, plus what she just used? No, "put in 4 gallons... to fill it up again". This means the deficit was 4 gallons.
+    *   However, to determine the *miles per gallon* capability of the car, we rely on the 100 miles / 4 gallons ratio observed. Whether the car averaged 25 mpg or just fluctuated, we use the ratio provided.
+    *   Does the total capacity of 12 gallons matter? Yes, because the question asks for distance on a *single tank of gas* implies starting with 12 gallons.
+    *   Calculation holds. $25 \times 12 = 300$.
+
+7.  **Construct Final Output:**
+    *   State the steps briefly (optional but good for context).
+    *   Output the number as requested.
+
+    Wait, the instruction says: "Put your final answer as a number after ####."
+    Example: `####300`.
+    Does it want just the number or the sentence? Usually just the formatted string.
+
+    Let's check the constraint again.
+    "Solve the math problem. Put your final answer as a number after ####."
+    Okay. I will provide the solution steps clearly, then the final tag.
+
+    Wait, checking standard interleaved patterns. Usually, I should output the reasoning first, then the final block.
+    Actually, looking at the "think silently" instruction, the user sees the final response. I need to make sure the final line or the specific part structure matches the prompt's constraint.
+    Usually, "after ####" means the last line is `####Answer`.
+
+    Let's re-read: "How far can Sophia drive on a single tank of gas?"
+    Answer = 300.
+
+    Let's double check arithmetic.
+    $100 / 4 = 25$.
+    $25 * 12 = 300$.
+    Seems solid.
+
+    Wait, one nuance: "She has traveled 100 miles since last filling her tank".
+    This means at $t=0$ (last fill), Fuel = Full (12 gal).
+    At $t=1$ (end of trip), Fuel = $12 - 4 = 8$ gal.
+    Because she filled it to make up for 4 gallons, she must have consumed 4 gallons.
+    If she had traveled 100 miles consuming 4 gallons, her efficiency is 25 mpg.
+    If she puts a *full* tank in (12 gallons), she can go $12 * 25 = 300$ miles.
+    Logic holds.
+
+    Final check of the prompt requirements.
+    "Put your final answer as a number after ####."
+    So, `####300` is the target.
+
+    I will write down the solution text to explain the logic.
+
+    **Plan:**
+    1. Determine the car's fuel efficiency (miles per gallon).
+    2. Multiply fuel efficiency by the tank capacity to get total distance.
+    3. Format the result.
+
+    **Drafting the response:**
+    First, we find the fuel efficiency. The car traveled 100 miles on 4 gallons of gas.
+    $\text{Miles per gallon} = \frac{100 \text{ miles}}{4 \text{ gallons}} = 25 \text{ miles per gallon}$.
+
+    Next, we calculate the total distance for a full tank. The tank holds 12 gallons.
+    $\text{Total Distance} = 25 \text{ mpg} \times 12 \text{ gallons} = 300 \text{ miles}$.
+
+    `####300`
+</think>
+
+To find out how far Sophia can drive on a single tank of gas, we first need to determine her car's fuel efficiency (miles per gallon).
+
+1.  **Calculate Miles Per Gallon (MPG):**
+    Sophia traveled 100 miles and used 4 gallons of gas to refill the tank.
+    $$ \text{MPG} = \frac{\text{Distance Traveled}}{\text{Gallons Used}} = \frac{
+---
+Here's my thought process for solving this word problem:
+
+1.  **Analyze the Request:**
+    *   Goal: Calculate the total miles Sophia can drive on a single tank of gas.
+    *   Given Information:
+        *   Distance driven: 100 miles.
+        *   Gas needed to fill up: 4 gallons (since the tank wasn't full after driving).
+        *   Tank capacity: 12 gallons.
+
+2.  **Identify the Core Question:**
+    *   Find the car's fuel efficiency (miles per gallon, or MPG).
+    *   Calculate the total miles possible given the full tank capacity.
+
+3.  **Step-by-Step Calculation:**
+
+    *   *Step 1: Determine fuel efficiency.*
+        *   We know she traveled 100 miles.
+        *   We know she needed 4 gallons of gas to reach the same state (a specific fill level implies she consumed fuel). Wait, let's re-read carefully. "She has traveled 100 miles since last filling her tank, and she needed to put in 4 gallons of gas to fill it up again."
+        *   Interpretation A: Her previous fill level + 100 miles = Current level. She needs 4 gallons to get to full (12 gallons). So, 12 - (Previous full capacity) = 4 gallons remaining?
+        *   Let's look at the phrasing "She has traveled 100 miles since last filling her tank". This implies she had a full tank before this trip.
+        *   "she needed to put in 4 gallons of gas to fill it up again". This means at the end of the trip (after driving 100 miles), the tank was drained down to a level where adding 4 gallons brings it back to the 12-gallon capacity.
+        *   So, 100 miles of driving consumed the difference between a Full Tank and the current amount.
+        *   Amount used = Full Tank Capacity (12 gallons) - Amount Remaining (4 gallons).
+        *   Wait, does "fill it up again" mean add 4 gallons to top it off to 12? Yes. "fill it up again" usually implies reaching the capacity. If I fill it to capacity (12 gallons), and I needed to put in 4 gallons to get to that capacity, then I had 8 gallons left.
+        *   Let's verify this.
+            *   Full Tank = 12 gallons.
+            *   Miles driven = 100 miles.
+            *   Gas remaining = 12 - 4 (gallons to fill up) = 8 gallons.
+            *   Gas *consumed* = Gas before - Gas after = 12 - 8 = 4 gallons.
+            *   So, she used 4 gallons of gas to drive 100 miles.
+
+    *   *Step 2: Calculate Fuel Efficiency.*
+        *   Fuel Efficiency = Distance / Fuel Consumed
+        *   Fuel Efficiency = 100 miles / 4 gallons = 25 miles per gallon (MPG).
+
+    *   *Step 3: Calculate Max Distance.*
+        *   The question asks: "How many miles can Sophia drive on a single tank of gas?"
+        *   This implies the theoretical maximum distance given a full 12-gallon tank.
+        *   Max Distance = Fuel Efficiency * Tank Capacity
+        *   Max Distance = 25 miles/gallon * 12 gallons.
+
+    *   *Step 4: Perform the Multiplication.*
+        *   $25 \times 10 = 250$
+        *   $25 \times 2 = 50$
+        *   $250 + 50 = 300$
+        *   Total miles = 300.
+
+4.  **Double Check the Interpretation:**
+    *   Does "put in 4 gallons of gas to fill it up again" definitely mean remaining fuel was 8?
+    *   If the tank holds 12 gallons.
+    *   If I add 4 gallons to fill it up, it means there were $12 - 4 = 8$ gallons in the tank.
+    *   If she drove 100 miles based on the difference between the previous full tank and the current tank state...
+    *   Previous state: Full (12 gallons).
+    *   Current state: 8 gallons remaining.
+    *   Consumed: 4 gallons.
+    *   Efficiency = 100 miles / 4 gallons = 25 MPG.
+    *   Full Tank (12 gallons) at 25 MPG = $12 \times 25 = 300$ miles.
+
+    *   Alternative interpretation check: Did she just need gas because she ran out? "fill it up again" implies topping off. "She has traveled 100 miles... and she needed to put in 4 gallons". This implies the consumption over the 100 miles caused the level to drop from Full to (12-4).
+    *   Is there any ambiguity? "put in 4 gallons of gas to fill it up again" -> "fill it up" usually means to the capacity mark. So remaining is capacity - 4.
+    *   Calculation: $(100 / 4) \times 12 = 25 \times 12 = 300$.
+
+5.  **Final Output Formatting:**
+    *   State the logic clearly.
+    *   Provide the final number in the specified format: "The answer is ####".
+
+    *   Wait, check the requested format again. "Put your final answer as a number after ####."
+    *   Okay.
+
+6.  **Drafting the Response:**
+    *   First, determine how many gallons were used for the 100 mile trip.
+    *   The tank holds 12 gallons.
+    *   To fill it up, 4 gallons were added, meaning 8 gallons were left before filling.
+    *   Therefore, 4 gallons were used to drive those 100 miles.
+    *   Calculate MPG: $100 \text{ miles} / 4 \text{ gallons} = 25 \text{ mpg}$.
+    *   Calculate total range: $25 \text{ mpg} \times 12 \text{ gallons} = 300 \text{ miles}$.
+
+    *   Let's check if there's any tricky wording. "single tank of gas". This could mean the original full tank (12 gallons) or a hypothetical tank. Since the context is "The owner's manual... says tank holds 12 gallons", we use 12.
+    *   Everything seems consistent.
+
+    *   Calculation: $25 \times 12 = 300$.
+
+    *   Result: 300.
+
+7.  **Final Polish:** Ensure the text explains the steps briefly and then presents the final answer in the requested slot.
+
+    *   Steps:
+        1.  Fuel consumption = 12 gallons (capacity) - 4 gallons (to fill) = 4 gallons.
+        2.  Efficiency = 100 miles / 4 gallons = 25 mpg.
+        3.  Total range = 25 mpg * 12 gallons = 300 miles.
+
+    *   Looks good.
+    *   Prompt asks for "Put your final answer as a number after ####."
+    *   Example: #### 300. Or just ####300? Usually it means replace the placeholder with the number or format it like `#### 300`. Let me check standard interpretations. Usually, it means `#### [result]`.
+    *   Instruction: "Put your final answer as a number after ####."
+    *   I will write `#### 300`.
+
+    Wait, reading instructions carefully: "Put your final answer as a number after ####."
+    Does it mean `#### 300`?
+    Or does it mean the output should *only* contain the number in that format?
+    Usually, these prompts want the explanation then the final tag.
+    I will provide the explanation and end with `#### 300`.
+
+    Wait, looking at similar instructions, sometimes it's `####<number>`.
+    Let's look at the phrasing "Put your final answer as a number after ####."
+    This implies the string `####` comes before the number.
+    So `#### 300`.
+
+    Wait, I should check if there's any constraint on surrounding text. "Solve the math problem." usually implies an explanation is okay.
+    Okay, I will write the solution and end with the specific format.
+
+    Wait, one more check on the logic.
+    Is it possible the interpretation of "4 gallons needed to fill it up" means that the *range* was calculated differently?
+    No, "Fill up" means bringing the tank level to Capacity.
+    If Capacity = 12.
+    Current Level = 12 - 4 = 8.
+    Initial Level = 12.
+    Usage = 12 - 8 = 4.
+    This logic holds up.
+
+    Calculation check:
+   
+---
+Here's my thought process for solving this word problem:
+
+1.  **Analyze the Request:**
+    *   **Goal:** Calculate the total distance Sophia can drive on a full tank of gas.
+    *   **Given Information:**
+        *   Distance driven = 100 miles.
+        *   Gas put in to fill the tank = 4 gallons.
+        *   Current capacity of the tank = 12 gallons.
+    *   **Output Format:** Final answer must be a number after `####`.
+
+2.  **Determine the Fuel Efficiency (MPG):**
+    *   I know she drove 100 miles.
+    *   She needed 4 gallons to fill the tank.
+    *   *Wait, does this mean the tank was empty?* The problem says "She has traveled 100 miles since last filling her tank, and she needed to put in 4 gallons of gas to fill it up again."
+    *   *Implied Assumption:* This implies that the consumption rate over those 100 miles resulted in a specific amount of fuel being used. However, usually, these problems imply that the 4 gallons represents the *difference* between a full tank and the current level, or that she used up the remaining fuel plus topped up to full.
+    *   Let's look at it simply:
+        *   She drove 100 miles.
+        *   She needed 4 gallons to top up the tank.
+        *   Therefore, the car used 4 gallons of fuel to travel that 100 miles (assuming she started with less than full or filled it to the brim).
+        *   Wait, the calculation depends on the rate of consumption.
+        *   If she drove 100 miles and *needed 4 gallons to fill it up again*, it implies she used 4 gallons worth of distance traveled recently OR that the tank has a specific consumption rate associated with the 100 miles vs the fuel amount.
+    *   Let's re-read carefully: "She has traveled 100 miles since last filling her tank, and she needed to put in 4 gallons of gas to fill it up again."
+    *   This usually implies: For the distance she is about to drive again (based on MPG), I need the MPG.
+    *   MPG = Distance / Fuel Consumed.
+    *   Distance = 100 miles.
+    *   Fuel Used = 4 gallons (This is because she had to buy 4 gallons to go from "recently driven" status back to "full tank" status. *Wait, no.* If she filled it *last time*, it was full. Then she drove. Then she needed 4 gallons to fill it. This implies she used up (Full Tank Contents - Remaining Amount).
+    *   Actually, the most standard interpretation for this specific type of riddle/middle-school math problem is:
+        *   She drove 100 miles.
+        *   To get back to full, she added 4 gallons.
+        *   Therefore, she consumed 4 gallons to cover 100 miles.
+        *   MPG = 100 miles / 4 gallons = 25 MPG.
+
+    *   *Alternative interpretation:* Is the tank currently full? No, she needs to put *in* 4 gallons to fill it *again*.
+    *   Is 4 gallons the total volume she used since she left the pump? "She has traveled 100 miles since last filling her tank" -> She drove. "She needed to put in 4 gallons of gas to fill it up again." -> This implies the consumption from the state immediately after the last fill up to the state immediately before this top up is 4 gallons.
+    *   Okay, let's assume the tank was full when she left for the 100 miles.
+    *   She drove 100 miles.
+    *   She stopped and filled the tank.
+    *   The tank went from "Full minus 100 miles worth of fuel" to "Full".
+    *   The amount added was 4 gallons.
+    *   Therefore, 100 miles required 4 gallons of fuel.
+    *   Efficiency = 100 miles / 4 gallons = 25 miles per gallon.
+
+3.  **Calculate Maximum Distance on a Full Tank:**
+    *   MPG = 25 miles/gallon.
+    *   Tank Capacity = 12 gallons.
+    *   Max Distance = MPG * Capacity.
+    *   Max Distance = 25 * 12.
+
+4.  **Perform the Calculation:**
+    *   $25 \times 10 = 250$
+    *   $25 \times 2 = 50$
+    *   $250 + 50 = 300$
+    *   Total distance = 300 miles.
+
+5.  **Review the Logic:**
+    *   Did I miss anything? "The owner's manual for her car says that her tank holds 12 gallons." -> This is the capacity.
+    *   "She has traveled 100 miles since last filling her tank" -> Distance $d = 100$.
+    *   "she needed to put in 4 gallons of gas to fill it up again" -> Fuel $f = 4$.
+    *   Assumption: The consumption over those 100 miles equates to the 4 gallons required to restore the tank to full. While technically, there's a possibility she carried a reserve, standard word problem conventions dictate that the gap between "start" (full) and "buy" (partially full) filled is the consumed amount ($f$).
+    *   So, consumption rate = $100 / 4 = 25$ mpg.
+    *   Max range = $25 \times 12 = 300$.
+
+6.  **Formatting:**
+    *   The prompt asks for the final answer as a number after `####`.
+
+7.  **Final check:**
+    *   Data: 100 miles, 4 gallons used, 12 gallons capacity.
+    *   Ratio: 100/4 = 25 mi/gal.
+    *   Range: 25 * 12 = 300 miles.
+
+8.  **Construct the Final Output:**
+    *   Show the work briefly (finding MPG, then finding total range).
+    *   End with `#### 300`.
+
+    *   Wait, is there a trick?
+        *   Maybe she didn't start with a full tank? "Since last filling her tank" implies it was full.
+        *   Maybe the tank didn't fill up exactly to the top? "to fill it up again" implies it goes to full level.
+        *   Seems straightforward.
+
+    *   Calculation: $100 / 4 = 25$. $25 \times 12 = 300$.
+
+    *   Double check: Is there any ambiguity about "her tank holds 12 gallons"?
+        *   Usually, tank capacity is the max range calculation base.
+        *   Sometimes, there's a spare capacity for a reserve line, but in 99% of these problems, Capacity = Max Fuel Volume.
+        *   So, 12 gallons is the calculation base.
+
+    *   Result is 300.
+
+    *   One more check on the prompt instructions: "Put your final answer as a number after ####."
+    *   Example: `#### 300`.
+
+    *   Step-by-step for the final output:
+        1.  Determine miles per gallon (MPG).
+        2.  100 miles covered with 4 gallons used = 25 MPG.
+        3.  Multiply MPG by tank capacity.
+        4.  $25 \times 12 = 300$ miles.
+
+    *   Ready.
+</think>
+
+To find out how far Sophia can drive on a single tank of gas, we first need to determine her car's fuel efficiency (miles per gallon).
+
+1.  **Determine Fuel Efficiency:**
+    Sophia drove 100 miles and needed 4 gallons of gas to fill the tank again. This implies that during those 100 miles, she consumed 4 gallons of fuel.
+    $$100 \text{ miles} / 4 \text{ gallons} = 25 \text{ miles per gallon (MPG)}$$
+
+2.  **Calculate Max Range:**
+    The car's tank holds 12 gallons of gas. Now, multiply the fuel efficiency by the tank capacity to find the total distance.
+    $$25 \text{ MPG} \times 12 \text{ gallons} = 300 \text{ miles}$$
+
+#### 300
+---
+Here's a thinking process that leads to the suggested answer:
+
+1.  **Analyze the Request:**
+    *   **Goal:** Calculate the distance Sophia can drive on a single tank of gas.
+    *   **Input Data:**
+        *   Distance traveled since last fill-up = 100 miles.
+        *   Gas needed to fill the tank = 4 gallons.
+        *   Total tank capacity = 12 gallons.
+    *   **Output Format:** Final answer must be a number after `####`.
+
+2.  **Determine the Mile per Gallon (MPG) Rate:**
+    *   Sophia drove 100 miles.
+    *   She used 4 gallons of gas to refill the tank.
+    *   Assumption: The 4 gallons corresponds to the distance just covered (since the problem implies this is the consumption up to that point, or effectively used up those 4 gallons to drive that 100 miles). *Correction/Refinement:* The problem states "since last filling her tank... needed to put in 4 gallons...".
+    *   *Interpretation A:* She filled it to full. Drove 100 miles. Something happened, and she needed 4 gallons. Wait, if she filled it to full, the screen is at 0 gallons leftover relative to the start of the trip. If she puts in 4 gallons, it's usually to top it off from 8 gallons to 12. This implies she used 4 gallons during the trip.
+    *   *Interpretation B:* The standard way these word problems work is: 100 miles consumed 4 gallons.
+    *   *Calculation:* $MPG = \frac{\text{Miles}}{\text{Gallons}} = \frac{100}{4} = 25 \text{ miles per gallon}$.
+
+3.  **Determine the Range on a Full Tank:**
+    *   Tank Capacity = 12 gallons.
+    *   MPG = 25 miles/gallon.
+    *   Calculation: $\text{Total Distance} = \text{Tank Capacity} \times \text{MPG}$.
+    *   $\text{Total Distance} = 12 \times 25$.
+
+4.  **Perform the Multiplication:**
+    *   $12 \times 25$
+    *   $10 \times 25 = 250$
+    *   $2 \times 25 = 50$
+    *   $250 + 50 = 300$
+
+5.  **Verify the Logic:**
+    *   Distance driven: 100 miles.
+    *   Fuel used: 4 gallons (implied by the need to top off; if she needed 4 gallons to fill it, she had 8 gallons left. Since she had the full amount before, and now has 0 fullness, she consumed 4 gallons in that period).
+    *   Efficiency: 100 miles / 4 gal = 25 mpg.
+    *   Max Range: 12 gal capacity * 25 mpg/gal = 300 miles.
+
+6.  **Final Formatting:**
+    *   The user requested the final answer as a number after `####`.
+    *   Result: 300.
+
+7.  **Construct the Output:**
+    *   State the steps clearly.
+    *   Calculate MPG.
+    *   Calculate Total Miles.
+    *   Provide the final number in the required format.
+
+    *(Self-Correction/Double Check during drafting)*: Is there any ambiguity about "needed to put in 4 gallons"?
+    *   Scenario: Full tank (0 at last fill, 12 now). Driver reports: "I've driven 100 miles. I have 8 gallons left." -> To fill it, she puts in 4 gallons.
+    *   Therefore, she used 4 gallons for 100 miles.
+    *   MPG = 25.
+    *   Full Tank = 12 gallons.
+    *   Range = 300 miles.
+    *   Logic holds.
+
+8.  **Final Answer Formulation:**
+    *   Step 1: Calculate fuel efficiency. $100 \text{ miles} / 4 \text{ gallons} = 25 \text{ mpg}$.
+    *   Step 2: Calculate total distance on full tank. $25 \text{ mpg} \times 12 \text{ gallons} = 300 \text{ miles}$.
+    *   Final output: 300.
+
+    *(Wait, check the prompt constraint exactly)*: "Put your final answer as a number after ####."
+    *   Should I include units? Usually, these formats prefer just the number. I will write the solution steps and end with `#### 300`. Or `#### 300 miles`?
+    *   Standard interpretation: "after ####" implies `#### [Answer]`. I will put just the number to be safe, or the number with the label if it clarifies, but usually just the number is safer for parsing scripts. Let's look at similar request patterns. Usually, it means `#### <number>`. I will put `#### 300`.
+
+    *(Re-reading prompt)*: "Put your final answer as a number after ####."
+    *   Okay, I will output the explanation and end with `#### 300`.
+
+    Wait, does the prompt want *only* the number after the hashes, or can there be text before? "Put your final answer as a number after ####." Usually, this means the last line of the response or a specific section. I will provide the reasoning and then the formatted number.
+
+    Let's refine the calculation steps for the final response text.
+    1.  Calculate miles per gallon: $\frac{100 \text{ miles}}{4 \text{ gallons}} = 25 \text{ miles/gallon}$.
+    2.  Calculate total miles for 12 gallons: $12 \text{ gallons} \times 25 \text{ miles/gallon} = 300 \text{ miles}$.
+
+    Final check: $12 \times 20 = 240$, $12 \times 5 = 60$, $240 + 60 = 300$. Correct.
+
+    The final output should contain the text "#### 300".
+</think>
+
+To find out how far Sophia can drive on a single tank of gas, we first need to calculate her car's fuel efficiency (miles per gallon).
+
+1.  **Calculate Miles Per Gallon (MPG):**
+    Sophia drove 100 miles and used 4 gallons of gas.
+    $$ \text{MPG} = \frac{100 \text{ miles}}{4 \text{ gallons}} = 25 \text{ miles per gallon} $$
+
+2.  **Calculate Total Distance on a Full Tank:**
+    The car's tank holds 12 gallons.
+    $$ \text{Total Distance} = 25 \text{ miles per gallon} \times 12 \text{ gallons} = 300 \text{ miles} $$
+
+#### 300
+---
+Here's my thought process for solving this problem:
+
+1.  **Analyze the Request:**
+    *   **Goal:** Calculate the total distance Sophia can drive on a single tank of gas.
+    *   **Input Data:**
+        *   Distance traveled since last fill-up: 100 miles.
+        *   Gas needed to refill the tank from that remaining amount to full: 4 gallons.
+        *   Total capacity of the tank: 12 gallons.
+    *   **Output Format:** Final answer as a number after `####`.
+
+2.  **Deconstruct the Problem:**
+    *   To find miles per gallon (MPG) or the efficiency of the car, I need to relate distance traveled to fuel consumed.
+    *   The car traveled 100 miles.
+    *   The amount of fuel needed to reset the tank to full was 4 gallons. This implies that during that 100-mile trip, the car consumed 4 gallons of gas.
+    *   *Correction/Verification:* Does "needed to put in 4 gallons to fill it up again" mean 4 gallons were consumed?
+        *   Scenario: Tank Level ($T_{initial}$) -> Drive ($D$) -> Remaining Level ($T_{final}$) -> Add Gas ($G$) -> Full Level ($T_{full}$).
+        *   Usually, when a tank is filled to the top, $T_{full} = 12$ gallons.
+        *   So, $T_{final} + G = 12$.
+        *   Therefore, $T_{final} = 12 - G = 12 - 4 = 8$ gallons remaining.
+        *   The fuel gauge setup suggests the "distance between fills" logic. If we assume the previous calculation started from a "full" tank, the amount *used* corresponds to the amount needed to *replace* the used amount to reach the previous full state.
+        *   Wait, let's look closer at standard word problem phrasing. "She has traveled 100 miles... needed to put in 4 gallons to fill it up again."
+        *   Usually, this implies that the 100 miles covered at that time cost 4 gallons. Why? Because if she had a full tank (implied by the start of the sentence "traveled 100 miles since last filling her tank"), then she doesn't need to put in 4 gallons?
+        *   Let's re-read: "She has traveled 100 miles since last filling her tank". This implies the previous tank was empty (or close to empty) or full at the start.
+        *   If the tank was full when she last filled it, and now 100 miles down, she needs 4 more gallons to fill it up.
+        *   This means she consumed 4 gallons over the 100 miles.
+        *   So, Fuel Usage = 4 gallons. Distance = 100 miles.
+        *   This can be treated as: The car uses 4 gallons to go 100 miles. Therefore, it uses 1 gallon to go $(100 / 4)$ miles.
+
+3.  **Calculate Fuel Efficiency:**
+    *   Distance Traveled / Distance Consumed: $100 \text{ miles} / 4 \text{ gallons} = 25 \text{ miles per gallon (MPG)}$.
+
+4.  **Calculate Total Range:**
+    *   Now we know the car gets 25 miles per gallon.
+    *   We know the tank holds 12 gallons total.
+    *   The question asks "How many miles can Sophia drive on a single tank of gas?"
+    *   Total Distance = Total Capacity $\times$ MPG.
+    *   Total Distance = $12 \text{ gallons} \times 25 \text{ miles/gallon}$.
+
+5.  **Perform the Calculation:**
+    *   $12 \times 25$
+    *   $12 \times 25 = 3 \times 4 \times 25 = 3 \times (4 \times 25) = 3 \times 100 = 300$.
+    *   Alternatively: $10 \times 25 = 250$, $2 \times 25 = 50$. $250 + 50 = 300$.
+
+6.  **Review Potential Ambiguity:**
+    *   Is the "last filling" relevant to the *current* logic?
+    *   "She has traveled 100 miles since last filling her tank". -> This establishes the baseline consumption rate.
+    *   "...she needed to put in 4 gallons of gas to fill it up again." -> This confirms the amount consumed during that interval was 4 gallons (assuming she topped off to the same indicator point, which is standard interpretation).
+    *   "The owner's manual... says that her tank holds 12 gallons." -> This is the capacity.
+    *   Wait, could the calculation be different? If the fuel gauge wasn't exactly accurate, we rely on the empirical data provided (100 miles / 4 gallons). That's the standard assumption.
+    *   Does the fact that it takes 4 gallons to fill it up imply she started with a 100% full tank? No, standard tank refueling usually means bringing it to "full".
+    *   So: Consumption ratio = 100 miles / 4 gallons = 25 mpg.
+    *   Max Range = 12 gallons * 25 mpg = 300 miles.
+
+7.  **Final Check:**
+    *   Logic holds.
+    *   Math is simple ($12 \times 25$).
+    *   Constraint check: "Put your final answer as a number after ####."
+
+8.  **Construct Final Output:**
+    *   Steps:
+        1.  Determine miles per gallon based on the trip data.
+        2.  Multiply total tank capacity by miles per gallon.
+    *   Result: 300.
+    *   Format: #### 300
+
+Let's double check the phrasing "since last filling her tank".
+If she filled the tank 100% last time. Then drove 100 miles. Then ran out? No, "needed to put in 4 gallons to fill it up again".
+This implies the tank wasn't empty. If it was empty, she would "fill it up" (maybe meaning to add 4 gallons?).
+But usually "fill it up" means "bring the gas level from current to max".
+So, Current Level + 4 = Max Level (12).
+So Current Level = 8.
+If she started at Max (100% full) 100 miles ago, then consumed $12 - 8 = 4$ gallons to get to 0 to 8 scenario?
+Wait, if she filled it last time, that's tank = 12 gallons.
+Drive 100 miles.
+Remaining gas = $12 - 4 = 8$ gallons.
+Then she waits to fill it? No, she puts "4 gallons to fill it up again". This means she adds 4 gallons to bring it from 8 to 12.
+So she used 4 gallons to drive 100 miles.
+This is the MPG (25).
+Max capacity is 12 gallons.
+Max distance = $12 \times 25 = 300$.
+
+Alternative interpretation:
+Does "tank holds 12 gallons" mean the *total* tank size, or the *current* amount? "holds" implies capacity.
+Does "put in 4 gallons to fill it up again" imply the previous fill wasn't full?
+Usually "since last filling" implies the previous fill was a full tank refuel.
+Regardless, the consumption data is the rate: She used gas to drive the 100 miles. Without explicitly stating "she used 4 gallons", we infer that adding 4 gallons brought it to the level where it was last filled?
+Actually, the most logical interpretation of "traveled X miles since filling tank, need Y gallons to fill again" is that Y gallons were consumed.
+Why?
+State 1: Full Tank.
+Action: Drive 100 miles.
+State 2: Current Tank Level.
+Action: Add 4 Gallons -> Full Tank.
+Therefore, Consumed = Full Tank - State 2 = Full Tank - (Full Tank - 4) = 4 Gallons.
+So Consumption = 4 gallons.
+Distance = 100 miles.
+Rate = 25 mpg.
+Max Range = 12 gallons * 25 mpg = 300 miles.
+
+Calculation is solid.
+
+One edge case: "Tank holds 12 gallons". Does she start with a full tank now? The question asks "How many miles can Sophia drive on a single tank of gas?"
+This asks for the theoretical range based on the car's efficiency (MPG) and total capacity.
+So, Total Capacity * Efficiency.
+$12 * 25 = 300$.
+
+Final check of the instruction: "Put your final answer as a number after ####."
+Wait, the example says `puts final answer as a

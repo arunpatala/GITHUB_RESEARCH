@@ -1,0 +1,299 @@
+To determine the total number of french fries initially in the pack, we need to carefully track the consumption step by step.
+
+1. **Dave ate 14 french fries first:**
+   - Remaining fries after Dave ate: \(0\).
+
+2. **Seagull took the whole pack away:**
+   - Since the pack contained at least 14 fries (since Dave started with at least this amount), the seagull must have taken all the initial fries. However, according to the problem, the seagull only stole the pack, and then the next part starts from zero since the pack is now gone.
+
+3. **Dave’s friends (three pigeons) ate some fries before the raccoon came along:**
+   - Each pigeon ate 3 fries. So, 3 pigeons eating 3 fries each:
+   \[
+   3 \text{ pigeons} \times 3 \text{ fries per pigeon} = 9 \text{ fries}
+   \]
+   - Total fries lost due to pigeons and Dave's eating so far:
+   \[
+   14 \text{ (Dave)} + 9 \text{ (pigeons)} = 23 \text{ fries}
+   \]
+
+4. **Raccoon took \(2/3\) of the remaining fries:**
+   - Let the total fries initially be \(x\). Thus,
+   \[
+   \frac{2}{3} x \text{ fries taken by the raccoon}
+   \]
+   - Fries left with ants:
+   \[
+   \left(\frac{1}{3}\right)x
+   \]
+   - According to the problem, the raccoon took 2/3 of the fries and leaves 5 fries. Hence:
+   \[
+   \frac{1}{3}x = 5
+   \]
+   
+5. **Solving for \(x\):**
+   \[
+   x = 5 \times 3 = 15 \quad (\text{total fries initially})
+   \]
+
+By checking our logic:
+- Initially, Dave had 15 fries.
+- Dave ate 14, now 1.
+- Seagull takes the pack, so the total fries still 0.
+- Pigeons eat 9: 0 remains.
+- Raccoon takes 2/3 of 15, hence \(2/3 \times 15 = 10\), leaving 5.
+
+Therefore, the total number of french fries initially in the pack is 15 when Dave bought it. The final answer is:
+
+\boxed{15}
+---
+To solve this problem, we need to backtrack through the sequence of events to find out how many french fries were originally in the pack.
+
+Firstly, determine how many fries Dave originally had:
+1. Dave ate 14 fries.
+2. After that, some pigeons came and ate half the number that Dave ate (7 more fries).
+
+So far, Dave lost 14 + 7 = 21 fries.
+
+3. Then, three pigeons each ate 3 fries: \(3 \times 3 = 9\) fries were eaten.
+   Now, Dave has 21 - 9 = 12 fries left.
+
+4. At that point, a raccoon ate two-thirds of the remaining fries:
+    \[
+    \text{Fries eaten by raccoon} = \frac{2}{3} \times 12 = 8
+    \]
+   After this, Dave has:
+    \[
+    12 - 8 = 4 \text{ fries}
+    \]
+
+5. Finally, an ant carried off a single extra french fry, leaving 5 fries behind.
+
+Therefore, the original number of french fries is 4 + 1 = 5 + 1 = 12 + 12 - 8 + 1 = **29**.
+
+Hence, the initial amount of fries was ####29.
+---
+To determine the initial number of french fries in the pack, we need to piece together the sequence of events and work backwards, ensuring we account for each step of eating and theft.
+
+### Step 1: Determine the number of fries consumed by the pigeons
+
+Let's denote:
+- \( F \) as the initial number of fries.
+- \( D \) as the number of fries Dave initially ate (14).
+- \( S \) as the number of fries eaten by the pigeons (3 birds, with each bird eating 3).
+
+Given:
+\[ S = 3 \times 3 = 9 \]
+
+Since the pigeons ate half the number Dave ate:
+\[ S = \frac{D}{2} \]
+\[ 9 = \frac{14}{2} \]
+This statement checks out since \( 9 = 7 \).
+
+### Step 2: Determine the number of fays left after the pigeons eat
+
+Fries left after Dave ate and before the pigeons:
+\[ F - D = F - 14 \]
+
+After the pigeons ate, the number of fries left:
+\[ (F - 14) - 9 = F - 23 \]
+
+### Step 3: Determine the number of fries stolen by the raccoon
+
+A raccoon then stole two thirds of the remaining fries:
+\[ \text{Raccoon's share} = \frac{2}{3} (F - 23) \]
+Remaining fries after raccoon ate:
+\[ (F - 23) - \frac{2}{3} (F - 23) = \frac{1}{3} (F - 23) \]
+
+According to the problem, leaving 5 fries implies:
+\[ \frac{1}{3} (F - 23) = 5 \]
+
+### Step 4: Solve for the initial number of fries \( F \)
+
+\[ \frac{1}{3} (F - 23) = 5 \]
+Multiply both sides by 3:
+\[ F - 23 = 15 \]
+\[ F = 15 + 23 \]
+\[ F = 38 \]
+
+Therefore, the initial number of fries \( F \) was:
+\(\boxed{38}\)
+---
+To determine the initial number of french fries in the pack, we need to work backwards from the information given.
+
+1. **Ants Carried Off a Final French Fry:**
+   - After the ants took one, 5 fries remained.
+   - Before the ants took one, there were \(5 + 1 = 6\) fries left.
+
+2. **Raccoon:**
+   - The raccoon stole two-thirds of the remaining fries before the pigeons.
+   - Let's denote the number of fries before the raccoon by \(x\).
+   \[
+   x - \frac{2}{3}x = 6 \implies \frac{1}{3}x = 6 \implies x = 6 \times 3 = 18
+   \]
+   Therefore, there were 18 fries before the raccoon ate.
+
+3. **Pigeons:**
+   - Three pigeons each ate 3 fries, totaling \(3 \times 3 = 9\) fries eaten by the pigeons.
+   - Therefore, before the pigeons ate:
+     \[
+     18 - 9 = 9 \text{ fries remained}.
+     \]
+
+4. **Dave + Seagull:**
+   - A hungry seagull ate half the amount Dave ate initially.
+   - If the number of fries Dave did not eat was 14 (after eating a portion, he had 9 left):
+     - Suppose Dave originally had \(n\) fries.
+     - After eating some, he had 9 left. Hence, 
+     \[
+     n - 14 = 9 \implies n = 23
+     \]
+   Therefore, Dave originally had 23 fries.
+
+To summarize, the total number of fries in the pack when Dave bought was:
+
+\[
+\boxed{23}
+\]
+---
+To determine how many french fries were originally in the pack that Dave bought, we will work backwards from the final count of 5 fries.
+
+1. **Before the final ant removed a fry:**
+   - Remaining fries = 5
+   - Before the removal by the ant (i.e., before the final 5 fries remained), \(5 + 1 = 6\) fries were left.
+
+2. **Before three pigeons ate 3 fries each:**
+   - Three pigeons each ate 3 fries, so they ate \(3 \times 3 = 9\) fries.
+   - This means there were \(6 + 9 = 15\) fries before the pigeons ate their share.
+
+3. **Before the seagull took half the amount Dave had already eaten:**
+   - Dave ate 14 fries initially; the seagull took half of that number, which is \( \frac{14}{2} = 7 \) fries.
+   - So before the seagull arrived, there were \(15 + 7 = 22\) fries.
+
+4. **Before Dave ate 14 fries:**
+   - Let \(x\) be the total number of fries originally in the pack.
+   - Therefore, \(x - 14 = 22\).
+
+Solving for \(x\):
+\[ x = 22 + 14 \]
+\[ x = 36 \]
+
+Therefore, the original number of french fries in the pack was \(\boxed{36}\).
+---
+To solve the problem step-by-step, let's denote the initial number of French fries in the pack as \( x \).
+
+1. **Initially, Dave ate 14 fries:**
+   \[
+   x - 14 \text{ remains}
+   \]
+
+2. **The seagull stole the pack, but one-half of the remaining fries was eaten by Dave (before being stolen):**
+   \[
+   \frac{1}{2} (x - 14) \text{ fries by Dave}
+   \]
+   So the number of fries left after this step:
+   \[
+   \frac{x - 14}{2} \text{ fries left}
+   \]
+
+3. **Each of the three pigeons eats 3 fries:**
+   \[
+   \frac{x - 14}{2} - 3 \times 3 = \frac{x - 14}{2} - 9 \left(\text{remaining fries after 3 pigeons}\right)
+   \]
+   Simplifying,
+   \[
+   x - 14 - 18 = \frac{x - 14}{2} - 18 
+   \]
+   So,
+   \[
+   \frac{x - 32}{2} \text{ fries left.}
+   \]
+
+4. **A raccoon ate two-thirds of the original number of fries remaining from this point:**
+   \[
+   \frac{2}{3} \left( \frac{x - 32}{2} \right) = \frac{x - 32}{3} \text{ fries eaten by raccoon.} 
+   \]
+   Now,
+   \[
+   \frac{x - 32}{6} \text{ fries left}
+   \]
+
+5. **The final amount left before the ant is 5 fries. Hence, solving for \( \frac{x - 32}{6} = 5 \):**
+   \[
+   x - 32 = 30
+   \]
+   \[
+   x = 62.
+   \]
+
+Thus, the initial number of Fries in the pack was:
+\boxed{62}
+---
+To solve this problem, we need to determine the total number of french fries in the pack when Dave initially bought it. We'll work backwards through each event that affected the number of fries.
+
+1. **Initial fries stolen by ant**: After all creatures and events except the ants, there were 5 fries left. An ant then ate one of these last fries. Therefore, there must have been 6 fries just before the ants ate the last one.
+   
+2. **Raccoon's impact**: Before the raccoon ate, the pack had more fries. The raccoon ate two-thirds of the fries, leaving one-third. Since there were 6 fries left after the raccoon, the full number before it was eaten must be:
+   \[
+   \frac{6}{\frac{1}{3}} = 18 \text{ fries}
+   \]
+
+3. **Pigeons' impact**: The three pigeons consumed a total of:
+   \[
+   3 \times 3 = 9 \text{ fries}
+   \]
+   Prior to the pigeons eating, there must have been:
+   \[
+   18 + 9 = 27 \text{ fries}
+   \]
+
+4. **Seagull and Dave**: The pigeons left some fries for Dave and the hungry seagull, who took half the amount Dave ate. Let’s define:
+   - \( x \) as the fries Dave originally ate (before being stolen).
+   - \( \frac{x}{2} \) as the fries eaten by the seagull.
+
+Given the total fries left before the raccoon was:
+   \[
+   27
+   \]
+After the pigeons, there are:
+   \[
+   27 - 9 = 18 \text{ fries}
+   \]
+This 18 fries consist of:
+   - All the fries left due after the pigeons: 9
+   - Fries left for Dave and the seagull to take, i.e., 
+     \[
+     18 - 9 = 9 \text{ fries}
+     \]
+
+So, prior to the pigeons, Dave and the seagull together took 9 fries. Since the seagull took only half, Dave ate:
+   \[
+   x = 2 \times 9 = 18 \text{ fries}
+   \]
+
+5. **Adding up Dave's initial intake**:
+Dave initially ate 14 fries, with an additional 4 eaten by the seagull. Total initially in the package:
+   \[
+   14 + 4 = 18 \text{ fries}
+   \]
+
+Thus, the total amount of fries initially in the packed, as required, is:
+\boxed{18}
+---
+To determine how many french fries were initially in the pack, we need to trace back the events that occurred with the fries:
+
+1. Dave ate 14 fries.
+2. The seagull ate half of what Dave ate, which was \( \frac{14}{2} = 7 \) fries.
+3. Each of the next three pigeons ate 3 fries, so they together ate \( 3 \times 3 = 9 \) fries.
+4. Let the total number of fries left before the raccoon came be denoted by \( F \). After Dave, the seagull and the pigeons ate, \( F - 14 - 7 - 9 = F - 20 \) fries remained.
+5. The raccoon ate two thirds of these remaining fries, so it ate \( \frac{2}{3}(F - 20) \) fries. This leaves one third of \( F - 20 \), which can be expressed as \( \frac{1}{3}(F - 20) \).
+6. This remaining amount of fries was then eaten by ants, and there were 5 fries left after all this consumption. Therefore, \( \frac{1}{3}(F - 20) = 5 \). Solving for \( F - 20 \):
+   \[
+   F - 20 = 5 \times 3 = 15
+   \]
+   Therefore,
+   \[
+   F = 15 + 20 = 35
+   \]
+So, the initial number of french fries in the pack was:
+####
+The answer is 35.

@@ -1,0 +1,443 @@
+4 teachers $\times$ 2 lessons $\times$ 3 cleaned lessons/lesson = 24.
+---
+### Step-by-Step Deduction
+
+1.  **Identify the number of whiteboards**:
+    The problem states there is "a whiteboard" shared among 4 teachers and classrooms (conceptually, in the context of the classroom setting described: 1 whiteboard per class). Let the total number of whiteboards be $W$. The calculation below uses $W=1$ as a base case, which implies 1 shared whiteboard per group of 4 teachers. Even if there were multiple whiteboards per child, the problem mainly asks for the frequency of cleaning based on the "per day" constraint following a turn-based rule. Let's assume standard interpretation: $W = 1$ whiteboard per group of 4.
+
+2.  **Determine the number of cleaning events per day**:
+    The problem states the whiteboard is cleaned 3 times per lesson. Since there are 4 teachers taking turns, each classroom (and thus each 4-person group) participates in one class per day.
+    *   Class 1's teacher cleans once.
+    *   Class 2's teacher cleans once.
+    *   Class 3's teacher cleans once.
+    *   Class 4's teacher cleans once.
+    Total cleaning events per day = 4.
+
+3.  **Calculate the frequency of cleaning in a day**:
+    The total number of cleaning actions in a day depends on the number of lessons performed.
+    *   Total Class Periods per Day = 4 (one per teacher).
+    *   Cleaning events per lesson = 3.
+    *   Total Cleanings per Day = (Number of Lessons) $\times$ (Cleanings per lesson).
+    *   Total Cleanings per Day = $4 \times 3 = 12$.
+
+    All four teachers perform one class each, and each class is 4 people long (implied by "shares the classroom" and plural entities).
+    *   Lesson 1: Teacher 1, Class 1, Class 2, Class 3.
+    *   Lesson 2: Teacher 2, Class 1, Class 2, Class 3.
+    *   ...and so on for 4 days a week.
+
+4.  **Problem Solution**:
+    The question asks for the number of times the whiteboard is cleaned *in a day*.
+    Calculation: $12$ tools are cleaned every single day (4 teachers x 1 class x 3 cleanings).
+
+### Final Conclusion
+
+12
+---
+To find the total number of times the whiteboard is cleaned in a day, we need to break down the process step by step.
+
+**Step 1: Determine the total number of lessons in a day.**
+The problem states that there are 4 teachers, one of whom owns the whiteboard among them.
+Work rate = Number of teachers = 4.
+Time = Number of days = 1 (24 hours).
+Total lessons = $4 \times 2 = 8$.
+
+**Step 2: Determine the number of times the whiteboard is cleaned per lesson.**
+The problem states the whiteboard is cleaned 3 times per lesson.
+Cleanings per lesson = 3.
+
+**Step 3: Calculate the total number of cleansings in a day.**
+Total cleansings = (Total lessons in a day) × (Cleanings per lesson)
+Total cleansings = $8 \times 3 = 24$.
+
+**Calculation check:**
+4 teachers = 8 lessons per day.
+Each lesson is done by 1 of the 4 teachers using the board twice (since they share it and take turns).
+Assuming 2 passes per teacher = 2 lessons used per teacher = 4 lessons used by 1 teacher.
+Total lessons used by 4 teachers = $4 \text{ teachers} \times 4 \text{ lessons} = 16$ lessons.
+For a standard whiteboard, 2 cleansings per lesson means $16 \times 2 = 32$ cleansings.
+Let's re-read carefully: "Each teacher has 2 lessons per day and uses the whiteboard in each lesson."
+So, 1 teacher uses the board for 2 lessons.
+Total lessons by 4 teachers = $4 \text{ teachers} \times 2 \text{ lessons} = 8 \text{ lessons}$.
+The wording "uses the whiteboard in each lesson" implies the owner of the whiteboard utilizes the board for its duration.
+Usually, a "licensed" whiteboard involves 2 cleaned boards. Here, the same board (shared) is assigned to multiple teachers.
+Scenario A: Each teacher assigns the same physical board for 2 lessons.
+- Teacher 1: Uses board for 2 lessons.
+- Teacher 2: Uses board for 2 lessons.
+- Teacher 3: Uses board for 2 lessons.
+- Teacher 4: Uses board for 2 lessons.
+Total lessons = 8.
+Cleanings per lesson = 3.
+Total cleansings = $8 \times 3 = 24$.
+
+Scenario B: Teachers take turns using the *separate* whiteboards for 2 lessons each (standard "classroom" model where the teacher owns it, then uses it).
+- The prompt says: "A classroom has a whiteboard which is shared between the 4 teachers... Each teacher has 2 lessons per day and uses the whiteboard in each lesson."
+- "Uses the whiteboard in each lesson" strongly implies the owner of that specific instance is cleaning that specific lesson's portion of the board.
+- Even if the board was split, the "clean" is usually associated with the specific lesson/task.
+- However, the standard interpretation of such riddles is usually that every active lesson involves the owner swinging or flicking the board in the neighborhood.
+- Let's look at the math in Scenario A again: $8 \text{ lessons} \times 3 \text{ cleanings/lesson} = 24$.
+- Does the separation of boards change the number? Yes, if teachers have separate boards. But the prompt says "A classroom has a whiteboard which is shared... Each teacher... uses the whiteboard in each lesson." This phrasing usually implies a continuous use, allowing for shared cleaning.
+- If schools had separate whiteboards, the number of teachers *multiplicity* would increase.
+- Let's assume the standard interpretation of such math problems: "Each of the persons sharing the right to use the whiteboard does 2 lessons... Therefore, 2 persons do 2 lessons."
+- So we have 4 persons doing 2 lessons each = 8 lessons.
+- Each lesson is cleaned 3 times.
+- Total = 24.
+
+Let's double check if "shared between" implies separate boards.
+If there were 4 separate boards, each assigned to a different teacher for 2 lessons:
+Board A (Tokyo) -> Teacher A (2 lessons) = 4 cleans.
+Board B (Tokyo) -> Teacher B (2 lessons) = 8 cleans.
+...
+Total = 8 users * 4 buffers = 32.
+However, the prompt says "A classroom has a whiteboard which is shared...". In the context of standard word problems involving "tasks" and "lessons", if items are shared (like a ride between people on the same trip), they are used together. "Tokyo" and "Guangzhou" have the same trip. Here, Teachers A, B, C, D and their respective lessons form a set of "events" (lessons), just like Chicago, Milwaukee, and Detroit are on the same event.
+So, we treat this as a set of tasks:
+Tasks = {Task A : 2 days} + {Task B : 2 days} ...
+Number of tasks = 4.
+Time per task = 2.
+Total tasks = $4 \times 2 = 8$.
+Cleanings per task = 3.
+Total cleanings = $8 \times 3 = 24$.
+
+The logic holds that sharing the class implies adding elements to the list of ones doing the work.
+
+Calculation:
+$$ \text{Total lessons} = \text{Teachers} \times \text{Lessons per teacher} $$
+$$ \text{Total lessons} = 4 \times 2 = 8 $$
+$$ \text{Cleanings per lesson} = 3 $$
+$$ \text{Total cleanings} = 8 \times 3 = 24 $$
+
+24
+
+24
+---
+16
+---
+First, let's determine how many lessons are performed in a single day.
+The problem states that the classroom has **4 teachers**.
+Each teacher takes turns using the whiteboard.
+Each teacher has **2 lessons** per day.
+Since 4 teachers perform their turns, the total number of lessons in one day is:
+$$2 \text{ lessons/teacher} \times 4 \text{ teachers} = 8 \text{ lessons}$$
+
+Next, let's determine how often the whiteboard is cleaned.
+The problem states that the whiteboard is cleaned **3 times per lesson**.
+Since there are **8 lessons** performed in a day, the total number of cleanings is:
+$$8 \text{ lessons} \times 3 \text{ cleanings/lesson} = 24 \text{ cleanings}$$
+
+The phrase "takes turns using the classroom" ensures that every lesson happens, regardless of which teacher performs the turn. Therefore, every of the 8 lessons gets cleaned.
+
+Calculation:
+$$8 \times 3 = 24$$
+
+The whiteboard is cleaned 24 times in a day.
+
+24
+---
+To solve this problem, let's break down the daily activity cycle assuming a standard 1440-minute day (24 hours $\times$ 60 minutes).
+
+**1. Analyze the Teacher's Day:**
+- The problem states: "Each teacher has 2 lessons per day".
+- Since there are 4 teachers:
+  $$2 \text{ lessons} \times 4 \text{ teachers} = 8 \text{ lessons in total per day}$$
+
+**2. Analyze the Special Condition:**
+- The problem states: "uses the whiteboard in each lesson".
+- This means 4 teachers each choose which student gets which whiteboard.
+- "Four teachers" does not necessarily mean 4 students, but "uses the classroom" implies the teachers are the ones who physically access the whiteboard and the students use it.
+- However, the question asks: "how many times is the whiteboard cleaned in a day?"
+- "The instructor" (plural implied by "teachers" and "instructor") refers to one person per lesson.
+- The text says "4 teachers" but then "uses the classroom" (implies 1 teacher per classroom context for the whiteboard usage focus) and later says "in each lesson".
+- Crucially, does the 4 teachers mean 4 distinct teachers using the whiteboard, or just that the positions are shared? Standard phrasing implies the 4 teachers are the active agents who use the whiteboard.
+- Therefore, they use the whiteboard $8$ times in one day.
+
+**3. Analyze the Cleanup Frequency:**
+- "The whiteboard is cleaned 3 times per lesson".
+- How many lessons are there?
+  $$8 \text{ lessons/day}$$
+
+**4. Calculate Total Cleanings:**
+- Total cleanings = Number of lessons $\times$ Cleanings per lesson
+- Total cleanings = $8 \times 3 = 24$
+
+**Alternative Interpretation Check:**
+Could "4 teachers" imply 4 distinct individuals taking turns rather than just the count?
+- Even if every student takes a turn, each of the 4 teachers uses the whiteboard. Same count: $8$.
+- Could the "4 teachers" mean the classes are 4 classes and each class has 2 lessons?
+  - If 4 classes $\times$ 2 lessons = $8$ lessons. Results are identical.
+- Is the 4 teachers referring to the students without taking a turn?
+  - "A classroom has a whiteboard... 4 teachers who take turns using the classroom ... Each teacher has 2 lessons".
+  - If there were 4 students, they don't take turns with a whiteboard because there's no other person. The guarantee of "taking turns" ensures they work alongside the teacher. So regardless of whether the 4 teachers work in a single row or 4 rows with different teachers, the total number of teacher-weeks is $8$.
+
+Calculation:
+- Total days in year = 365
+- Total lessons = $8 \times 365 = 2920$
+- Total cleanings = $2920 \times 3 = 8760$
+
+Since the question asks "how many times is the whiteboard cleaned in a day" (singular "day"), and does not specify a year (implying a regular school year start time), the calculation refers to any single lesson. The phrasing "how many times in a day" strongly implies $8 \times 3 = 24$.
+
+**Step-by-step Summary:**
+1.  Teachers per day: $4 \text{ teachers}$. Since each takes 2 lessons, total lessons = $4 \times 2 = 8$.
+2.  Cleanings per lesson: $3$.
+3.  Total cleanings per day: $8 \times 3 = 24$.
+
+24
+---
+To solve this problem, we need to step through the sequence of events daily, accounting for the 4 teachers and their specific time slots and cleaning schedule.
+
+**1. Analyze the Teachers and Their Schedule:**
+*   There are 4 teachers.
+*   Each teacher takes 2 lessons per day.
+*   Total lessons per day per teacher = 2.
+*   Total lessons per day for 4 teachers = $4 \times 2 = 8$ lessons per day.
+
+**2. Analyze the Whiteboard Usage:**
+*   Each teacher uses the whiteboard in **each lesson**.
+*   Total whiteboard uses per day = 8 pieces.
+
+**3. Analyze the Cleaning Schedule:**
+*   The problem states the whiteboard is **cleaned 3 times per lesson**.
+*   This means for every 1 piece of whiteboard used, there are 3 cleaning slots counted in that specific lesson.
+
+**4. Calculate the Total Cleanings:**
+*   **Lesson 1 Teacher:** 1 usage slot $\times$ 3 cleanings/usage = 3 cleanings.
+*   **Lesson 2 Teacher:** 1 usage slot $\times$ 3 cleanings/usage = 3 cleanings.
+*   **Lesson 3 Teacher:** 1 usage slot $\times$ 3 cleanings/usage = 3 cleanings.
+*   **Lesson 4 Teacher:** 1 usage slot $\times$ 3 cleanings/usage = 3 cleanings.
+
+**5. Total Daily Cleanings:**
+Total cleanings = $3 + 3 + 3 + 3 = 12$.
+
+Alternatively, we can think of it simply as:
+Each lesson generates 3 cleanings regardless of who is using the board. There are 8 lessons in the day.
+$8 \text{ lessons} \times 3 \text{ cleanings/lesson} = 24$??
+Wait, let's re-read carefully. "If the whiteboard is cleaned 3 times per lesson."
+Does "per lesson" mean 3 cleaning slots per lesson, or does it mean 3 times *every single time* the whiteboard is used?
+Usually, in such problems, "cleaned 3 times per lesson" implies the count is 3 per lesson unit provided the board is used.
+Let's re-evaluate based on the standard interpretation of these logic puzzles.
+
+*Interpretation A (Condition depends on usage):*
+Total Board Uses = 8.
+Total Cleanings = $8 \times 3 = 24$.
+
+*Interpretation B (Condition applies to all usage):*
+The phrase "used in each lesson" implies the act of cleaning happens *during* the use.
+Let's check the wording again: "Each teacher has 2 lessons per day and uses the whiteboard in each lesson. If the whiteboard is cleaned 3 times per lesson..."
+This strongly implies the wall cleaning happens 3 times for every instance of whiteboard usage.
+So, for every 1 unit used, you get 3 cleanings.
+Total units used = 8.
+Total cleanings = $8 \times 3 = 24$.
+
+Let's double check if there's any nuance like "per day" covering the whole day. Yes, "how many times is the whiteboard cleaned in a day?" covers Lesson 1, Lesson 2, and Lesson 3.
+
+Let's calculate the exact number of cleanings per lesson again.
+If 3 cleanings are made *per lesson*, and there are 3 lessons...
+Wait, "per lesson" usually modifies the cleaning action.
+Question: "cleaned 3 times per lesson" -> Means you wash the board 3 times when you use it.
+Calculation:
+Lesson 1: 1 whiteboard used. 3 cleanings.
+Lesson 2: 1 whiteboard used. 3 cleanings.
+Lesson 3: 1 whiteboard used. 3 cleanings.
+Total = $1+1+1+1 = 4$ teachers. Wait, teachers don't use the board in the same session of cleaning usually.
+No, the sequence is:
+Teacher 1 sees whiteboard $\rightarrow$ Uses it $\rightarrow$ Cleaning (3 times)
+Teacher 2 sees whiteboard $\rightarrow$ Uses it $\rightarrow$ Cleaning (3 times)
+Teacher 3 sees whiteboard $\rightarrow$ Uses it $\rightarrow$ Cleaning (3 times)
+Teacher 4 sees whiteboard $\rightarrow$ Uses it $\rightarrow$ Cleaning (3 times)
+Total Cleanings performed = 12.
+
+Wait, did I miss something?
+If "cleaned 3 times per lesson" refers to the cleaning action specifically tied to the lesson duration (e.g., 3-day lesson), and the whiteboard is used *during* that 3-day duration?
+If so, Lesson 1 (3 days) has 1 usage $\to$ 3 cleanings.
+Lesson 2 (3 days) has 1 usage $\to$ 3 cleanings.
+Lesson 3 (3 days) has 1 usage $\to$ 3 cleanings.
+This interpretation leads to 12 cleanings/day.
+
+Let's consider the alternative interpretation: 3 cleanings *per 1 usage*.
+Teacher 1 Usage 1 $\to$ 3 cleanings.
+Teacher 2 Usage 1 $\to$ 3 cleanings.
+Teacher 3 Usage 1 $\to$ 3 cleanings.
+Teacher 4 Usage 1 $\to$ 3 cleanings.
+Total = $1+1+1+1 = 4$ cleanings?
+This contradicts the "per lesson" clarity. It is clearer that the cleaning count per unit of usage is 3.
+So for 4 teachers, 4 lessons (8 total), usage = 8 boards.
+Cleanings = $8 \times 3 = 24$?
+
+Let's trace the specific lesson count to avoid ambiguity.
+If I use an interface for 3 lessons:
+Lesson 1: Clean (1st), Clean (2nd), Clean (3rd). (Waiting 1 day?)
+Lesson 2: Clean (1st), Clean (2nd), Clean (3rd).
+Lesson 3: Clean (1st), Clean (2nd), Clean (3rd).
+...
+Total lessons per day = 8.
+If each usage triggers 3 cleanings:
+Total cleanings = $8 \text{ (lessons)} \times 3 \text{ (cleanings/usage)} = 24$.
+
+Let's pause and look for a counter-example or simpler interpretation often found in these riddles.
+"cleaned 3 times per lesson" -> Does it mean 3 cleaning events? Or 3 cleaning instances per lesson?
+Usually, "cleaned X times per [activity]" means X events per event.
+So 3 cleaning actions per piece of paper used.
+Total paper used = 8.
+Total cleaning actions = 24.
+
+Is it possible the question implies a specific structure where cleaning happens continuously?
+"Each teacher has 2 lessons per day".
+Lesson 1: 2 lessons.
+Lesson 2: 2 lessons.
+Total 4 lesson blocks in the middle of the day? No, 8 total lessons.
+So there are 8 distinct blocks.
+In each block:
+1 Teacher uses whiteboard.
+Sequence of cleaning for that block:
+Time $t_1$: Use $\to$ Clean ($t_{c1}$)
+Time $t_2$: Use $\to$ Clean ($t_{c2}$)
+Time $t_3$: Use $\to$ Clean ($t_{c3}$)
+...
+Total cleaning days = 3 per lesson.
+Total cleanings = $8 \text{ lessons} \times 3 \text{ cleanings/lesson} = 24$.
+
+Let's verify the logic with a smaller calculation if numbers weren't divisible by 3. But they are.
+$8 \times 3 = 24$.
+
+Wait, what if "3 times per lesson" refers to 3 cleaning slots *within* the 3 lesson blocks per teacher?
+If a teacher has 2 lessons, and the cleaning happens 3 times *per lesson* (meaning 1 per day in the class, or 1 per day of class time), and the whiteboard is used?
+No, "used the whiteboard" is the condition.
+Let's assume the standard interpretation:
+For every 1 unit of whiteboard, 3 cleaning operations occur.
+Total units = 8 (4 teachers $\times$ 2 lessons).
+Total operations = $8 \times 3 = 24$.
+
+Let's try one more interpretation:
+Maybe the question implies that cleaning happens *only* when the teacher uses it, repeated 3 times per classroom session?
+Classroom Session = 1 day? Or 3 days?
+If cleanings happen every 3 days for every 1 usage:
+Lesson 1 (Day 1): 1 usage. Cleanings = 3.
+Lesson 2 (Day 2): 1 usage. Cleanings = 3.
+Lesson 3 (Day 3): 1 usage. Cleanings = 3.
+...
+Lesson 8 (Day 1 of Next Cycle): 1 usage. Cleanings = 3.
+Total cleanings = $8 \times 3 = 24$.
+
+What if "cleaned 3 times per lesson"
+---
+To solve this problem, let's break it down step by step:
+
+1.  **Number of days in a week**: Since there are 4 teachers taking turns, and there are 7 days in a week, we can calculate the number of days in one week.
+    $$7 \text{ days} / 4 \text{ teachers} = 1.75 \text{ days/trainer}$$
+    This means that for every 2 days completed, one teacher finishes a play.
+
+2.  **Total lessons per teacher**: Each teacher teaches a specific lesson. The problem states the 4 teachers take turns, but they each use the *same* whiteboard. However, let's re-read carefully: "Each teacher has 2 lessons per day and uses the whiteboard in each lesson."
+    This implies that within the 7-day, 1.75-day cycle, every teacher teaches 2 lessons out of every 7 days.
+    Total lessons per teacher per day = $2$.
+
+3.  **Calculation for one week**:
+    *   Total lessons on the 7 days in one week = $4 \text{ teachers} \times 2 \text{ lessons/teacher} = 8$ lessons.
+    *   **6 Days per week**: In the first 6 days, all 4 teachers teach. Total lessons = $4 \times 6 = 24$ lessons.
+    *   **1 Day per week**: In the 7th day, one teacher takes the lead. They teach 2 lessons. Total lessons for that day = $1 \text{ teacher} \times 2 = 2$ lessons.
+    *   For the second 6 days, the 4 teachers teach. Total lessons = $4 \times 6 = 24$ lessons.
+    *   So, total lessons per week is $24 + 2 = 26$ lessons.
+
+4.  **Total lessons in 7 days of a week**:
+    Since a week has 7 days and we calculated 26 lessons per week, let's check if 7 days fits perfectly.
+    $$Days \times Powers \times Lessons = Total Lessons$$
+    $$7 \times 4 \times 2 = 56 \text{ Lessons per week?}$$
+    Wait, my previous calculation was:
+    - Days: $7, 6, 1 \to 26$
+    - $7, 6, 1 \to 26$
+    $26 + 2 = 28$ lessons per week.
+    
+    This seems too large. Let's re-evaluate the "powers" concept. The standard Pythagorean mock problem states that a day of $n$ turns is equivalent to $n^{-1}$ days of $n$ lessons. Here $n=4$. So a day of 4 turns is 4 lessons.
+    
+    Correct interpretation of the "Powers" rule (applied here):
+    *   Day 1: 4 teachers teach. Total = 4 lessons. (Typical daily)
+    *   Day 2: 4 teachers teach. Total = 4 lessons.
+    *   ...
+    *   Day 7: 4 teachers teach. Total = 4 lessons.
+    *   Next Day (Day 8): 4 teachers teach. Total = 4 lessons.
+    ...
+    *   Last Day (Day 14): 4 teachers teach. Total = 4 lessons.
+    *   Next Day (Day 15): 1 teacher teaches. Total = 2 lessons.
+    *   ...
+    *   Last Day (Day 30): 4 teachers teach. Total = 4 lessons.
+    *   Next Day (Day 31): 1 teacher teaches. Total = 1 lesson? Or does the "Powers" rule apply to the total day count?
+    
+    Actually, the standard puzzle solution relies on:
+    $1 \times 2 = 2$ days.
+    $2 \times 2 = 4$ days.
+    $1 \times 4 = 4$ days.
+    $3 \times 4 = 12$ days.
+    $4 \times 4 = 16$ days.
+    $1 \times 8 = 8$ days.
+    ...
+    $4 \times 1 = 4$ days.
+    
+    Total lessons in a week = $25$ lessons.
+    (Check: $4 \times 32$ days... No, that's wrong).
+    
+    Let's just stick to the manual arithmetic which is robust against the specific "Powers" trick (which is a common illusion):
+    *   Total lessons in 7 days of the 4 teachers = 28 lessons.
+    *   Total lessons in 7 days of 1 teacher = 2 lessons.
+    *   Total in a week = $28 + 2 = 30$ lessons.
+    
+    Now, the cleaning frequency:
+    *   Whiteboard cleaned 3 times per lesson.
+    *   Cleaning per week = $30 \text{ lessons} \times 3 \text{ cleans/lesson} = 90$ cleans.
+    *   Cleaning per day = $90 / 7 \approx 12.85$.
+    
+    This result ($90/7$) is not a nice integer. Let me reread the problem to ensure I didn't miss a detail about the "first day" vs "zeros".
+
+    *Re-read:* "A classroom has a whiteboard which is shared between the 4 teachers who take turns using the classroom. Each teacher has 2 lessons per day and uses the whiteboard in each lesson."
+    
+    Is it possible the text implies a system where days cycle?
+    Let's assume the "Powers" logic is the intended path.
+    Standard Pairs: $2, 4, 8, 12 \to 4, 8, 16, 30$.
+   Standard Triples: $6, 12, 20, 26 \to 3, 6, 12, 8$.
+    Standard Quartets: $30, 43, 54, 56 \to 30, 50, 60, 70, 86$.
+    
+    Wait, $4 \times 4 = 16 \neq 30$.
+    $4 \times 7 = 28 + 2 = 30$.
+    
+    Maybe the "Powers" are different?
+    What if the number of days involved in the cycle is $7$?
+    Day 1: 4 teachers.
+    Day 2: 4 teachers.
+    ...
+    Day 7: 1 teacher.
+    Day 8: 4 teachers.
+    ...
+    Day 30: 1 teacher?
+    Day 31: 1 teacher?
+    
+    Let's trace Day 1 to Day 30:
+    Days 1-7: 4 teachers. (28 lessons).
+    Days 8-30: 4 teachers. (28 lessons).
+    Day 31: 1 teacher. (2 lessons).
+    Total 30 lessons.
+    $30 \times 3 = 90$ cleans.
+    $90 / 7 = 12.857$.
+    
+    Could the question be asking for the total number of cleans over 7 days total? No, "how many times is the whiteboard cleaned **in a day**".
+    
+    Maybe I calculated the wrong total lessons per week.
+    Let's try a different grouping.
+    What if the puzzle implies that for every 8 days, we clear 40 cleans?
+    $8 \times 5 = 40$.
+    $40 / 8 = 5$.
+    Total cleans per 7 days = $40 - 7 \times 7$? No.
+    Clean per 8 days = 40.
+    Clean per day = 5.
+    So per week = 5 * 7 = 35.
+    Total per week = 26 (my calculation earlier)).
+    $26 \times 3 = 78$.
+    $78 / 7 = 11.14$.
+    
+    Let's try the logic where the cycles align such that the numbers work out nicely.
+    Total cleans per day must be an integer.
+    Total cleans = $N$.
+    $N = \text{Total Lessons} \times 3 \approx 40/7 \approx 5.7$?
+    $N$ needs to be around 60.
+    
+    Let's reconsider the "Powers" explanation.
+    "A day of 4 turns is equivalent to 4 lessons."
+    "A day of 2 turns is equivalent to 8 lessons." (Because $1/2 = 0.5 \times 2$? No, $1/4 = 0.25 \times 2 = 0.5$).
+    So a day of 4 turns allows teaching twice as much as a day of 2 turns.
+    
+    If a day of 

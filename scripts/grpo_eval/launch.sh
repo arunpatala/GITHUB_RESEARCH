@@ -5,7 +5,16 @@ PORT="${2:-8000}"
 MAX_MODEL_LEN="${3:-4096}"
 GPUS="${4:-all}"
 
-docker run -d --name vllm-eval \
+# Derive GPU device number for container name
+if [[ "$GPUS" == *"device="* ]]; then
+  DEV=$(echo "$GPUS" | grep -oP 'device=\K[0-9]+')
+else
+  DEV="all"
+fi
+NAME="vllm-gpu${DEV}"
+
+set -x
+exec docker run --rm --name "$NAME" \
   --gpus "$GPUS" \
   -p "$PORT":8000 \
   -v ~/.cache/huggingface:/root/.cache/huggingface \
@@ -13,7 +22,3 @@ docker run -d --name vllm-eval \
   --model "$MODEL" \
   --max-model-len "$MAX_MODEL_LEN" \
   --trust-remote-code
-
-echo "vLLM serving $MODEL on port $PORT"
-echo "Wait for model to load, then run: python infer.py --model $MODEL"
-echo "To stop: docker rm -f vllm-eval"

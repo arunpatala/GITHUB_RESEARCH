@@ -1,0 +1,824 @@
+Here's a thinking process that leads to the solution:
+
+1.  **Analyze the Request:**
+    *   **Goal:** Calculate the monthly payment amount.
+    *   **Given Data:**
+        *   Number of cell phones: 5
+        *   Price per phone: $150
+        *   Installment plan: 3 months
+        *   Interest rate: 2% per unit.
+        *   Clarification needed: Is the interest calculated on the total or per month? The prompt says "A 2% interest will be charged for each unit." This usually means 2% of the total price per unit. Let's assume it's a simple interest charge applied to the purchase price.
+    *   **Output Format:** A number after ####.
+
+2.  **Step-by-Step Calculation:**
+
+    *   **Step 1: Calculate the total cost of the cell phones.**
+        *   Cost per phone = $150
+        *   Number of phones = 5
+        *   Total Price = $150 * 5 = $750
+
+    *   **Step 2: Calculate the interest.**
+        *   Interest rate = 2%
+        *   The wording "charged for each unit" is slightly ambiguous.
+            *   *Interpretation A:* 2% interest on the total purchase price ($750). This is a sales tax/focus bank fee model.
+            *   *Interpretation B:* 2% interest per month? Unlikely, usually stated as monthly rate.
+            *   *Interpretation C:* 2% total interest on the transaction.
+        *   Let's interpret "2% interest will be charged for each unit" as interest on the total cost of the units. Usually, in these types of math problems, unless specified as "monthly interest," a flat percentage implies the total cost of goods plus a markup/interest fee on the principal. However, standard financial math for installment loans often implies interest on the outstanding balance.
+        *   *Simpler Interpretation (School/Arithmetic level):* Total Interest = 2% of Total Price.
+        *   Calculation: $750 * 0.02 = $15.
+        *   Total Amount to Pay (Principal + Interest) = $750 + $15 = $765.
+
+    *   **Step 3: Calculate the monthly installment.**
+        *   Total Amount to Pay = $765
+        *   Number of months = 3
+        *   Monthly Payment = $765 / 3 = $255.
+
+    *   **Alternative Interpretation Check:**
+        *   Could "charged for each unit" mean 2% of $150 per phone?
+        *   $150 * 0.02 = $3 per phone. Total Interest = $3 * 5 = $15. Same result.
+        *   What if "charged for each unit" implies the interest is paid over the 3 months on the specific loan amount?
+        *   What if it implies simple interest based on daily balance? No info provided.
+        *   What if the "2% interest" is a monthly rate? "A 2% interest will be charged". Usually implies total cost of borrowing. If it were monthly, it would be huge ($15 per month is 6000% annualized? No, 2% of what?). If it's 2% of the principal ($750), that's 15.
+        *   Let's stick to the standard interpretation: Total Price + Total Interest.
+        *   Interest = 2% of $750 = $15.
+        *   Total Cost = $750 + $15 = $765.
+        *   Monthly Payment = $765 / 3 = $255.
+
+    *   **Another possible interpretation:**
+        *   Does the interest get added to the total first, then divided by 3? Yes, usually.
+        *   Does the interest reduce the principal? No, interest is added to the expense.
+        *   Is the 2% charged *per month*? "charged for each unit" (meaning each phone).
+        *   Let's re-read carefully: "A 2% interest will be charged for each unit."
+        *   This likely means the merchant adds a 2% fee to the purchase price.
+        *   Cost = $150.
+        *   Interest = $150 * 0.02 = $3.
+        *   Total per unit = $153.
+        *   5 units = $765.
+        *   3 months installments of $765 = $255/month.
+
+    *   **Wait, is there an interpretation where interest is calculated on the installment amount?**
+        *   Some contexts calculate interest on the declining balance.
+        *   Month 1: Pay X.
+        *   Month 2: Pay X.
+        *   Month 3: Pay X.
+        *   Without specific terms (like "2% monthly interest rate"), the most standard "simple math problem" approach is:
+            *   (Price * Units) * (1 + InterestRate) / InstallmentCount.
+            *   ($750 * 1.02) / 3 = $765 / 3 = $255.
+
+3.  **Verification:**
+    *   Price: $150 x 5 = $750.
+    *   Interest: 2% of $750 = $15.
+    *   Total: $765.
+    *   Months: 3.
+    *   Monthly Pay: $765 / 3 = $255.
+
+    *   *Self-Correction Check on Interest:* What if the interest is charged on the *monthly payment*? Unlikely phrasing.
+    *   What if the interest is chgared on the device price *specifically*? It says "charged for each unit".
+    *   Does "2% interest" mean monthly compounding? No, not stated.
+    *   Does it mean 2% annually? If so, simple interest for 3 months would be different. But usually, "2% interest will be charged for each unit" in a word problem context for a single transaction implies a 2% surcharge on the price.
+    *   Let's assume the standard word problem logic: Total Price + Interest Fee = Total Cost / Months.
+
+4.  **Drafting the Solution:**
+    *   Calculate total cost without interest.
+    *   Calculate interest amount.
+    *   Add interest to total cost to get total payable.
+    *   Divide by number of months.
+    *   Format result.
+
+    *   Total Price = $150 * 5 = $750.
+    *   Interest = 2% of $750 = 0.02 * 750 = 15.
+    *   Grand Total = 750 + 15 = 765.
+    *   Monthly Payment = 765 / 3 = 255.
+
+5.  **Final Check:**
+    *   Does the logic hold? Yes.
+    *   Is the math correct? 750 + 15 = 765. 765 / 3 = 255. Yes.
+
+    *   Wait, is there a possibility that the interest is calculated per month?
+    *   Scenario: Loan of $750. Interest is 2%.
+    *   If it's simple interest for the whole duration: Interest = P * R * T.
+        *   P = 750. R = 0.02 (implied as total rate, not annual), T = 3 months?
+        *   If R=2% is the total cost percentage for the loan: Interest = 750 * 0.02 = 15. Same result.
+    *   If R=2% is the APR and T=3 months (0.25 years): 750 * 0.02 * 0.25 = $3.75. Total = $753.75. Monthly = 251.25.
+    *   However, the phrasing "A 2% interest will be charged for each unit" sounds like a flat fee percentage on the transaction, not an annualized APR.
+    *   Common Sense check in elementary/intermediate algebra contexts: Flat percentage added to price is the norm unless "annual" is specified.
+    *   Therefore, Total Interest = 2% of $750 = $15.
+    *   Total = $765.
+    *   Monthly = $255.
+
+6.  **Final Output Formulation:**
+    *   Show the steps clearly.
+    *   State the final number.
+
+    *   Step 1: Total cost of phones = $150 * 5 = $750.
+    *   Step 2: Interest = $750 * 0.02 = $15.
+    *   Step 3: Total amount = $
+---
+Here's my thought process for solving this problem:
+
+1.  **Analyze the Request:**
+    *   **User:** Asks for the monthly installment payment for a specific purchase.
+    *   **Given Data:**
+        *   Number of cell phones: 5
+        *   Price per cell phone: $150
+        *   Plan length: 3 months
+        *   Interest rate: 2% *per unit* (interpreted as 2% *of the total monthly cost* or 2% *of the principal* added to a monthly fee? Let's look at standard installment loan terminology).
+    *   **Goal:** Find the monthly payment amount.
+    *   **Output Format:** Put the final answer as a number after `####`.
+
+2.  **Deconstruct the Problem:**
+    *   **Total Principal Cost:**
+        *   $150 \times 5 = $750$.
+    *   **Clarifying the "2% interest will be charged for each unit":**
+        *   Does this mean 2% simple interest on the total purchase price?
+        *   Does it mean 2% of the total purchase price is added as a fee that isn't amortized but included in the installments?
+        *   Does it mean 2% per month? (Highly unlikely).
+        *   Does it mean 2% of the balance per month (Amortization)? (Unlikely given the phrasing "charged for each unit").
+        *   *Standard Interpretation in Math Word Problems:* Usually, when a problem says "a $X\%$ interest will be charged... for a installment plan without specifying compounding periods or months," it often implies the interest is added to the principal before being divided by the number of months, OR it's a simple flat fee added to the principal, OR it's interest on the monthly balance.
+        *   Let's re-read carefully: "A 2% interest will be charged for each unit."
+        *   Interpretation A: $2\%$ of the total price ($150 \times 5$) is added to the total cost, then divided by 3 months.
+        *   Interpretation B: $2\%$ per month on the total cost? No, usually stated as monthly interest rate.
+        *   Interpretation C: $2\%$ *monthly* amortization? No.
+        *   Let's look at the phrase "for each unit". This usually implies the calculation applies to the individual phone cost, then sums up.
+        *   Is it simple interest? $I = P \times r \times t$. If $t=3$ months, and rate is annual or per unit? If it's 2% *per month*, the cost is huge. If it's 2% of the total cost once, it's flat fee interest.
+        *   In many basic algebra/finance word problems found in general contexts, "$2\%$ interest charged" without specifying "annually" or "per month" often means the interest charge is calculated on the total price and added to the total, then divided by the number of payments. Or, it means the *payment* includes the principal plus the interest calculated for the period.
+        *   However, usually, "interest will be charged for each unit" in a 3-month plan suggests the total interest is 2% of the total price, added to the total price, the sum is divided by 3 months. Alternatively, it might be a typo for annual interest rate applied for 3 months. But without "per annum", "per month" is implied for the rate itself if it's a short term loan, or it's a flat fee.
+        *   Let's check similar problems online. Often, "$2\%$ interest" on a short term purchase ($150) implies 2% of that amount is added as a fee.
+        *   Let's calculate the principal first.
+            $5 \text{ phones} \times \$150/\text{phone} = \$750$.
+        *   Let's calculate the interest.
+            If the interest is 2% of the cost: $\$750 \times 0.02 = \$15$.
+            Total amount to be paid back = $\$750 + \$15 = \$765$.
+        *   Monthly payment calculation:
+            Payment = Total Amount / Number of Months.
+            Payment = $\$765 / 3$.
+            Payment = $\$255$.
+
+        *   Alternative Interpretation: Interest is 2% *per month* on the entire amount?
+            Total Interest = $750 \times 0.02 = 15$. This is very low.
+            If it's 2% per month (3 months total), interest = $750 \times 0.02 \times 3$.
+            If it's 2% annual interest, for 3 months ($1/4$ year): $750 \times 0.02 \times (3/12) = \$3.75$.
+            $753.75 / 3 = 251.25$.
+
+        *   Most "simple math problem" logic dictates that "2% interest will be charged" means the total cost plus 2% interest. Why? Because specific rates (annual/monthly) aren't mentioned. "2% interest" often functions as a flat fee in these low-value consumer math problems.
+        *   Let's test the logic: Is it a monthly interest rate? If monthly interest is 2% of the balance, the first month payment is $750 + (0.02 \times 750) = 765$, plus principal reduction. But it says "for a 3-month installment". It implies a flat fee or total interest calculation.
+        *   However, a literal reading of "A 2% interest will be charged for each unit" could mean 2% of the phone's regular price is an interest charge *added* to the monthly bill.
+        *   Wait, does "for each unit" mean the interest is 2% of the phone, and applied monthly? Or is the interest calculated on the total purchase cost?
+        *   Let's check the wording "2% interest will be charged for each unit".
+            Total Cost = $5 \times 150 = 750$.
+            Interest Rate = 2%.
+            Usually, interest is a percentage of the principal.
+            Interest Amount = $750 \times 0.02 = 15$.
+            Total Amount Payable = $750 + 15 = 765$.
+            This amount is spread over 3 months.
+            Payment = $765 / 3 = 255$.
+            $500$ phones cost $150$... No, 5 phones cost $150$... No, 5 phones cost $5 \times 150 = 750$.
+            Okay, wait, re-read the prompt: "Shiela bought five cell phones for $150 each for a 3-month installment."
+            $5 \times 150 = 750$.
+            "2% interest will be charged for each unit."
+            Total Interest = $750 \times 0.02 = 15$.
+            Sum = 765.
+            Monthly = $765 / 3 = 255$.
+
+        *   Is it possible the interest is calculated monthly on the remaining balance? (Amortization).
+            Yearly rate = 2%? Monthly rate $\approx$ 0.5%?
+            Or is the rate exactly 2% per month?
+            If 2% per month (compound or simple interest)?
+            Usually, short installments like "3 months" with "2% interest" in simple word problems mean Total Cost + (2% of Total Cost) / 3 months.
+            Why? Because calculating monthly payments using simple interest on the monthly balance is complex ($I_1 = P \times r$, $A = P + I_1$, subtract A, etc) for the remaining balance, but in a bank loan it's usually fixed rate.
+            Given the context of "5 cell phones for $150 each", this feels like a generic algebra problem found in textbooks (not a professional financial calculator). In those contexts, "Interest charged" usually means "Total Interest added to price". The phrase "for each unit" likely emphasizes that the interest applies to the cost of the units, not necessarily per item *per month*. However, since it's applied to the order ($150 each), calculating on the total is mathematically equivalent to calculating on the individual units ($150 \times 1.02 = 153$, then summing ($153 \times 5$)).
+            If it meant 2% of the total cost *per month*, it would say "2% monthly interest".
+            If it meant 2% annual interest for 3 months, it would say "2% annual interest".
+            Without time qualifiers, the standard interpretation for "X% interest will be charged [on a transaction]" is a flat fee (or total interest charge).
+            So, Principal = 750. Interest = 15
+---
+Here's my thought process for solving this problem:
+
+1.  **Analyze the Request:**
+    *   **Goal:** Calculate the monthly payment amount for Shiela's cell phone purchase.
+    *   **Inputs:**
+        *   Quantity of cell phones: 5.
+        *   Cost per cell phone: $150.
+        *   Payment structure: 3-month installment.
+        *   Interest rate: 2% (plied per unit, though this needs careful interpretation).
+        *   Timing: Pay over 3 months.
+    *   **Output Format:** The final numerical answer must follow `####`.
+
+2.  **Break Down the Problem:**
+
+    *   *Step 1: Calculate the total cost of the cell phones before interest.*
+        $5 \text{ phones} \times \$150/\text{phone}$.
+
+    *   *Step 2: Interpret the interest condition.*
+        "A 2% interest will be charged for each unit."
+        Does this mean:
+        a) 2% of the total cost? (Less likely given "for each unit").
+        b) 2% of the cost of *one* phone.
+        c) 2% total interest on the purchase price? (Usually percentage interest applies to the principal).
+        Wait, usually "A 2% interest will be charged for each unit" implies a fee or interest amount specific to the unit price. Since the total is simply the sum of individual units ($5 units), the total interest amount will be 5 times the interest on one unit, or 2% of the total principal.
+        Let's calculate interest per unit first.
+        Interest = 2% of Cost per Unit.
+        Or, Interest = 2% of Total Cost (since Total Cost = 5 * Unit Cost).
+        It effectively adds 2% to the principal amount.
+
+    *   *Step 3: Calculation of total cost with interest.*
+        Principal Total = $5 \times 150$.
+        Interest Amount = 2% of Principal Total (or 5 * (2% * 150)).
+        Total Amount to Pay = Principal Total + Interest Amount.
+
+    *   *Step 4: Calculate the monthly installment.*
+        There is a potential ambiguity here: "3-month installment".
+        Does "installment" mean paying in equal monthly amounts? Yes, standard interpretation.
+        Does it mean Total Amount divided by 3?
+        Or does it imply the interest is calculated differently (e.g., simple interest amortization vs flat fee)?
+        Given the phrasing "A 2% interest will be charged for each unit" and the math level implied (likely elementary/middle school), the standard approach is:
+        Total Cost + Interest = Total Payment.
+        Monthly Payment = Total Payment / Number of months.
+        However, there is a very specific phrasing: "A 2% interest will be charged **for each unit**".
+        Let's look at the grammar again. "Shiela bought five cell phones for $150 each... A 2% interest will be charged for each unit."
+        Does the interest apply to the total bill or is it a per-phone condition? It doesn't matter mathematically since interest is linear. $5 \times (0.02 \times 150) = 0.02 \times (5 \times 150)$.
+        Now, is the monthly payment simply Total Amount / 3?
+        Or is it Total Interest included in the monthly calculation? Yes, "installment" implies spreading the cost.
+        Let's check alternative interpretations. Sometimes "installment" implies simple interest on the remaining balance, but usually, in these word problems, it's a flat fee added to the total.
+        Is there any hidden cost? No.
+        Is it possible the interest is calculated monthly? Unlikely without specific phrasing.
+        
+        Let's proceed with:
+        1. Cost of 1 phone: $150.
+        2. Interest per phone: 2% of $150.
+        3. Interest total: $5 \times$ interest per phone.
+        4. Total cost = Cost + Interest.
+        5. Monthly payment = Total cost / 3.
+
+    *Wait, let me pause and think about the phrasing "2% interest".*
+    In some contexts (like credit cards), interest is charged per month on an outstanding balance.
+    However, "3-month installment" often implies a shutdown/flat rate structure in these types of math problems rather than a monthly compounding schedule. If it were monthly compounding, the prompt would usually specify compounding. If it were monthly simple interest, it would usually specify the process.
+    Usually, for these types of standardized math problems:
+    Total Principal = Cost.
+    Interest Fee = Percentage of Principal.
+    Total Cost to Pay = Principal + Interest Fee.
+    Monthly Payment = Total Cost to Pay / Number of Months.
+
+    *Let's check the number.*
+    1 phone: $150.
+    5 phones: $750.
+    Interest: 2% of $750 = $15.
+    Total to Pay: $750 + $15 = $765.
+    Monthly: $765 / 3 = $255.
+
+    *Alternative interpretation check:*
+    Is it possible the interest is 2% *per month*?
+    "A 2% interest will be charged for each unit."
+    If it were per month:
+    Interest calculation usually requires a number of periods.
+    If it's a store installment plan, it's often a discount or fee on the purchase price, not a loan rate.
+    However, "Interest" specifically usually means the cost of borrowing money.
+    Let's assume the flat fee interpretation first because it's the most robust against ambiguity in poorly worded school math problems. If it were compound interest or monthly rate, usually it says "per month". "Interest will be charged" on a 3-month installment often implies an administration fee or total annualized percentage simplified here.
+    Wait, "2% interest" for a 3-month term is weird for a "fee". Interest usually implies $P \times r \times t$.
+    If $r = 2\%$ total interest rate for the duration (2 per annum? 2 per quarter?), and duration is 3 months.
+    Usually, in low-level math problems, "2% interest" on a loan/payment plan implies 2% of the principal amount added to the bill.
+    Let's look for clues. "charged for each unit".
+    If I have 5 units, I pay 2% on 1 unit, 2% on another, etc.
+    Total Interest = $5 \times (0.02 \times 150) = 15 + 15 + 15 + 15 + 15 = 75$.
+    Total Price = $750 + 75 = 825$.
+    Monthly = $825 / 3 = 275$.
+
+    Wait, whoops, I calculated $0.02 \times 750 = 15$ above.
+    Let's re-calculate:
+    Price total = $5 \times 150 = 750$.
+    2% of 750: $750 / 100 \times 2 = 7.5 \times 2 = 15$.
+    Wait, math check.
+    5 x 150 = 750.
+    2% of 750.
+    1% of 750 = 7.5.
+    2% of 750 = 15.
+    Total Interest = $15.
+    Total Cost = $750 + 15 = 765.
+    Monthly = $765 / 3 = 255.
+
+    Why did I think $275$ just now?
+    Ah, $5 \times 30 = 150$ ... No.
+    $0.02 \times 150 = 3$.
+    $5 \times 3 = 15$.
+    Okay, so total interest is 15.
+    Previous check said 15.
+    Previous thought said 825. Why?
+    Maybe I thought interest per unit was $150 \times 100\%$? No.
+    Maybe I did $150 \times 2\% = 3$.
+    $5 \times 3 = 15$.
+    $150 \times 5 = 750$.
+    $750 + 15 = 765$.
+    $765 / 3 = 255$.
+    
+    Let's re-read the prompt carefully to ensure "2% interest" isn't interpreted differently.
+    "A 2% interest will be charged for each unit."
+    Usually, "interest" on installments covers the total period.
+    Example: You borrow $750 for 3 months. The bank charges 2% interest.
+    So the total payment is
+---
+Here's a thinking process that leads to the solution:
+
+1.  **Analyze the Request:**
+    *   **Item:** Cell phones.
+    *   **Quantity:** 5 phones.
+    *   **Unit Price:** $150 each.
+    *   **Payment Structure:** 3-month installment.
+    *   **Interest:** 2% interest charged for *each unit*.
+    *   **Goal:** Calculate the monthly payment per phone or per month total? The question asks "How much will Shiela pay each month". This usually implies the total monthly payment for all items, but sometimes in specific contexts, it might mean per phone. Let's look at the wording carefully. "How much will Shiela pay each month". Shiela is buying five phones. It usually implies the total monthly payment obligation. However, I need to check if the interest applies to the total or per unit. The prompt says "A 2% interest will be charged for each unit."
+    *   **Output Format:** Final answer as a number after `####`.
+
+2.  **Step-by-Step Calculation:**
+
+    *   **Step 1: Calculate the total cost (principal) for all phones.**
+        *   5 phones * $150/phone = $750.
+
+    *   **Step 2: Analyze the interest structure.**
+        *   "A 2% interest will be charged for each unit."
+        *   Does this mean 2% per month or 2% total for the 3 months? Usually, in simple installment word problems without specifying "per month" for the interest rate, it can be ambiguous. However, the standard interpretation for "charged for each unit" in this context often implies a total interest-on-principal.
+        *   Alternative interpretation: Interest is charged on the unit price. Is it simple interest for 3 months? Or is it a flat fee?
+        *   Let's re-read typical math problem conventions for this phrasing. "A 2% interest" usually means a total 2% markup on the price for the duration of the loan. If it meant compound interest or monthly interest rate, it would usually say "2% monthly interest". Let's assume it's a flat 2% on the total purchase price for each unit.
+        *   Let's check if the interest is per phone or on the total.
+            *   Option A: Calculate total price, add 2% interest to the whole amount?
+            *   Option B: Calculate interest per phone, then sum up? (Likely equivalent due to linearity).
+            *   Option C: Is "2%" the effective rate over the 3 months? Yes.
+
+    *   **Step 3: Calculate Interest.**
+        *   Principal = 5 units * $150 = $750.
+        *   Interest Rate = 2% = 0.02.
+        *   Total Interest = $750 * 0.02 = $15.
+        *   *Wait, does it mean 2% *per month*?* If it's 2% per month for 3 months, that's a total of approx 6% (or compounded). If it's just "A 2% interest will be charged", it usually refers to the total accrual cost for the installment plan. Let's stick with the Total Interest interpretation (2% of the total value).
+        *   Wait, let's re-read carefully: "A 2% interest will be charged for each unit."
+        *   Calculation: 2% of $150 per phone.
+        *   Interest per phone = $150 * 0.02 = $3.
+        *   Total Interest for 5 phones = $3 * 5 = $15.
+
+    *   **Step 4: Calculate Total Amount Owed.**
+        *   Total Principal ($750) + Total Interest ($15) = $765.
+
+    *   **Step 5: Determine Monthly Payment.**
+        *   The payment is spread over 3 months.
+        *   Total Monthly Payment = Total Amount Owed / 3.
+        *   Total = $765.
+        *   Monthly = $765 / 3.
+        *   $765 / 3 = $255.
+
+    *   **Re-evaluating Interpretation of Interest:**
+        *   Is it possible the interest is applied to the *remaining* balance (standard amortization)?
+            *   If it's a simple loan over 3 months with 2% total interest:
+                *   Payment = (Price + Interest) / 3. This matches the calculation above.
+            *   If it's 2% interest *per month* (simple interest usually applied to the principal in these specific math problems unless "monthly rate" is specified):
+                *   Total interest = $150 * 0.02 * 3 months = $9 per phone? Or $750 * 0.02 * 3?
+                *   However, phrasing "A 2% interest will be charged" strongly implies a specific fee associated with the purchase, not necessarily a rate per period. In many lower-level math problems, "X% interest" on an installment implies the total markup. If it meant per month, it would usually say "bearing 2% monthly interest".
+                *   Let's consider the phrase "2% interest will be charged for each unit".
+            *   Let's calculate the reverse check. If I pay $255 for 3 months for a phone. Total $765. Price $150. (Actually $255 * 3 = $765).
+            *   $750 price vs $765 total.
+            *   Wait, if she buys 5 phones, does the interest apply to the total or per unit? "charged for each unit".
+            *   Interest per unit = 0.02 * 150 = $3.
+            *   Total Interest = 5 * 3 = $15.
+            *   Total Cost = 5 * 150 + 15 = 750 + 15 = 765.
+            *   Monthly Payment = 765 / 3 = 255.
+
+            *   What if "2% interest" means 2% of the monthly principal? No, that's standard loan logic, but "charged" suggests a fee.
+            *   What if it's simple interest calculated as P * r * t?
+                *   t = 3 months.
+                *   If r = 0.02/month, then Interest = 150 * 0.02 * 3 = 9 per phone.
+                *   Total Interest = 45.
+                *   Total Cost per phone = 159.
+                *   Total per unit = 159 * 5 = 795.
+                *   Monthly = 795 / 3 = 265.
+            *   Let's look for context clues. "3-month installment". "2% interest will be charged". Usually, in questions like this (often found in standardized math tests), "2% interest" refers to the total interest cost imposed on the principal to incentivize the buyer not to pay upfront, usually expressed as a percentage of the total principal. However, the ambiguity exists.
+            *   Common Pattern in these problems: "X% interest" on a daily/periodic buy often means X% on the total amount.
+            *   However, if this is a bank loan calculation: Interest = P * r * t. If r isn't specified as "per period", we often assume it's a flat fee on the loan. A 2% flat rate on the total purchase for a 3-month loan seems very low for a bank loan (Yearly APR would be 1% - 2%), but for a specific commercial math problem, it's the most literal reading.
+            *   If it were annualized, it would say "2% per annum".
+            *   If it is 2% of the *outstanding balance*, we calculate pro-rata. But "charged for each unit" suggests the fee is determined at the start.
+            *   Let's assume the license holder (Shiela) wants the period cost.
+            *   Most likely interpretation for this specific type of math puzzle:
+                1. Calculate total product cost.
+                2. Calculate interest on product cost.
+                3. Divide total by 3.
+            *   Does "2% interest" mean interest on the *installment* price?
+                *   Some interpretations: Interest = Price * Rate.
+                *   150 * 0.02 = 3.
+                *   So for a phone, you owe 153.
+                *   Total for 5 phones = 765.
+                *   Monthly = 765 / 3 = 255.
+
+            *   Let's check if there is a simpler interpretation.
+            *   Could "2% interest" mean 2% of the *monthly* payment?
+            *   Could it mean 2% of total cost?
+            *   Let's stick with: Interest is calculated on the Total Cost (Principal) of the
+---
+Here's a thinking process that leads to the solution:
+
+1.  **Analyze the Request:**
+    *   **Items:** 5 cell phones.
+    *   **Price per unit:** $150 each.
+    *   **Installment Plan:** 3 months.
+    *   **Interest Rate:** 2% (It implies 2% interest per unit, but I need to check if it's monthly interest, total interest, or simple interest added to the total. The phrasing "A 2% interest will be charged for each unit" usually means the total cost is increased by 2% of the purchase price of that unit. However, installment problems can sometimes imply monthly interest rates or total flat fees. Given the simplicity, it's likely 2% of the total value of the goods as an additional fee, or 2% monthly? Let's look at standard accounting problems. Usually, if it says "2% interest will be charged", it often refers to the interest on the total amount or a total interest amount. If it were monthly, it would say "2% per month". Let's assume 2% of the total purchase price is added as interest cost. Wait, there's another interpretation: Is the $150/month without interest? No, price is $150 *each*.
+    *   **Goal:** Find the monthly payment amount.
+
+2.  **Calculate Total Cost of Goods:**
+    *   5 phones * $150/phone = $750.
+
+3.  **Determine Interest Cost:**
+    *   *Interpretation A:* Interest is a flat fee added to the total price. 2% of $750.
+        *   Interest = 0.02 * 750 = $15.
+    *   *Interpretation B:* Interest is calculated monthly (compound?) for the 3-month duration. This is more complex and usually specified as "2% per month".
+    *   *Interpretation C:* Interest is simply 2% of the *total cost* for the installment.
+    *   *Interpretation D:* The phrase "A 2% interest will be charged for each unit" might mean 2% *monthly* interest on the remaining balance?
+    *   *Re-reading carefully:* "A 2% interest will be charged for each unit." This usually implies a total cost of $150 + (2% of $150).
+    *   *Alternative reading:* Is it 2% per month on the balance?
+        *   If 2% per month: Total interest = 2% * $150 * 3 months = $90 per unit? That seems high.
+        *   Let's check the magnitude of typical cell phone prices and installment plans.
+        *   Interest = $750 * 0.02 = $15.
+        *   Total Amount = $750 + $15 = $765.
+        *   Monthly Payment = $765 / 3 = $255.
+    *   *Let's check Interpretation D:* What if it means "2% interest on the installment plan"? Usually, in elementary math problems, interest is added once to the principal to determine the installments unless specified "per month".
+    *   *Let's consider the phrasing "2% interest will be charged for each unit".* This sounds like the cost of borrowing for that specific phone.
+    *   *Another potential interpretation:* $150 is the upfront price. She is paying over 3 months. Interest is 2% *of the installment amount*? No, "2% interest" usually applies to the principal value.
+    *   *Most logical standard math problem interpretation:*
+        1.  Calculate total purchase price.
+        2.  Calculate interest (2% of total purchase price).
+        3.  Add interest to price for total installment amount.
+        4.  Divide total installment amount by number of months.
+
+4.  **Step-by-Step Calculation:**
+
+    *   **Step 1: Total Price.**
+        $150 \times 5 = \$750$.
+
+    *   **Step 2: Interest Calculation.**
+        "A 2% interest will be charged for each unit."
+        Does "each unit" mean the interest is calculated per unit then summed up? Yes.
+        Price per unit = $150.
+        Interest per unit = $150 \times 0.02 = \$3$.
+        Total Interest = $3 \times 5 \text{ (units)} = \$15$.
+        *Wait, is it possible the 2% is monthly?* If I owe $150, pay $150/3 = $50/month. If there's 2% interest, where is it charged? If it's 2% *on the money borrowed* over the 3 months... In math problems of this level, interest is typically calculated as a flat rate on the principal unless "simple interest per period" is explicitly stated. Given "A 2% interest will be charged for each unit", it defines the cost to borrow the phone. It's a fee attached to the item.
+        So, Interest = 2% of $750 = $15.
+
+    *   **Step 3: Total Installment Amount.**
+        $\text{Total Price} + \text{Interest} = \text{Total Amount to Pay}$
+        $750 + 15 = 765$.
+
+    *   **Step 4: Monthly Payment.**
+        Total Amount / 3 months = $765 / 3$.
+        $765 / 3 = 255$.
+
+5.  **Review Alternative Interpretations (Sanity Check):**
+    *   What if the $150 is the monthly price? "bought five cell phones for $150 each". No, clearly sales price.
+    *   What if the 2% interest is *monthly*?
+        *   Interest = $150 \times 3 \text{ months} \times 2\% = 0.06 \times 150 = 9$.
+        *   Total interest per unit = 9. Total interest for 5 = 45.
+        *   Total = 795. Month = 265.
+    *   What if 2% is calculated on the balance? (Compound interest). Too complex for this phrasing style.
+    *   What if 2% means she pays 102% back? Yes, used above.
+    *   What if the question implies the $150 is the total interest? No.
+    *   Most "simple math" interpretation: Principal + (Principal * Rate) = Total. Then Total / Months.
+        *   Principal = $750.
+        *   Rate = 2% (0.02).
+        *   Reasoning: Usually, if it's 2% *per month*, it states "2% monthly". "A 2% interest will be charged" usually implies the total cost is 102%.
+
+    *   *Refining the Interest Statement:* "A 2% interest will be charged for each unit."
+        *   If I buy 1 phone for $150. Interest charged for that unit is 2% of $150 = $3.
+        *   If I pay it back over 3 months.
+        *   Total for that unit = $153.
+        *   Monthly for that unit = $51.
+        *   Total for 5 units = Monthly payment * 5? Or Total Value * 5?
+        *   Calculation: (150 + 3) * 5 = 153 * 5 = 765.
+        *   765 / 3 = 255.
+
+    *   Let's check if there is a trick. "interest will be charged for each unit". Does this mean 2% interest *on the unpaid balance* monthly? Usually, problems specify "simple interest" or "per month" for that. Without "per month" attached to the percentage, and given the phrasing "charged for each unit", it implies a one-time administrative fee or simple interest on the principal. Given the simplicity of the numbers ($150, 5 units, 3 months, 2%), the calculation $750 + (750 \times 0.02) / 3$ is the standard expectation for this grade level.
+
+6.  **Finalizing the Calculation:**
+    1.  Total Cost of Phones = $5 \times 150 = 750$.
+    2.  Interest Total = $0.02 \times 750 = 15$.
+    3.  Total Payment Amount = $750 + 15 = 765$.
+    4.  Monthly Payment = $765 / 3 = 255$.
+
+7.  **Formatting the Output:**
+    *   Show the steps clearly.
+    *   Final answer followed by `####`.
+
+    *   Wait, is it possible the interest is calculated differently?
+        *   Example: Borrow $150. Monthly
+---
+Here's a thinking process to solve the problem:
+
+1.  **Understand the Goal:** The objective is to calculate the monthly payment amount Shiela makes for five cell phones purchased with a specific installment plan.
+
+2.  **Identify the Given Information:**
+    *   Number of cell phones: 5
+    *   Cost per cell phone: $150
+    *   Payment plan: 3-month installment (installment means the principal is paid back in installments).
+    *   Interest rate: 2% charged for each unit (This wording is slightly ambiguous. Does it mean 2% per month on each unit? Or 2% total on the price? Or 2% of the *total* purchase? Let's look at the phrasing "A 2% interest will be charged for each unit". Usually, in installment problems, interest is calculated on the outstanding balance. However, the simplest interpretation in standard math word problems of this type is often a flat interest or specific percentage per period.
+    *   *Correction/Refinement on Interest:* Let's look at the phrasing again: "A 2% interest will be charged for each unit." And "for 3-month installment".
+    *   *Interpretation A:* Interest is 2% of the principal amount ($150) paid per unit, spread over 3 months.
+    *   *Interpretation B:* Total interest is 2% per month for 3 months? (Unlikely for cell phones).
+    *   *Interpretation C:* Total interest is 2% of the total purchase price per unit.
+    *   *Interpretation D:* "2% interest" is the monthly interest rate for the loan.
+    *   *Interpretation E:* "2% interest will be charged for each unit" implies 2% *of the cost*. Then, this interest + cost needs to be paid in specific installments.
+
+    Let's re-read carefully: "Shiela bought five cell phones for $150 each for a 3-month installment. A 2% interest will be charged for each unit."
+    Usually, in these types of simple math problems, the interest is calculated as a specific percentage applied to the item's price to get the extra cost, or it's a finance charge.
+
+    Let's assume the standard convention for this specific phrasing in grade school/middle school math contexts:
+    Total Price = Cost + Interest.
+    Where Interest = Percentage x Original Price.
+
+    Wait, "3-month installment" suggests the money is paid in 3 equal monthly chunks.
+    "A 2% interest will be charged for each unit."
+    Does this mean 2% total interest, or 2% per month?
+    If I buy something in 3-month installments, usually there is a fee. If it's 2% per month, the interest would be $150 \times 0.02 \times 3$.
+    If it's 2% total, it's $150 \times 0.02$.
+    However, the phrasing "charged for *each unit*" suggests the interest applies to the individual item price.
+    The most common interpretation of "Interest" in simple word problems without specifying "per month" or "flat rate" but combined with "installment plan" and a single percentage is a markup or a specific finance charge. But the period isn't defined for the interest rate.
+
+    Let's look at the numbers.
+    Price: $150.
+    250 (interest?) $3.8?
+    If it's 2% flat rate on the purchase price: Interest = $150 * 0.02 = $3. This seems too low for 5 units. Total interest = $15.
+    If it's 2% monthly interest: Interest = $150 * 0.02 = $3 per month. Total interest per month = $3. Total interest over 3 months = $9 per unit.
+    If it's an installment plan problem, often the question implies "The interest rate is 2% per month".
+    However, "A 2% interest will be charged" usually refers to the total cost increase. But without the word "monthly", it's ambiguous.
+    Let's calculate based on "2% interest on the total value per unit".
+    Wait, let's check standard math problem conventions. "X% interest" without a time qualifier in this context usually refers to the finance charge over the installment term. However, 2% is a very low rate for 3 months unless it's monthly compounding or just an arbitrary flat number.
+    Let's reconsider the text "3-month installment".
+    Total Cost per unit = $150.
+    Interest = 2% of $150 = $3. (Assuming 2% is the total finance charge).
+    Total Payable per unit = $153.
+    Total installment = $153 / 3 = $51.
+    Answer: $51.
+
+    Alternatively, is the interest 2% *of the remaining balance* per month?
+    First Month: Principal $150. Interest 2%?
+    No, look at the phrasing "A 2% interest will be charged for each unit."
+    It implies the interest is a specific sum added to the cost.
+    Another possibility: Interest is based on the total cost ($750), not per unit? No, "for each unit" is explicit.
+
+    Let's check if there's a different interpretation. "Bought ... for $150 each".
+    Does she pay cash for the phones and add interest?
+    Total Coast = $150 \times 5 = 750$.
+    Interest = 2% of $750 = 15$.
+    Total = $765$.
+    Per month = $765 / 3 = 255$.
+
+    Does "charged for each unit" mean the interest is calculated on the $150 per unit, and the total interest is added to the specific unit price calculation?
+    Case 1: Interest is $150 \times 2\% = $3$ total interest added to the device price.
+    New Price per device = $153$.
+    Monthly payment = $153 / 3 = \$51$.
+    Total for 5 devices = $5 \times 51 = 255$.
+    Case 2: Interest is 2% per month.
+    Total repayment per month = $150 +$ Interest? No, installments usually amortize.
+    If it's simple interest (as in, total cost + interest, then split):
+    Interest is applied to the purchase price.
+    Is it 2% total or 2% per month?
+    If I search for similar problems online... "3-month installment. 2% interest".
+    Often, "2% interest" in these contexts (non-calculus, simple algebra) implies the finance charge amount is 2% of the principal *over the course of the term*.
+    However, 2% total interest is incredibly low for 3 months.
+    What if it means "2% of the price is added on top, to be paid in installments"?
+    Let's assume the "total cost + interest" model where the interest is 2% of the base price.
+
+    Let's try to find if there is a missing "per month".
+    If the problem meant 2% per month, it would usually say "2% per month".
+    If it just says "2% interest will be charged", in the context of a single transaction of 3 months, it often acts as the "math fee" or "markup" applied to the sale to give an installment price.
+    Let's calculate:
+    Cost = $150
+    Interest = $150 * 0.02 = $3.00.
+    Total cost = $153.00.
+    Monthly payment = $153 / 3 = $51.00.
+
+    Is there another interpretation?
+    Maybe the interest is calculated on the total sum of the five phones?
+    "for each unit".
+    Okay, maybe the 5 units are lumped together.
+    Cost = $5 * 150 = 750$.
+    Interest = 2% of $750 = 15.
+    Total = 765.
+    Months = 3.
+    Monthly = 765 / 3 = 255.
+    Wait, the question asks "How much will Shiela pay each month".
+    If we calculate per unit ($51) and multiply by 5 ($255), it's the same result.
+    So the distribution (per unit vs total pots) doesn't change the ratio.
+
+    Is it possible the interest is *monthly*?
+    If interest = 2% per month on the principal.
+    Payment = Principal + Interest.
+    Month 1: 150 + (150 * 0.02) = 153. (Remaining 150 paid?), no installment means principal is divided?
+    Standard Amortization vs Simple Interest Installment.
+    In simple installment math (low grade 
+---
+Here's a thinking process that leads to the solution:
+
+1.  **Analyze the Problem:**
+    *   **Item purchased:** Cell phones.
+    *   **Quantity:** 5 cell phones.
+    *   **Unit Price:** $150 each.
+    *   **Payment Terms:** Installments over 3 months.
+    *   **Interest Rate:** 2% per unit (this needs careful interpretation).
+    *   **Goal:** Calculate the monthly payment amount.
+
+2.  **Calculate the Total Principal Amount:**
+    *   5 units * $150/unit = $750.
+
+3.  **Interpret the Interest Clause:**
+    *   "A 2% interest will be charged for each unit."
+    *   This phrasing is slightly ambiguous. Does it mean 2% *total* interest on the whole amount, or 2% interest per month, or 2% per unit specifically (meaning 2% of the unit price)?
+    *   Usually, in simple math problems like this, "2% interest" implies a one-time interest calculation on the total cost.
+    *   Let's check the specific phrasing: "charged for each unit".
+        *   Option A: 2% of the unit price for each unit (i.e., $150 * 0.02).
+        *   Option B: It's a standard installment problem where interest applies to the purchase amount.
+    *   Let's assume the standard interpretation for elementary/middle school math problems: Calculate the total cost including interest, then divide by the number of months.
+    *   Interest Rate = 2%. Price = $750.
+    *   Total Interest = $750 * 0.02.
+    *   Total Interest = $15.
+    *   Total Amount to Pay = Principal + Interest = $750 + $15 = $765.
+
+    *Wait, let me re-read carefully:* "A 2% interest will be charged for each unit."
+    Does it mean the interest is calculated per month? No, usually "interest charged for each unit" in the context of the sale implies interest on the cost of that unit.
+    Let's look for alternative interpretations.
+    *   Interpretation 1: Total cost for 5 units is $150 * 5 = $750. Interest is 2% of this total. Total Interest = $15. Total Payment = $765. Monthly Payment = $765 / 3 = $255.
+    *   Interpretation 2: Does "for each unit" mean 2% interest is added *to the price* of the unit before combining? Yes, that's what I did above.
+    *   Interpretation 3: Is it 2% interest per month? If it were per month, the formula would be compound or simple add-on. Simple add-on is (Interest = Principal * Rate * Time). Time = 3 months?
+    *   However, the phrase "charged for each unit" suggests it's tied to the cost structure, not time. Usually, "2% interest" without "per month" or "per annum" in this context simply means 2% of the total purchase price is added to the total.
+    *   Let's try to search for similar math problem patterns. Often, these problems imply:
+        1. Calculate Total Price of Goods.
+        2. Calculate Interest on Total Price.
+        3. Calculate Total Amount.
+        4. Calculate Monthly Installment (Total Amount / Months).
+
+    *Re-evaluating the "Interest... for each unit" part:*
+    It likely emphasizes that the interest applies to every phone bought.
+    Unit Price: $150.
+    Interest per unit: 2% of $150 = $3.
+    Total Interest for 5 units: 5 * $3 = $15.
+    Grand Total: $750 + $15 = $765.
+    This matches the logic of "interest on the total". The wording "for each unit" might just be descriptive to ensure you know it's not just 2% on the first unit.
+
+    *Let's check if there is a Monthly Interest interpretation:*
+    If it meant 2% interest *per month*...
+    Total Amount = Principal * 1.02^3 (Compound) or Principal * 3 * 0.02 (Simple Interest add-on).
+    If Simple Interest (2% per month): $750 * 6 months (if it were 6 months). No, it's 3 months.
+    Interest = $750 * 0.02 * 3 = $45. Total = $795. Monthly = $265.
+    But the text says "charged for each unit", not "charged monthly". It sounds like a fee attached to the goods. "A 2% interest will be charged [on] each unit." This is definitely 2% of the principal.
+
+    *Let's consider if it means interest on the installment balance.*
+    Usually, in these specific types of Word Math problems, "2% interest" without a time qualifier is a flat fee on the total price.
+    However, the phrase "A 2% interest will be charged" often implies the finance charge.
+    If Interest Rate = 2%.
+    Is it 2% *total* or 2% *monthly*?
+    Given "charged for each unit", it sounds like a fee.
+    Let's assume Total Cost = Principal + Interest.
+    Principal = 5 * 150 = 750.
+    Interest = 2% of 750 = 15.
+    Total = 765.
+    Monthly Payment = 765 / 3 = 255.
+
+    *Is there another interpretation?*
+    Could it be 2% of the *month* installment? No, that depends on the principal.
+    Could it be 2% *monthly* interest?
+    If a shop offers "3-month installment with 2% interest", standard interpretation is Simple Interest add-on method.
+    Interest = P * r * t.
+    r = ? if 2%, is it annual or per period?
+    In consumer finance contexts in Philippines/Asian contexts (Shiela sounds like the name):
+    Problem: "A 3-month installment with 2% interest".
+    Usually means Total Interest = Principal * 0.02.
+    Wait, let's look for standard conventions for this specific phrasing "2% interest will be charged for each unit".
+    It looks like a variation of a specific logic:
+    Cost = $150.
+    Interest per unit = $150 * 0.02 = $3.
+    Total Interest for 5 units = $15.
+    Total to Pay = $750 + $15 = $765.
+    Number of months = 3.
+    Payment per month = 765 / 3 = 255.
+
+    Let's verify if the 2% is an *annual* rate converted to the period or a flat rate.
+    Without time specification (e.g., "per month"), 2% is usually treated as a fixed percentage of the principal for the transaction.
+    However, some problems imply 2% is charged *per month*.
+    Phrasing: "A 2% interest will be charged for each unit."
+    It does not say "per month". It says "for each unit".
+    "charged... for each unit". This means the total cost of a unit is X + (0.02 * X).
+    It does not imply a monthly interest fee within the installment term.
+    If it were monthly, it would usually say "monthly interest rate of 2%" or "interest charged at the rate of 2% per month".
+    The phrasing "charged for each unit" implies the interest is part of the unit price structure, spread over the installment plan? Or just calculated once?
+    If it's 2% interest on the total, added to the total, and then divided by 3 months (installment), the calculation holds: ($750 + $15) / 3.
+
+    Let's calculate step-by-step to be sure.
+    1.  **Price of 5 phones:** $150 * 5 = $750.
+    2.  **Interest on 5 phones:** The problem states "2% interest will be charged for each unit".
+        *   Interest per phone = $150 * 0.02 = $3.
+        *   Total Interest = $3 * 5 = $15.
+    3.  **Total Payment:** $750 + $15 = $765.
+    4.  **Monthly Installment:** The bill is paid in 3 installments.
+        *   $765 / 3 months = $255 per month.
+
+    Let's double-check the "for each unit" constraint.
+    Does it mean the interest is calculated differently?
+    Maybe it means 2% of the *installment* amount? No, that doesn't make sense mathematically for a standard word problem
+---
+Here's a thinking process that leads to the solution:
+
+1.  **Analyze the Request:**
+    *   **Item:** 5 cell phones.
+    *   **Price per unit:** $150 each.
+    *   **Financing terms:** 3-month installment (monthly payments), 2% interest charged *per unit*.
+    *   **Goal:** Calculate the total monthly payment Shiela makes for 3 months.
+
+2.  **Determine the Principal Cost for One Unit:**
+    *   Price = $150.
+    *   Interest is charged for each unit.
+    *   Interest rate = 2%.
+    *   Question: Does the interest apply *upfront* or is it spread? Usually, "2% interest will be charged for each unit" in the context of short term installments implies the total interest on that unit before being divided over the term, OR it implies an interest rate calculation. However, often in simple word problems of this type (cell phone financing), "2% interest" often refers to the fee added to the principal to make the total bill, calculated on the purchase price.
+    *   *Interpretation 1 (Total Interest added):* Cost + (2% of Cost). Then divide by 3 months.
+    *   *Interpretation 2 (Interest Rate per month?):* 2% per month for 3 months? (Unlikely for a math problem of this complexity unless specified "interest compounded" or similar).
+    *   *Interpretation 3 (Specific industry wording):* "2% interest will be charged for each unit". This usually implies the interest for the transaction. Is it monthly interest or total interest?
+    *   *Context Clue:* "A 2% interest will be charged for each unit." This sounds like a flat fee calculation relative to the item price. Let's assume the total interest for that unit is 2% of the price.
+    *   *Alternative Interpretation:* Is it 2% *interest rate* for the whole loan? If it's a 3-month loan (90 days), is 2% per month or per loan? The phrasing "for each unit" suggests a property of the unit, not the time. It's most likely: Total Interest = 2% of Price.
+    *   Let's stick with the most common math problem interpretation: Interest is added to the principal to find the Total Payable Amount.
+    *   Total Payable Cost per Unit = Price + (2% of Price).
+    *   Total Payable Cost per Unit = $150 + ($150 * 0.02).
+
+3.  **Calculate Total Cost per Unit:**
+    *   $150 \times 0.02 = $3.
+    *   Total Cost = $150 + $3 = $153.
+
+4.  **Calculate Total Cost for All Phones:**
+    *   Number of phones = 5.
+    *   Total Cost = $153 \times 5$.
+    *   Calculation: $150 \times 5 = 750$. $3 \times 5 = 15$. Total = $765.
+
+    *(Self-Correction/Check):* Wait, should I calculate interest per phone then total, or total price then interest?
+    Math is commutative here.
+    Total Price = $150 \times 5 = $750.
+    Total Interest = 2% of Total Price? If "2% interest will be charged for each unit", does that mean 2% of the individual price or 2% of the total contract? Usually, it means 2% of the specific item's face value.
+    $(5 \times 150) \times 0.02 = 750 \times 0.02 = 15$.
+    Total Payable = $750 + 15 = $765.
+
+    *Re-evaluating the "2% interest" phrasing:*
+    Sometimes, in financing questions, "2% interest" applied to installments over a specific time could mean a monthly interest rate. However, usually, if it's a monthly payment question, the phrasing would be "2% monthly interest". The phrasing "2% interest will be charged for each unit" suggests a flat fee commission or markup added to the product cost before payment is split. Given the short 3-month term, calculating total cost then dividing by months is the standard approach for installment problems of this level.
+
+    Is it possible the interest is distinct for *each* month? No, it says "charged for each unit", not "charged per month".
+    Is it possible the interest applies to the monthly balance? Too complex for standard text.
+    Most likely interpretation:
+    1. Calculate total purchase price.
+    2. Calculate total interest (2% of price per unit).
+    3. Sum principal and interest to get total amount to pay.
+    4. Divide by number of months.
+
+5.  **Re-verify the Step-by-Step:**
+
+    *   **Step 1: Cost per phone.**
+        *   Selling price: $150.
+        *   Interest per phone: $150 \times 0.02 = \$3.00$.
+        *   Total cost per phone (to be paid): $150 + 3 = \$153$.
+
+    *   **Step 2: Total cost for 5 phones.**
+        *   $153 \times 5 = \$765$.
+
+    *   **Step 3: Amortization over 3 months.**
+        *   Total Term = 3 months.
+        *   Payment per month = Total Amount / 3.
+        *   $765 / 3 = 255$.
+
+    *   *Alternative Calculation path:*
+        *   Monthly payment for principal only:
+            *   Principal = $150 \times 5 = \$750$.
+            *   Monthly Principal Payment = $750 / 3 = \$250$.
+        *   Interest allocation:
+            *   Usually, interest costs are charged on the balance. If it's a 2% total fee, $3 per phone goes towards total cost.
+            *   $3 \times 5 = $15 interest total.
+            *   $15 / 3 = $5 interest per month per phone? No.
+            *   $15 / 3 = $5 interest per month total.
+        *   Total Monthly Payment = $250 (Principal) + $5 (Interest) = $255.
+        *   Wait, math check: $255 \times 3 = 765$. Correct.
+
+    *   *Is there another interpretation of "2% interest"?*
+        Could it be 2% *per month*?
+        If so:
+        Monthly Interest on $150 = $3.
+        Principal/3 months = $750 / 3 = $250.
+        If Interest is charged every month...
+        Month 1: Pay on $750 balance. Interest = 2% of $750 = $15.
+        Month 2: Pay on $500 balance. Interest = $10.
+        Month 3: Pay on $250 balance. Interest = $5.
+        This gets complicated and usually text problems specify "Monthly Interest" or "APR". "A 2% interest will be charged for each unit" implies a discrete charge on the purchase, not a rate over time.
+        Given the phrasing "for each unit" (singular), it implies the interest is attached to the unit's cost.
+        Also, 2% per month on $150 is very high for a math problem relative to the fractional years, but "2% interest... for each unit" strongly suggests a markup/fee structure.
+
+        Let's look for standard patterns of this question online or in textbooks.
+        "Shiela bought five cell phones... 2% interest will be charged for each unit."
+        This phrasing is very specific to sales math (e.g., simple interest over the order).
+        Interpretation: The "Loan" costs = Price + (Interest Rate * Price).
+        The Interest is 2% of the unit price.
+        Total Cost = (Price * Units) + (Price * Units * Rate).
+        Total Cost = $750 + (750 * 0.02) = $765.
+        Monthly = $765 / 3 = $255.
+
+6.  **Final Verification:**
+    *   5 phones * $150 = $750.
+    *   Interest = 2% * $750 = $15.
+    *   Total to pay = $765.
+    *   Installments = 3.
+    *   Payment = $765 / 3 = $255 per month.
+
+    Another check: What if the interest is on *each unit* in the sense of compounding? No, "charged for each unit" implies a flat addition to the purchase price.
+    What if it means $150 * 0.0
